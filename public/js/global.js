@@ -9,21 +9,21 @@ window.touchScreen;
 /* On DOM load */
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.touchScreen = matchMedia('(hover: none)').matches; // Detect mobile
-    setEventsGlobal(); // Mouse and keyboard
+  window.touchScreen = matchMedia('(hover: none)').matches; // Detect mobile
+  setEventsGlobal(); // Mouse and keyboard
 
-    // Scroll
-    window.addEventListener('scroll', () => {
-        //window.pageYOffset;
-    });
+  // Scroll
+  window.addEventListener('scroll', () => {
+    //window.pageYOffset;
+  });
 
-    // Resize
-    window.addEventListener('resize', () => {
+  // Resize
+  window.addEventListener('resize', () => {
 
-    });
+  });
 
-    document.querySelector('html').style.visibility = 'visible'; // Hack to avoid FOUC
-    start();
+  document.querySelector('html').style.visibility = 'visible'; // Hack to avoid FOUC
+  start();
 });
 
 /* Mouse and keyboard events */
