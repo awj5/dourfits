@@ -1,16 +1,19 @@
 'use strict';
 
-//import { Module } from './XXXXX.js';
+import { Pattern } from './plugins/pattern.min.js';
+import { home } from './home.js';
+import { wardrobe } from './wardrobe.js';
 
 /* Global vars */
 
-window.touchScreen;
+var touchScreen;
+var patrn;
 
 /* On DOM load */
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.touchScreen = matchMedia('(hover: none)').matches; // Detect mobile
-  setEventsGlobal(); // Mouse and keyboard
+  touchScreen = matchMedia('(hover: none)').matches; // Detect mobile
+  setEvents(); // Mouse and keyboard
 
   // Scroll
   window.addEventListener('scroll', () => {
@@ -28,10 +31,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Mouse and keyboard events */
 
-function setEventsGlobal() {}
+function setEvents() {}
 
-/* Start */
+/* Start/Router */
 
-function start() {}
+function start() {
+  patrn = new Pattern();
+  patrn.init(patternChange);
+}
+
+function patternChange() {
+  loadSection(patrn.page);
+}
+
+function loadSection(section) {
+  // Hide all sections
+  const sections = document.querySelectorAll('section');
+
+  for (let x = 0; x < sections.length; x++) {
+    sections[x].style.display = '';
+  }
+
+  document.querySelector('section#section-' + section).style.display = 'flex'; // Show section
+
+  switch (section) {
+    case 'wardrobe':
+      wardrobe();
+      break;
+    default:
+      home();
+  }
+}
 
 /* Global */
