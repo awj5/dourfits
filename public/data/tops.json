@@ -1,0 +1,53 @@
+[
+	{
+		"title": "80s Oversized",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Balloon",
+		"trait": "Arms",
+		"layer": "tops"
+	},
+	{
+		"title": "Basketball",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Bat Wings",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Beer",
+		"trait": "Arms",
+		"layer": "tops"
+	},
+	{
+		"title": "Black Button Down",
+		"shortTitle": "Button Down",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Black T-Shirt",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Bones T-Shirt",
+		"trait": "Tops",
+		"layer": "tops"
+	},
+	{
+		"title": "Camo Puffer",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Camo Skateboard",
+		"trait": "Arms",
+		"layer": "tops"
+	}
+]

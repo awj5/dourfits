@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Cyborg",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Dead",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Diamond",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Gold",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Rainbow",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Regular",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Stickers",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Tattoos",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Transparent",
+        "trait": "Head",
+        "layer": "head"
+    }
+]

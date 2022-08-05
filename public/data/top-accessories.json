@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Bow Tie",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Chrome Necklace",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Coin Necklace",
+        "trait": "Accessories - Tops",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Colorful Necklace",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Crucifix Necklace",
+        "shortTitle": "Crucifix",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "DD Necklace",
+        "trait": "Accessories - Tops",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Dour Cross Bag",
+        "shortTitle": "Dour Cross",
+        "trait": "Accessories - Tops",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Gold Chain",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Gold Necklace",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Multi Cross Bag",
+        "shortTitle": "Multi Cross",
+        "trait": "Accessories - Tops",
+        "layer": "topAccessories"
+    }
+]

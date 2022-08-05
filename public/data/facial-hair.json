@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Black Beard",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Black Stubble",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Brown Beard",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Brown Stubble",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Forest Beard",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Mid Blue Beard",
+        "shortTitle": "Blue Beard",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Navy Mustache",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Patch",
+        "shortTitle": "Stripe Skirt",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Tan Mustache",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Thin Mustache",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    }
+]

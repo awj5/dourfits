@@ -1,0 +1,60 @@
+[
+    {
+        "title": "Blue Bangs",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Chain",
+        "trait": "Legs & Clothes",
+        "layer": "topAccessories"
+    },
+    {
+        "title": "Blue Colette Dots Bucket",
+        "shortTitle": "Dots Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Colette Dots Cap",
+        "shortTitle": "Dots Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Colette Dots Earring",
+        "shortTitle": "Dots Earring",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Blue Colette Dots Glasses",
+        "shortTitle": "Dots Glasses",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Blue Colette Eyelid",
+        "shortTitle": "Blue Eyelid",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Blue Colette Hair",
+        "shortTitle": "Blue Hair",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Colette Hoodie",
+        "shortTitle": "Logo Hoodie",
+        "trait": "Legs & Clothes",
+        "layer": "tops"
+    },
+    {
+        "title": "Blue Colette Logo Cap",
+        "shortTitle": "Logo Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    }
+]

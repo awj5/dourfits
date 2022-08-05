@@ -1,0 +1,255 @@
+[
+    {
+        "title": "80s",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Brown",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#4f2100"
+    },
+    {
+        "title": "Camo",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Charcoal",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#323232"
+    },
+    {
+        "title": "Checkerboard",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "City",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#4B4B4B"
+    },
+    {
+        "title": "Clouds",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Coffee",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#7F5223"
+    },
+    {
+        "title": "Concentric Circles",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Day Garden",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Diagonal Stripes",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Flames",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Forest",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#004D00"
+    },
+    {
+        "title": "Grid",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Leopard",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Lilac",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#B182B5"
+    },
+    {
+        "title": "Mauve",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#7E5284"
+    },
+    {
+        "title": "Mid Blue Dots",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Mid Blue Rays",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Mid Blue",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#055083"
+    },
+    {
+        "title": "Moss Rays",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Moss",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#4B7F1C"
+    },
+    {
+        "title": "Navy",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#002456"
+    },
+    {
+        "title": "New York Inside",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "New York Outside",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Night Garden",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Orange",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#E25201"
+    },
+    {
+        "title": "Peach Stripes",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Peach",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#D98184"
+    },
+    {
+        "title": "Pink Stripes",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Pink",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#A03A8A"
+    },
+    {
+        "title": "Purple",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#4F2154"
+    },
+    {
+        "title": "Red Carpet",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Red",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#A60707"
+    },
+    {
+        "title": "Sky Blue",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#4680B2"
+    },
+    {
+        "title": "Slate",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#66686A"
+    },
+    {
+        "title": "Smoke",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#CBCFD0"
+    },
+    {
+        "title": "Special Black",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#000000"
+    },
+    {
+        "title": "Special Charcoal",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#323232"
+    },
+    {
+        "title": "Special Yellow",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#E2B600"
+    },
+    {
+        "title": "Subway",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Tan",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#AE804E"
+    },
+    {
+        "title": "Taxi",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "White Dots",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Woodgrain",
+        "trait": "Background",
+        "layer": "background"
+    },
+    {
+        "title": "Yellow",
+        "trait": "Background",
+        "layer": "background",
+        "hex": "#E2B600"
+    }
+]
