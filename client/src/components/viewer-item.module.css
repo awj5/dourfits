@@ -21,7 +21,6 @@
   margin: 8px;
   margin-top: 16px;
   opacity: 0;
-  animation: fadeIn1 ease-in .25s forwards;
 }
 
 @media (hover: hover) {
@@ -35,6 +34,10 @@
     border-radius: 40px;
     border: solid 8px #000;
   }
+}
+
+.viewerItem.loaded {
+  animation: fadeIn1 ease-in .25s forwards;
 }
 
 .viewerItem.right {
