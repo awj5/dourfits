@@ -1,38 +1,32 @@
-import Express from 'express'
-import Cors from 'cors'
-import Path from 'path'
-const app = Express()
-const port = process.env.PORT || 3002
-const __dirname = Path.resolve()
+import Express from 'express';
+import Cors from 'cors';
+import Path from 'path';
+const app = Express();
+const port = process.env.PORT || 3002;
+const __dirname = Path.resolve();
 
 /* App */
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*')
-  next()
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
 })
 
-app.use(Express.static(__dirname + '/public')) // Static files
-app.use(Cors())
+app.use(Express.static(Path.join(__dirname, 'client/build'))); // React
+app.use(Cors());
 
 app.listen(port, () => {
-  console.log(`App running on port ${ port }.`)
-})
+  console.log(`App running on port ${ port }.`);
+});
 
 // Router
 
-app.use(Express.json())
-const router = new Express.Router()
-app.use('/', router)
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello from server!' });
+});
 
-router.get('/*', function (req, res, next) {
-  if (req.originalUrl.indexOf('/api/') !== -1) {
-    // Exclude API
-    next()
-  } else {
-    req.url = '/index.html'
-    app.handle(req, res, next)
-  }
-})
+app.get('*', (req, res) => {
+  res.sendFile(Path.join(__dirname + '/client/build/index.html'));
+});
 
-/* API endpoints */
+/* Endpoints */

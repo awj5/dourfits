@@ -1,0 +1,88 @@
+/* Fonts */
+
+@font-face {
+  font-family: "itc-avant-garde-gothic-lt-bold";
+  src: url("assets/fonts/itc-avant-garde-gothic-lt-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "avgb";
+  src: url("assets/fonts/avgb.woff2") format("woff2");
+}
+
+/* Vars */
+
+:root {
+  --df-orange: #F60;
+  --dd-yellow: #FC0;
+}
+
+/* Set-up */
+
+html {
+  background-color: var(--df-orange);
+}
+
+body {
+  font-family: "avgb", sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  line-height: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  overflow-anchor: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "itc-avant-garde-gothic-lt-bold", sans-serif;
+  margin: 0;
+  line-height: 1.25;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Form */
+
+select {
+  -webkit-appearance: none;
+  font-family: "itc-avant-garde-gothic-lt-bold", sans-serif;
+  font-size: 18px;
+  outline: none;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  background-color: #000;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 52px;
+  background-image: url('assets/img/icon-arrow.png');
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  background-position: top 12px right 16px;
+}
