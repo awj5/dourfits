@@ -1,21 +1,21 @@
 import { useState, useContext } from 'react';
-import { CategoryContext } from '../context/CategoryContext';
-import { DarcelContext, Darcel } from '../context/DarcelContext';
+import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
+import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelContext';
 import styles from './viewer-item.module.css';
 
 function ViewerItem(props: { index: number; title: string; subTitle: string; slug: string; layer: string; hex: string; }) {
-  const { category, setCategory } = useContext(CategoryContext);
-  const { darcel, setDarcel } = useContext(DarcelContext);
-  const [localCategory] = useState(category); // Set state locally to avoid re-rendering on category change
+  const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
+  const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
+  const [localCategory] = useState<string>(category); // Set state locally to avoid re-rendering on category change
 
   const itemClick = () => {
     if (localCategory === 'categories') {
       setCategory(props.slug); // Go to category in viewer
     } else {
       // Update Darcel avatar
-      const currentVal = darcel[props.layer as keyof Darcel];
-      const newVal = props.hex ? props.hex : localCategory + '/' + props.slug;
-      const clearedVal = props.layer === 'background' ? '#F60' : ''; // Background resets to default color
+      const currentVal: string = darcel[props.layer as keyof Darcel] ?? '';
+      const newVal: string = props.hex ? props.hex : localCategory + '/' + props.slug;
+      const clearedVal: string = props.layer === 'background' ? '#F60' : ''; // Background resets to default color
       setDarcel({ ...darcel, [props.layer]: currentVal === newVal ? clearedVal : newVal });
     }
   }

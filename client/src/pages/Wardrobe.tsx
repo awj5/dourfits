@@ -42,8 +42,8 @@ function ViewerMenu() {
   useEffect(() => {
     const getCategories = async () => {
       try {
-        const response = await fetch('data/categories.json');
-        const data = await response.json();
+        const response: Response = await fetch('data/categories.json');
+        const data: Category[] = await response.json();
         setCategories(data);
       } catch (error) {
         console.log(error);
@@ -71,14 +71,14 @@ function Viewer() {
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const [scrollInterval, setScrollInterval] = useState(0);
+  const [scrollInterval, setScrollInterval] = useState<number>(0);
   const viewer = useRef<HTMLDivElement>(null);
   const buttonUp = useRef<HTMLButtonElement>(null);
   const buttonDown = useRef<HTMLButtonElement>(null);
 
   const viewerScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const orientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-    const offset = orientation === 'landscape' ? e.currentTarget.scrollTop : e.currentTarget.scrollLeft;
+    const orientation: string = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+    const offset: number = orientation === 'landscape' ? e.currentTarget.scrollTop : e.currentTarget.scrollLeft;
 
     // Up
     if (offset > 0 && !scrollUp) {
@@ -135,8 +135,8 @@ function Viewer() {
   useEffect(() => {
     const getViewerItems = async () => {
       try {
-        const response = await fetch(`data/${ category }.json`);
-        const data = await response.json();
+        const response: Response = await fetch(`data/${ category }.json`);
+        const data: Category[] = await response.json();
         setDate(Date.now()); // Use date for item key
         setViewerItems(data);
 
