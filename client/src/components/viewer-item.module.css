@@ -11,7 +11,7 @@
 }
 
 .viewerItem {
-  width: calc(50% - 20px);
+  width: calc(33.3% - 24px);
   aspect-ratio: 4/4;
   background-color: #EEE;
   float: left;
@@ -20,6 +20,7 @@
   cursor: pointer;
   margin: 8px;
   margin-top: 16px;
+  margin-right: 16px;
   opacity: 0;
 }
 
@@ -38,10 +39,6 @@
 
 .viewerItem.loaded {
   animation: fadeIn1 ease-in .25s forwards;
-}
-
-.viewerItem.right {
-  float: right;
 }
 
 .viewerItem.selected:after {
@@ -108,11 +105,18 @@
   color: #cb171e !important;
 }
 
+@media only screen and (max-width: 1279px) {
+  .viewerItem {
+    width: calc(50% - 24px);
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .viewerItem {
     border-radius: 28px;
-    margin-top: 8px;
-    width: calc(50% - 16px);
+    margin-top: 12px;
+    margin-right: 12px;
+    width: calc(50% - 20px);
   }
 
   @media (hover: hover) {
@@ -150,5 +154,6 @@
     float: none !important;
     display: inline-block;
     margin-right: 12px;
+    margin-top: 8px;
   }
 }

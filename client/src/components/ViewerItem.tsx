@@ -22,7 +22,7 @@ function ViewerItem(props: { index: number; title: string; subTitle: string; slu
   }
 
   return (
-    <div onClick={ itemClick } className={ `${ styles.viewerItem } ${ imageLoaded ? styles.loaded : '' } ${ !props.subTitle ? styles.category : (props.layer === 'background' ? styles.background : '') } ${ (props.index + 1) % 2 === 0 ? styles.right : styles.left } ${ darcel[props.layer as keyof Darcel] === localCategory + '/' + props.slug || (props.layer === 'background' && darcel['background'] === props.hex) ? styles.selected : '' }` } style={{ animationDelay: `${ props.index * 0.1 }s` }}>
+    <div onClick={ itemClick } className={ `${ styles.viewerItem } ${ imageLoaded ? styles.loaded : '' } ${ !props.subTitle ? styles.category : (props.layer === 'background' ? styles.background : '') } ${ darcel[props.layer as keyof Darcel] === localCategory + '/' + props.slug || (props.layer === 'background' && darcel['background'] === props.hex) ? styles.selected : '' }` } style={{ animationDelay: `${ props.index * 0.1 }s` }}>
       <img src={ props.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ props.slug }.png` } style={{ backgroundColor: props.hex ? props.hex : "transparent" }} alt={ props.title } onLoad={() => setImageLoaded(true)} />
 
       <hgroup>

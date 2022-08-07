@@ -25,7 +25,7 @@
 #wardrobeViewer {
   height: 100%;
   margin-left: 24px;
-  width: 360px;
+  width: 552px;
   position: relative;
   min-width: 200px;
 }
@@ -36,8 +36,8 @@ button#viewerHome {
 
 select#viewerMenu {
   float: right;
-  margin-right: 8px;
-  width: calc(100% - 76px);
+  margin-right: 16px;
+  width: calc(100% - 84px);
 }
 
 #viewer {
@@ -74,6 +74,12 @@ button#viewerDown {
   margin-top: -36px;
 }
 
+@media only screen and (max-width: 1279px) {
+  #wardrobeViewer {
+    width: 368px;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   #wardrobeViewer {
     margin-left: 8px;
@@ -81,7 +87,8 @@ button#viewerDown {
   }
 
   select#viewerMenu {
-    width: calc(100% - 72px);
+    width: calc(100% - 76px);
+    margin-right: 12px;
   }
 }
 
