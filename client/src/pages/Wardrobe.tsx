@@ -145,14 +145,16 @@ function Viewer() {
   useEffect(() => {
     const getViewerItems = async () => {
       try {
+        // Reset viewer
+        setViewerItems([]); // Clear
+        viewer.current!.scrollTop = 0;
+        viewer.current!.scrollLeft = 0;
+
+        // Fetch
         const response: Response = await fetch(`data/${ category }.json`);
         const data: Category[] = await response.json();
         setDate(Date.now()); // Use date for item key
         setViewerItems(data);
-
-        // Reset viewer
-        viewer.current!.scrollTop = 0;
-        viewer.current!.scrollLeft = 0;
       } catch (error) {
         console.log(error);
       }
@@ -164,7 +166,7 @@ function Viewer() {
   return (
   <>
     <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } index={ i } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
+      { viewerItems.map((item, i) => <ViewerItem key={ i + date } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
     </div>
 
     <button ref={ buttonUp } onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollUp ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
