@@ -4,24 +4,30 @@ export interface Darcel {
   background: string;
   head: string;
   eye: string;
-  hairAndHats?: string;
+  hairAndHats: string;
   shoes: string;
-  bottoms?: string;
+  bottoms: string;
   tops: string;
-  topAccessories?: string;
-  facialHair?: string;
+  topAccessories: string;
+  facialHair: string;
   mouth: string;
-  headAccessories?: string;
-  glasses?: string;
+  headAccessories: string;
+  glasses: string;
 }
 
 export const DefaultDarcel: Darcel = {
   background: "#F60",
   head: "head/regular",
   eye: "eye/regular",
+  hairAndHats: "",
   shoes: "shoes/regular",
+  bottoms: "",
   tops: "tops/crossed",
-  mouth: "mouth/sad"
+  topAccessories: "",
+  facialHair: "",
+  mouth: "mouth/sad",
+  headAccessories: "",
+  glasses: ""
 }
 
 export type DarcelContextType = {

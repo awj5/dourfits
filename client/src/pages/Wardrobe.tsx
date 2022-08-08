@@ -8,11 +8,16 @@ import './wardrobe.css';
 /* Stage */
 
 function WardrobeStage() {
-  const { darcel } = useContext<DarcelContextType>(DarcelContext);
+  const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
+
+  const resetClick = () => {
+    setDarcel(DefaultDarcel);
+  }
 
   return (
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
+      <button onClick={ resetClick } className="iconButton"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
     </div>
   );
 }
@@ -55,7 +60,7 @@ function ViewerMenu() {
 
   return (
     <>
-      <button onClick={ homeClick } className="iconButton" id="viewerHome" title="Home"><img src="assets/img/icon-home.png" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.png" alt="Home" style={{ paddingBottom: "4px" }} /></button>
 
       <select id="viewerMenu" onChange={ menuChange } value={ category }>
         <option value="categories">Categories</option>
@@ -157,8 +162,8 @@ function Viewer() {
       { viewerItems.map((item, i) => <ViewerItem key={ i + date } index={ i } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
     </div>
 
-    <button ref={ buttonUp } onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollUp ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerUp" title="Up"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
-    <button ref={ buttonDown } onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollDown ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerDown" title="Down"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
+    <button ref={ buttonUp } onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollUp ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
+    <button ref={ buttonDown } onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollDown ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
   </>
   );
 }
@@ -179,11 +184,11 @@ function WardrobeViewer() {
 /* Wardrobe */
 
 function Wardrobe() {
-  const [darcel, setDarcel] = useState<Darcel>(localStorage.dfDarcel ? JSON.parse(localStorage.dfDarcel) : DefaultDarcel);
+  const [darcel, setDarcel] = useState<Darcel>(localStorage.dfAvatar ? JSON.parse(localStorage.dfAvatar) : DefaultDarcel);
 
   useEffect(() => {
     //localStorage.clear(); // Use for testing
-    localStorage.dfDarcel = JSON.stringify(darcel); // Update local storage
+    localStorage.dfAvatar = JSON.stringify(darcel); // Update local storage
 
     // Change body bg color to match avatar
     if (darcel.background.indexOf('#') !== -1) {

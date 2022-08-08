@@ -11,6 +11,22 @@
 #wardrobeStage {
   height: 100%;
   aspect-ratio: 4/4;
+  position: relative;
+}
+
+#wardrobeStage button.iconButton {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  opacity: 0.8;
+}
+
+#wardrobeStage button.iconButton img {
+  height: 28px;
+  padding-left: 2px;
 }
 
 @media screen and (orientation: portrait) {
@@ -57,7 +73,7 @@ button.viewerUpDown {
   position: absolute;
   left: 50%;
   margin-left: -24px;
-  cursor: pointer;
+  cursor: var(--cursor), auto;
   display: none;
 }
 

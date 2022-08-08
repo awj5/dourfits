@@ -14,7 +14,7 @@ function ViewerItem(props: { index: number; title: string; subTitle: string; slu
       setCategory(props.slug); // Go to category in viewer
     } else {
       // Update Darcel avatar
-      const currentVal: string = darcel[props.layer as keyof Darcel] ?? '';
+      const currentVal: string = darcel[props.layer as keyof Darcel];
       const newVal: string = props.hex ? props.hex : localCategory + '/' + props.slug;
       const clearedVal: string = props.layer === 'background' ? '#F60' : ''; // Background resets to default color
       setDarcel({ ...darcel, [props.layer]: currentVal === newVal ? clearedVal : newVal });

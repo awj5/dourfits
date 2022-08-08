@@ -17,7 +17,7 @@
   float: left;
   border-radius: 32px;
   position: relative;
-  cursor: pointer;
+  cursor: var(--cursor), auto;
   margin: 8px;
   margin-top: 16px;
   margin-right: 16px;

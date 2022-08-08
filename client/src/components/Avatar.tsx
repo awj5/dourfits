@@ -9,7 +9,7 @@ const AvatarLayer = React.memo((props: { trait: string; layer: string;}) => {
 function Avatar(darcel: Darcel) {
   return (
     <div className={ styles.avatar }>
-      { Object.keys(darcel).map((val, i) => <AvatarLayer key={ i } trait={ darcel[val as keyof Darcel] ?? '' } layer={ val.charAt(0).toUpperCase() + val.slice(1) } />) }
+      { Object.keys(darcel).map((val, i) => <AvatarLayer key={ i } trait={ darcel[val as keyof Darcel] } layer={ val.charAt(0).toUpperCase() + val.slice(1) } />) }
     </div>
   );
 }

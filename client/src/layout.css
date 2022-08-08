@@ -45,7 +45,7 @@ button.iconButton {
 
 @media (hover: hover) {
   button.iconButton:hover {
-    background-color: var(--dd-yellow);
+    background-color: var(--dd-yellow) !important;
   }
 }
 
