@@ -81,10 +81,10 @@ select {
   background-color: #000;
   color: #FFF;
   padding-left: 20px;
-  padding-right: 52px;
+  padding-right: 48px;
   background-image: url('assets/img/icon-arrow.png');
   background-repeat: no-repeat;
-  background-size: 28px 28px;
+  background-size: 24px 24px;
   background-position: top 12px right 16px;
   cursor: var(--cursor), auto;
 }

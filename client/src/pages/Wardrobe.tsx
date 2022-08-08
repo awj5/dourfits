@@ -17,6 +17,11 @@ function WardrobeStage() {
   return (
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
+
+      <select id="submitMenu">
+        <option value="">Submit</option>
+      </select>
+
       <button onClick={ resetClick } className="iconButton"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
     </div>
   );
