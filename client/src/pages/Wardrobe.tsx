@@ -11,15 +11,17 @@ function WardrobeStage() {
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
 
   const resetClick = () => {
-    setDarcel(DefaultDarcel);
+    if (window.confirm('Are you sure you want to reset your Darcel?')) {
+      setDarcel(DefaultDarcel);
+    }
   }
 
   return (
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
 
-      <select id="submitMenu">
-        <option value="">Submit</option>
+      <select>
+        <option value="">Send</option>
       </select>
 
       <button onClick={ resetClick } className="iconButton"><img src="assets/img/icon-reset.png" alt="Reset" /></button>

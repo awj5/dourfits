@@ -6,7 +6,7 @@ import './layout.css';
 
 function HeaderDashboard() {
   const connectClick = () => {
-    alert("WIP!");
+
   }
 
   return (

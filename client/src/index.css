@@ -66,6 +66,7 @@ button {
   background: none;
   cursor: var(--cursor), auto;
   padding: 0;
+  outline: none;
 }
 
 /* Form */
@@ -82,7 +83,7 @@ select {
   color: #FFF;
   padding-left: 20px;
   padding-right: 48px;
-  background-image: url('assets/img/icon-arrow.png');
+  background-image: url('assets/img/icon-arrow-down.png');
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: top 12px right 16px;
