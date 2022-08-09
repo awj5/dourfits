@@ -21,7 +21,6 @@
   margin: 8px;
   margin-top: 16px;
   margin-right: 16px;
-  opacity: 0;
 }
 
 @media (hover: hover) {
@@ -35,10 +34,6 @@
     border-radius: 40px;
     border: solid 8px #000;
   }
-}
-
-.viewerItem.loaded {
-  animation: fadeIn1 ease-in .25s forwards;
 }
 
 .viewerItem.selected:after {
@@ -58,6 +53,11 @@
   margin: auto;
   left: 0;
   right: 0;
+  opacity: 0;
+}
+
+.viewerItem.loaded img {
+  animation: fadeIn1 ease-in .25s forwards;
 }
 
 .viewerItem.category img {

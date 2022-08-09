@@ -55,6 +55,7 @@ button.iconButton:active {
 }
 
 button.iconButton img {
+  width: 28px;
   height: 28px;
 }
 

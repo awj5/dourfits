@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useContext } from 'react';
+import { isMobile } from 'react-device-detect';
 import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
 import { DarcelContext, DarcelContextType, DefaultDarcel, Darcel } from '../context/DarcelContext';
@@ -21,7 +22,7 @@ function WardrobeStage() {
       <Avatar { ...darcel } />
 
       <select>
-        <option value="">Send</option>
+        <option value="">Submit</option>
       </select>
 
       <button onClick={ resetClick } className="iconButton"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
@@ -85,26 +86,22 @@ function Viewer() {
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
   const viewer = useRef<HTMLDivElement>(null);
-  const buttonUp = useRef<HTMLButtonElement>(null);
-  const buttonDown = useRef<HTMLButtonElement>(null);
 
-  const viewerScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const target = e.currentTarget;
-    const orientation: string = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-    const offset: number = orientation === 'landscape' ? target.scrollTop : target.scrollLeft;
+  const viewerScroll = () => {
+    const itemViewer = viewer.current!;
 
     // Up
-    if (offset > 0 && !scrollUp) {
+    if (!isMobile && itemViewer.scrollTop > 0 && !scrollUp) {
       setScrollUp(true);
-    } else if (offset === 0 && scrollUp) {
+    } else if (itemViewer.scrollTop === 0 && scrollUp) {
       setScrollUp(false);
       cancelScroll();
     }
 
     // Down
-    if (((orientation === 'landscape' && offset + target.offsetHeight !== target.scrollHeight) || (orientation === 'portrait' && offset + target.offsetWidth !== target.scrollWidth)) && !scrollDown) {
+    if (!isMobile && itemViewer.scrollTop + itemViewer.offsetHeight !== itemViewer.scrollHeight && !scrollDown) {
       setScrollDown(true);
-    } else if (((orientation === 'landscape' && offset + target.offsetHeight === target.scrollHeight) || (orientation === 'portrait' && offset + target.offsetWidth === target.scrollWidth)) && scrollDown) {
+    } else if (Math.ceil(itemViewer.scrollTop + itemViewer.offsetHeight) >= itemViewer.scrollHeight && scrollDown) {
       setScrollDown(false);
       cancelScroll();
     }
@@ -134,29 +131,14 @@ function Viewer() {
   }
 
   useEffect(() => {
-    // Hack to allow e.preventDefault()
-    buttonUp.current!.addEventListener('touchstart', () => {
-        scrollMouseDown('up');
-    }, { passive: false });
-
-    buttonDown.current!.addEventListener('touchstart', () => {
-        scrollMouseDown('down');
-    }, { passive: false });
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
     const getViewerItems = async () => {
       try {
-        // Reset viewer
         setViewerItems([]); // Clear
-
-        // Fetch
+        setScrollDown(false); // Hide
         const response: Response = await fetch(`data/${ category }.json`);
         const data: Category[] = await response.json();
         setDate(Date.now()); // Use date for item key
         setViewerItems(data);
-        setScrollDown(true);
       } catch (error) {
         console.log(error);
       }
@@ -168,11 +150,11 @@ function Viewer() {
   return (
   <>
     <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
+      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
     </div>
 
-    <button ref={ buttonUp } onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollUp ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
-    <button ref={ buttonDown } onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ display: scrollDown ? "inline" : "" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
+    <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
+    <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
   </>
   );
 }
