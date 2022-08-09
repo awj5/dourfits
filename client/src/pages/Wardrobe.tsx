@@ -89,8 +89,9 @@ function Viewer() {
   const buttonDown = useRef<HTMLButtonElement>(null);
 
   const viewerScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const target = e.currentTarget;
     const orientation: string = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-    const offset: number = orientation === 'landscape' ? e.currentTarget.scrollTop : e.currentTarget.scrollLeft;
+    const offset: number = orientation === 'landscape' ? target.scrollTop : target.scrollLeft;
 
     // Up
     if (offset > 0 && !scrollUp) {
@@ -101,9 +102,9 @@ function Viewer() {
     }
 
     // Down
-    if (((orientation === 'landscape' && offset + e.currentTarget.offsetHeight !== e.currentTarget.scrollHeight) || (orientation === 'portrait' && offset + e.currentTarget.offsetWidth !== e.currentTarget.scrollWidth)) && !scrollDown) {
+    if (((orientation === 'landscape' && offset + target.offsetHeight !== target.scrollHeight) || (orientation === 'portrait' && offset + target.offsetWidth !== target.scrollWidth)) && !scrollDown) {
       setScrollDown(true);
-    } else if (((orientation === 'landscape' && offset + e.currentTarget.offsetHeight === e.currentTarget.scrollHeight) || (orientation === 'portrait' && offset + e.currentTarget.offsetWidth === e.currentTarget.scrollWidth)) && scrollDown) {
+    } else if (((orientation === 'landscape' && offset + target.offsetHeight === target.scrollHeight) || (orientation === 'portrait' && offset + target.offsetWidth === target.scrollWidth)) && scrollDown) {
       setScrollDown(false);
       cancelScroll();
     }
@@ -149,14 +150,13 @@ function Viewer() {
       try {
         // Reset viewer
         setViewerItems([]); // Clear
-        viewer.current!.scrollTop = 0;
-        viewer.current!.scrollLeft = 0;
 
         // Fetch
         const response: Response = await fetch(`data/${ category }.json`);
         const data: Category[] = await response.json();
         setDate(Date.now()); // Use date for item key
         setViewerItems(data);
+        setScrollDown(true);
       } catch (error) {
         console.log(error);
       }
