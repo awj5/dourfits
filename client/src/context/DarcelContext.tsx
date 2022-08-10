@@ -22,7 +22,7 @@ export const DefaultDarcel: Darcel = {
   hairAndHats: "",
   shoes: "shoes/regular",
   bottoms: "",
-  tops: "tops/crossed",
+  tops: "tops/nude-shrug",
   topAccessories: "",
   facialHair: "",
   mouth: "mouth/sad",
