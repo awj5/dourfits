@@ -38,6 +38,7 @@ export interface Category {
   trait?: string;
   layer?: string;
   hex?: string;
+  xp?: number;
 }
 
 function ViewerMenu() {
@@ -150,7 +151,7 @@ function Viewer() {
   return (
   <>
     <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.trait ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
+      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
     </div>
 
     <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>

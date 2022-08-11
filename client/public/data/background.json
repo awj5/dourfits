@@ -5,6 +5,24 @@
         "layer": "background"
     },
     {
+        "title": "Apricot",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#FFA466"
+    },
+    {
+        "title": "Auburn",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#E16666"
+    },
+    {
+        "title": "Baby Blue",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#A4C3E1"
+    },
+    {
         "title": "Brown",
         "trait": "Background",
         "layer": "background",
@@ -68,6 +86,12 @@
         "trait": "Background",
         "layer": "background",
         "hex": "#004D00"
+    },
+    {
+        "title": "Grass Green",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#66A466"
     },
     {
         "title": "Grid",
@@ -201,6 +225,12 @@
         "trait": "Background",
         "layer": "background",
         "hex": "#CBCFD0"
+    },
+    {
+        "title": "Soft Yellow",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#FFE165"
     },
     {
         "title": "Special Black",

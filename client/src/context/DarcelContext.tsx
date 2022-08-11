@@ -16,11 +16,11 @@ export interface Darcel {
 }
 
 export const DefaultDarcel: Darcel = {
-  background: "#F60",
+  background: "#999",
   head: "head/regular",
   eye: "eye/regular",
   hairAndHats: "",
-  shoes: "shoes/regular",
+  shoes: "shoes/nude-undies",
   bottoms: "",
   tops: "tops/nude-shrug",
   topAccessories: "",
