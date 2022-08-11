@@ -22,7 +22,7 @@ button.bigButton {
 
 @media (hover: hover) {
   button.bigButton:hover {
-    background-color: var(--dd-yellow);
+    background-color: var(--dd-yellow) !important;
   }
 }
 

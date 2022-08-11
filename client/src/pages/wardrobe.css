@@ -107,6 +107,7 @@ button.viewerUpDown {
   cursor: var(--cursor), auto;
   visibility: hidden;
   pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 button.viewerUpDown img {

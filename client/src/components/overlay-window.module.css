@@ -1,0 +1,88 @@
+/* Overlay */
+
+@keyframes fadeIn1 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#overlayBg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#overlayWrapper {
+	position: relative;
+	margin: auto;
+	padding: 8px;
+	width: 100%;
+	max-width: 480px;
+}
+
+#overlayWindow {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 32px;
+	padding: 8px;
+	animation: fadeIn1 ease-in .25s forwards;
+	position: relative;
+}
+
+#overlayWindow::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+button#overlayClose {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+
+button#overlayClose img {
+	width: 16px;
+	height: 16px;
+}
+
+#overlayWindow h2 {
+	color: #000;
+	font-size: 36px;
+	padding: 16px;
+	padding-top: 48px;
+	text-align: center;
+}
+
+#overlayConnect button {
+	margin: 8px;
+	width: calc(50% - 16px);
+	background-color: #000;
+	color: #FFF;
+	float: left;
+}
+
+#overlayConnect button img {
+	height: 28px;
+	margin-right: 8px;
+}
+
+@media only screen and (max-width: 1023px) {
+	#overlayConnect button {
+		width: calc(100% - 16px);
+	}
+}

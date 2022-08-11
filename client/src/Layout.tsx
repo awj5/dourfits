@@ -1,12 +1,16 @@
 import { Outlet } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import OverlayWindow from './components/OverlayWindow';
+import { OverlayContext, OverlayContextType, Overlay, DefaultOverlay } from './context/OverlayContext';
 import './layout.css';
 
 /* Header */
 
 function HeaderDashboard() {
-  const connectClick = () => {
+  const { overlay, setOverlay } = useContext<OverlayContextType>(OverlayContext);
 
+  const connectClick = () => {
+    setOverlay({ visible: true, title: 'Connect a Wallet', message: 'connect' });
   }
 
   return (
@@ -45,6 +49,7 @@ function Header() {
 
 function Layout() {
   const [domReady, setDOMReady] = useState<boolean>(false);
+  const [overlay, setOverlay] = useState<Overlay>(DefaultOverlay);
 
   useEffect(() => {
     // Hack to avoid FOUC
@@ -54,10 +59,13 @@ function Layout() {
   }, []);
 
   return (
-    <div style={{ visibility: domReady ? "visible" : "hidden" }}>
-      <Outlet />
-      <Header />
-    </div>
+    <OverlayContext.Provider value={{ overlay, setOverlay }}>
+      <div style={{ visibility: domReady ? "visible" : "hidden" }}>
+        <Outlet />
+        <Header />
+        <OverlayWindow />
+      </div>
+    </OverlayContext.Provider>
   );
 }
 
