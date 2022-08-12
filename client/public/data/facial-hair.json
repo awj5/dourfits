@@ -50,5 +50,10 @@
         "title": "Thin Mustache",
         "trait": "Facial Hair",
         "layer": "facialHair"
+    },
+    {
+        "title": "Yellow Mustache",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
     }
 ]

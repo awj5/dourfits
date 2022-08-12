@@ -39,6 +39,7 @@ export interface Category {
   layer?: string;
   hex?: string;
   xp?: number;
+  format?: string;
 }
 
 function ViewerMenu() {
@@ -151,7 +152,7 @@ function Viewer() {
   return (
   <>
     <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } />) }
+      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } format={ item.format ? item.format : '.svg' } />) }
     </div>
 
     <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
@@ -176,11 +177,11 @@ function WardrobeViewer() {
 /* Wardrobe */
 
 function Wardrobe() {
-  const [darcel, setDarcel] = useState<Darcel>(localStorage.dfAvatar ? JSON.parse(localStorage.dfAvatar) : DefaultDarcel);
+  const [darcel, setDarcel] = useState<Darcel>(localStorage.dAvatar ? JSON.parse(localStorage.dAvatar) : DefaultDarcel);
 
   useEffect(() => {
     //localStorage.clear(); // Use for testing
-    localStorage.dfAvatar = JSON.stringify(darcel); // Update local storage
+    localStorage.dAvatar = JSON.stringify(darcel); // Update local storage
 
     // Change body bg color to match avatar
     if (darcel.background.indexOf('#') !== -1) {

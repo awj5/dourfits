@@ -37,7 +37,8 @@
     {
         "title": "Glowing",
         "trait": "Eye",
-        "layer": "eye"
+        "layer": "eye",
+        "format": ".svg.png"
     },
     {
         "title": "Heart",
@@ -63,7 +64,8 @@
     {
         "title": "Moss Glowing",
         "trait": "Eye",
-        "layer": "eye"
+        "layer": "eye",
+        "format": ".svg.png"
     },
     {
         "title": "Pink Eyelid",

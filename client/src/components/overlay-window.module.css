@@ -63,8 +63,9 @@ button#overlayClose img {
 #overlayWindow h2 {
 	color: #000;
 	font-size: 36px;
-	padding: 16px;
-	padding-top: 48px;
+	padding: 48px;
+	padding-top: 32px;
+	padding-bottom: 24px;
 	text-align: center;
 }
 
