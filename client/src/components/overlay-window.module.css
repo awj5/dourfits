@@ -30,21 +30,15 @@
 	margin: auto;
 	padding: 8px;
 	width: 100%;
-	max-width: 560px;
+	max-width: 360px;
 }
 
 #overlayWindow {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 32px;
-	padding: 8px;
+	padding: 16px;
 	animation: fadeIn1 ease-in .25s forwards;
 	position: relative;
-}
-
-#overlayWindow::after {
-	content: "";
-	clear: both;
-	display: table;
 }
 
 button#overlayClose {
@@ -63,34 +57,21 @@ button#overlayClose img {
 #overlayWindow h2 {
 	color: #000;
 	font-size: 36px;
-	padding: 48px;
+	padding: 40px;
 	padding-top: 32px;
 	padding-bottom: 16px;
 	text-align: center;
-}
-
-#overlayWindow p {
-	color: #000;
-	text-align: center;
-	font-size: 16px;
-	padding: 8px;
+	line-height: 1;
 }
 
 #overlayConnect button {
-	margin: 8px;
-	width: calc(50% - 16px);
+	width: 100%;
 	background-color: #000;
 	color: #FFF;
-	float: left;
+	margin-top: 16px;
 }
 
 #overlayConnect button img {
 	height: 28px;
 	margin-right: 8px;
-}
-
-@media only screen and (max-width: 1023px) {
-	#overlayConnect button {
-		width: calc(100% - 16px);
-	}
 }

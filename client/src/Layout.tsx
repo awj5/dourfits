@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
+import { useAccount } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
 import { OverlayContext, OverlayContextType, Overlay } from './context/OverlayContext';
 import './layout.css';
@@ -8,6 +9,7 @@ import './layout.css';
 
 function HeaderDashboard() {
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const { address, isConnected } = useAccount();
 
   const connectClick = () => {
     setOverlay({ visible: true, title: 'Connect a Wallet', message: 'connect' });
@@ -23,7 +25,7 @@ function HeaderDashboard() {
         </p>
       </div>
 
-      <button onClick={ connectClick } className="bigButton">Connect</button>
+      <button onClick={ connectClick } className="bigButton" style={{ pointerEvents: isConnected ? "none" : "auto" }}>{ isConnected ? `${ address!.substring(0, 3) }...${ address!.substring(address!.length - 4) }` : 'Connect' }</button>
     </div>
   );
 }

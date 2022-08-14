@@ -6,7 +6,6 @@ import { publicProvider } from 'wagmi/providers/public';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet';
-import { InjectedConnector } from 'wagmi/connectors/injected';
 import Layout from './Layout';
 import Home from './pages/Home';
 import Wardrobe from './pages/Wardrobe';
@@ -33,13 +32,6 @@ const client = createClient({
       chains,
       options: {
         appName: 'wagmi',
-      },
-    }),
-    new InjectedConnector({
-      chains,
-      options: {
-        name: 'Injected',
-        shimDisconnect: true,
       },
     })
   ],

@@ -18,7 +18,7 @@ function OverlayConnect() {
 
   return (
     <div id={ styles.overlayConnect }>
-      { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }>{ connector.name !== 'Injected' && <img src= { `assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } /> }{ connector.name }</button>)) }
+      { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }><img src= { `assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } />{ connector.name }</button>)) }
     </div>
   );
 }
