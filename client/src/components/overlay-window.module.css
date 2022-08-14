@@ -30,7 +30,7 @@
 	margin: auto;
 	padding: 8px;
 	width: 100%;
-	max-width: 480px;
+	max-width: 560px;
 }
 
 #overlayWindow {
@@ -65,8 +65,15 @@ button#overlayClose img {
 	font-size: 36px;
 	padding: 48px;
 	padding-top: 32px;
-	padding-bottom: 24px;
+	padding-bottom: 16px;
 	text-align: center;
+}
+
+#overlayWindow p {
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+	padding: 8px;
 }
 
 #overlayConnect button {

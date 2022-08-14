@@ -1,27 +1,33 @@
 import { useContext, useEffect } from 'react';
-import { OverlayContext, OverlayContextType, Overlay } from '../context/OverlayContext';
+import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
+import { useConnect, useAccount } from 'wagmi';
 import styles from './overlay-window.module.css';
 
-function OverlayMessage(props: {overlay: Overlay}) {
-  if (props.overlay.message === 'connect') {
-    return (
-      <div id={ styles.overlayConnect }>
-        <button className="bigButton"><img src="assets/img/metamask.png" alt="MetaMask" />MetaMask</button>
-        <button className="bigButton"><img src="assets/img/walletconnect.png" alt="MetaMask" />WalletConnect</button>
-        <button className="bigButton"><img src="assets/img/coinbase.png" alt="MetaMask" />Coinbase</button>
-        <button className="bigButton">Injected</button>
-      </div>
-    );
-  } else {
-    return <></>;
-  }
+function OverlayConnect() {
+  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const { connect, connectors } = useConnect();
+  const { isConnected } = useAccount();
+
+  useEffect(() => {
+    if (isConnected) {
+      setOverlay({ visible: false }); // Hide overlay once connected
+    }
+
+    // eslint-disable-next-line
+  }, [isConnected]);
+
+  return (
+    <div id={ styles.overlayConnect }>
+      { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }>{ connector.name !== 'Injected' && <img src= { `assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } /> }{ connector.name }</button>)) }
+    </div>
+  );
 }
 
 function OverlayWindow() {
   const { overlay, setOverlay } = useContext<OverlayContextType>(OverlayContext);
 
   const closeClick = () => {
-    setOverlay({ visible: false, title: '', message: '' });
+    setOverlay({ visible: false });
   }
 
   const keyHandler = (e: KeyboardEvent) => {
@@ -32,7 +38,7 @@ function OverlayWindow() {
 
   useEffect(() => {
     window.addEventListener('keydown', keyHandler, false);
-    return () => window.removeEventListener('keydown', keyHandler, false);
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -43,7 +49,7 @@ function OverlayWindow() {
         <div id={ styles.overlayWindow }>
           <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
-          <OverlayMessage overlay={ overlay } />
+          { overlay.message === 'connect' && <OverlayConnect /> }
         </div>
       </div>
     </div>

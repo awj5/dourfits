@@ -16,7 +16,7 @@ function ViewerItem(props: { viewerScroll: Function; title: string; subTitle: st
       // Update Darcel avatar
       const currentVal: string = darcel[props.layer as keyof Darcel];
       const newVal: string = props.hex ? props.hex : `${ localCategory }/${ props.slug }${ props.format }`;
-      const clearedVal: string = props.layer === 'background' ? '#F60' : ''; // Background resets to default color
+      const clearedVal: string = props.layer === 'background' ? '#999' : ''; // Background resets to default color
       setDarcel({ ...darcel, [props.layer]: currentVal === newVal ? clearedVal : newVal });
     }
   }
@@ -27,7 +27,7 @@ function ViewerItem(props: { viewerScroll: Function; title: string; subTitle: st
   }
 
   return (
-    <div onClick={ itemClick } className={ `${ styles.viewerItem } ${ imageLoaded ? styles.loaded : '' } ${ !props.subTitle ? styles.category : (props.layer === 'background' ? styles.background : '') } ${ darcel[props.layer as keyof Darcel] === `${ localCategory }/${ props.slug }${ props.format }` || (props.layer === 'background' && darcel['background'] === props.hex) ? styles.selected : '' }` }>
+    <div onClick={ itemClick } className={ `${ styles.viewerItem } ${ imageLoaded && styles.loaded } ${ !props.subTitle ? styles.category : props.layer === 'background' && styles.background } ${ (darcel[props.layer as keyof Darcel] === `${ localCategory }/${ props.slug }${ props.format }` || (props.layer === 'background' && darcel['background'] === props.hex)) && styles.selected }` }>
       <img src={ props.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ props.slug }.png` } style={{ backgroundColor: props.hex ? props.hex : "transparent" }} alt={ props.title } onLoad={ loaded } />
 
       <hgroup>
