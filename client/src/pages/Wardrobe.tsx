@@ -1,10 +1,19 @@
 import { useState, useEffect, useRef, useContext } from 'react';
 import { isMobile } from 'react-device-detect';
+import { Network, Alchemy } from 'alchemy-sdk';
+import { useAccount } from 'wagmi';
 import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
 import { DarcelContext, DarcelContextType, DefaultDarcel, Darcel } from '../context/DarcelContext';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
 import './wardrobe.css';
+
+const settings = {
+  apiKey: process.env.REACT_APP_ALCHEMY_ID,
+  network: Network.ETH_MAINNET
+}
+
+const alchemy = new Alchemy(settings);
 
 /* Stage */
 
@@ -82,11 +91,13 @@ function ViewerMenu() {
 
 function Viewer() {
   const { category } = useContext<CategoryContextType>(CategoryContext);
+  const { address, isConnected } = useAccount();
   const [date, setDate] = useState<number>(Date.now());
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
+  //const [traits, setTraits] = useState<String[]>([]);
   const viewer = useRef<HTMLDivElement>(null);
 
   const viewerScroll = () => {
@@ -131,6 +142,17 @@ function Viewer() {
     clearInterval(scrollInterval);
     setScrollInterval(0);
   }
+
+  useEffect(() => {
+    const getTraits = async () => {
+      const blah = await alchemy.nft.getNftsForOwner(address ?? '', { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'] }); // DD, colette and DF
+      console.log(blah.ownedNfts[7].rawMetadata!.attributes![0]);
+    }
+
+    if (category === 'categories' && isConnected) {
+      getTraits();
+    }
+  }, [category, address, isConnected]);
 
   useEffect(() => {
     const getViewerItems = async () => {

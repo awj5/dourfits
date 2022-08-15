@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useCallback } from 'react';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import { useConnect, useAccount } from 'wagmi';
 import styles from './overlay-window.module.css';
@@ -12,9 +12,7 @@ function OverlayConnect() {
     if (isConnected) {
       setOverlay({ visible: false }); // Hide overlay once connected
     }
-
-    // eslint-disable-next-line
-  }, [isConnected]);
+  }, [isConnected, setOverlay]);
 
   return (
     <div id={ styles.overlayConnect }>
@@ -26,20 +24,19 @@ function OverlayConnect() {
 function OverlayWindow() {
   const { overlay, setOverlay } = useContext<OverlayContextType>(OverlayContext);
 
-  const closeClick = () => {
+  const closeClick = useCallback(() => {
     setOverlay({ visible: false });
-  }
-
-  const keyHandler = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      closeClick();
-    }
-  };
+  }, [setOverlay]);
 
   useEffect(() => {
+    const keyHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeClick();
+      }
+    };
+
     window.addEventListener('keydown', keyHandler, false);
-    // eslint-disable-next-line
-  }, []);
+  }, [closeClick]);
 
   return (
     <div id={ styles.overlay } style={{ display: overlay.visible ? "flex" : "" }}>

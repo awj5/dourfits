@@ -49,5 +49,626 @@
         "title": "Black Fuzz",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Long",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Short Back and Sides",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Stevie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Wide Brim",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blow Out",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blunt",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Braid",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Bangs",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Bun",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Shag",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Shaved",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Short Back and Sides",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Camo Camp",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Camo Cowboy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Cat Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Check Newsie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Checkerboard Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Chloe",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Choppy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Cloud Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Coffee Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Cornrows",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Cowboy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Crown",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Dour Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Edges",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Egg Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Emo",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Flat Top",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Floral Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Bangs",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Fuzz",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Pom Pom",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Fuzz",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Furry",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Gimp",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Gray Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Gray Quiff",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Leather Daddy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "leopard Camp",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Liberty",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Mane",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Messy Bun",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Messy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Metal Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Mid Blue Hoodie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Multi Pom Pom",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Backwards Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy DD Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Lion",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Newsie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Waves",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Neat",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "NYFC Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Orange Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Orange Horns",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Orange Peace Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Paisley Bandana",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Patch Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Peach Ozzy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pig Tail",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pigtails",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pink Camo Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pink Cowboy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pink Curls",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pointy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Polka Dot Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Polo",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pompadour",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pope",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Professor",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pup Rave",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Purple Emo",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Purple Lion",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Purple Long",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Rainbow",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Backwards Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Bob",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Devil Gimp",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Dots Bandana",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Hoodie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Karl",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Part",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Redhead",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Rock Dog",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Round",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sailor",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sensible",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Severe",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Shearling Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Short Curls",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Short Slicked",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Skull Rave",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sky Blue Bandana",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sky Blue Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Slicked Back",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Space Buns",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Pom Pom",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Rave",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Sweatband",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sweatband",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Tan Barb",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Toothpaste",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Top Knot",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Turban",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wen Bucket",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Backwards Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Cowboy",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Darcel Cap",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Long",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wild",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wisps",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Beanie",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Braids",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Horns",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Shaved",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Short Back and Sides",
+        "shortTitle": "Yellow Short",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Waves",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
     }
 ]
