@@ -90,12 +90,21 @@ select {
   cursor: var(--cursor), auto;
 }
 
-/* WAGMI */
+/* WalletConnect style fixes */
 
 #walletconnect-wrapper {
   line-height: normal;
 }
 
+#walletconnect-wrapper * {
+  box-sizing: border-box;
+}
+
 #walletconnect-wrapper a {
   color: #000;
+}
+
+.walletconnect-modal__footer  {
+  overflow: auto;
+  justify-content: left !important;
 }

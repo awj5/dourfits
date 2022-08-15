@@ -177,7 +177,8 @@ button#navBurger {
 }
 
 @media only screen and (max-width: 1023px) {
-  h1#logo {
+  h1#logo,
+  #headerDashboard button {
     display: none;
   }
 
@@ -186,10 +187,6 @@ button#navBurger {
     top: 16px;
     margin-left: 0;
     width: 224px;
-  }
-
-  #headerDashboard button {
-    display: none;
   }
 
   button#navBurger {
