@@ -104,7 +104,9 @@ select {
   color: #000;
 }
 
-.walletconnect-modal__footer  {
-  overflow: auto;
-  justify-content: left !important;
+@media screen and (orientation: portrait) {
+  .walletconnect-modal__footer  {
+    overflow: auto;
+    justify-content: left !important;
+  }
 }
