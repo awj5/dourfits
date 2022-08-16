@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useContext } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Network, Alchemy } from 'alchemy-sdk';
+import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
 import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
@@ -97,7 +97,7 @@ function Viewer() {
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
-  //const [traits, setTraits] = useState<String[]>([]);
+  const [traits, setTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
   const viewer = useRef<HTMLDivElement>(null);
 
   const viewerScroll = () => {
@@ -144,15 +144,31 @@ function Viewer() {
   }
 
   useEffect(() => {
-    const getTraits = async () => {
-      const blah = await alchemy.nft.getNftsForOwner(address ?? '', { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'] }); // DD, colette and DF
-      console.log(blah.ownedNfts[7].rawMetadata!.attributes![0]);
+    const getNFTs = async () => {
+      try {
+        const ownedTraits: Record<"value" | "trait_type", string>[] = [];
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'] }); // DD, colette and DF
+
+        for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
+          let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
+
+          if (attributes) {
+            for (let x: number = 0; x < attributes.length; x++) {
+              ownedTraits.push(attributes[x]);
+            }
+          }
+        }
+
+        setTraits(ownedTraits);
+      } catch (error) {
+        console.log(error);
+      }
     }
 
-    if (category === 'categories' && isConnected) {
-      getTraits();
+    if (isConnected) {
+      getNFTs(); // Set user owned traits
     }
-  }, [category, address, isConnected]);
+  }, [isConnected, address]);
 
   useEffect(() => {
     const getViewerItems = async () => {
