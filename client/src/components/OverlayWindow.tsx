@@ -5,7 +5,7 @@ import styles from './overlay-window.module.css';
 
 function OverlayConnect() {
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
-  const { connect, connectors } = useConnect();
+  const { connect, connectors, error } = useConnect();
   const { isConnected } = useAccount();
 
   useEffect(() => {
@@ -17,6 +17,7 @@ function OverlayConnect() {
   return (
     <div id={ styles.overlayConnect }>
       { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }><img src= { `assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } />{ connector.name }</button>)) }
+      { error && <p>{ error.message }</p> }
     </div>
   );
 }

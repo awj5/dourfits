@@ -64,6 +64,8 @@ button#overlayClose img {
 	line-height: 1;
 }
 
+/* Connect */
+
 #overlayConnect button {
 	width: 100%;
 	background-color: #000;
@@ -74,4 +76,10 @@ button#overlayClose img {
 #overlayConnect button img {
 	height: 28px;
 	margin-right: 8px;
+}
+
+#overlayConnect p {
+	color: var(--dd-red);
+	text-align: center;
+	margin-top: 16px;
 }
