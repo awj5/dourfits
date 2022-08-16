@@ -143,30 +143,54 @@ function Viewer() {
     setScrollInterval(0);
   }
 
-  useEffect(() => {
-    const getNFTs = async () => {
-      try {
-        const ownedTraits: Record<"value" | "trait_type", string>[] = [];
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'] }); // DD, colette and DF
+  const getSubTitle = (title: string, trait: string) => {
+    const checkTrait = traits.filter(obj => {
+      return obj.value === title && obj.trait_type === trait;
+    })
 
+    return checkTrait.length ? 'YOU OWN' : 'BUY';
+  }
+
+  useEffect(() => {
+    let ownedTraits: Record<"value" | "trait_type", string>[];
+
+    const getNFTs = async (page: string) => {
+      try {
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page ? page : undefined }); // DD, colette and DF
+
+        // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
           if (attributes) {
+            // Loop traits
             for (let x: number = 0; x < attributes.length; x++) {
-              ownedTraits.push(attributes[x]);
+              // Check if trait already added
+              let checkTrait = ownedTraits.filter(obj => {
+                return obj.value === attributes![x].value && obj.trait_type === attributes![x].trait_type;
+              })
+
+              if (!checkTrait.length) {
+                ownedTraits.push(attributes[x]);
+              }
             }
           }
         }
 
-        setTraits(ownedTraits);
+        // Check if more than 100 NFTs held
+        if (userNFTs.pageKey) {
+          getNFTs(userNFTs.pageKey); // Next page
+        } else {
+          setTraits(ownedTraits);
+        }
       } catch (error) {
         console.log(error);
       }
     }
 
     if (isConnected) {
-      getNFTs(); // Set user owned traits
+      ownedTraits = []; // Clear
+      getNFTs(''); // Set user owned traits
     }
   }, [isConnected, address]);
 
@@ -190,7 +214,7 @@ function Viewer() {
   return (
   <>
     <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? 'YOU OWN' : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } format={ item.format ? item.format : '.svg' } />) }
+      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? getSubTitle(item.title, item.trait!) : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } format={ item.format ? item.format : '.svg' } />) }
     </div>
 
     <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
