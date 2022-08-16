@@ -20,7 +20,7 @@ export const DefaultDarcel: Darcel = {
   head: "head/regular.svg",
   eye: "eye/regular.svg",
   hairAndHats: "",
-  shoes: "shoes/regular.svg",
+  shoes: "shoes/nude-undies.svg",
   bottoms: "",
   tops: "tops/nude-shrug.svg",
   topAccessories: "",
