@@ -44,6 +44,7 @@ function WardrobeStage() {
 export interface Category {
   title: string;
   shortTitle?: string;
+  collection?: string;
   trait?: string;
   layer?: string;
   hex?: string;
@@ -97,7 +98,7 @@ function Viewer() {
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
-  const [traits, setTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
+  const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
   const viewer = useRef<HTMLDivElement>(null);
 
   const viewerScroll = () => {
@@ -143,8 +144,8 @@ function Viewer() {
     setScrollInterval(0);
   }
 
-  const getSubTitle = (title: string, trait: string) => {
-    const checkTrait = traits.filter(obj => {
+  const getItemAvailability = (title: string, trait: string) => {
+    const checkTrait = userTraits.filter(obj => {
       return obj.value === title && obj.trait_type === trait;
     })
 
@@ -154,9 +155,9 @@ function Viewer() {
   useEffect(() => {
     let ownedTraits: Record<"value" | "trait_type", string>[];
 
-    const getNFTs = async (page: string) => {
+    const getNFTs = async (page?: string | undefined) => {
       try {
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page ? page : undefined }); // DD, colette and DF
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page }); // DD, colette and DF
 
         // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
@@ -165,7 +166,7 @@ function Viewer() {
           if (attributes) {
             // Loop traits
             for (let x: number = 0; x < attributes.length; x++) {
-              // Check if trait already added
+              // Check if trait already included
               let checkTrait = ownedTraits.filter(obj => {
                 return obj.value === attributes![x].value && obj.trait_type === attributes![x].trait_type;
               })
@@ -181,7 +182,7 @@ function Viewer() {
         if (userNFTs.pageKey) {
           getNFTs(userNFTs.pageKey); // Next page
         } else {
-          setTraits(ownedTraits);
+          setUserTraits(ownedTraits);
         }
       } catch (error) {
         console.log(error);
@@ -190,7 +191,7 @@ function Viewer() {
 
     if (isConnected) {
       ownedTraits = []; // Clear
-      getNFTs(''); // Set user owned traits
+      getNFTs(); // Set user owned traits
     }
   }, [isConnected, address]);
 
@@ -212,14 +213,14 @@ function Viewer() {
   }, [category]);
 
   return (
-  <>
-    <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-      { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } title={ item.shortTitle ? item.shortTitle : item.title } subTitle={ item.layer ? getSubTitle(item.title, item.trait!) : '' } slug={ item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-') } layer={ item.layer ?? '' } hex={ item.hex ? item.hex : '' } format={ item.format ? item.format : '.svg' } />) }
-    </div>
+    <>
+      <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } availability={ item.layer ? getItemAvailability(item.title, item.trait!) : '' } />) }
+      </div>
 
-    <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
-    <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
-  </>
+      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
+    </>
   );
 }
 

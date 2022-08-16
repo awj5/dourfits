@@ -1,46 +1,55 @@
 [
     {
         "title": "Cyborg",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Dead",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Diamond",
+        "collection": "dourfits",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Gold",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Rainbow",
+        "collection": "dourfits",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Regular",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Stickers",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Tattoos",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
     {
         "title": "Transparent",
+        "collection": "dourfits",
         "trait": "Head",
         "layer": "head"
     }

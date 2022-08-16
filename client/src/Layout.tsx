@@ -13,7 +13,7 @@ function HeaderDashboard() {
   const { disconnect } = useDisconnect();
 
   const connectClick = () => {
-    setOverlay({ visible: true, title: 'Connect a Wallet', message: 'connect' });
+    setOverlay({ visible: true, title: 'Connect a Wallet' });
   }
 
   const disconnectClick = () => {
@@ -43,8 +43,8 @@ function Header() {
   }
 
   return (
-    <header id="dfHeader">
-      <h1 id="logo"><img src="assets/img/logo.png" alt="Dour Fits" /></h1>
+    <header>
+      <h1><img src="assets/img/logo.png" alt="Dour Fits" /></h1>
       <HeaderDashboard />
 
       <nav>

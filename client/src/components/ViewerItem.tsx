@@ -1,24 +1,28 @@
 import { useState, useContext } from 'react';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
 import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelContext';
+import { Category } from '../pages/Wardrobe';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; title: string; subTitle: string; slug: string; layer: string; hex: string; format: string; }) {
+function ViewerItem(props: { viewerScroll: Function; item: Category; availability: string; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
-  const [localCategory] = useState<string>(category); // Set state locally to avoid re-rendering on category change
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+  const localCategory: string = category; // Static var to avoid re-rendering on category state change
+  const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
+  const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
+  const format: string = props.item.format ? props.item.format : '.svg';
 
   const itemClick = () => {
-    if (localCategory === 'categories') {
-      setCategory(props.slug); // Go to category in viewer
-    } else {
       // Update Darcel avatar
-      const currentVal: string = darcel[props.layer as keyof Darcel];
-      const newVal: string = props.hex ? props.hex : `${ localCategory }/${ props.slug }${ props.format }`;
-      const clearedVal: string = props.layer === 'background' ? '#999' : ''; // Background resets to default color
-      setDarcel({ ...darcel, [props.layer]: currentVal === newVal ? clearedVal : newVal });
-    }
+      const currentVal: string = darcel[props.item.layer as keyof Darcel];
+      const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
+      const clearedVal: string = props.item.layer === 'background' ? '#999' : ''; // Background resets to default color
+      setDarcel({ ...darcel, [props.item.layer!]: currentVal === newVal ? clearedVal : newVal });
+  }
+
+  const buyClick = () => {
+    window.open(`https://opensea.io/collection/${ props.item.collection }?search[stringTraits][0][name]=${ props.item.trait }&search[stringTraits][0][values][0]=${ props.item.title }&search[toggles][0]=BUY_NOW&search[toggles][1]=ON_AUCTION`);
   }
 
   const loaded = () => {
@@ -27,12 +31,12 @@ function ViewerItem(props: { viewerScroll: Function; title: string; subTitle: st
   }
 
   return (
-    <div onClick={ itemClick } className={ `${ styles.viewerItem } ${ imageLoaded && styles.loaded } ${ !props.subTitle ? styles.category : props.layer === 'background' && styles.background } ${ (darcel[props.layer as keyof Darcel] === `${ localCategory }/${ props.slug }${ props.format }` || (props.layer === 'background' && darcel['background'] === props.hex)) && styles.selected }` }>
-      <img src={ props.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ props.slug }.png` } style={{ backgroundColor: props.hex ? props.hex : "transparent" }} alt={ props.title } onLoad={ loaded } />
+    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : props.availability === 'BUY' ? buyClick : itemClick } className={ `${ styles.viewerItem } ${ imageLoaded && styles.loaded } ${ !props.availability ? styles.category : props.item.layer === 'background' && styles.background } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
+      <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
-        <h3>{ props.title }</h3>
-        <h4>{ props.subTitle }</h4>
+        <h3>{ title }</h3>
+        <h4>{ props.availability }</h4>
       </hgroup>
     </div>
   );
