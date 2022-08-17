@@ -12,6 +12,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; availabilit
   const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
   const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
   const format: string = props.item.format ? props.item.format : '.svg';
+  const available: boolean = props.availability !== 'BUY' ? true : false;
 
   const itemClick = () => {
       // Update Darcel avatar
@@ -31,7 +32,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; availabilit
   }
 
   return (
-    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : props.availability === 'BUY' ? buyClick : itemClick } className={ `${ styles.viewerItem } ${ imageLoaded && styles.loaded } ${ !props.availability ? styles.category : props.item.layer === 'background' && styles.background } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
+    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : available ? itemClick : buyClick } className={ `${ styles.viewerItem } ${ !available && styles.buy } ${ imageLoaded && styles.loaded } ${ !props.availability ? styles.category : props.item.layer === 'background' && styles.background } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
       <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>

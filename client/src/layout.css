@@ -22,13 +22,13 @@ button.bigButton {
 
 @media (hover: hover) {
   button.bigButton:hover {
-    background-color: var(--dd-yellow) !important;
+    background-color: var(--df-yellow) !important;
   }
 }
 
 button.bigButton:active {
   color: #FFF;
-  background-color: var(--dd-yellow);
+  background-color: var(--df-yellow);
   transition: none;
 }
 
@@ -45,12 +45,12 @@ button.iconButton {
 
 @media (hover: hover) {
   button.iconButton:hover {
-    background-color: var(--dd-yellow) !important;
+    background-color: var(--df-yellow) !important;
   }
 }
 
 button.iconButton:active {
-  background-color: var(--dd-yellow);
+  background-color: var(--df-yellow);
   transition: none;
 }
 
@@ -78,7 +78,7 @@ button.iconButton:active img {
   .section {
     padding: 16px;
     height: calc(100% - 80px);
-    top: 80px;
+    top: 72px;
   }
 }
 
@@ -142,7 +142,7 @@ h1 img {
 #dashboardXP p span {
   font-size: 18px;
   margin-left: 6px;
-  color: var(--dd-yellow);
+  color: var(--df-yellow);
 }
 
 #headerDashboard button {
@@ -186,11 +186,17 @@ button#navBurger {
     left: 16px;
     top: 16px;
     margin-left: 0;
-    width: 224px;
+    width: max-content;
+    height: 56px;
+    padding-right: 16px;
+  }
+
+  #xpIcon {
+    margin: 8px;
   }
 
   button#navBurger {
     right: 0;
-    top: 16px;
+    top: 12px;
   }
 }

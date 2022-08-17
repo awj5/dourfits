@@ -79,7 +79,7 @@ button#overlayClose img {
 }
 
 #overlayConnect p {
-	color: var(--dd-red);
+	color: var(--df-red);
 	text-align: center;
 	margin-top: 16px;
 }

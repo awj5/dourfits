@@ -1,5 +1,3 @@
-/* ViewerItem */
-
 @keyframes fadeIn1 {
   0% {
     opacity: 0;
@@ -10,6 +8,18 @@
   }
 }
 
+@keyframes fadeIn05 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* ViewerItem */
+
 .viewerItem {
   width: calc(33.3% - 24px);
   aspect-ratio: 4/4;
@@ -17,14 +27,18 @@
   float: left;
   border-radius: 32px;
   position: relative;
-  cursor: var(--cursor), auto;
   margin: 8px;
   margin-top: 16px;
   margin-right: 16px;
+  cursor: var(--cursor), auto;
+}
+
+.viewerItem.buy {
+  cursor: auto;
 }
 
 @media (hover: hover) {
-  .viewerItem:hover:after {
+  .viewerItem:not(.buy):hover:after {
     content: "";
     position: absolute;
     top: -8px;
@@ -60,13 +74,17 @@
   animation: fadeIn1 ease-in .25s forwards;
 }
 
+.viewerItem.buy.loaded img {
+  animation: fadeIn05 ease-in .25s forwards;
+}
+
 .viewerItem.category img {
   height: 80%;
 }
 
 .viewerItem.background img {
   height: 100%;
-  border-radius: 30px;
+  border-radius: 32px;
 }
 
 .viewerItem hgroup {
@@ -75,34 +93,53 @@
   bottom: 0;
   width: 100%;
   padding: 8px;
-  padding-bottom: 12px;
   box-sizing: border-box;
   overflow: hidden;
   white-space: normal;
 }
 
 .viewerItem hgroup * {
-  color: #000;
   line-height: 1;
 }
 
 .viewerItem.background hgroup * {
-  color: #FFF;
   text-shadow: 1px 1px #000;
 }
 
 .viewerItem h3 {
   font-size: 16px;
+  color: #000;
+}
+
+.viewerItem.background h3 {
+  color: #FFF;
+}
+
+.viewerItem.buy h3 {
+  opacity: 0.5;
 }
 
 .viewerItem.category h3 {
   font-size: 18px;
+  padding-bottom: 4px;
 }
 
 .viewerItem h4 {
   font-size: 12px;
   margin-top: 4px;
-  color: var(--dd-red) !important;
+  color: var(--df-red);
+}
+
+.viewerItem.buy h4 {
+  display: inline-block;
+  cursor: var(--cursor), auto;
+  background-color: var(--df-green);
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 999px;
+  color: #FFF;
+  text-shadow: none;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -130,7 +167,11 @@
   }
 
   .viewerItem.background img {
-    border-radius: 26px;
+    border-radius: 28px;
+  }
+
+  .viewerItem hgroup {
+    padding: 6px;
   }
 
   .viewerItem h3 {
@@ -144,6 +185,12 @@
   .viewerItem h4 {
     font-size: 10px;
     margin-top: 2px;
+  }
+
+  .viewerItem.buy h4 {
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 

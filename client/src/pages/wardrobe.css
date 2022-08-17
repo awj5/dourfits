@@ -44,7 +44,7 @@
 
 @media (hover: hover) {
   #root #wardrobeStage select:hover {
-    background-color: var(--dd-yellow);
+    background-color: var(--df-yellow);
   }
 }
 
