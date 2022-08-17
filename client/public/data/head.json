@@ -31,7 +31,7 @@
     },
     {
         "title": "Regular",
-        "collection": "dourdarcels",
+        "xp": 0,
         "trait": "Head",
         "layer": "head"
     },

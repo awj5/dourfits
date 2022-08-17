@@ -149,7 +149,7 @@ function Viewer() {
       return obj.value === title && obj.trait_type === trait;
     })
 
-    return checkTrait.length ? 'YOU OWN' : 'BUY';
+    return checkTrait.length || !isConnected ? 'YOU OWN' : 'BUY';
   }
 
   useEffect(() => {

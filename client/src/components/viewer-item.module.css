@@ -142,6 +142,10 @@
   text-shadow: none;
 }
 
+.viewerItem.background.buy h4 {
+  box-shadow: 1px 1px #000;
+}
+
 @media only screen and (max-width: 1279px) {
   .viewerItem {
     width: calc(50% - 24px);
