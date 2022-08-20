@@ -1,18 +1,20 @@
 import { useState, useContext } from 'react';
+import { Category } from '../pages/Wardrobe';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
 import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelContext';
-import { Category } from '../pages/Wardrobe';
+import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
 function ViewerItem(props: { viewerScroll: Function; item: Category; availability: string; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
+  const { xp } = useContext<XPContextType>(XPContext);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const localCategory: string = category; // Static var to avoid re-rendering on category state change
   const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
   const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
   const format: string = props.item.format ? props.item.format : '.svg';
-  const available: boolean = props.availability !== 'BUY' ? true : false;
+  const available: boolean = props.availability !== 'BUY' || (props.item.xp !== undefined && props.item.xp <= xp) ? true : false;
 
   const itemClick = () => {
       // Update Darcel avatar
@@ -37,7 +39,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; availabilit
 
       <hgroup>
         <h3>{ title }</h3>
-        <h4>{ props.availability }</h4>
+        <h4>{ props.item.xp !== undefined && props.item.xp <= xp ? 'UNLOCKED' : props.availability }</h4>
       </hgroup>
     </div>
   );

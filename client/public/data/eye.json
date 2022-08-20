@@ -1,109 +1,93 @@
 [
     {
         "title": "Acid",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Anime",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Buzzed",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Cat",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
-        "title": "Cross",
+        "title": "Dead",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Eyelid",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Forest Moody",
+        "xp": 0,
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Glowing",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye",
         "format": ".svg.png"
     },
     {
         "title": "Heart",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Mauve",
+        "collection": "dourdarcels",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Melting",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Mid Blue Eyelid",
         "shortTitle": "Blue Eyelid",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Moody",
+        "xp": 0,
         "trait": "Eye",
         "layer": "eye"
     },
     {
-        "title": "Moss Glowing",
-        "trait": "Eye",
-        "layer": "eye",
-        "format": ".svg.png"
-    },
-    {
-        "title": "Pink Eyelid",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Pixel",
+        "title": "Mummy",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Regular",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Reptile",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Star",
+        "xp": 0,
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Stoned",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
-        "title": "Wide Eyed",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
-        "title": "Zombie",
+        "title": "Transparent",
+        "collection": "dourdarcels",
         "trait": "Eye",
         "layer": "eye"
     }

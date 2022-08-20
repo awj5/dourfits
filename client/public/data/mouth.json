@@ -1,51 +1,61 @@
 [
     {
         "title": "Ambivalent",
+        "xp": 0,
         "trait": "Mouth",
         "layer": "mouth"
     },
     {
-        "title": "Argh",
-        "trait": "Mouth",
-        "layer": "mouth"
-    },
-    {
-        "title": "Cross",
+        "title": "Dead",
+        "collection": "dourdarcels",
         "trait": "Mouth",
         "layer": "mouth"
     },
     {
         "title": "Fangs",
+        "collection": "dourdarcels",
         "trait": "Mouth",
         "layer": "mouth"
     },
     {
         "title": "Happy",
-        "trait": "Mouth",
-        "layer": "mouth"
-    },
-    {
-        "title": "Mid Blue Lip",
-        "trait": "Mouth",
-        "layer": "mouth"
-    },
-    {
-        "title": "Moss Lip",
-        "trait": "Mouth",
-        "layer": "mouth"
-    },
-    {
-        "title": "Oh",
-        "trait": "Mouth",
-        "layer": "mouth"
-    },
-    {
-        "title": "Peach Lip",
+        "xp": 0,
         "trait": "Mouth",
         "layer": "mouth"
     },
     {
         "title": "Red Lip",
+        "collection": "dourdarcels",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Sad",
+        "xp": 0,
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Tongue",
+        "collection": "dourdarcels",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Toothpick",
+        "collection": "dourdarcels",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Transparent",
+        "collection": "dourdarcels",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Urgh",
+        "collection": "dourdarcels",
         "trait": "Mouth",
         "layer": "mouth"
     }

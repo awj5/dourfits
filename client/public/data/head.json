@@ -12,8 +12,14 @@
         "layer": "head"
     },
     {
-        "title": "Diamond",
-        "collection": "dourfits",
+        "title": "Egg",
+        "collection": "dourdarcels",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Furry",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
@@ -24,8 +30,8 @@
         "layer": "head"
     },
     {
-        "title": "Rainbow",
-        "collection": "dourfits",
+        "title": "Melting",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     },
@@ -49,7 +55,7 @@
     },
     {
         "title": "Transparent",
-        "collection": "dourfits",
+        "collection": "dourdarcels",
         "trait": "Head",
         "layer": "head"
     }

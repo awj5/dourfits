@@ -3,14 +3,16 @@ import { useState, useEffect, useContext } from 'react';
 import { useAccount, useDisconnect } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
 import { OverlayContext, OverlayContextType, Overlay } from './context/OverlayContext';
+import { XPContext, XPContextType } from './context/XP';
 import './layout.css';
 
 /* Header */
 
 function HeaderDashboard() {
-  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
+  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const { xp } = useContext<XPContextType>(XPContext);
 
   const connectClick = () => {
     setOverlay({ visible: true, title: 'Connect a Wallet' });
@@ -26,10 +28,7 @@ function HeaderDashboard() {
     <div id="headerDashboard">
       <div id="dashboardXP">
         <div id="xpIcon"><img src="assets/img/icon-heart.png" alt="XP" /></div>
-        <p>
-          9999
-          <span>XP</span>
-        </p>
+        <p>{ xp }<span>XP</span></p>
       </div>
 
       <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton">{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : 'Connect' }</button>
@@ -59,6 +58,7 @@ function Header() {
 function Layout() {
   const [domReady, setDOMReady] = useState<boolean>(false);
   const [overlay, setOverlay] = useState<Overlay>({ visible: false });
+  const [xp, setXP] = useState<number>(0);
 
   useEffect(() => {
     // Hack to avoid FOUC
@@ -68,6 +68,7 @@ function Layout() {
   }, []);
 
   return (
+    <XPContext.Provider value={{ xp, setXP }}>
     <OverlayContext.Provider value={{ overlay, setOverlay }}>
       <div style={{ visibility: domReady ? "visible" : "hidden" }}>
         <Outlet />
@@ -75,6 +76,7 @@ function Layout() {
         <OverlayWindow />
       </div>
     </OverlayContext.Provider>
+    </XPContext.Provider>
   );
 }
 

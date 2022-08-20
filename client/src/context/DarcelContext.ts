@@ -5,10 +5,11 @@ export interface Darcel {
   head: string;
   eye: string;
   hairAndHats: string;
-  shoes: string;
+  shoesAndLegs: string;
   bottoms: string;
   tops: string;
-  topAccessories: string;
+  arms: string;
+  bodyAccessories: string;
   facialHair: string;
   mouth: string;
   headAccessories: string;
@@ -20,10 +21,11 @@ export const DefaultDarcel: Darcel = {
   head: "head/regular.svg",
   eye: "eye/regular.svg",
   hairAndHats: "",
-  shoes: "shoes/nude-undies.svg",
+  shoesAndLegs: "shoes-and-legs/nude-undies.svg",
   bottoms: "",
-  tops: "tops/nude-shrug.svg",
-  topAccessories: "",
+  tops: "",
+  arms: "arms/shrug.svg",
+  bodyAccessories: "",
   facialHair: "",
   mouth: "mouth/sad.svg",
   headAccessories: "",

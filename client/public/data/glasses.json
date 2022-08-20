@@ -1,257 +1,151 @@
 [
     {
         "title": "3d",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Angles",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Anonymous",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Aviator",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Basic",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Black and Gold",
-        "shortTitle": "Black & Gold",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Black",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Bookish",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Brown",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Chunky",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Crazy",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Cross",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Fat Brown",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Flower Lens",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Flower Rims",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Forest Wireframe",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Geometric",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Gold",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Gradient",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Heart",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Kurt",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Mid Blue",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Monocle",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Moss",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Narrow",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Navy",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Octagon",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Orange",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Peach",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Purple Circle",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Racer",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Rave",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Red Lens",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Red",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Robo",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Silver",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Ski",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Star",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Stripes and Crosses",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Sunglasses",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Tortiseshell",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Triangle",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Velma",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "White Aviator",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "White Round",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "White Sunglasses",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Wireframe",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Wise",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Wobbly",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Woodgrain",
-        "trait": "Glasses",
-        "layer": "glasses"
-    },
-    {
-        "title": "Yellow Rectangle",
+        "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     }

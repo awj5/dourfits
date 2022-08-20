@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Bones",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Chrome Robot",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Gold Robot",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Mummy",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Regular",
+		"xp": 0,
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Transparent",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	}
+]

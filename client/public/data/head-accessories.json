@@ -1,52 +1,134 @@
 [
     {
         "title": "Ape",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
         "title": "Bandana",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
-        "title": "Black Hoops",
-        "trait": "Accessories - Head",
-        "layer": "headAccessories"
-    },
-    {
         "title": "Bunny",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
         "title": "Cat",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
         "title": "Chain",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
         "title": "Cheeks",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
         "title": "Chrome Earrings",
+        "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
-        "title": "Coin",
-        "trait": "Accessories - Head",
+        "title": "Clouds",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
         "layer": "headAccessories"
     },
     {
-        "title": "Cross",
-        "trait": "Accessories - Head",
+        "title": "Crucifix Earring",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Cry",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Diamond Stud",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Gold Stud",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Gold Studs",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Hoops",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Lots",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Motocross",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Mummy",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Orange Earrings",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Purple Earrings",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Safety Pin",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Single Hoop",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Unicorn",
+        "collection": "dourdarcels",
+        "trait": "Accessories & Ears",
         "layer": "headAccessories"
     }
 ]

@@ -1,695 +1,430 @@
 [
     {
-        "title": "Afro",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Alien",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
         "title": "Angel",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Bandana",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Barber",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Black Backwards Cap",
-        "shortTitle": "Backwards",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Black Beanie",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Black Bob",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Black Cap",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Black Fuzz",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Black Long",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Black Short Back and Sides",
         "shortTitle": "Black Short",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Black Stevie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Black Wide Brim",
-        "shortTitle": "Wide Brim",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blow Out",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blunt",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Braid",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Brown Bangs",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Brown Bun",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Brown Shag",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Brown Shaved",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Brown Short Back and Sides",
         "shortTitle": "Brown Short",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Camo Camp",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Camo Cowboy",
-        "shortTitle": "Cowboy",
+        "title": "Chrome Robot",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Cat Cap",
+        "title": "Clouds",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Check Newsie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Checkerboard Bucket",
-        "shortTitle": "Check Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Chloe",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Choppy",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Cloud Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Coffee Beanie",
+        "title": "Clouds Bucket",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Cornrows",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Cowboy",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Crown",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Dour Bucket",
+        "title": "Devil",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Edges",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Egg Cap",
+        "title": "Egg",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Emo",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Flat Top",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Floral Bucket",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Forest Bangs",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Forest Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Forest Fuzz",
+        "title": "Forest Short Back and Sides",
+        "shortTitle": "Forest Short",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Forest Pom Pom",
-        "shortTitle": "Pom Pom",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Forest Fuzz",
+        "title": "Forest Quiff",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Furry",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Gimp",
+        "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Gold Robot",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Gray Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Gray Quiff",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Leather Daddy",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "leopard Camp",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Liberty",
+        "title": "Leopard Camp",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Mane",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Messy Bun",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Messy",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Metal Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Mid Blue Hoodie",
         "shortTitle": "Blue Hoodie",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Multi Pom Pom",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Navy Backwards Cap",
-        "shortTitle": "Backwards",
+        "title": "Mummy",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Navy Beanie",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Navy Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Navy DD Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Navy Lion",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Navy Newsie",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Navy Waves",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Neat",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "NYFC Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Orange Beanie",
         "shortTitle": "Beanie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Orange Horns",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Orange Peace Cap",
-        "shortTitle": "Peace Cap",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Paisley Bandana",
-        "shortTitle": "Bandana",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Patch Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Peach Ozzy",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Pig Tail",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Pigtails",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Pink Camo Bucket",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Pink Cowboy",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Pink Curls",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Pointy",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Polka Dot Bucket",
         "shortTitle": "Dot Bucket",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Polo",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Pompadour",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Pope",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Professor",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Pup Rave",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Purple Emo",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Purple Lion",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Purple Long",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Rainbow",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Red Backwards Cap",
-        "shortTitle": "Backwards",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Red Beanie",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Red Bob",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Red Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Red Devil Gimp",
         "shortTitle": "Devil Gimp",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Red Dots Bandana",
-        "shortTitle": "Dots Bandana",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Red Hoodie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Red Karl",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Red Part",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Redhead",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Rock Dog",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Round",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Sailor",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Sensible",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Severe",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Shearling Bucket",
         "shortTitle": "Shearling",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Short Curls",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Short Slicked",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Skull Rave",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Sky Blue Bandana",
-        "shortTitle": "Blue Bandana",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Sky Blue Beanie",
-        "shortTitle": "Blue Beanie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Slicked Back",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Space Buns",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Striped Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Striped Pom Pom",
-        "shortTitle": "Pom Pom",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Striped Rave",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Striped Sweatband",
-        "shortTitle": "Striped Sweat",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Sweatband",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Tan Barb",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Toothpaste",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Top Knot",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Turban",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Wen Bucket",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "White Backwards Cap",
-        "shortTitle": "Backwards",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "White Cowboy",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "White Darcel Cap",
-        "shortTitle": "Darcel Cap",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "White Long",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Wild",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Wisps",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Yellow Beanie",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Yellow Braids",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Yellow Horns",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Yellow Shaved",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Yellow Short Back and Sides",
         "shortTitle": "Yellow Short",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Yellow Waves",
+        "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     }

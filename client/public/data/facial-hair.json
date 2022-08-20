@@ -1,58 +1,43 @@
 [
     {
-        "title": "Black Beard",
-        "trait": "Facial Hair",
-        "layer": "facialHair"
-    },
-    {
         "title": "Black Stubble",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
         "title": "Brown Beard",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
         "title": "Brown Stubble",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
         "title": "Forest Beard",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
-        "title": "Mid Blue Beard",
-        "shortTitle": "Blue Beard",
-        "trait": "Facial Hair",
-        "layer": "facialHair"
-    },
-    {
-        "title": "Navy Mustache",
-        "trait": "Facial Hair",
-        "layer": "facialHair"
-    },
-    {
-        "title": "Patch",
-        "shortTitle": "Stripe Skirt",
+        "title": "Furry",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
         "title": "Tan Mustache",
-        "trait": "Facial Hair",
-        "layer": "facialHair"
-    },
-    {
-        "title": "Thin Mustache",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
     {
         "title": "Yellow Mustache",
+        "collection": "dourdarcels",
         "trait": "Facial Hair",
         "layer": "facialHair"
     }

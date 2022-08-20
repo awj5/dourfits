@@ -1,53 +1,212 @@
 [
 	{
-		"title": "80s Oversized",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
-		"title": "Balloon",
-		"trait": "Arms",
-		"layer": "tops"
-	},
-	{
-		"title": "Basketball",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
-		"title": "Bat Wings",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
-		"title": "Beer",
-		"trait": "Arms",
-		"layer": "tops"
-	},
-	{
-		"title": "Black Button Down",
-		"shortTitle": "Button Down",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
-		"title": "Black T-Shirt",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
-		"title": "Bones T-Shirt",
-		"trait": "Tops",
-		"layer": "tops"
-	},
-	{
 		"title": "Camo Puffer",
+		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops"
 	},
 	{
-		"title": "Camo Skateboard",
-		"trait": "Arms",
+		"title": "Check T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Clouds T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Darcel T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Dour Darcels T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "GM Wings",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Gray Hoodie",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Grid Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Heart Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Leather Jacket",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Leopard T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Metal T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Navy Pleats",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Navy Puffer",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "NGMI Hoodie",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "NGMI Wings",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Orange Hoodie",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Patch Jacket",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Peach Pleats",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Polka Dot Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Purple Hoodie",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Red Leather Jacket",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Roadman Puffer",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Shearling Puffer",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Skull T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Striped Jersey",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Striped Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Striped T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Tan Jacket",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Teddy Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Tie Dye Hoodie",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Tie Dye T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Varsity",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "White T-Shirt",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops"
+	},
+	{
+		"title": "Woodgrain Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
 		"layer": "tops"
 	}
 ]

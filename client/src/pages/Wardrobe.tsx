@@ -6,6 +6,7 @@ import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
 import { DarcelContext, DarcelContextType, DefaultDarcel, Darcel } from '../context/DarcelContext';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
+import { XPContext, XPContextType } from '../context/XP';
 import './wardrobe.css';
 
 const settings = {
@@ -91,8 +92,9 @@ function ViewerMenu() {
 }
 
 function Viewer() {
-  const { category } = useContext<CategoryContextType>(CategoryContext);
   const { address, isConnected } = useAccount();
+  const { category } = useContext<CategoryContextType>(CategoryContext);
+  const { setXP } = useContext<XPContextType>(XPContext);
   const [date, setDate] = useState<number>(Date.now());
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
@@ -153,7 +155,8 @@ function Viewer() {
   }
 
   useEffect(() => {
-    let ownedTraits: Record<"value" | "trait_type", string>[];
+    let ownedTraits: Record<"value" | "trait_type", string>[] = [];
+    let addressXP: number = 0;
 
     const getNFTs = async (page?: string | undefined) => {
       try {
@@ -161,6 +164,7 @@ function Viewer() {
 
         // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
+          addressXP += 10;
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
           if (attributes) {
@@ -183,6 +187,7 @@ function Viewer() {
           getNFTs(userNFTs.pageKey); // Next page
         } else {
           setUserTraits(ownedTraits);
+          setXP(addressXP);
         }
       } catch (error) {
         console.log(error);
@@ -190,10 +195,9 @@ function Viewer() {
     }
 
     if (isConnected) {
-      ownedTraits = []; // Clear
       getNFTs(); // Set user owned traits
     }
-  }, [isConnected, address]);
+  }, [isConnected, address, setXP]);
 
   useEffect(() => {
     const getViewerItems = async () => {
@@ -240,11 +244,19 @@ function WardrobeViewer() {
 /* Wardrobe */
 
 function Wardrobe() {
-  const [darcel, setDarcel] = useState<Darcel>(localStorage.dAvatar ? JSON.parse(localStorage.dAvatar) : DefaultDarcel);
+  const { isConnected } = useAccount();
+  const [darcel, setDarcel] = useState<Darcel>(localStorage.avatarV1 ? JSON.parse(localStorage.avatarV1) : DefaultDarcel);
+  const [sectionVisibility, setSectionVisibility] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Show section if wallet connected or demo param in URL
+    const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
+    setSectionVisibility(isConnected || urlParams.get('demo') ? true : false);
+  }, [isConnected]);
 
   useEffect(() => {
     //localStorage.clear(); // Use for testing
-    localStorage.dAvatar = JSON.stringify(darcel); // Update local storage
+    localStorage.avatarV1 = JSON.stringify(darcel); // Update local storage
 
     // Change body bg color to match avatar
     if (darcel.background.indexOf('#') !== -1) {
@@ -256,7 +268,7 @@ function Wardrobe() {
 
   return (
     <DarcelContext.Provider value={{ darcel, setDarcel }}>
-      <div className="section" id="sectionWardrobe">
+      <div className="section" id="sectionWardrobe" style={{ display: !sectionVisibility ? "none" : "" }}>
         <WardrobeStage />
         <WardrobeViewer />
       </div>

@@ -1,11 +1,5 @@
 [
     {
-        "title": "80s",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Apricot",
         "xp": 0,
         "layer": "background",
@@ -24,12 +18,6 @@
         "hex": "#A4C3E1"
     },
     {
-        "title": "Blue Dots",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Brown",
         "collection": "dourdarcels",
         "trait": "Background",
@@ -37,23 +25,11 @@
         "hex": "#4B2700"
     },
     {
-        "title": "Camo",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Charcoal",
         "collection": "dourdarcels",
         "trait": "Background",
         "layer": "background",
         "hex": "#323232"
-    },
-    {
-        "title": "Checkerboard",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "City",
@@ -64,7 +40,7 @@
     },
     {
         "title": "Clouds",
-        "collection": "dourfits",
+        "collection": "dourdarcels",
         "trait": "Background",
         "layer": "background"
     },
@@ -74,30 +50,6 @@
         "trait": "Background",
         "layer": "background",
         "hex": "#7F5223"
-    },
-    {
-        "title": "Concentric Circles",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Day Garden",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Diagonal Stripes",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Flames",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Forest",
@@ -111,18 +63,6 @@
         "xp": 0,
         "layer": "background",
         "hex": "#66A466"
-    },
-    {
-        "title": "Grid",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Leopard",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Lilac",
@@ -139,29 +79,11 @@
         "hex": "#7E5284"
     },
     {
-        "title": "Mid Blue Dots",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Mid Blue Rays",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Mid Blue",
         "collection": "dourdarcels",
         "trait": "Background",
         "layer": "background",
         "hex": "#055083"
-    },
-    {
-        "title": "Moss Rays",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Moss",
@@ -178,24 +100,6 @@
         "hex": "#002456"
     },
     {
-        "title": "New York Apartment",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "New York Street",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Night Garden",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Orange",
         "collection": "dourdarcels",
         "trait": "Background",
@@ -203,23 +107,11 @@
         "hex": "#E25201"
     },
     {
-        "title": "Peach Stripes",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Peach",
         "collection": "dourdarcels",
         "trait": "Background",
         "layer": "background",
         "hex": "#D98184"
-    },
-    {
-        "title": "Pink Stripes",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Pink",
@@ -234,12 +126,6 @@
         "trait": "Background",
         "layer": "background",
         "hex": "#4F2154"
-    },
-    {
-        "title": "Red Carpet",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Red",
@@ -297,35 +183,11 @@
         "hex": "#FFCC33"
     },
     {
-        "title": "Subway",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
         "title": "Tan",
         "collection": "dourdarcels",
         "trait": "Background",
         "layer": "background",
         "hex": "#AE804E"
-    },
-    {
-        "title": "Taxi",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "White Dots",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
-    },
-    {
-        "title": "Woodgrain",
-        "collection": "dourfits",
-        "trait": "Background",
-        "layer": "background"
     },
     {
         "title": "Yellow",

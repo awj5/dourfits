@@ -1,12 +1,12 @@
 import { useContext, useEffect, useCallback } from 'react';
-import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import { useConnect, useAccount } from 'wagmi';
+import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import styles from './overlay-window.module.css';
 
 function OverlayConnect() {
-  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const { connect, connectors, error } = useConnect();
   const { isConnected } = useAccount();
+  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
 
   useEffect(() => {
     if (isConnected) {
