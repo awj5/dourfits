@@ -33,12 +33,12 @@
   cursor: var(--cursor), auto;
 }
 
-.viewerItem.buy {
+.viewerItem.unavailable {
   cursor: auto;
 }
 
 @media (hover: hover) {
-  .viewerItem:not(.buy):hover:after {
+  .viewerItem:not(.unavailable):hover:after {
     content: "";
     position: absolute;
     top: -8px;
@@ -74,7 +74,7 @@
   animation: fadeIn1 ease-in .25s forwards;
 }
 
-.viewerItem.buy.loaded img {
+.viewerItem.unavailable.loaded img {
   animation: fadeIn05 ease-in .25s forwards;
 }
 
@@ -115,7 +115,7 @@
   color: #FFF;
 }
 
-.viewerItem.buy h3 {
+.viewerItem.unavailable h3 {
   opacity: 0.5;
 }
 
@@ -130,7 +130,7 @@
   color: var(--df-red);
 }
 
-.viewerItem.buy h4 {
+.viewerItem h4.buy {
   display: inline-block;
   cursor: var(--cursor), auto;
   background-color: var(--df-green);
@@ -142,7 +142,11 @@
   text-shadow: none;
 }
 
-.viewerItem.background.buy h4 {
+.viewerItem h4.xp {
+  color: var(--df-blue);
+}
+
+.viewerItem.background h4.buy {
   box-shadow: 1px 1px #000;
 }
 
@@ -191,7 +195,7 @@
     margin-top: 2px;
   }
 
-  .viewerItem.buy h4 {
+  .viewerItem h4.buy {
     padding: 2px;
     padding-left: 6px;
     padding-right: 6px;

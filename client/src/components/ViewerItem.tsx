@@ -5,7 +5,7 @@ import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelConte
 import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; item: Category; availability: string; }) {
+function ViewerItem(props: { viewerScroll: Function; item: Category; availability: string | undefined; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
@@ -14,13 +14,14 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; availabilit
   const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
   const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
   const format: string = props.item.format ? props.item.format : '.svg';
-  const available: boolean = props.availability !== 'BUY' || (props.item.xp !== undefined && props.item.xp <= xp) ? true : false;
+  const xpItem: string | undefined = props.item.xp !== undefined ? props.item.xp <= xp ? 'UNLOCKED' : props.item.xp + 'XP' : undefined;
+  const available: boolean = props.availability !== 'BUY' || xpItem === 'UNLOCKED' ? true : false;
 
   const itemClick = () => {
       // Update Darcel avatar
       const currentVal: string = darcel[props.item.layer as keyof Darcel];
       const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
-      const clearedVal: string = props.item.layer === 'background' ? '#999' : ''; // Background resets to default color
+      const clearedVal: string = props.item.layer === 'background' ? '#999' : ""; // Background resets to default color
       setDarcel({ ...darcel, [props.item.layer!]: currentVal === newVal ? clearedVal : newVal });
   }
 
@@ -34,12 +35,12 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; availabilit
   }
 
   return (
-    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : available ? itemClick : buyClick } className={ `${ styles.viewerItem } ${ !available && styles.buy } ${ imageLoaded && styles.loaded } ${ !props.availability ? styles.category : props.item.layer === 'background' && styles.background } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
+    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : available ? itemClick : xpItem ? () => null : buyClick } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ !props.availability ? styles.category : props.item.layer === 'background' && styles.background } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
       <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
         <h3>{ title }</h3>
-        <h4>{ props.item.xp !== undefined && props.item.xp <= xp ? 'UNLOCKED' : props.availability }</h4>
+        <h4 className={ xpItem ? styles.xp : !available ? styles.buy : undefined }>{ xpItem ? xpItem : props.availability }</h4>
       </hgroup>
     </div>
   );
