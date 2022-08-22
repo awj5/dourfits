@@ -53,7 +53,7 @@ export interface Category {
   format?: string;
 }
 
-function ViewerMenu() {
+function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean>> }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const [categories, setCategories] = useState<Category[]>([]);
 
@@ -82,6 +82,7 @@ function ViewerMenu() {
   return (
     <>
       <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.png" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button className="iconButton" id="viewerOwnedToggle"><img src={ `assets/img/icon-star${ props.ownedOnly ? '-selected' : '' }.png` } alt="Home" style={{ paddingBottom: "2px" }} /></button>
 
       <select id="viewerMenu" onChange={ menuChange } value={ category }>
         <option value="categories">Categories</option>
@@ -91,7 +92,7 @@ function ViewerMenu() {
   );
 }
 
-function Viewer() {
+function Viewer(props: { ownedOnly: boolean; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
   const { setXP } = useContext<XPContextType>(XPContext);
@@ -148,7 +149,7 @@ function Viewer() {
 
   const getItemOwned = (title: string, trait: string): boolean => {
     const checkTrait = userTraits.filter(obj => {
-      return obj.value.toLowerCase() === title && obj.trait_type.toLowerCase() === trait;
+      return obj.value.toLowerCase() === title.toLowerCase() && obj.trait_type.toLowerCase() === trait.toLowerCase();
     })
 
     return checkTrait.length || !isConnected ? true : false;
@@ -221,7 +222,7 @@ function Viewer() {
   return (
     <>
       <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title.toLowerCase(), item.trait!.toLowerCase()) } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title, item.trait!) } />) }
       </div>
 
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
@@ -232,12 +233,13 @@ function Viewer() {
 
 function WardrobeViewer() {
   const [category, setCategory] = useState<string>('categories');
+  const [ownedOnly, setOwnedOnly] = useState<boolean>(false);
 
   return (
     <CategoryContext.Provider value={{ category, setCategory }}>
       <div id="wardrobeViewer">
-        <ViewerMenu />
-        <Viewer />
+        <ViewerMenu ownedOnly={ ownedOnly } setOwnedOnly={ setOwnedOnly } />
+        <Viewer ownedOnly={ ownedOnly } />
       </div>
     </CategoryContext.Provider>
   );

@@ -79,12 +79,13 @@
 
 button#viewerHome {
   margin-left: 8px;
+  margin-right: 12px;
 }
 
 #root select#viewerMenu {
   float: right;
   margin-right: 16px;
-  width: calc(100% - 84px);
+  width: calc(100% - 144px);
 }
 
 #viewer {
@@ -151,12 +152,13 @@ button#viewerDown {
 
   button#viewerHome {
     margin-left: 0;
+    margin-right: 8px;
   }
 
   #root select#viewerMenu {
     float: right;
     margin-right: 0;
-    width: calc(100% - 56px);
+    width: calc(100% - 112px);
   }
 
   #viewer {
