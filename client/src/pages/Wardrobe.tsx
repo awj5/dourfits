@@ -146,12 +146,12 @@ function Viewer() {
     setScrollInterval(0);
   }
 
-  const getItemAvailability = (title: string, trait: string) => {
+  const getItemOwned = (title: string, trait: string): boolean => {
     const checkTrait = userTraits.filter(obj => {
-      return obj.value === title && obj.trait_type === trait;
+      return obj.value.toLowerCase() === title && obj.trait_type.toLowerCase() === trait;
     })
 
-    return checkTrait.length || !isConnected ? 'YOU OWN' : 'BUY';
+    return checkTrait.length || !isConnected ? true : false;
   }
 
   useEffect(() => {
@@ -164,7 +164,7 @@ function Viewer() {
 
         // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
-          addressXP += 10;
+          addressXP += 100;
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
           if (attributes) {
@@ -196,6 +196,8 @@ function Viewer() {
 
     if (isConnected) {
       getNFTs(); // Set user owned traits
+    } else {
+      setXP(0);
     }
   }, [isConnected, address, setXP]);
 
@@ -219,7 +221,7 @@ function Viewer() {
   return (
     <>
       <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } availability={ item.layer && getItemAvailability(item.title, item.trait!) } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title.toLowerCase(), item.trait!.toLowerCase()) } />) }
       </div>
 
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>

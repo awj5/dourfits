@@ -37,7 +37,7 @@
     },
     {
         "title": "Regular",
-        "xp": 0,
+        "xp": 100,
         "trait": "Head",
         "layer": "head"
     },
