@@ -142,8 +142,12 @@
   text-shadow: none;
 }
 
-.viewerItem h4.xp {
+.viewerItem h4.unlocked {
   color: var(--df-yellow);
+}
+
+.viewerItem h4.locked {
+  color: var(--df-orange);
 }
 
 .viewerItem.background h4.buy {

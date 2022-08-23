@@ -1,11 +1,11 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Category } from '../pages/Wardrobe';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
 import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelContext';
 import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned: boolean; }) {
+function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned: boolean; ownedOnly: boolean; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
@@ -31,16 +31,19 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
   const loaded = () => {
     setImageLoaded(true);
-    props.viewerScroll(); // Call to set scroll buttons in viewer
   }
 
+  useEffect(() => {
+    props.viewerScroll(); // Call to set scroll buttons in viewer
+  }, []);
+
   return (
-    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` }>
+    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
       <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
         <h3>{ title }</h3>
-        <h4 className={ xpItem ? styles.xp : (!available ? styles.buy : undefined) }>{ xpItem ? xpItem : (localCategory === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
+        <h4 className={ xpItem ? (xpItem === 'UNLOCKED' ? styles.unlocked : styles.locked) : (!available ? styles.buy : undefined) }>{ xpItem ? xpItem : (localCategory === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
       </hgroup>
     </div>
   );

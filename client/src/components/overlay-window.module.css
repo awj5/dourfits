@@ -73,6 +73,10 @@ button#overlayClose img {
 	margin-top: 16px;
 }
 
+#overlayConnect button:active {
+  color: #000;
+}
+
 #overlayConnect button img {
 	height: 28px;
 	margin-right: 8px;

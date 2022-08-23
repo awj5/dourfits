@@ -27,7 +27,7 @@ function HeaderDashboard() {
   return (
     <div id="headerDashboard">
       <div id="dashboardXP">
-        <div id="xpIcon"><img src="assets/img/icon-heart.png" alt="XP" /></div>
+        <div id="xpIcon"><img src="assets/img/icon-heart.svg" alt="XP" /></div>
         <p>{ xp }<span>XP</span></p>
       </div>
 
@@ -43,7 +43,7 @@ function Header() {
 
   return (
     <header>
-      <h1><img src="assets/img/logo.png" alt="Dour Fits" /></h1>
+      <h1><img src="assets/img/logo.svg" alt="Dour Fits" /></h1>
       <HeaderDashboard />
 
       <nav>

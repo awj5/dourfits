@@ -44,7 +44,7 @@ button.iconButton {
 }
 
 @media (hover: hover) {
-  button.iconButton:hover {
+  button.iconButton:not(.selected):hover {
     background-color: var(--df-yellow) !important;
   }
 }
@@ -54,13 +54,23 @@ button.iconButton:active {
   transition: none;
 }
 
-button.iconButton img {
+button.iconButton * {
   width: 28px;
   height: 28px;
+  fill: #FFF;
 }
 
-button.iconButton:active img {
+button.iconButton:active * {
   filter: invert(1);
+  fill: #000;
+}
+
+button.iconButton.selected * {
+  fill: var(--df-yellow);
+}
+
+button.iconButton.selected:active * {
+  fill: #000;
 }
 
 .section {

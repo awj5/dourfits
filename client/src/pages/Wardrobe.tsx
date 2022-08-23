@@ -61,6 +61,10 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
     setCategory('categories');
   }
 
+  const ownedToggleClick = () => {
+    props.setOwnedOnly(!props.ownedOnly);
+  }
+
   const menuChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCategory(e.currentTarget.value);
   }
@@ -81,8 +85,8 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
 
   return (
     <>
-      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.png" alt="Home" style={{ paddingBottom: "4px" }} /></button>
-      <button className="iconButton" id="viewerOwnedToggle"><img src={ `assets/img/icon-star${ props.ownedOnly ? '-selected' : '' }.png` } alt="Home" style={{ paddingBottom: "2px" }} /></button>
+      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="viewerOwnedToggle"><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
 
       <select id="viewerMenu" onChange={ menuChange } value={ category }>
         <option value="categories">Categories</option>
@@ -219,14 +223,18 @@ function Viewer(props: { ownedOnly: boolean; }) {
     getViewerItems();
   }, [category]);
 
+  useEffect(() => {
+    viewerScroll(); // Call to set scroll buttons when owned only toggled
+  }, [props.ownedOnly]);
+
   return (
     <>
       <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title, item.trait!) } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
       </div>
 
-      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.png" alt="Up" draggable="false" /></button>
-      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.png" alt="Down" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
   );
 }
