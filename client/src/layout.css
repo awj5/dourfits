@@ -84,11 +84,6 @@ button.iconButton.selected:active * {
   box-sizing: border-box;
 }
 
-.tooltip {
-  border-radius: 999px !important;
-  padding: 16px !important;
-}
-
 @media only screen and (max-width: 1023px) {
   .section {
     padding: 16px;

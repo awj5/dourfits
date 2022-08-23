@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useContext, useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
-import ReactTooltip from 'react-tooltip';
 import { useAccount } from 'wagmi';
 import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
@@ -32,8 +31,7 @@ function WardrobeStage() {
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
       <button className="bigButton">Submit<svg viewBox="0 0 15.84 27.18"><path d="M2.25,27.18c-.58,0-1.15-.22-1.59-.66-.88-.88-.88-2.3,0-3.18L10.41,13.59,.66,3.84C-.22,2.96-.22,1.54,.66,.66,1.54-.22,2.96-.22,3.84,.66L15.18,12c.88,.88,.88,2.3,0,3.18L3.84,26.52c-.44,.44-1.02,.66-1.59,.66Z"/></svg></button>
-      <button onClick={ resetClick } className="iconButton" data-tip="Reset Darcel"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
-      <ReactTooltip delayShow={ 500 } className="tooltip" />
+      <button onClick={ resetClick } className="iconButton"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
     </div>
   );
 }
@@ -83,15 +81,13 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
 
   return (
     <>
-      <button onClick={ homeClick } className="iconButton" id="viewerHome" data-tip="All categories"><img src="assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
-      <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="viewerOwnedToggle" data-tip={ props.ownedOnly ? 'Show all items' : 'Show available items only' }><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
+      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="viewerOwnedToggle"><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
 
       <select id="viewerMenu" onChange={ menuChange } value={ category }>
         <option value="categories">Categories</option>
         { categories.map((category, i) => <option value={ category.title.toLowerCase().replace('&', 'and').replace(/ /g, '-') } key={ i }>{ category.title }</option>) }
       </select>
-
-      <ReactTooltip delayShow={ 500 } className="tooltip" />
     </>
   );
 }
