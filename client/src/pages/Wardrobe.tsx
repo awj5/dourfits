@@ -277,12 +277,12 @@ function WardrobeViewer() {
 
 function Wardrobe() {
   const { isConnected } = useAccount();
-  const [darcel, setDarcel] = useState<Darcel>(localStorage.avatarV1 ? JSON.parse(localStorage.avatarV1) : DefaultDarcel);
+  const [darcel, setDarcel] = useState<Darcel>(localStorage.avatarV2 ? JSON.parse(localStorage.avatarV2) : DefaultDarcel);
   const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
   useEffect(() => {
     //localStorage.clear(); // Use for testing
-    localStorage.avatarV1 = JSON.stringify(darcel); // Update local storage
+    localStorage.avatarV2 = JSON.stringify(darcel); // Update local storage
 
     // Change body bg color to match avatar
     if (darcel.background.indexOf('#') !== -1) {
