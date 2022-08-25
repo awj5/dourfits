@@ -35,8 +35,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
   useEffect(() => {
     props.viewerScroll(); // Call to set scroll buttons in viewer
-    // eslint-disable-next-line
-  }, []);
+  }, [props]);
 
   return (
     <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>

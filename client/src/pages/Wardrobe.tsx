@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext } from 'react';
+import { useState, useEffect, useRef, useContext, useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
@@ -97,23 +97,21 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
 function Viewer(props: { ownedOnly: boolean; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
-  const { xp, setXP } = useContext<XPContextType>(XPContext);
+  const { setXP } = useContext<XPContextType>(XPContext);
   const [date, setDate] = useState<number>(Date.now());
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
   const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
-  const [viewerMessage, setViewerMessage] = useState<string>('');
-  const [viewerMessageTimeout, setViewerMessageTimeout] = useState<number>(0);
   const viewerRef = useRef<HTMLDivElement>(null);
 
-  const cancelScroll = () => {
+  const cancelScroll = useCallback(() => {
     clearInterval(scrollInterval);
     setScrollInterval(0);
-  }
+  }, [scrollInterval]);
 
-  const viewerScroll = () => {
+  const viewerScroll = useCallback(() => {
     const itemViewer = viewerRef.current!;
 
     // Up
@@ -131,7 +129,7 @@ function Viewer(props: { ownedOnly: boolean; }) {
       setScrollDown(false);
       cancelScroll();
     }
-  }
+  }, [cancelScroll, scrollUp, scrollDown]);
 
   const scrollMouseDown = (direction: string) => {
     cancelScroll();
@@ -201,11 +199,10 @@ function Viewer(props: { ownedOnly: boolean; }) {
 
     if (isConnected) {
       getNFTs(); // Set user owned traits
-    } else if (xp !== 0) {
+    } else {
       setXP(0);
     }
-    // eslint-disable-next-line
-  }, [isConnected]);
+  }, [isConnected, address, setXP]);
 
   useEffect(() => {
     const getViewerItems = async () => {
@@ -226,27 +223,7 @@ function Viewer(props: { ownedOnly: boolean; }) {
 
   useEffect(() => {
     viewerScroll(); // Call to set scroll buttons when owned only toggled
-    let message: string | undefined;
-
-    if (props.ownedOnly) {
-      message = 'Showing your items only';
-    } else if (viewerMessageTimeout) {
-      message = 'Showing all items';
-    }
-
-    if (message) {
-      clearTimeout(viewerMessageTimeout);
-      setViewerMessage(message);
-
-      const timeout = window.setTimeout(() => {
-        setViewerMessage(''); // Clear
-      }, 3500);
-
-      setViewerMessageTimeout(timeout);
-    }
-
-    // eslint-disable-next-line
-  }, [props.ownedOnly]);
+  }, [props.ownedOnly, viewerScroll]);
 
   return (
     <>
@@ -254,7 +231,6 @@ function Viewer(props: { ownedOnly: boolean; }) {
         { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
       </div>
 
-      <p id="viewerMessage" style={{ display: !viewerMessage ? "none" : "" }} className={ viewerMessage && 'visible' }>{ viewerMessage }</p>
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
       <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
@@ -264,12 +240,38 @@ function Viewer(props: { ownedOnly: boolean; }) {
 function WardrobeViewer() {
   const [category, setCategory] = useState<string>('categories');
   const [ownedOnly, setOwnedOnly] = useState<boolean>(false);
+  const [viewerMessage, setViewerMessage] = useState<string>('');
+  const viewerMessageInitRef: React.MutableRefObject<boolean> = useRef(false);
+
+  useEffect(() => {
+    let message: string | undefined;
+
+    if (ownedOnly) {
+      message = 'Showing your items only';
+    } else if (viewerMessageInitRef.current) {
+      message = 'Showing all items';
+    }
+
+    if (message) {
+      setViewerMessage(message);
+      viewerMessageInitRef.current = true;
+
+      const timeout = window.setTimeout(() => {
+        setViewerMessage(''); // Clear
+      }, 2500);
+
+      return () => {
+        clearInterval(timeout);
+      }
+    }
+  }, [ownedOnly]);
 
   return (
     <CategoryContext.Provider value={{ category, setCategory }}>
       <div id="wardrobeViewer">
         <ViewerMenu ownedOnly={ ownedOnly } setOwnedOnly={ setOwnedOnly } />
         <Viewer ownedOnly={ ownedOnly } />
+        <p id="viewerMessage" style={{ display: !viewerMessage ? "none" : "" }} className={ viewerMessage && 'visible' }>{ viewerMessage }</p>
       </div>
     </CategoryContext.Provider>
   );
@@ -280,13 +282,7 @@ function WardrobeViewer() {
 function Wardrobe() {
   const { isConnected } = useAccount();
   const [darcel, setDarcel] = useState<Darcel>(localStorage.avatarV1 ? JSON.parse(localStorage.avatarV1) : DefaultDarcel);
-  const [sectionVisibility, setSectionVisibility] = useState<boolean>(false);
-
-  useEffect(() => {
-    // Show section if wallet connected or demo param in URL
-    const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
-    setSectionVisibility(isConnected || urlParams.get('demo') ? true : false);
-  }, [isConnected]);
+  const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
   useEffect(() => {
     //localStorage.clear(); // Use for testing
@@ -302,7 +298,7 @@ function Wardrobe() {
 
   return (
     <DarcelContext.Provider value={{ darcel, setDarcel }}>
-      <div className="section" id="sectionWardrobe" style={{ display: !sectionVisibility ? "none" : "" }}>
+      <div className="section" id="sectionWardrobe" style={{ display: !isConnected && !urlParams.get('demo') ? "none" : "" }}>
         <WardrobeStage />
         <WardrobeViewer />
       </div>
