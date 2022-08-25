@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext, useCallback } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
@@ -106,43 +106,39 @@ function Viewer(props: { ownedOnly: boolean; }) {
   const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
   const viewerRef = useRef<HTMLDivElement>(null);
 
-  const cancelScroll = useCallback(() => {
+  const cancelScroll = () => {
     clearInterval(scrollInterval);
     setScrollInterval(0);
-  }, [scrollInterval]);
+  }
 
-  const viewerScroll = useCallback(() => {
+  const viewerScroll = () => {
     const itemViewer = viewerRef.current!;
 
     // Up
-    if (!isMobile && itemViewer.scrollTop > 0 && !scrollUp) {
+    if (!isMobile && itemViewer.scrollTop > 0) {
       setScrollUp(true);
-    } else if (itemViewer.scrollTop === 0 && scrollUp) {
+    } else if (scrollUp) {
       setScrollUp(false);
       cancelScroll();
     }
 
     // Down
-    if (!isMobile && itemViewer.scrollTop + itemViewer.offsetHeight !== itemViewer.scrollHeight && !scrollDown) {
+    if (!isMobile && Math.ceil(itemViewer.scrollTop + itemViewer.offsetHeight) < itemViewer.scrollHeight) {
       setScrollDown(true);
-    } else if (Math.ceil(itemViewer.scrollTop + itemViewer.offsetHeight) >= itemViewer.scrollHeight && scrollDown) {
+    } else if (scrollDown) {
       setScrollDown(false);
       cancelScroll();
     }
-  }, [cancelScroll, scrollUp, scrollDown]);
+  }
 
   const scrollMouseDown = (direction: string) => {
-    cancelScroll();
+    const itemViewer = viewerRef.current!;
 
     const interval = window.setInterval(() => {
-      if (window.innerWidth > window.innerHeight && direction === 'up') {
-        viewerRef.current!.scrollTop -= 2;
-      } else if (window.innerWidth > window.innerHeight && direction === 'down') {
-        viewerRef.current!.scrollTop += 2;
-      } else if (direction === 'up') {
-        viewerRef.current!.scrollLeft -= 2;
+      if (direction === 'up') {
+        itemViewer.scrollTop -= 2;
       } else {
-        viewerRef.current!.scrollLeft += 2;
+        itemViewer.scrollTop += 2;
       }
     }, 0);
 
@@ -222,17 +218,17 @@ function Viewer(props: { ownedOnly: boolean; }) {
   }, [category]);
 
   useEffect(() => {
-    viewerScroll(); // Call to set scroll buttons when owned only toggled
-  }, [props.ownedOnly, viewerScroll]);
+    viewerRef.current!.scrollTop = 0;
+  }, [props.ownedOnly]);
 
   return (
     <>
-      <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
+      <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll }>
         { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
       </div>
 
-      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
-      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
   );
 }
@@ -261,7 +257,7 @@ function WardrobeViewer() {
       }, 2500);
 
       return () => {
-        clearInterval(timeout);
+        clearTimeout(timeout);
       }
     }
   }, [ownedOnly]);
