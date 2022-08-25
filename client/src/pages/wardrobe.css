@@ -69,12 +69,35 @@
 
 /* Viewer */
 
+@keyframes fadeInOut3 {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 #wardrobeViewer {
   height: 100%;
   margin-left: 24px;
   width: 552px;
   position: relative;
   min-width: 200px;
+}
+
+button#viewerHome,
+button#viewerOwnedToggle {
+  float: left;
 }
 
 button#viewerHome {
@@ -124,6 +147,26 @@ button#viewerDown {
   margin-top: -36px;
 }
 
+p#viewerMessage {
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  position: absolute;
+  left: -8px;
+  right: 0;
+  top: 56px;
+  bottom: 0;
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  border-radius: 999px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+p#viewerMessage.visible {
+  animation: fadeInOut3 ease-in 2.5s forwards;
+}
+
 @media only screen and (max-width: 1279px) {
   #wardrobeViewer {
     width: 368px;
@@ -136,9 +179,17 @@ button#viewerDown {
     width: 288px;
   }
 
+  button#viewerHome {
+    margin-right: 8px;
+  }
+
   select#viewerMenu {
-    width: calc(100% - 76px);
+    width: calc(100% - 132px);
     margin-right: 12px;
+  }
+
+  p#viewerMessage {
+    left: -4px;
   }
 }
 
@@ -152,7 +203,6 @@ button#viewerDown {
 
   button#viewerHome {
     margin-left: 0;
-    margin-right: 8px;
   }
 
   select#viewerMenu {
@@ -174,5 +224,9 @@ button#viewerDown {
 
   button.viewerUpDown {
     display: none;
+  }
+
+  p#viewerMessage {
+    left: 0;
   }
 }

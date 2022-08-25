@@ -35,11 +35,12 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
   useEffect(() => {
     props.viewerScroll(); // Call to set scroll buttons in viewer
-  }, [props]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
-      <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourdarcels.s3.amazonaws.com/df/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
+      <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
         <h3>{ title }</h3>

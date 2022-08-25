@@ -1,3 +1,5 @@
+/* ViewerItem */
+
 @keyframes fadeIn1 {
   0% {
     opacity: 0;
@@ -17,8 +19,6 @@
     opacity: 0.5;
   }
 }
-
-/* ViewerItem */
 
 .viewerItem {
   width: calc(33.3% - 24px);

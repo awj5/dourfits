@@ -183,13 +183,15 @@
 		"title": "Tie Dye Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"format": ".svg.png"
 	},
 	{
 		"title": "Tie Dye T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"format": ".svg.png"
 	},
 	{
 		"title": "Varsity",

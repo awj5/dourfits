@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext, useCallback } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
@@ -88,6 +88,8 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
         <option value="categories">Categories</option>
         { categories.map((category, i) => <option value={ category.title.toLowerCase().replace('&', 'and').replace(/ /g, '-') } key={ i }>{ category.title }</option>) }
       </select>
+
+      <div className="clear"></div>
     </>
   );
 }
@@ -95,22 +97,24 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
 function Viewer(props: { ownedOnly: boolean; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
-  const { setXP } = useContext<XPContextType>(XPContext);
+  const { xp, setXP } = useContext<XPContextType>(XPContext);
   const [date, setDate] = useState<number>(Date.now());
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
   const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
-  const viewer = useRef<HTMLDivElement>(null);
+  const [viewerMessage, setViewerMessage] = useState<string>('');
+  const [viewerMessageTimeout, setViewerMessageTimeout] = useState<number>(0);
+  const viewerRef = useRef<HTMLDivElement>(null);
 
-  const cancelScroll = useCallback(() => {
+  const cancelScroll = () => {
     clearInterval(scrollInterval);
     setScrollInterval(0);
-  }, [scrollInterval, setScrollInterval]);
+  }
 
-  const viewerScroll = useCallback(() => {
-    const itemViewer = viewer.current!;
+  const viewerScroll = () => {
+    const itemViewer = viewerRef.current!;
 
     // Up
     if (!isMobile && itemViewer.scrollTop > 0 && !scrollUp) {
@@ -127,27 +131,27 @@ function Viewer(props: { ownedOnly: boolean; }) {
       setScrollDown(false);
       cancelScroll();
     }
-  }, [cancelScroll, scrollUp, scrollDown]);
+  }
 
   const scrollMouseDown = (direction: string) => {
     cancelScroll();
 
     const interval = window.setInterval(() => {
       if (window.innerWidth > window.innerHeight && direction === 'up') {
-        viewer.current!.scrollTop -= 2;
+        viewerRef.current!.scrollTop -= 2;
       } else if (window.innerWidth > window.innerHeight && direction === 'down') {
-        viewer.current!.scrollTop += 2;
+        viewerRef.current!.scrollTop += 2;
       } else if (direction === 'up') {
-        viewer.current!.scrollLeft -= 2;
+        viewerRef.current!.scrollLeft -= 2;
       } else {
-        viewer.current!.scrollLeft += 2;
+        viewerRef.current!.scrollLeft += 2;
       }
     }, 0);
 
     setScrollInterval(interval);
   }
 
-  const getItemOwned = (title: string, trait: string): boolean => {
+  const checkItemOwned = (title: string, trait: string): boolean => {
     const checkTrait = userTraits.filter(obj => {
       return obj.value.toLowerCase() === title.toLowerCase() && obj.trait_type.toLowerCase() === trait.toLowerCase();
     })
@@ -197,10 +201,11 @@ function Viewer(props: { ownedOnly: boolean; }) {
 
     if (isConnected) {
       getNFTs(); // Set user owned traits
-    } else {
+    } else if (xp !== 0) {
       setXP(0);
     }
-  }, [isConnected, address, setXP]);
+    // eslint-disable-next-line
+  }, [isConnected]);
 
   useEffect(() => {
     const getViewerItems = async () => {
@@ -221,14 +226,35 @@ function Viewer(props: { ownedOnly: boolean; }) {
 
   useEffect(() => {
     viewerScroll(); // Call to set scroll buttons when owned only toggled
-  }, [props.ownedOnly, viewerScroll]);
+    let message: string | undefined;
+
+    if (props.ownedOnly) {
+      message = 'Showing your items only';
+    } else if (viewerMessageTimeout) {
+      message = 'Showing all items';
+    }
+
+    if (message) {
+      clearTimeout(viewerMessageTimeout);
+      setViewerMessage(message);
+
+      const timeout = window.setTimeout(() => {
+        setViewerMessage(''); // Clear
+      }, 3500);
+
+      setViewerMessageTimeout(timeout);
+    }
+
+    // eslint-disable-next-line
+  }, [props.ownedOnly]);
 
   return (
     <>
-      <div id="viewer" ref={ viewer } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : getItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
+      <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll }>
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
       </div>
 
+      <p id="viewerMessage" style={{ display: !viewerMessage ? "none" : "" }} className={ viewerMessage && 'visible' }>{ viewerMessage }</p>
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
       <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } onTouchEnd={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
