@@ -114,11 +114,11 @@ h1 img {
 #headerDashboard {
   background-color: #000;
   border-radius: 999px;
-  width: 380px;
+  width: 360px;
   height: 64px;
   position: absolute;
   left: 50%;
-  margin-left: -190px;
+  margin-left: -180px;
   top: 32px;
 }
 
@@ -161,13 +161,50 @@ h1 img {
   height: 40px;
 }
 
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-top: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+nav a {
+  font-family: "itc-avant-garde-gothic-lt-bold", sans-serif;
+  font-size: 24px;
+  margin-left: 16px;
+  margin-top: 20px;
+  line-height: 1;
+  display: inline-block;
+  transition: opacity 0.15s linear;
+  opacity: .75;
+}
+
+a#nav-home {
+  display: none;
+}
+
+nav button.bigButton {
+  display: none;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+@media (hover: hover) {
+  nav a:hover {
+    opacity: 1;
+  }
+}
+
 button#navBurger {
   position: absolute;
-  right: 16px;
-  top: 32px;
+  right: 0;
+  top: 12px;
   padding: 16px;
   padding-top: 17px;
   padding-bottom: 17px;
+  display: none;
 }
 
 #burger {
@@ -177,6 +214,10 @@ button#navBurger {
   border-bottom: 6px solid #FFF;
 }
 
+#burger.selected {
+  border-color: var(--df-orange);
+}
+
 #burger:after {
   content: "";
   background-color: #FFF;
@@ -184,6 +225,10 @@ button#navBurger {
   height: 6px;
   display: block;
   margin-top: 6px;
+}
+
+#burger.selected:after {
+  background-color: var(--df-orange);
 }
 
 @media only screen and (max-width: 1023px) {
@@ -205,8 +250,30 @@ button#navBurger {
     margin: 8px;
   }
 
+  nav {
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: right 0.25s linear;
+    padding-top: 59px;
+    padding-right: 0;
+  }
+
+  nav a {
+    font-size: 30px;
+    margin-top: 16px;
+    display: block;
+    width: max-content;
+    color: var(--df-orange);
+  }
+
+  a#nav-home,
+  nav button.bigButton {
+    display: block;
+  }
+
   button#navBurger {
-    right: 0;
-    top: 12px;
+    display: inline;
   }
 }

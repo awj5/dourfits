@@ -1,28 +1,16 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
-import { useAccount, useDisconnect } from 'wagmi';
+import { useAccount } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
-import { OverlayContext, OverlayContextType, Overlay } from './context/OverlayContext';
+import ConnectButton from './components/ConnectButton';
+import { OverlayContext, Overlay } from './context/OverlayContext';
 import { XPContext, XPContextType } from './context/XP';
 import './layout.css';
 
 /* Header */
 
 function HeaderDashboard() {
-  const { address, isConnected } = useAccount();
-  const { disconnect } = useDisconnect();
-  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const { xp } = useContext<XPContextType>(XPContext);
-
-  const connectClick = () => {
-    setOverlay({ visible: true, title: 'Connect a Wallet' });
-  }
-
-  const disconnectClick = () => {
-    if (window.confirm('Disconnect wallet?')) {
-      disconnect();
-    }
-  }
 
   return (
     <div id="headerDashboard">
@@ -31,24 +19,38 @@ function HeaderDashboard() {
         <p>{ xp }<span>XP</span></p>
       </div>
 
-      <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton">{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : 'Connect' }</button>
+      <ConnectButton />
     </div>
   );
 }
 
 function Header() {
+  const location = useLocation();
+  const { isConnected } = useAccount();
+  const [showingNav, setshowingNav] = useState<boolean>(false);
+
   const burgerClick = () => {
-    alert("WIP!");
+    setshowingNav(!showingNav);
+  }
+
+  const hideNav = () => {
+    setshowingNav(false);
   }
 
   return (
     <header>
-      <h1><img src="assets/img/logo.svg" alt="Dour Fits" /></h1>
+      <h1><Link to="/"><img src="assets/img/logo.svg" alt="Dour Fits" /></Link></h1>
       <HeaderDashboard />
 
-      <nav>
-        <button onClick={ burgerClick } id="navBurger"><div id="burger"></div></button>
+      <nav style={{ right: showingNav ? 0 : "" }}>
+        <Link to="/" id="nav-home" onClick={ hideNav } style={{ opacity: location.pathname === '/' ? 1 : "" }}>Home</Link>
+        <Link to="/wardrobe" onClick={ hideNav } id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
+        <Link to="/events" onClick={ hideNav } id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
+        <Link to="/faq" onClick={ hideNav } id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
+        <ConnectButton />
       </nav>
+
+      <button onClick={ burgerClick } id="navBurger"><div id="burger" className={ showingNav ? 'selected' : undefined }></div></button>
     </header>
   );
 }
