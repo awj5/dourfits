@@ -18,11 +18,70 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   const available: boolean = props.traitOwned || xpItem === 'UNLOCKED' ? true : false;
 
   const itemClick = () => {
-      // Update Darcel avatar
-      const currentVal: string = darcel[props.item.layer as keyof Darcel];
-      const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
-      const clearedVal: string = props.item.layer === 'background' ? '#999' : ""; // Background resets to default color
-      setDarcel({ ...darcel, [props.item.layer!]: currentVal === newVal ? clearedVal : newVal });
+    // Update Darcel avatar
+    const currentVal: string = darcel[props.item.layer as keyof Darcel];
+    const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
+    const clearedVal: string = props.item.layer === 'background' ? '#999' : ""; // Background resets to default color
+    const layers: { [x: string]: string; } = { [props.item.layer!]: currentVal === newVal ? clearedVal : newVal };
+
+    // Exclusions
+    if (props.item.exclusions) {
+      localStorage[props.item.layer! + 'DFEx'] = JSON.stringify(props.item.exclusions); // Store layer exclusions
+    } else if (localStorage[props.item.layer! + 'DFEx']) {
+      localStorage.removeItem(props.item.layer! + 'DFEx'); // No exclusions for layer
+    }
+
+    // Loop Darcel layers
+    for (var key in darcel) {
+      if (localStorage[key + 'DFEx']) {
+        // Exclusion exists for layer
+        let exclusions: object = JSON.parse(localStorage[key + 'DFEx']);
+        let keys: string[] = Object.keys(exclusions);
+
+        // Loop exclusions and set layer
+        for (let x = 0; x < keys.length; x++) {
+          let key = keys[x] as keyof typeof exclusions;
+          layers[key] = exclusions[key];
+        }
+      }
+    }
+
+    // Top type
+    if (props.item.topType) {
+      if (props.item.topType !== localStorage.dfTopType) {
+        if (props.item.layer === 'tops') {
+          let arms: string;
+
+          switch (props.item.topType) {
+            case 'short':
+              arms = 'arms/hands-on-hips.svg';
+              break;
+            case 'outwear':
+              arms = 'arms/outwear.svg';
+              break;
+            case 'hoodie':
+              arms = 'arms/hoodie.svg';
+              break;
+            case 'sweater':
+              arms = 'arms/sweater.svg';
+              break;
+            case 'sleeveless':
+              arms = 'arms/crossed.svg';
+              break;
+            default:
+              arms = '';
+          }
+
+          layers.arms = arms;
+        } else {
+          layers.tops = '';
+        }
+      }
+
+      localStorage.dfTopType = props.item.topType;
+    }
+
+    setDarcel({ ...darcel, ...layers }); // Update avatar context
   }
 
   const buyClick = () => {

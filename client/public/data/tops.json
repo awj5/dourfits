@@ -3,212 +3,247 @@
 		"title": "Camo Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "Check T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Clouds T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Darcel T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Dour Darcels T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "GM Wings",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Gray Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "hoodie"
 	},
 	{
 		"title": "Grid Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Heart Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Leather Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "no-arms"
 	},
 	{
 		"title": "Leopard T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Metal T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Navy Pleats",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Navy Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "NGMI Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "hoodie"
 	},
 	{
 		"title": "NGMI Wings",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Orange Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "hoodie"
 	},
 	{
 		"title": "Patch Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "no-arms"
 	},
 	{
 		"title": "Peach Pleats",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Polka Dot Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Purple Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "hoodie"
 	},
 	{
 		"title": "Red Leather Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "no-arms"
 	},
 	{
 		"title": "Roadman Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "Shearling Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "Skull T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Striped Jersey",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Striped Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Striped T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Tan Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "no-arms"
 	},
 	{
 		"title": "Teddy Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Tie Dye Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"format": ".svg.png"
+		"format": ".svg.png",
+		"topType": "hoodie"
 	},
 	{
 		"title": "Tie Dye T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"format": ".svg.png"
+		"format": ".svg.png",
+		"topType": "short"
 	},
 	{
 		"title": "Varsity",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "no-arms"
 	},
 	{
 		"title": "White T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Woodgrain Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sweater"
 	}
 ]

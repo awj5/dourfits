@@ -43,7 +43,6 @@
     },
     {
         "title": "Black Short Back and Sides",
-        "shortTitle": "Black Short",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -74,25 +73,12 @@
     },
     {
         "title": "Brown Short Back and Sides",
-        "shortTitle": "Brown Short",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Camo Camp",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Chrome Robot",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Clouds",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -159,7 +145,6 @@
     },
     {
         "title": "Forest Short Back and Sides",
-        "shortTitle": "Forest Short",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -171,19 +156,7 @@
         "layer": "hairAndHats"
     },
     {
-        "title": "Furry",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
         "title": "Gimp",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Gold Robot",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -226,16 +199,12 @@
     },
     {
         "title": "Mid Blue Hoodie",
-        "shortTitle": "Blue Hoodie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Mummy",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "hairAndHats",
+        "exclusions": {
+            "arms": ""
+        }
     },
     {
         "title": "Navy Beanie",
@@ -263,7 +232,6 @@
     },
     {
         "title": "Orange Beanie",
-        "shortTitle": "Beanie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -300,7 +268,6 @@
     },
     {
         "title": "Polka Dot Bucket",
-        "shortTitle": "Dot Bucket",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -349,7 +316,6 @@
     },
     {
         "title": "Red Devil Gimp",
-        "shortTitle": "Devil Gimp",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -358,7 +324,10 @@
         "title": "Red Hoodie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "hairAndHats",
+        "exclusions": {
+            "arms": ""
+        }
     },
     {
         "title": "Redhead",
@@ -374,7 +343,6 @@
     },
     {
         "title": "Shearling Bucket",
-        "shortTitle": "Shearling",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -417,7 +385,6 @@
     },
     {
         "title": "Yellow Short Back and Sides",
-        "shortTitle": "Yellow Short",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"

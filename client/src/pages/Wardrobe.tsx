@@ -23,6 +23,14 @@ function WardrobeStage() {
 
   const resetClick = () => {
     if (window.confirm('Are you sure you want to reset your Darcel?')) {
+      // Remove layer exclusions
+      for (var key in darcel) {
+        if (localStorage[key + 'DFEx']) {
+          localStorage.removeItem(key + 'DFEx');
+        }
+      }
+
+      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
       setDarcel(DefaultDarcel);
     }
   }
@@ -48,6 +56,8 @@ export interface Category {
   hex?: string;
   xp?: number;
   format?: string;
+  exclusions?: object;
+  topType?: string
 }
 
 function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean>> }) {
@@ -282,6 +292,10 @@ function Wardrobe() {
   const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
   useEffect(() => {
+    if (!localStorage.avatarV2) {
+      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
+    }
+
     //localStorage.clear(); // Use for testing
     localStorage.avatarV2 = JSON.stringify(darcel); // Update local storage
 

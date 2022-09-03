@@ -9,7 +9,11 @@
         "title": "Dead",
         "collection": "dourdarcels",
         "trait": "Head",
-        "layer": "head"
+        "layer": "head",
+        "exclusions": {
+            "eye": "",
+            "mouth": ""
+        }
     },
     {
         "title": "Egg",

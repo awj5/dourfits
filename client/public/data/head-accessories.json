@@ -42,6 +42,12 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Chrome Robot",
+        "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Clouds",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
@@ -64,6 +70,12 @@
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
         "layer": "headAccessories"
+    },
+    {
+        "title": "Gold Robot",
+        "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
     },
     {
         "title": "Gold Stud",

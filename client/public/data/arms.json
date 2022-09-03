@@ -3,174 +3,189 @@
         "title": "Balloon",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Basketball",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
-    },
-    {
-        "title": "Beard Arms",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Beer",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Bones",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Camo Skateboard",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Champagne",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Chrome Robot",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Cigarette",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Coffee",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Crossed",
-        "collection": "dourdarcels",
+        "xp": 100,
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Crossed Jewelry",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Gold Robot",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "GM Skateboard",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Hands on Hips",
         "xp": 100,
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Lots",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
-    },
-    {
-        "title": "Melting",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Mummy",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Muscle",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Peace",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Regular",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Rose",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Selfie",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Shrug",
-        "collection": "dourdarcels",
+        "xp": 100,
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Striped Bag",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Thumbs Up",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Transparent",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Wave",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "sleeveless"
     },
     {
         "title": "Woodgrain Bag",
         "collection": "dourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     }
 ]
