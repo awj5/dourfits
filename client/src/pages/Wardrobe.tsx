@@ -24,7 +24,7 @@ function WardrobeStage() {
   const resetClick = () => {
     if (window.confirm('Are you sure you want to reset your Darcel?')) {
       // Remove all layer exclusions
-      for (var key in darcel) {
+      for (let key in darcel) {
         if (localStorage[key + 'DFEx']) {
           localStorage.removeItem(key + 'DFEx');
         }

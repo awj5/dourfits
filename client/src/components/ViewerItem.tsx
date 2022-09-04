@@ -26,9 +26,9 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
     const exclusions: string[] = [];
 
     // Get currently excluded layers
-    for (var key in darcel) {
-      if (localStorage[key + 'DFEx']) {
-        let keys: string[] = Object.keys(JSON.parse(localStorage[key + 'DFEx']));
+    for (let layer in darcel) {
+      if (localStorage[layer + 'DFEx']) {
+        let keys: string[] = Object.keys(JSON.parse(localStorage[layer + 'DFEx']));
 
         for (let x = 0; x < keys.length; x++) {
           let key: string = keys[x];
@@ -40,10 +40,6 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
       }
     }
 
-    if (exclusions.includes(props.item.layer!)) {
-      console.log(1); // Show message
-    }
-
     if (props.item.exclusions && currentVal !== newVal && !exclusions.includes(props.item.layer!)) {
       localStorage[props.item.layer + 'DFEx'] = JSON.stringify(props.item.exclusions); // Store layer exclusions
     } else if (localStorage[props.item.layer + 'DFEx']) {
@@ -51,9 +47,9 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
     }
 
     // Set exclusions
-    for (var key in darcel) {
-      if (localStorage[key + 'DFEx']) {
-        let layerExclusions: object = JSON.parse(localStorage[key + 'DFEx']);
+    for (let layer in darcel) {
+      if (localStorage[layer + 'DFEx']) {
+        let layerExclusions: object = JSON.parse(localStorage[layer + 'DFEx']);
         let keys: string[] = Object.keys(layerExclusions);
 
         // Loop exclusions and set layers
@@ -64,6 +60,10 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
           // Remove key/layer exclusion if exists
           if (localStorage[key + 'DFEx']) {
             localStorage.removeItem(key + 'DFEx');
+          }
+
+          if (props.item.layer === key) {
+            console.log(layer); // Show message - could fire multiple times
           }
         }
       }
