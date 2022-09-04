@@ -12,6 +12,11 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Blue Earrings",
+        "xp": 100,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Bunny",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
@@ -45,13 +50,11 @@
         "title": "Chrome Robot",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Clouds",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": "",
+            "glasses": ""
+        }
     },
     {
         "title": "Crucifix Earring",
@@ -75,7 +78,11 @@
         "title": "Gold Robot",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": "",
+            "glasses": ""
+        }
     },
     {
         "title": "Gold Stud",
@@ -96,22 +103,23 @@
         "layer": "headAccessories"
     },
     {
-        "title": "Lots",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
         "title": "Motocross",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": "",
+            "glasses": ""
+        }
     },
     {
         "title": "Mummy",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "Orange Earrings",
@@ -141,6 +149,11 @@
         "title": "Unicorn",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "White Stud",
+        "xp": 100,
         "layer": "headAccessories"
     }
 ]

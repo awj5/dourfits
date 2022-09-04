@@ -1,1 +1,27 @@
-[]
+[
+	{
+		"title": "Black Skinny",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
+		"title": "Gray Pants",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
+		"title": "Navy Shorts",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
+		"title": "Red Tube",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
+		"title": "Sky Short Shorts",
+		"xp": 100,
+		"layer": "bottoms"
+	}
+]

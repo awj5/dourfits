@@ -23,33 +23,58 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
     const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
     const clearedVal: string = props.item.layer === 'background' ? '#999' : ""; // Background resets to default color
     const layers: { [x: string]: string; } = { [props.item.layer!]: currentVal === newVal ? clearedVal : newVal };
+    const exclusions: string[] = [];
 
-    // Exclusions
-    if (props.item.exclusions) {
-      localStorage[props.item.layer! + 'DFEx'] = JSON.stringify(props.item.exclusions); // Store layer exclusions
-    } else if (localStorage[props.item.layer! + 'DFEx']) {
-      localStorage.removeItem(props.item.layer! + 'DFEx'); // No exclusions for layer
-    }
-
-    // Loop Darcel layers
+    // Get currently excluded layers
     for (var key in darcel) {
       if (localStorage[key + 'DFEx']) {
-        // Exclusion exists for layer
-        let exclusions: object = JSON.parse(localStorage[key + 'DFEx']);
-        let keys: string[] = Object.keys(exclusions);
+        let keys: string[] = Object.keys(JSON.parse(localStorage[key + 'DFEx']));
 
-        // Loop exclusions and set layer
         for (let x = 0; x < keys.length; x++) {
-          let key = keys[x] as keyof typeof exclusions;
-          layers[key] = exclusions[key];
+          let key: string = keys[x];
+
+          if (!exclusions.includes(key)) {
+            exclusions.push(key);
+          }
+        }
+      }
+    }
+
+    if (exclusions.includes(props.item.layer!)) {
+      console.log(1); // Show message
+    }
+
+    if (props.item.exclusions && currentVal !== newVal && !exclusions.includes(props.item.layer!)) {
+      localStorage[props.item.layer + 'DFEx'] = JSON.stringify(props.item.exclusions); // Store layer exclusions
+    } else if (localStorage[props.item.layer + 'DFEx']) {
+      localStorage.removeItem(props.item.layer + 'DFEx'); // No exclusions for layer
+    }
+
+    // Set exclusions
+    for (var key in darcel) {
+      if (localStorage[key + 'DFEx']) {
+        let layerExclusions: object = JSON.parse(localStorage[key + 'DFEx']);
+        let keys: string[] = Object.keys(layerExclusions);
+
+        // Loop exclusions and set layers
+        for (let x = 0; x < keys.length; x++) {
+          let key = keys[x] as keyof typeof layerExclusions;
+          layers[key] = layerExclusions[key];
+
+          // Remove key/layer exclusion if exists
+          if (localStorage[key + 'DFEx']) {
+            localStorage.removeItem(key + 'DFEx');
+          }
         }
       }
     }
 
     // Top type
-    if (props.item.topType) {
+    if (props.item.topType && layers[props.item.layer!]) {
       if (props.item.topType !== localStorage.dfTopType) {
-        if (props.item.layer === 'tops') {
+        if (props.item.layer === 'arms') {
+          layers.tops = '';
+        } else {
           let arms: string;
 
           switch (props.item.topType) {
@@ -66,15 +91,13 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
               arms = 'arms/sweater.svg';
               break;
             case 'sleeveless':
-              arms = 'arms/crossed.svg';
+              arms = 'arms/regular.svg';
               break;
             default:
               arms = '';
           }
 
           layers.arms = arms;
-        } else {
-          layers.tops = '';
         }
       }
 

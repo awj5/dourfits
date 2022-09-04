@@ -24,7 +24,7 @@ export const DefaultDarcel: Darcel = {
   shoesAndLegs: "shoes-and-legs/nude-undies.svg",
   bottoms: "",
   tops: "",
-  arms: "arms/shrug.svg",
+  arms: "arms/regular.svg",
   bodyAccessories: "",
   facialHair: "",
   mouth: "mouth/sad.svg",

@@ -6,6 +6,11 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Brown Slip Ons",
+		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Chrome Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -18,6 +23,16 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Gray Heels",
+		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Gray Low Cuts",
+		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Mummy",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -26,13 +41,17 @@
 	{
 		"title": "Regular",
 		"xp": 100,
-		"trait": "Legs & Clothes",
 		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Transparent",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Flats",
+		"xp": 100,
 		"layer": "shoesAndLegs"
 	}
 ]

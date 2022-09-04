@@ -24,6 +24,11 @@
         "layer": "glasses"
     },
     {
+        "title": "Black Glasses",
+        "xp": 100,
+        "layer": "glasses"
+    },
+    {
         "title": "Brown",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -45,6 +50,11 @@
         "title": "Gold",
         "collection": "dourdarcels",
         "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Gold Wireframe",
+        "xp": 100,
         "layer": "glasses"
     },
     {

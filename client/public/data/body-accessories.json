@@ -1,5 +1,12 @@
 [
     {
+        "title": "Polka Dot Sweater",
+        "shortTitle": "Black Chain",
+        "collection": "dourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "bodyAccessories"
+    },
+    {
         "title": "Bow Tie",
         "collection": "dourdarcels",
         "trait": "Legs & Clothes",
@@ -26,7 +33,6 @@
     {
         "title": "Crucifix Necklace",
         "collection": "dourdarcels",
-        "shortTitle": "Crucifix",
         "trait": "Legs & Clothes",
         "layer": "bodyAccessories"
     },
@@ -43,9 +49,26 @@
         "layer": "bodyAccessories"
     },
     {
+        "title": "Heart Sweater",
+        "shortTitle": "Heart Necklace",
+        "collection": "dourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "bodyAccessories"
+    },
+    {
+        "title": "Orange Necklace",
+        "xp": 100,
+        "layer": "bodyAccessories"
+    },
+    {
         "title": "Pearls",
         "collection": "dourdarcels",
         "trait": "Legs & Clothes",
+        "layer": "bodyAccessories"
+    },
+    {
+        "title": "Red Beads",
+        "xp": 100,
         "layer": "bodyAccessories"
     }
 ]

@@ -1,5 +1,13 @@
 [
     {
+        "title": "Blue Crossbody Bag Sweater",
+        "shortTitle": "Blue Bag Sweater",
+        "collection": "colettexdourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "tops",
+        "topType": "sweater"
+    },
+    {
         "title": "Blue Bangs",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
@@ -13,73 +21,58 @@
     },
     {
         "title": "Blue colette Dots Bucket",
-        "shortTitle": "Dots Bucket",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blue colette Dots Cap",
-        "shortTitle": "Dots Cap",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blue colette Dots Earrings",
-        "shortTitle": "Dots Earrings",
         "collection": "colettexdourdarcels",
         "trait": "Accessories",
         "layer": "headAccessories"
     },
     {
         "title": "Blue colette Dots Glasses",
-        "shortTitle": "Dots Glasses",
         "collection": "colettexdourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
         "title": "Blue colette Eyelid",
-        "shortTitle": "Blue Eyelid",
         "collection": "colettexdourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Blue colette Hair",
-        "shortTitle": "Blue Hair",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Blue colette Hoodie",
-        "shortTitle": "Logo Hoodie",
-        "collection": "colettexdourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "tops"
-    },
-    {
         "title": "Blue colette Logo Cap",
-        "shortTitle": "Logo Cap",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blue colette Moody",
-        "shortTitle": "Blue Moody",
         "collection": "colettexdourdarcels",
         "trait": "Eye",
         "layer": "eye"
     },
     {
         "title": "Blue colette Puffer",
-        "shortTitle": "colette Puffer",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "outwear"
     },
     {
         "title": "Blue colette Sunglasses",
@@ -89,44 +82,39 @@
     },
     {
         "title": "Blue colette Sweater",
-        "shortTitle": "Blue Sweater",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "sweater"
     },
     {
         "title": "Blue colette T-Shirt",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "short"
     },
     {
         "title": "Blue colette x Dour Darcels Bucket",
-        "shortTitle": "Collab Bucket",
+        "shortTitle": "Blue colette x DD Bucket",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "Blue colette x Dour Darcels Cap",
-        "shortTitle": "Collab Cap",
+        "shortTitle": "Blue colette x DD Cap",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "Blue Crossbody Bag Sweater",
-        "shortTitle": "Bag Sweater",
-        "collection": "colettexdourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "tops"
-    },
-    {
-        "title": "Blue Hoodie with colette Pocket Logo",
+        "title": "Blue colette Hoodie",
         "shortTitle": "Blue Hoodie",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "hoodie"
     },
     {
         "title": "Blue Lens",
@@ -141,8 +129,15 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Blue Hoodie with colette Pocket Logo",
+        "shortTitle": "Blue Pocket Hoodie",
+        "collection": "colettexdourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "tops",
+        "topType": "hoodie"
+    },
+    {
         "title": "Blue Short Back and Sides",
-        "shortTitle": "Blue Short",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -155,10 +150,10 @@
     },
     {
         "title": "colette Balloon and Bag",
-        "shortTitle": "Balloon & Bag",
         "collection": "colettexdourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "colette Blue Hoop",
@@ -181,7 +176,6 @@
     },
     {
         "title": "colette Dots Cap",
-        "shortTitle": "Dots Cap",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -200,16 +194,19 @@
         "hex": "#E6E6E6"
     },
     {
-        "title": "Peace",
-        "collection": "colettexdourdarcels",
-        "trait": "Arms",
-        "layer": "arms"
-    },
-    {
         "title": "colette Skateboard",
         "collection": "colettexdourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
+        "title": "White Crossbody Bag Sweater",
+        "shortTitle": "White Bag Sweater",
+        "collection": "colettexdourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "tops",
+        "topType": "sweater"
     },
     {
         "title": "White Bangs",
@@ -231,14 +228,13 @@
     },
     {
         "title": "White colette Dots Bag",
-        "shortTitle": "Dots Bag",
         "collection": "colettexdourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "White colette Dots Bucket",
-        "shortTitle": "Dots Bucket",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -259,81 +255,76 @@
         "title": "White colette Dots T-Shirt",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "short"
     },
     {
         "title": "White colette Hair",
-        "shortTitle": "White Hair",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
-        "title": "White colette Hoodie",
-        "shortTitle": "White Hoodie",
-        "collection": "colettexdourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "tops"
-    },
-    {
         "title": "White colette Logo Bag",
-        "shortTitle": "Logo Bag",
         "collection": "colettexdourdarcels",
         "trait": "Arms",
-        "layer": "arms"
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "White colette Logo Bucket",
-        "shortTitle": "Logo Bucket",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "White colette Logo Cap",
-        "shortTitle": "Logo Cap",
         "collection": "colettexdourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
         "title": "White colette Puffer",
-        "shortTitle": "White Puffer",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "outwear"
     },
     {
         "title": "White colette Sweater",
-        "shortTitle": "White Sweater",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "sweater"
     },
     {
         "title": "White colette T-Shirt",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "short"
     },
     {
-        "title": "White Crossbody Bag Sweater",
-        "shortTitle": "Bag Sweater",
+        "title": "White colette Hoodie",
+        "shortTitle": "White Hoodie",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
-    },
-    {
-        "title": "White Hoodie with colette Pocket Logo",
-        "shortTitle": "Logo Hoodie",
-        "collection": "colettexdourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "hoodie"
     },
     {
         "title": "White Jacket",
         "collection": "colettexdourdarcels",
         "trait": "Legs & Clothes",
-        "layer": "tops"
+        "layer": "tops",
+        "topType": "no-arms"
+    },
+    {
+        "title": "White Hoodie with colette Pocket Logo",
+        "shortTitle": "White Pocket Hoodie",
+        "collection": "colettexdourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "tops",
+        "topType": "hoodie"
     }
 ]

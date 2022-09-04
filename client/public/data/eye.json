@@ -26,7 +26,6 @@
     {
         "title": "Eyelid",
         "xp": 100,
-        "trait": "Eye",
         "layer": "eye"
     },
     {
@@ -63,7 +62,6 @@
     {
         "title": "Moody",
         "xp": 100,
-        "trait": "Eye",
         "layer": "eye"
     },
     {
@@ -75,7 +73,6 @@
     {
         "title": "Regular",
         "xp": 100,
-        "trait": "Eye",
         "layer": "eye"
     },
     {

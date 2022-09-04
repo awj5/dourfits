@@ -36,9 +36,19 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Black Curly",
+        "xp": 100,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Black Long",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Part",
+        "xp": 100,
         "layer": "hairAndHats"
     },
     {
@@ -202,8 +212,10 @@
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats",
+        "topType": "sweater",
         "exclusions": {
-            "arms": ""
+            "tops": "",
+            "arms": "arms/sweater.svg"
         }
     },
     {
@@ -325,8 +337,10 @@
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats",
+        "topType": "sweater",
         "exclusions": {
-            "arms": ""
+            "tops": "",
+            "arms": "arms/sweater.svg"
         }
     },
     {
@@ -345,6 +359,16 @@
         "title": "Shearling Bucket",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Short Brown",
+        "xp": 100,
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Shoulder Length",
+        "xp": 100,
         "layer": "hairAndHats"
     },
     {

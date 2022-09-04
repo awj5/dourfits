@@ -1,5 +1,19 @@
 [
 	{
+		"title": "Heart Sweater",
+		"shortTitle": "Black Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Black T-Shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Camo Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -49,14 +63,13 @@
 		"topType": "hoodie"
 	},
 	{
-		"title": "Grid Sweater",
-		"collection": "dourdarcels",
-		"trait": "Legs & Clothes",
+		"title": "Gray Singlet",
+		"xp": 100,
 		"layer": "tops",
-		"topType": "sweater"
+		"topType": "sleeveless"
 	},
 	{
-		"title": "Heart Sweater",
+		"title": "Grid Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
@@ -133,6 +146,18 @@
 		"topType": "short"
 	},
 	{
+		"title": "Pink Dress",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Polka Dot Dress",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
 		"title": "Polka Dot Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -152,6 +177,12 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "no-arms"
+	},
+	{
+		"title": "Red T-Shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Roadman Puffer",

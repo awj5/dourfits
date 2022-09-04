@@ -25,7 +25,11 @@
         "title": "Furry",
         "collection": "dourdarcels",
         "trait": "Head",
-        "layer": "head"
+        "layer": "head",
+        "exclusions": {
+            "hairAndHats": "",
+            "headAccessories": ""
+        }
     },
     {
         "title": "Gold",
@@ -42,7 +46,6 @@
     {
         "title": "Regular",
         "xp": 100,
-        "trait": "Head",
         "layer": "head"
     },
     {
