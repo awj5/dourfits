@@ -215,7 +215,8 @@
         "topType": "sweater",
         "exclusions": {
             "tops": "",
-            "arms": "arms/sweater.svg"
+            "arms": "arms/sweater.svg",
+            "headAccessories": ""
         }
     },
     {
@@ -340,7 +341,8 @@
         "topType": "sweater",
         "exclusions": {
             "tops": "",
-            "arms": "arms/sweater.svg"
+            "arms": "arms/sweater.svg",
+            "headAccessories": ""
         }
     },
     {

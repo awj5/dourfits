@@ -60,7 +60,7 @@ export interface Category {
   topType?: string
 }
 
-function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean>> }) {
+function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean | undefined>>; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const [categories, setCategories] = useState<Category[]>([]);
 
@@ -105,7 +105,7 @@ function ViewerMenu(props: { ownedOnly: boolean; setOwnedOnly: React.Dispatch<Re
   );
 }
 
-function Viewer(props: { ownedOnly: boolean; }) {
+function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
   const { setXP } = useContext<XPContextType>(XPContext);
@@ -235,7 +235,7 @@ function Viewer(props: { ownedOnly: boolean; }) {
   return (
     <>
       <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait!) } ownedOnly={ props.ownedOnly } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
       </div>
 
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
@@ -246,23 +246,20 @@ function Viewer(props: { ownedOnly: boolean; }) {
 
 function WardrobeViewer() {
   const [category, setCategory] = useState<string>('categories');
-  const [ownedOnly, setOwnedOnly] = useState<boolean>(false);
+  const [ownedOnly, setOwnedOnly] = useState<boolean | undefined>(undefined);
   const [viewerMessage, setViewerMessage] = useState<string>('');
   const viewerMessageInitRef: React.MutableRefObject<boolean> = useRef(false);
 
   useEffect(() => {
-    let message: string | undefined;
-
     if (ownedOnly) {
-      message = 'Showing your items only';
-    } else if (viewerMessageInitRef.current) {
-      message = 'Showing all items';
+      setViewerMessage('Showing your items only');
+    } else if (ownedOnly !== undefined) {
+      setViewerMessage('Showing all items');
     }
+  }, [ownedOnly]);
 
-    if (message) {
-      setViewerMessage(message);
-      viewerMessageInitRef.current = true;
-
+  useEffect(() => {
+    if (viewerMessageInitRef.current) {
       const timeout = window.setTimeout(() => {
         setViewerMessage(''); // Clear
       }, 2500);
@@ -271,13 +268,15 @@ function WardrobeViewer() {
         clearTimeout(timeout);
       }
     }
-  }, [ownedOnly]);
+
+    viewerMessageInitRef.current = true;
+  }, [viewerMessage]);
 
   return (
     <CategoryContext.Provider value={{ category, setCategory }}>
       <div id="wardrobeViewer">
         <ViewerMenu ownedOnly={ ownedOnly } setOwnedOnly={ setOwnedOnly } />
-        <Viewer ownedOnly={ ownedOnly } />
+        <Viewer ownedOnly={ ownedOnly } viewerMessage={ viewerMessage } setViewerMessage={ setViewerMessage } />
         <p id="viewerMessage" style={{ display: !viewerMessage ? "none" : "" }} className={ viewerMessage && 'visible' }>{ viewerMessage }</p>
       </div>
     </CategoryContext.Provider>

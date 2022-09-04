@@ -5,7 +5,7 @@ import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelConte
 import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned: boolean; ownedOnly: boolean; }) {
+function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned: boolean; ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
@@ -62,8 +62,8 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
             localStorage.removeItem(key + 'DFEx');
           }
 
-          if (props.item.layer === key) {
-            console.log(layer); // Show message - could fire multiple times
+          if (props.item.layer === key && !props.viewerMessage) {
+            props.setViewerMessage('Not compatible with ' + layer.replace('And', ' & ').replace('dA', 'd a').toLowerCase()); // Show message
           }
         }
       }
@@ -73,7 +73,17 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
     if (props.item.topType && layers[props.item.layer!]) {
       if (props.item.topType !== localStorage.dfTopType) {
         if (props.item.layer === 'arms') {
-          layers.tops = '';
+          let top: string;
+
+          switch (props.item.topType) {
+            case 'short':
+              top = 'tops/black-t-shirt.svg';
+              break;
+            default:
+              top = '';
+          }
+
+          layers.tops = top;
         } else {
           let arms: string;
 
