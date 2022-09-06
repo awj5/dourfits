@@ -1,5 +1,17 @@
 [
     {
+        "title": "Afro",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Alien",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Angel",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -14,6 +26,18 @@
     {
         "title": "Barber",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Bear",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Black Backwards Cap",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -41,6 +65,12 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Black Fuzz",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Black Long",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -58,14 +88,44 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Black Wide Brim",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Blow Out",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
+        "title": "Blue Alien",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Pulled Back",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Blue Round",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Blunt",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Bodo",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -82,8 +142,32 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Brown Bun",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Shag",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Brown Shaved",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Brown Short Back and Sides",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Bushy",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -94,8 +178,50 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Camo Cowboy",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Cat Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Checkerboard Bucket",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Check Newsie",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Chloe",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Choppy",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Clouds Bucket",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Coffee Beanie",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -124,8 +250,26 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Dour Bucket",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Edges",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Egg",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Egg Cap",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -136,8 +280,20 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Feather Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Flat Top",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Floral Bucket",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -154,6 +310,18 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Forest Fuzz",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Forest Pom Pom",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Forest Short Back and Sides",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -162,6 +330,18 @@
     {
         "title": "Forest Quiff",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Furry",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Gentleman",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -184,14 +364,38 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Knight",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Leather Daddy",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Leopard Camp",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
+        "title": "Liberty",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Mane",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Messy",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -220,6 +424,18 @@
         }
     },
     {
+        "title": "Multi Pom Pom",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Backwards Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Navy Beanie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -232,8 +448,20 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Navy DD Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Navy Lion",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Navy Newsies",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -244,8 +472,32 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Neat",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "NYC Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Orange Beanie",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Orange Horns",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Paisley Bandana",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -256,8 +508,32 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Peace Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Peach Ozzy",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Pigtails",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pig Tail",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pink Camo Bucket",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -270,6 +546,12 @@
     {
         "title": "Pink Curls",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pixel Eye Cap",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -298,6 +580,30 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Pope",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Professor",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Pup Rave",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Purple Emo",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Purple Lion",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -312,6 +618,18 @@
     {
         "title": "Rainbow",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Backwards Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Red Beanie",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -334,6 +652,12 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Red Dots Bandana",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Red Hoodie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
@@ -346,8 +670,32 @@
         }
     },
     {
+        "title": "Red Part",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Redhead",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Rock Dog",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sailor",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sensible",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -369,13 +717,73 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Short Curls",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Short Slicked",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Shoulder Length",
         "xp": 100,
         "layer": "hairAndHats"
     },
     {
+        "title": "Skull Rave",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sky Blue Bandana",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Sky Blue Beanie",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Slicked Back",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Space Buns",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Striped Bucket",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Pom Pom",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Rave",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Striped Sweatband",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -386,14 +794,68 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Tan Curly",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Toothpaste",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Top Knot",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
     {
+        "title": "Turban",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Versailles",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wen Bucket",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Backwards Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Cowboy",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "White Darcels Cap",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
         "title": "White Long",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wild",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },
@@ -406,6 +868,24 @@
     {
         "title": "Yellow Beanie",
         "collection": "dourdarcels",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Horns",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Round",
+        "collection": "dourfits",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Yellow Shaved",
+        "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
     },

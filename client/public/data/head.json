@@ -1,5 +1,11 @@
 [
     {
+        "title": "Alien",
+        "collection": "dourfits",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
         "title": "Cyborg",
         "collection": "dourdarcels",
         "trait": "Head",
@@ -7,13 +13,19 @@
     },
     {
         "title": "Dead",
-        "collection": "dourdarcels",
+        "collection": "dourfits",
         "trait": "Head",
         "layer": "head",
         "exclusions": {
             "eye": "",
             "mouth": ""
         }
+    },
+    {
+        "title": "Diamond",
+        "collection": "dourfits",
+        "trait": "Head",
+        "layer": "head"
     },
     {
         "title": "Egg",
@@ -44,6 +56,12 @@
         "layer": "head"
     },
     {
+        "title": "Rainbow",
+        "collection": "dourfits",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
         "title": "Regular",
         "xp": 100,
         "layer": "head"
@@ -62,7 +80,13 @@
     },
     {
         "title": "Transparent",
-        "collection": "dourdarcels",
+        "collection": "dourfits",
+        "trait": "Head",
+        "layer": "head"
+    },
+    {
+        "title": "Versailles",
+        "collection": "dourfits",
         "trait": "Head",
         "layer": "head"
     }

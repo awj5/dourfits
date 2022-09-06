@@ -3,7 +3,10 @@
 		"title": "Bones",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Brown Slip Ons",
@@ -14,13 +17,19 @@
 		"title": "Chrome Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Gold Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Gray Heels",
@@ -36,7 +45,10 @@
 		"title": "Mummy",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Regular",

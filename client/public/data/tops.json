@@ -90,6 +90,12 @@
 		"topType": "short"
 	},
 	{
+		"title": "Mauve T-Shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Metal T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -177,12 +183,6 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "no-arms"
-	},
-	{
-		"title": "Red T-Shirt",
-		"xp": 100,
-		"layer": "tops",
-		"topType": "short"
 	},
 	{
 		"title": "Roadman Puffer",

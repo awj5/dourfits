@@ -77,7 +77,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
           switch (props.item.topType) {
             case 'short':
-              top = 'tops/black-t-shirt.svg';
+              top = 'tops/dour-fits-t-shirt.svg';
               break;
             default:
               top = '';

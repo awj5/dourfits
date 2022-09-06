@@ -6,6 +6,18 @@
         "layer": "eye"
     },
     {
+        "title": "Alien",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Anime",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
         "title": "Buzzed",
         "collection": "dourdarcels",
         "trait": "Eye",
@@ -24,8 +36,26 @@
         "layer": "eye"
     },
     {
+        "title": "Evil Eye",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
         "title": "Eyelid",
         "xp": 100,
+        "layer": "eye"
+    },
+    {
+        "title": "Forest Moody",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Ghost",
+        "collection": "dourfits",
+        "trait": "Eye",
         "layer": "eye"
     },
     {
@@ -34,6 +64,12 @@
         "trait": "Eye",
         "layer": "eye",
         "format": ".svg.png"
+    },
+    {
+        "title": "Green Glowing",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
     },
     {
         "title": "Heart",
@@ -71,8 +107,50 @@
         "layer": "eye"
     },
     {
+        "title": "Navy Moody",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Pink Eyelid",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Pixelated",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Purple Moody",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Rainbow",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
         "title": "Regular",
         "xp": 100,
+        "layer": "eye"
+    },
+    {
+        "title": "Reptile",
+        "collection": "dourfits",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Star",
+        "collection": "dourfits",
+        "trait": "Eye",
         "layer": "eye"
     },
     {
@@ -84,6 +162,12 @@
     {
         "title": "Transparent",
         "collection": "dourdarcels",
+        "trait": "Eye",
+        "layer": "eye"
+    },
+    {
+        "title": "Zombie",
+        "collection": "dourfits",
         "trait": "Eye",
         "layer": "eye"
     }
