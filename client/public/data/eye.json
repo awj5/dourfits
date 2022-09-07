@@ -30,12 +30,6 @@
         "layer": "eye"
     },
     {
-        "title": "Dead",
-        "collection": "dourdarcels",
-        "trait": "Eye",
-        "layer": "eye"
-    },
-    {
         "title": "Evil Eye",
         "collection": "dourfits",
         "trait": "Eye",
@@ -69,7 +63,8 @@
         "title": "Green Glowing",
         "collection": "dourfits",
         "trait": "Eye",
-        "layer": "eye"
+        "layer": "eye",
+        "format": ".svg.png"
     },
     {
         "title": "Heart",

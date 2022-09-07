@@ -280,7 +280,7 @@
         "layer": "hairAndHats"
     },
     {
-        "title": "Feather Cap",
+        "title": "Feather Hat",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -349,7 +349,10 @@
         "title": "Gimp",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "hairAndHats",
+        "exclusions": {
+            "mouth": ""
+        }
     },
     {
         "title": "Gray Cap",
@@ -460,7 +463,7 @@
         "layer": "hairAndHats"
     },
     {
-        "title": "Navy Newsies",
+        "title": "Navy Newsie",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -649,7 +652,10 @@
         "title": "Red Devil Gimp",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "hairAndHats",
+        "exclusions": {
+            "mouth": ""
+        }
     },
     {
         "title": "Red Dots Bandana",

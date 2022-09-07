@@ -56,6 +56,12 @@
         "layer": "bodyAccessories"
     },
     {
+        "title": "Opening Night",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "bodyAccessories"
+    },
+    {
         "title": "Orange Necklace",
         "xp": 100,
         "layer": "bodyAccessories"
@@ -64,6 +70,12 @@
         "title": "Pearls",
         "collection": "dourdarcels",
         "trait": "Legs & Clothes",
+        "layer": "bodyAccessories"
+    },
+    {
+        "title": "Quilt",
+        "collection": "dourfits",
+        "trait": "Accessories",
         "layer": "bodyAccessories"
     },
     {

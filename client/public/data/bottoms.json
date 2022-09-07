@@ -1,8 +1,129 @@
 [
 	{
+		"title": "Black Mini",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Pants Please",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Puffy Pants",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Black Skinny",
-		"xp": 100,
-		"layer": "bottoms"
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Stripe Skirt",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Blue Jeans",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Brown Genie",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Camo Tube",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Dour Darcels Skinny",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Charcoal Tube",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Coffee Flares",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Coffee Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Diagonal Stripe Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Eyes Skinny",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Flames Pants",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Floral Pants",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Flower Skirt",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Forest Flares",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Forest Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Gray Pants",
@@ -10,9 +131,117 @@
 		"layer": "bottoms"
 	},
 	{
+		"title": "Gray Sweats",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Kilt",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Knight",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Lilac Tube",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Moss Puffy",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Navy Cargos",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Navy Shorts",
 		"xp": 100,
 		"layer": "bottoms"
+	},
+	{
+		"title": "Peach Genie",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Pink Check Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Pink Genie",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Purple Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Rainbow Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Raw Denim",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Mini",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Pants Please",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Sport Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Stripe Skinny",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Sweats",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Red Tube",
@@ -20,8 +249,86 @@
 		"layer": "bottoms"
 	},
 	{
+		"title": "Skull Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Sky Pants Please",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Sky Short Shorts",
 		"xp": 100,
 		"layer": "bottoms"
+	},
+	{
+		"title": "Space Suit",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Sport Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Striped Pants",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Tan Cargos",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Tan Seam",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Taxi Tube",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Underwear",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Stripe Short Shorts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Skinny",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Yellow Pants",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
 	}
 ]

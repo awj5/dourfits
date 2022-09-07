@@ -1,5 +1,65 @@
 [
 	{
+		"title": "Alien",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Bandage Heels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Heels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Hi Tops",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Hi Top Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Lace Up Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Simple Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Slides",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Black Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Boat Shoes",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Bones",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -9,8 +69,32 @@
 		}
 	},
 	{
+		"title": "Brown Dress Ups",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Brown Lace Up Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Brown Slip Ons",
 		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Brown Tassels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Charcoal Tassels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
 		"layer": "shoesAndLegs"
 	},
 	{
@@ -23,6 +107,36 @@
 		}
 	},
 	{
+		"title": "Coffee Dress Ups",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Cowboy Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Dot Lace Up Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Dot Low Cuts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Forest Hi Tops",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Gold Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -32,13 +146,50 @@
 		}
 	},
 	{
+		"title": "Gray Dress Ups",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Gray Heels",
 		"xp": 100,
 		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Gray Low Cuts",
-		"xp": 100,
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Gray Slip Ons",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Green Striped Slides",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Knight",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Mauve Dress Ups",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Multi Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
 		"layer": "shoesAndLegs"
 	},
 	{
@@ -51,8 +202,116 @@
 		}
 	},
 	{
+		"title": "Navy Hi Top Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Opening Night",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Pink Low Cuts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Platform Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Rainbow Spot Hi Tops",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Heels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Lace Up Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Slip Ons",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Sole Slides",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Sole Space Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Red Tassels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Regular",
 		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Sandals",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Sky Blue Simple Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Space Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Strappy Heels",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Striped Hi Tops",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Tan Low Cuts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Tan Slides",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
 		"layer": "shoesAndLegs"
 	},
 	{
@@ -62,8 +321,50 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Versailles",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Wedges",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "White Flats",
 		"xp": 100,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Lace Up Boots",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Low Cuts",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Slides",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "White Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Yellow Hi Top Sneakers",
+		"collection": "dourfits",
+		"trait": "Shoes & Legs",
 		"layer": "shoesAndLegs"
 	}
 ]

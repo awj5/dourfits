@@ -57,6 +57,18 @@
         }
     },
     {
+        "title": "Coin",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Cross",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
         "title": "Crucifix Earring",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
@@ -69,9 +81,45 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Dangly",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Dangly Earrings",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Dark Hoops",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
         "title": "Diamond Stud",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Egg Fren",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Flower Earrings",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Ghost",
+        "collection": "dourfits",
+        "trait": "Accessories",
         "layer": "headAccessories"
     },
     {
@@ -97,9 +145,21 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Heart Earrings",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
         "title": "Hoops",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Moss Stud",
+        "collection": "dourfits",
+        "trait": "Accessories",
         "layer": "headAccessories"
     },
     {
@@ -122,6 +182,18 @@
         }
     },
     {
+        "title": "Nut",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Opening Night",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
         "title": "Orange Earrings",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
@@ -131,6 +203,18 @@
         "title": "Purple Earrings",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Quilt",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Red Cheeks and Beauty Spot",
+        "collection": "dourfits",
+        "trait": "Accessories",
         "layer": "headAccessories"
     },
     {
@@ -146,6 +230,46 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Space",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories",
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": "",
+            "glasses": ""
+        }
+    },
+    {
+        "title": "Space Bubble",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories",
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": "",
+            "glasses": ""
+        }
+    },
+    {
+        "title": "Star Earrings",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Triangle",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
+        "title": "U Earrings",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "headAccessories"
+    },
+    {
         "title": "Unicorn",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
@@ -154,6 +278,12 @@
     {
         "title": "White Stud",
         "xp": 100,
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Yellow Single Hoop",
+        "collection": "dourfits",
+        "trait": "Accessories",
         "layer": "headAccessories"
     }
 ]
