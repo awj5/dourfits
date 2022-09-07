@@ -1,7 +1,25 @@
 [
     {
+        "title": "Black Beard",
+        "collection": "dourfits",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Black Thin Mustache",
+        "collection": "dourfits",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
         "title": "Black Stubble",
         "collection": "dourdarcels",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Blue Beard",
+        "collection": "dourfits",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },
@@ -30,8 +48,26 @@
         "layer": "facialHair"
     },
     {
+        "title": "Navy Mustache",
+        "collection": "dourfits",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Patch",
+        "collection": "dourfits",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
         "title": "Tan Mustache",
         "collection": "dourdarcels",
+        "trait": "Facial Hair",
+        "layer": "facialHair"
+    },
+    {
+        "title": "Thin Mustache",
+        "collection": "dourfits",
         "trait": "Facial Hair",
         "layer": "facialHair"
     },

@@ -1,7 +1,31 @@
 [
     {
+        "title": "Alien",
+        "collection": "dourfits",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
         "title": "Ambivalent",
         "xp": 100,
+        "layer": "mouth"
+    },
+    {
+        "title": "Argh",
+        "collection": "dourfits",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Blue Lip",
+        "collection": "dourfits",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
+        "title": "Cross",
+        "collection": "dourfits",
+        "trait": "Mouth",
         "layer": "mouth"
     },
     {
@@ -11,14 +35,32 @@
         "layer": "mouth"
     },
     {
+        "title": "Ghost",
+        "collection": "dourfits",
+        "trait": "Mouth",
+        "layer": "mouth"
+    },
+    {
         "title": "Happy",
         "xp": 100,
+        "layer": "mouth"
+    },
+    {
+        "title": "Lilac Lip",
+        "collection": "dourfits",
+        "trait": "Mouth",
         "layer": "mouth"
     },
     {
         "title": "Mummy",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
+        "layer": "mouth"
+    },
+    {
+        "title": "Oh",
+        "collection": "dourfits",
+        "trait": "Mouth",
         "layer": "mouth"
     },
     {
