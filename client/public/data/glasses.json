@@ -6,6 +6,12 @@
         "layer": "glasses"
     },
     {
+        "title": "Angles",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Anonymous",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -18,14 +24,32 @@
         "layer": "glasses"
     },
     {
+        "title": "Basic",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Black",
         "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
+        "title": "Black and Gold",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Black Glasses",
         "xp": 100,
+        "layer": "glasses"
+    },
+    {
+        "title": "Bookish",
+        "collection": "dourfits",
+        "trait": "Glasses",
         "layer": "glasses"
     },
     {
@@ -37,6 +61,42 @@
     {
         "title": "Chunky",
         "collection": "dourdarcels",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Crazy",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Cross",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Fat Brown",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Flower Lens",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Flower Rims",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Forest Wireframe",
+        "collection": "dourfits",
         "trait": "Glasses",
         "layer": "glasses"
     },
@@ -64,6 +124,18 @@
         "layer": "glasses"
     },
     {
+        "title": "Heart",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Kurt",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Mid Blue",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -82,6 +154,12 @@
         "layer": "glasses"
     },
     {
+        "title": "Narrow",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Navy",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -96,6 +174,30 @@
     {
         "title": "Orange",
         "collection": "dourdarcels",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Peach",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Purple Circle",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Racer",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Rave",
+        "collection": "dourfits",
         "trait": "Glasses",
         "layer": "glasses"
     },
@@ -124,14 +226,56 @@
         "layer": "glasses"
     },
     {
+        "title": "Ski",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Star",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Stripes and Crosses",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Sunglasses",
         "collection": "dourdarcels",
         "trait": "Glasses",
         "layer": "glasses"
     },
     {
+        "title": "Tortiseshell",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Triangle",
         "collection": "dourdarcels",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Velma",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "White Aviator",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "White Round",
+        "collection": "dourfits",
         "trait": "Glasses",
         "layer": "glasses"
     },
@@ -148,6 +292,12 @@
         "layer": "glasses"
     },
     {
+        "title": "Wise",
+        "collection": "dourfits",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
         "title": "Wobbly",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -156,6 +306,12 @@
     {
         "title": "Woodgrain",
         "collection": "dourdarcels",
+        "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Yellow Rectangle",
+        "collection": "dourfits",
         "trait": "Glasses",
         "layer": "glasses"
     }
