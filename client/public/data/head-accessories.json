@@ -20,13 +20,19 @@
         "title": "Bunny",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "Cat",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "Chain",
@@ -108,7 +114,10 @@
         "title": "Egg Fren",
         "collection": "dourfits",
         "trait": "Accessories",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "Flower Earrings",
@@ -120,7 +129,10 @@
         "title": "Ghost",
         "collection": "dourfits",
         "trait": "Accessories",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "Gold Robot",
@@ -183,12 +195,6 @@
     },
     {
         "title": "Nut",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Opening Night",
         "collection": "dourfits",
         "trait": "Accessories",
         "layer": "headAccessories"
@@ -273,7 +279,10 @@
         "title": "Unicorn",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories"
+        "layer": "headAccessories",
+        "exclusions": {
+            "hairAndHats": ""
+        }
     },
     {
         "title": "White Stud",

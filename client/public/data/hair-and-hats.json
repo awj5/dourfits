@@ -33,7 +33,10 @@
         "title": "Bear",
         "collection": "dourfits",
         "trait": "Hair & Hats",
-        "layer": "hairAndHats"
+        "layer": "hairAndHats",
+        "exclusions": {
+            "headAccessories": ""
+        }
     },
     {
         "title": "Black Backwards Cap",

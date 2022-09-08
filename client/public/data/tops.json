@@ -1,15 +1,57 @@
 [
 	{
-		"title": "Heart Sweater",
-		"shortTitle": "Black Sweater",
-		"collection": "dourdarcels",
-		"trait": "Legs & Clothes",
+		"title": "80s Oversized",
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sweater"
+		"topType": "oversized"
 	},
 	{
-		"title": "Black T-Shirt",
-		"xp": 100,
+		"title": "Bat Wings",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Big Bag",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Black Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Black Dot Top",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Blue Darcels Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
+		"title": "Bones T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Black T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -19,6 +61,20 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "outwear"
+	},
+	{
+		"title": "Check Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Check Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Check T-Shirt",
@@ -35,11 +91,60 @@
 		"topType": "short"
 	},
 	{
+		"title": "College Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Concentric T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Country Guitar",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Darcel T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "short"
+	},
+	{
+		"title": "DD Oversized",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "oversized"
+	},
+	{
+		"title": "DD Pattern Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Dot Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Dour Darcels Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Dour Darcels T-Shirt",
@@ -49,11 +154,74 @@
 		"topType": "short"
 	},
 	{
+		"title": "Dour Darcels Tote",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Dour Fits Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Egg Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Flames Top",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Floral T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Flower Top",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Forest Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Forest Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
 		"title": "GM Wings",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "short"
+	},
+	{
+		"title": "Gray DD Puffer",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "Gray Hoodie",
@@ -63,10 +231,24 @@
 		"topType": "hoodie"
 	},
 	{
+		"title": "Gray Jacket",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
 		"title": "Gray Singlet",
 		"xp": 100,
 		"layer": "tops",
 		"topType": "sleeveless"
+	},
+	{
+		"title": "Gray Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Grid Sweater",
@@ -76,11 +258,75 @@
 		"topType": "sweater"
 	},
 	{
+		"title": "Gray Top",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Gym Bag",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Have A Crap Day Tote",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Heart Hands T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "heart-hands"
+	},
+	{
+		"title": "Heart Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Heart Sweater",
+		"shortTitle": "Black Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Jacket and Tie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Knight",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "knight"
+	},
+	{
 		"title": "Leather Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "no-arms"
+	},
+	{
+		"title": "Leopard Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Leopard T-Shirt",
@@ -90,8 +336,29 @@
 		"topType": "short"
 	},
 	{
+		"title": "Liberty",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "liberty"
+	},
+	{
+		"title": "Lilac Darcel Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
 		"title": "Mauve T-Shirt",
 		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Metal Guitar",
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -101,6 +368,20 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "short"
+	},
+	{
+		"title": "Multi Stripe Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Navy Dots Puffer",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "outwear"
 	},
 	{
 		"title": "Navy Pleats",
@@ -131,6 +412,41 @@
 		"topType": "short"
 	},
 	{
+		"title": "NYC Oversized",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "oversized"
+	},
+	{
+		"title": "OK Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Opening Night",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "opening-night"
+	},
+	{
+		"title": "Orange Darcels T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Orange D Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
 		"title": "Orange Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -145,6 +461,13 @@
 		"topType": "no-arms"
 	},
 	{
+		"title": "Peace Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
 		"title": "Peach Pleats",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -152,10 +475,31 @@
 		"topType": "short"
 	},
 	{
+		"title": "Perfect T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Pink Camo Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
 		"title": "Pink Dress",
 		"xp": 100,
 		"layer": "tops",
 		"topType": "sleeveless"
+	},
+	{
+		"title": "Plaid Sweater",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Polka Dot Dress",
@@ -178,9 +522,72 @@
 		"topType": "hoodie"
 	},
 	{
+		"title": "Rainbow Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Rainbow Jacket",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Rainbow Puffer",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "outwear"
+	},
+	{
+		"title": "Rainbow Tier Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Red Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Red Dot Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Red Furry",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "outwear"
+	},
+	{
+		"title": "Red Gown",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
 		"title": "Red Leather Jacket",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Red Sleeve Varsity",
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
 		"topType": "no-arms"
 	},
@@ -192,6 +599,20 @@
 		"topType": "outwear"
 	},
 	{
+		"title": "Sad T-shirt",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Sad Tote",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Shearling Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -199,11 +620,46 @@
 		"topType": "outwear"
 	},
 	{
+		"title": "Skull Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
 		"title": "Skull T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "short"
+	},
+	{
+		"title": "Sky Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
+		"title": "Space Suit",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "space"
+	},
+	{
+		"title": "Striped Button Down",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Striped Collar Dress",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Striped Jersey",
@@ -234,6 +690,13 @@
 		"topType": "no-arms"
 	},
 	{
+		"title": "Tan Varsity",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
 		"title": "Teddy Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -257,9 +720,44 @@
 		"topType": "short"
 	},
 	{
+		"title": "Troll Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
+		"title": "Tux",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
 		"title": "Varsity",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "no-arms"
+	},
+	{
+		"title": "Versailles",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "versailles"
+	},
+	{
+		"title": "White Furry",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "outwear"
+	},
+	{
+		"title": "White Leather Jacket",
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
 		"topType": "no-arms"
 	},
@@ -276,5 +774,19 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "sweater"
+	},
+	{
+		"title": "Yellow Darcels Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
+		"title": "Yellow Dot Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless"
 	}
 ]
