@@ -40,6 +40,7 @@
     },
     {
         "title": "Black Backwards Cap",
+        "shortTitle": "Black Backwards",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -437,6 +438,7 @@
     },
     {
         "title": "Navy Backwards Cap",
+        "shortTitle": "Navy Backwards",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -629,6 +631,7 @@
     },
     {
         "title": "Red Backwards Cap",
+        "shortTitle": "Red Backwards",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
@@ -840,6 +843,7 @@
     },
     {
         "title": "White Backwards Cap",
+        "shortTitle": "White Backwards",
         "collection": "dourfits",
         "trait": "Hair & Hats",
         "layer": "hairAndHats"
