@@ -74,7 +74,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "dress-1"
 	},
 	{
 		"title": "Check T-Shirt",
@@ -179,7 +179,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "no-arms"
+		"topType": "tops-2"
 	},
 	{
 		"title": "Floral T-shirt",
@@ -193,14 +193,14 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "no-arms"
+		"topType": "tops-1"
 	},
 	{
 		"title": "Forest Dress",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "forest-dress"
 	},
 	{
 		"title": "Forest Hoodie",
@@ -326,7 +326,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "dress-1"
 	},
 	{
 		"title": "Leopard T-Shirt",
@@ -561,7 +561,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "dress-2"
 	},
 	{
 		"title": "Red Furry",
@@ -659,7 +659,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "dress-2"
 	},
 	{
 		"title": "Striped Jersey",
