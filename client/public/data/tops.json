@@ -79,6 +79,7 @@
 	},
 	{
 		"title": "Blue Darcels Hoodie",
+		"shortTitle": "Blue Hoodie",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
@@ -99,6 +100,13 @@
 		"topType": "short"
 	},
 	{
+		"title": "Pink Camo Hoodie",
+		"shortTitle": "Camo Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
+	},	{
 		"title": "Camo Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -489,13 +497,6 @@
 		"topType": "short"
 	},
 	{
-		"title": "Pink Camo Hoodie",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "hoodie"
-	},
-	{
 		"title": "Pink Dress",
 		"xp": 100,
 		"layer": "tops",
@@ -783,17 +784,18 @@
 		"topType": "sweater"
 	},
 	{
-		"title": "Yellow Darcels Hoodie",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "hoodie"
-	},
-	{
 		"title": "Yellow Dot Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "straight"
+	},
+	{
+		"title": "Yellow Darcels Hoodie",
+		"shortTitle": "Yellow Hoodie",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "hoodie"
 	}
 ]
