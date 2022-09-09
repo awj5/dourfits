@@ -73,6 +73,18 @@
         "layer": "bodyAccessories"
     },
     {
+        "title": "Quilt",
+        "collection": "dourfits",
+        "trait": "Accessories",
+        "layer": "bodyAccessories",
+        "exclusions": {
+            "mouth": "",
+            "headAccessories": "",
+            "arms": "",
+            "facialHair": ""
+        }
+    },
+    {
         "title": "Red Beads",
         "xp": 100,
         "layer": "bodyAccessories"

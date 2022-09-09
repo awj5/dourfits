@@ -7,6 +7,20 @@
 		"topType": "oversized"
 	},
 	{
+		"title": "Balloon",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Basketball",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "straight"
+	},
+	{
 		"title": "Bat Wings",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -14,11 +28,11 @@
 		"topType": "short"
 	},
 	{
-		"title": "Big Bag",
-		"collection": "dourfits",
-		"trait": "Tops",
+		"title": "Beer",
+		"collection": "dourdarcels",
+		"trait": "Arms",
 		"layer": "tops",
-		"topType": "short"
+		"topType": "straight"
 	},
 	{
 		"title": "Black Button Down",
@@ -33,6 +47,35 @@
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "no-arms"
+	},
+	{
+		"title": "Champagne",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Cigarette",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "straight"
+	},
+	{
+		"title": "Coffee",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "straight"
+	},
+	{
+		"title": "Heart Sweater",
+		"shortTitle": "Black Sweater",
+		"collection": "dourdarcels",
+		"trait": "Legs & Clothes",
+		"layer": "tops",
+		"topType": "sweater"
 	},
 	{
 		"title": "Blue Darcels Hoodie",
@@ -133,30 +176,16 @@
 		"topType": "sweater"
 	},
 	{
-		"title": "Dot Sweater",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "sweater"
-	},
-	{
 		"title": "Dour Darcels Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Dour Darcels T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
-		"title": "Dour Darcels Tote",
-		"collection": "dourfits",
-		"trait": "Tops",
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -172,7 +201,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Flames Top",
@@ -210,6 +239,13 @@
 		"topType": "hoodie"
 	},
 	{
+		"title": "GM Skateboard",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "GM Wings",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -241,7 +277,7 @@
 		"title": "Gray Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Gray Sweater",
@@ -258,47 +294,11 @@
 		"topType": "sweater"
 	},
 	{
-		"title": "Gray Top",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "no-arms"
-	},
-	{
-		"title": "Gym Bag",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
-		"title": "Have A Crap Day Tote",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
-		"title": "Heart Hands T-shirt",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "heart-hands"
-	},
-	{
 		"title": "Heart Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
-	},
-	{
-		"title": "Heart Sweater",
-		"shortTitle": "Black Sweater",
-		"collection": "dourdarcels",
-		"trait": "Legs & Clothes",
-		"layer": "tops",
-		"topType": "sweater"
+		"topType": "straight"
 	},
 	{
 		"title": "Jacket and Tie",
@@ -377,6 +377,13 @@
 		"topType": "short"
 	},
 	{
+		"title": "Muscle",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "Straight"
+	},
+	{
 		"title": "Navy Dots Puffer",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -423,7 +430,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Opening Night",
@@ -547,7 +554,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "short"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Red Button Down",
@@ -606,13 +613,6 @@
 		"topType": "short"
 	},
 	{
-		"title": "Sad Tote",
-		"collection": "dourfits",
-		"trait": "Tops",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
 		"title": "Shearling Puffer",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -638,7 +638,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Space Suit",
@@ -666,7 +666,7 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	},
 	{
 		"title": "Striped Sweater",
@@ -702,6 +702,13 @@
 		"trait": "Legs & Clothes",
 		"layer": "tops",
 		"topType": "sweater"
+	},
+	{
+		"title": "Thumbs Up",
+		"collection": "dourdarcels",
+		"trait": "Arms",
+		"layer": "tops",
+		"topType": "straight"
 	},
 	{
 		"title": "Tie Dye Hoodie",
@@ -787,6 +794,6 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "straight"
 	}
 ]

@@ -13,6 +13,7 @@
 	},
 	{
 		"title": "Black Puffy Pants",
+		"shortTitle": "Black Puffy",
 		"collection": "dourfits",
 		"trait": "Bottoms",
 		"layer": "bottoms"
@@ -298,12 +299,6 @@
 	{
 		"title": "Taxi Tube",
 		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Underwear",
-		"xp": 100,
 		"trait": "Bottoms",
 		"layer": "bottoms"
 	},

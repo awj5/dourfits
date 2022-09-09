@@ -139,6 +139,9 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
             case 'tops-2':
               arms = 'arms/tops-2.svg';
               break;
+            case 'straight':
+              arms = 'arms/regular.svg';
+              break;
             default:
               arms = '';
           }

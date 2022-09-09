@@ -21,6 +21,13 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Big Bag",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Bones",
         "collection": "dourdarcels",
         "trait": "Arms",
@@ -77,6 +84,13 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Dour Darcels Tote",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Gold Robot",
         "collection": "dourdarcels",
         "trait": "Arms",
@@ -91,8 +105,30 @@
         "topType": "short"
     },
     {
+        "title": "Gym Bag",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Hands on Hips",
         "xp": 100,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
+        "title": "Have A Crap Day Tote",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
+        "title": "Heart Hands T-shirt",
+        "shortTitle": "Heart Hands",
+        "collection": "dourfits",
+        "trait": "Tops",
         "layer": "arms",
         "topType": "short"
     },
@@ -138,11 +174,22 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Sad Tote",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Selfie",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "sleeveless",
+        "exclusions": {
+            "mouth": "",
+            "facialHair": ""
+        }
     },
     {
         "title": "Shrug",
