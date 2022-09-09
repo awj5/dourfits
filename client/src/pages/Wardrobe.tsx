@@ -30,7 +30,7 @@ function WardrobeStage() {
         }
       }
 
-      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
+      localStorage.dfTopType = 'regular'; // !important - default arms top type
       setDarcel(DefaultDarcel);
     }
   }
@@ -317,7 +317,7 @@ function Wardrobe() {
 
   useEffect(() => {
     if (!localStorage.avatarV2) {
-      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
+      localStorage.dfTopType = 'regular'; // !important - default arms top type
     }
 
     //localStorage.clear(); // Use for testing

@@ -100,8 +100,11 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
             case 'sweater':
               arms = 'arms/sweater.svg';
               break;
-            case 'sleeveless':
+            case 'dangly':
               arms = 'arms/dangly.svg';
+              break;
+            case 'regular':
+              arms = 'arms/regular.svg';
               break;
             case 'oversized':
               arms = 'arms/oversized.svg';
@@ -112,17 +115,8 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
             case 'liberty':
               arms = 'arms/liberty.svg';
               break;
-            case 'knight':
-              arms = 'arms/knight.svg';
-              break;
             case 'opening-night':
               arms = 'arms/opening-night.svg';
-              break;
-            case 'space':
-              arms = 'arms/space.svg';
-              break;
-            case 'versailles':
-              arms = 'arms/versailles.svg';
               break;
             case 'forest-dress':
               arms = 'arms/forest-dress.svg';
@@ -138,9 +132,6 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
               break;
             case 'tops-2':
               arms = 'arms/tops-2.svg';
-              break;
-            case 'straight':
-              arms = 'arms/regular.svg';
               break;
             default:
               arms = '';

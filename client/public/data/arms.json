@@ -4,35 +4,35 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Basketball",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Beer",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Big Bag",
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "short"
+        "topType": "regular"
     },
     {
         "title": "Bones",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Camo Skateboard",
@@ -53,35 +53,35 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Cigarette",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Coffee",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Crossed",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Crossed Jewelry",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Dour Darcels Tote",
@@ -95,7 +95,7 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "GM Skateboard",
@@ -122,7 +122,7 @@
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "short"
+        "topType": "regular"
     },
     {
         "title": "Heart Hands T-shirt",
@@ -133,25 +133,32 @@
         "topType": "short"
     },
     {
+        "title": "Knight",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Lots",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Mummy",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Muscle",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Peace",
@@ -161,17 +168,24 @@
         "topType": "short"
     },
     {
+        "title": "Space Suit",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Regular",
         "xp": 100,
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Rose",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Sad Tote",
@@ -185,7 +199,7 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless",
+        "topType": "regular",
         "exclusions": {
             "mouth": "",
             "facialHair": ""
@@ -196,7 +210,7 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Striped Bag",
@@ -210,21 +224,28 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Transparent",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
+    },
+    {
+        "title": "Versailles",
+        "collection": "dourdarcels",
+        "trait": "Legs & Clothes",
+        "layer": "arms",
+        "topType": "short"
     },
     {
         "title": "Wave",
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "regular"
     },
     {
         "title": "Woodgrain Bag",
