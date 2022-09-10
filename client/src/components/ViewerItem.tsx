@@ -71,108 +71,30 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
     // Top type
     if (props.item.topType && layers[props.item.layer!]) {
-      if (props.item.topType !== localStorage.dfTopType || props.item.layer === 'arms' && !darcel.tops) {
+      if (props.item.topType !== localStorage.dfTopType || (props.item.layer === 'arms' && !darcel.tops)) {
         if (props.item.layer === 'arms') {
-          let top: string;
+          let top: string = '';
 
-          switch (props.item.topType) {
-            case 'short':
-              switch (newVal) {
-                case 'arms/champagne.svg':
-                  top = 'tops/champagne.svg';
-                  break;
-                case 'arms/gm-skateboard.svg':
-                  top = 'tops/gm-skateboard.svg';
-                  break;
-                case 'arms/heart-hands-t-shirt.svg':
-                  top = 'tops/heart-hands-t-shirt.svg';
-                  break;
-                default:
-                  top = 'tops/dour-fits-t-shirt.svg';
-              }
-
-              break;
-            case 'regular':
-              switch (newVal) {
-                case 'arms/basketball.svg':
-                  top = 'tops/basketball.svg';
-                  break;
-                case 'arms/beer.svg':
-                  top = 'tops/beer.svg';
-                  break;
-                case 'arms/cigarette.svg':
-                  top = 'tops/cigarette.svg';
-                  break;
-                case 'arms/coffee.svg':
-                  top = 'tops/coffee.svg';
-                  break;
-                case 'arms/muscle.svg':
-                  top = 'tops/muscle.svg';
-                  break;
-                case 'arms/thumbs-up.svg':
-                  top = 'tops/thumbs-up.svg';
-                  break;
-                default:
-                  top = '';
-              }
-
-              break;
-            default:
-              top = '';
+          if (props.item.default) {
+            top = `tops/${ props.item.default }.svg`;
+          } else if (props.item.topType === 'short') {
+            top = 'tops/dour-fits-t-shirt.svg';
+          } else {
+            top = `tops/${ props.item.topType }.svg`;
           }
 
           layers.tops = top;
         } else {
-          let arms: string;
+          let arms: string = '';
 
-          switch (props.item.topType) {
-            case 'short':
-              arms = 'arms/hands-on-hips.svg';
-              break;
-            case 'outwear':
-              arms = 'arms/outwear.svg';
-              break;
-            case 'hoodie':
-              arms = 'arms/hoodie.svg';
-              break;
-            case 'sweater':
-              arms = 'arms/sweater.svg';
-              break;
-            case 'dangly':
-              arms = 'arms/dangly.svg';
-              break;
-            case 'regular':
-              arms = 'arms/regular.svg';
-              break;
-            case 'oversized':
-              arms = 'arms/oversized.svg';
-              break;
-            case 'heart-hands':
-              arms = 'arms/heart-hands.svg';
-              break;
-            case 'liberty':
-              arms = 'arms/liberty.svg';
-              break;
-            case 'opening-night':
-              arms = 'arms/opening-night.svg';
-              break;
-            case 'forest-dress':
-              arms = 'arms/forest-dress.svg';
-              break;
-            case 'dress-1':
-              arms = 'arms/dress-1.svg';
-              break;
-            case 'dress-2':
-              arms = 'arms/dress-2.svg';
-              break;
-            case 'tops-1':
-              arms = 'arms/tops-1.svg';
-              break;
-            case 'tops-2':
-              arms = 'arms/tops-2.svg';
-              break;
-            default:
-              arms = '';
+          if (props.item.default) {
+            arms = `arms/${ props.item.default }.svg`;
+          } else if (props.item.topType === 'short') {
+            arms = 'arms/hands-on-hips.svg';
+          } else if (props.item.topType === 'sleeveless') {
+            arms = 'arms/regular.svg';
+          } else {
+            arms = `arms/${ props.item.topType }.svg`;
           }
 
           layers.arms = arms;
@@ -180,6 +102,12 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
       }
 
       localStorage.dfTopType = props.item.topType;
+    }
+
+    // Revert back to regular arms if no top and arms not already sleeveless
+    if ((!darcel.tops || props.item.layer === 'tops') && !layers.tops && !layers.arms && localStorage.dfTopType !== 'sleeveless') {
+      layers.arms = 'arms/regular.svg';
+      localStorage.dfTopType = 'sleeveless';
     }
 
     setDarcel({ ...darcel, ...layers }); // Update avatar context

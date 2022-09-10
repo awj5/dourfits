@@ -30,7 +30,7 @@ function WardrobeStage() {
         }
       }
 
-      localStorage.dfTopType = 'regular'; // !important - default arms top type
+      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
       setDarcel(DefaultDarcel);
     }
   }
@@ -83,6 +83,7 @@ export interface Category {
   format?: string;
   exclusions?: object;
   topType?: string
+  default?: string
 }
 
 function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean | undefined>>; }) {
@@ -317,7 +318,7 @@ function Wardrobe() {
 
   useEffect(() => {
     if (!localStorage.avatarV2) {
-      localStorage.dfTopType = 'regular'; // !important - default arms top type
+      localStorage.dfTopType = 'sleeveless'; // !important - default arms top type
     }
 
     //localStorage.clear(); // Use for testing

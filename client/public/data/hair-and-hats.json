@@ -427,7 +427,8 @@
         "exclusions": {
             "tops": "",
             "arms": "arms/sweater.svg",
-            "headAccessories": ""
+            "headAccessories": "",
+            "bodyAccessories": ""
         }
     },
     {
@@ -678,7 +679,8 @@
         "exclusions": {
             "tops": "",
             "arms": "arms/sweater.svg",
-            "headAccessories": ""
+            "headAccessories": "",
+            "bodyAccessories": ""
         }
     },
     {

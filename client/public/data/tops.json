@@ -11,7 +11,7 @@
 		"shortTitle": "Basketball Jersey",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Bat Wings",
@@ -46,7 +46,7 @@
 		"shortTitle": "Cheers Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Balloon",
@@ -60,7 +60,7 @@
 		"shortTitle": "Coffee Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Heart Sweater",
@@ -181,14 +181,14 @@
 		"shortTitle": "Donut Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Dour Darcels Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Dour Darcels T-Shirt",
@@ -209,14 +209,14 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Cigarette",
 		"shortTitle": "Flame Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Flames Top",
@@ -292,7 +292,7 @@
 		"title": "Gray Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Gray Sweater",
@@ -313,7 +313,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Jacket and Tie",
@@ -439,7 +439,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Opening Night",
@@ -501,7 +501,7 @@
 		"title": "Pink Dress",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "dangly"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Plaid Sweater",
@@ -514,7 +514,7 @@
 		"title": "Polka Dot Dress",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "dangly"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Polka Dot Sweater",
@@ -556,7 +556,8 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "dangly"
+		"topType": "sleeveless",
+		"default": "dangly"
 	},
 	{
 		"title": "Red Button Down",
@@ -584,7 +585,8 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "dangly"
+		"topType": "sleeveless",
+		"default": "dangly"
 	},
 	{
 		"title": "Red Leather Jacket",
@@ -647,7 +649,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Space Suit",
@@ -675,7 +677,7 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Striped Sweater",
@@ -789,7 +791,7 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Yellow Darcels Hoodie",
@@ -804,6 +806,6 @@
 		"shortTitle": "Yep Singlet",
 		"xp": 100,
 		"layer": "tops",
-		"topType": "regular"
+		"topType": "sleeveless"
 	}
 ]
