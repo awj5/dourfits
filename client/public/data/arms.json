@@ -43,7 +43,7 @@
     },
     {
         "title": "Champagne",
-        "collection": "dourdarcels",
+        "xp": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
         "topType": "short"

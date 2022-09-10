@@ -71,13 +71,48 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
 
     // Top type
     if (props.item.topType && layers[props.item.layer!]) {
-      if (props.item.topType !== localStorage.dfTopType) {
+      if (props.item.topType !== localStorage.dfTopType || props.item.layer === 'arms' && !darcel.tops) {
         if (props.item.layer === 'arms') {
           let top: string;
 
           switch (props.item.topType) {
             case 'short':
-              top = 'tops/dour-fits-t-shirt.svg';
+              switch (newVal) {
+                case 'arms/champagne.svg':
+                  top = 'tops/champagne.svg';
+                  break;
+                case 'arms/gm-skateboard.svg':
+                  top = 'tops/gm-skateboard.svg';
+                  break;
+                default:
+                  top = 'tops/dour-fits-t-shirt.svg';
+              }
+
+              break;
+            case 'regular':
+              switch (newVal) {
+                case 'arms/basketball.svg':
+                  top = 'tops/basketball.svg';
+                  break;
+                case 'arms/beer.svg':
+                  top = 'tops/beer.svg';
+                  break;
+                case 'arms/cigarette.svg':
+                  top = 'tops/cigarette.svg';
+                  break;
+                case 'arms/coffee.svg':
+                  top = 'tops/coffee.svg';
+                  break;
+                case 'arms/muscle.svg':
+                  top = 'tops/muscle.svg';
+                  break;
+                case 'arms/thumbs-up.svg':
+                  top = 'tops/thumbs-up.svg';
+                  break;
+                default:
+                  top = '';
+              }
+
               break;
             default:
               top = '';

@@ -7,16 +7,9 @@
 		"topType": "oversized"
 	},
 	{
-		"title": "Balloon",
-		"collection": "dourdarcels",
-		"trait": "Arms",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
 		"title": "Basketball",
-		"collection": "dourdarcels",
-		"trait": "Arms",
+		"shortTitle": "Basketball Jersey",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "regular"
 	},
@@ -26,13 +19,6 @@
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "short"
-	},
-	{
-		"title": "Beer",
-		"collection": "dourdarcels",
-		"trait": "Arms",
-		"layer": "tops",
-		"topType": "regular"
 	},
 	{
 		"title": "Black Button Down",
@@ -50,22 +36,29 @@
 	},
 	{
 		"title": "Champagne",
-		"collection": "dourdarcels",
-		"trait": "Arms",
+		"shortTitle": "Champagne T-Shirt",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "short"
 	},
 	{
-		"title": "Cigarette",
-		"collection": "dourdarcels",
-		"trait": "Arms",
+		"title": "Beer",
+		"shortTitle": "Cheers Singlet",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "regular"
 	},
 	{
+		"title": "Balloon",
+		"shortTitle": "Clown T-Shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Coffee",
-		"collection": "dourdarcels",
-		"trait": "Arms",
+		"shortTitle": "Coffee Singlet",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "regular"
 	},
@@ -184,6 +177,13 @@
 		"topType": "sweater"
 	},
 	{
+		"title": "Muscle",
+		"shortTitle": "Donut Singlet",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "regular"
+	},
+	{
 		"title": "Dour Darcels Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -208,6 +208,13 @@
 		"title": "Egg Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
+		"layer": "tops",
+		"topType": "regular"
+	},
+	{
+		"title": "Cigarette",
+		"shortTitle": "Flame Singlet",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "regular"
 	},
@@ -248,8 +255,8 @@
 	},
 	{
 		"title": "GM Skateboard",
-		"collection": "dourdarcels",
-		"trait": "Arms",
+		"shortTitle": "GM T-Shirt",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -345,6 +352,7 @@
 	},
 	{
 		"title": "Liberty",
+		"shortTitle": "Liberty Singlet",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
@@ -383,13 +391,6 @@
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "short"
-	},
-	{
-		"title": "Muscle",
-		"collection": "dourdarcels",
-		"trait": "Arms",
-		"layer": "tops",
-		"topType": "regular"
 	},
 	{
 		"title": "Navy Dots Puffer",
@@ -705,13 +706,6 @@
 		"topType": "sweater"
 	},
 	{
-		"title": "Thumbs Up",
-		"collection": "dourdarcels",
-		"trait": "Arms",
-		"layer": "tops",
-		"topType": "regular"
-	},
-	{
 		"title": "Tie Dye Hoodie",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
@@ -797,5 +791,12 @@
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "hoodie"
+	},
+	{
+		"title": "Thumbs Up",
+		"shortTitle": "Yep Singlet",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "regular"
 	}
 ]
