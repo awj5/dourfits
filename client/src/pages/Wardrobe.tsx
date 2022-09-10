@@ -20,6 +20,7 @@ const alchemy = new Alchemy(settings);
 
 function WardrobeStage() {
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
+  const [downloadEnabled, setDownloadEnabled] = useState<boolean>(true);
 
   const resetClick = () => {
     if (window.confirm('Are you sure you want to reset your Darcel?')) {
@@ -36,6 +37,7 @@ function WardrobeStage() {
   }
 
   const downloadClick = async () => {
+    setDownloadEnabled(false);
     const canvas: HTMLCanvasElement = document.createElement('canvas');
     canvas.width = 1200;
     canvas.height = 1200;
@@ -55,27 +57,33 @@ function WardrobeStage() {
       });
     }
 
-    // Loop Darcel layers
-    for (let key in darcel) {
-      let file: string = darcel[key as keyof Darcel];
+    try {
+      // Loop Darcel layers
+      for (let key in darcel) {
+        let file: string = darcel[key as keyof Darcel];
 
-      if (file.indexOf('#') !== -1) {
-        ctx!.fillStyle = file;
-        ctx!.fillRect(0, 0, canvas.width, canvas.height); // Add background hex color
-      } else if (file) {
-        await addCanvasLayer(file);
+        if (file.indexOf('#') !== -1) {
+          ctx!.fillStyle = file;
+          ctx!.fillRect(0, 0, canvas.width, canvas.height); // Add background hex color
+        } else if (file) {
+          await addCanvasLayer(file);
+        }
       }
+
+      // Add canvas to DOM, download then remove
+      document.body.appendChild(canvas);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = canvas.toDataURL('image/png');
+      downloadLink.download = 'dour-fits.png';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      document.body.removeChild(canvas);
+    } catch (error) {
+      console.log(error);
     }
 
-    // Add canvas to DOM, download then remove
-    document.body.appendChild(canvas);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = canvas.toDataURL('image/png');
-    downloadLink.download = 'dour-fits.png';
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-    document.body.removeChild(canvas);
+    setDownloadEnabled(true);
   }
 
   return (
@@ -83,7 +91,7 @@ function WardrobeStage() {
       <Avatar { ...darcel } />
       <button className="bigButton">Submit<svg viewBox="0 0 15.84 27.18"><path d="M2.25,27.18c-.58,0-1.15-.22-1.59-.66-.88-.88-.88-2.3,0-3.18L10.41,13.59,.66,3.84C-.22,2.96-.22,1.54,.66,.66,1.54-.22,2.96-.22,3.84,.66L15.18,12c.88,.88,.88,2.3,0,3.18L3.84,26.52c-.44,.44-1.02,.66-1.59,.66Z"/></svg></button>
       <button onClick={ resetClick } className="iconButton" id="stageReset"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
-      <button onClick={ downloadClick } className="iconButton"id="stageDownload"><img src="assets/img/icon-download.png" alt="Download" /></button>
+      <button onClick={ downloadClick } className="iconButton"id="stageDownload" style={{ pointerEvents: downloadEnabled ? "auto" : "none" }}><img src="assets/img/icon-download.png" alt="Download" /></button>
     </div>
   );
 }
