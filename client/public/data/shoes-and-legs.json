@@ -63,10 +63,7 @@
 		"title": "Bones",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs",
-		"exclusions": {
-			"bottoms": ""
-		}
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Brown Dress Ups",
@@ -101,10 +98,7 @@
 		"title": "Chrome Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs",
-		"exclusions": {
-			"bottoms": ""
-		}
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Coffee Dress Ups",
@@ -140,10 +134,7 @@
 		"title": "Gold Robot",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs",
-		"exclusions": {
-			"bottoms": ""
-		}
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Gray Dress Ups",
@@ -196,10 +187,7 @@
 		"title": "Mummy",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "shoesAndLegs",
-		"exclusions": {
-			"bottoms": ""
-		}
+		"layer": "shoesAndLegs"
 	},
 	{
 		"title": "Navy Hi Top Sneakers",

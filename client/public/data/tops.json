@@ -94,7 +94,6 @@
 	},
 	{
 		"title": "Pink Camo Hoodie",
-		"shortTitle": "Camo Hoodie",
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
@@ -599,6 +598,13 @@
 		"trait": "Tops",
 		"layer": "tops",
 		"topType": "no-arms"
+	},
+	{
+		"title": "Heart Hands T-shirt",
+		"shortTitle": "Red T-Shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
 	},
 	{
 		"title": "Roadman Puffer",

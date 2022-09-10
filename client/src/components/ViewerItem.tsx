@@ -84,6 +84,9 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
                 case 'arms/gm-skateboard.svg':
                   top = 'tops/gm-skateboard.svg';
                   break;
+                case 'arms/heart-hands-t-shirt.svg':
+                  top = 'tops/heart-hands-t-shirt.svg';
+                  break;
                 default:
                   top = 'tops/dour-fits-t-shirt.svg';
               }
