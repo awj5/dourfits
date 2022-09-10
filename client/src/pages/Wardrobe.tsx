@@ -35,29 +35,47 @@ function WardrobeStage() {
     }
   }
 
-  const downloadClick = () => {
-    /* const canvas = document.createElement('canvas');
+  const downloadClick = async () => {
+    const canvas: HTMLCanvasElement = document.createElement('canvas');
     canvas.width = 1200;
     canvas.height = 1200;
     canvas.style.width = '0';
     canvas.style.height = '0';
     const ctx = canvas.getContext('2d');
-    const image = document.createElement('img');
-    image.setAttribute('crossOrigin', '*');
-    image.src = 'https://dourfits.s3.amazonaws.com/background/clouds.svg';
 
-    image.onload = () => {
-      ctx!.drawImage(image, 0, 0, 1200, 1200);
-      const downloadLink = document.createElement('a');
-      downloadLink.href = canvas.toDataURL('image/png');
-      downloadLink.download = 'fit.png';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-      document.body.removeChild(canvas);
+    const addCanvasLayer = (file: string) => {
+      return new Promise((resolve) => {
+        const image: HTMLImageElement = document.createElement('img');
+        image.setAttribute('crossOrigin', '*');
+        image.src = 'https://dourfits.s3.amazonaws.com/' + file;
+
+        image.onload = () => {
+          resolve(ctx!.drawImage(image, 0, 0, 1200, 1200));
+        }
+      });
     }
 
-    document.body.appendChild(canvas); */
+    // Loop Darcel layers
+    for (let key in darcel) {
+      let file: string = darcel[key as keyof Darcel];
+
+      if (file.indexOf('#') !== -1) {
+        ctx!.fillStyle = file;
+        ctx!.fillRect(0, 0, canvas.width, canvas.height); // Add background hex color
+      } else if (file) {
+        await addCanvasLayer(file);
+      }
+    }
+
+    // Add canvas to DOM, download then remove
+    document.body.appendChild(canvas);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = canvas.toDataURL('image/png');
+    downloadLink.download = 'dour-fits.png';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    document.body.removeChild(canvas);
   }
 
   return (
