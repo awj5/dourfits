@@ -47,17 +47,37 @@ function WardrobeStage() {
 
     const addCanvasLayer = (file: string) => {
       return new Promise((resolve) => {
+        const src = `https://dourfits.s3.amazonaws.com/${ file }?d=${ Date.now() }`; // Need date to clear FF cache
         const image: HTMLImageElement = document.createElement('img');
         image.setAttribute('crossOrigin', '*');
-        image.src = 'https://dourfits.s3.amazonaws.com/' + file;
 
-        image.onload = () => {
-          resolve(ctx!.drawImage(image, 0, 0, 1200, 1200));
+        // Hack to allow FF to draw SVGs to canvas
+        const request = new XMLHttpRequest();
+        request.open('GET', src, true);
+
+        request.onload = () => {
+          if (file.indexOf('.png') !== -1) {
+            image.src = src;
+          } else {
+            const parser = new DOMParser();
+            const result = parser.parseFromString(request.responseText, 'text/xml');
+            const inlineSVG = result.getElementsByTagName('svg')[0];
+            inlineSVG.setAttribute('width', '1200px');
+            inlineSVG.setAttribute('height', '1200px');
+            const svg64 = window.btoa(new XMLSerializer().serializeToString(inlineSVG));
+            const image64 = 'data:image/svg+xml;base64,' + svg64;
+            image.src = image64;
+          }
+
+          image.onload = () => {
+            resolve(ctx!.drawImage(image, 0, 0, 1200, 1200));
+          }
         }
+
+        request.send();
       });
     }
 
-    try {
       // Loop Darcel layers
       for (let key in darcel) {
         let file: string = darcel[key as keyof Darcel];
@@ -79,9 +99,6 @@ function WardrobeStage() {
       downloadLink.click();
       document.body.removeChild(downloadLink);
       document.body.removeChild(canvas);
-    } catch (error) {
-      console.log(error);
-    }
 
     setDownloadEnabled(true);
   }
