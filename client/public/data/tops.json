@@ -51,7 +51,7 @@
 	{
 		"title": "Balloon",
 		"shortTitle": "Clown T-Shirt",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -504,6 +504,12 @@
 		"topType": "sleeveless"
 	},
 	{
+		"title": "Pink Singlet",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "sleeveless"
+	},
+	{
 		"title": "Plaid Sweater",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -605,9 +611,11 @@
 	{
 		"title": "Heart Hands T-shirt",
 		"shortTitle": "Red T-Shirt",
-		"xp": 100,
+		"collection": "dourfits",
+		"trait": "Tops",
 		"layer": "tops",
-		"topType": "short"
+		"topType": "short",
+		"default": "heart-hands-t-shirt"
 	},
 	{
 		"title": "Roadman Puffer",
@@ -649,7 +657,8 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "sleeveless"
+		"topType": "sleeveless",
+		"default": "sky-singlet"
 	},
 	{
 		"title": "Space Suit",

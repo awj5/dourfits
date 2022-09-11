@@ -79,8 +79,6 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
             top = `tops/${ props.item.default }.svg`;
           } else if (props.item.topType === 'short') {
             top = 'tops/dour-fits-t-shirt.svg';
-          } else {
-            top = `tops/${ props.item.topType }.svg`;
           }
 
           layers.tops = top;

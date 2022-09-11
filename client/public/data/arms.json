@@ -45,7 +45,7 @@
     },
     {
         "title": "Champagne",
-        "xp": "dourdarcels",
+        "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
         "topType": "short",
@@ -117,6 +117,15 @@
         "default": "gm-skateboard"
     },
     {
+        "title": "Sky Singlet",
+        "shortTitle": "Gold Crossed",
+        "collection": "dourfits",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "sleeveless",
+        "default": "sky-singlet"
+    },
+    {
         "title": "Gym Bag",
         "collection": "dourfits",
         "trait": "Tops",
@@ -134,7 +143,8 @@
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "sleeveless",
+        "default": "pink-singlet"
     },
     {
         "title": "Heart Hands T-shirt",
@@ -150,7 +160,7 @@
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "short"
+        "topType": "sleeveless"
     },
     {
         "title": "Lots",
@@ -186,7 +196,7 @@
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "short"
+        "topType": "sleeveless"
     },
     {
         "title": "Regular",
