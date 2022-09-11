@@ -57,15 +57,17 @@ function WardrobeStage() {
 
         request.onload = () => {
           if (file.indexOf('.png') !== -1) {
+            // .png
             image.src = src;
           } else {
-            const parser = new DOMParser();
-            const result = parser.parseFromString(request.responseText, 'text/xml');
-            const inlineSVG = result.getElementsByTagName('svg')[0];
+            // .svg
+            const parser: DOMParser = new DOMParser();
+            const result: Document = parser.parseFromString(request.responseText, 'text/xml');
+            const inlineSVG: SVGSVGElement = result.getElementsByTagName('svg')[0];
             inlineSVG.setAttribute('width', '1200px');
             inlineSVG.setAttribute('height', '1200px');
-            const svg64 = window.btoa(new XMLSerializer().serializeToString(inlineSVG));
-            const image64 = 'data:image/svg+xml;base64,' + svg64;
+            const svg64: string = window.btoa(new XMLSerializer().serializeToString(inlineSVG));
+            const image64: string = 'data:image/svg+xml;base64,' + svg64;
             image.src = image64;
           }
 
