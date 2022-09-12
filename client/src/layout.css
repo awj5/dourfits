@@ -87,7 +87,7 @@ button.iconButton.selected:active * {
 @media only screen and (max-width: 1023px) {
   .section {
     padding: 16px;
-    height: calc(100% - 80px);
+    height: calc(100% - 72px);
     top: 72px;
   }
 }

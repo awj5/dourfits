@@ -710,6 +710,15 @@
 		"topType": "no-arms"
 	},
 	{
+		"title": "Big Bag",
+		"shortTitle": "Tan Singlet",
+		"collection": "dourfits",
+		"trait": "Tops",
+		"layer": "tops",
+		"topType": "sleeveless",
+		"default": "big-bag"
+	},
+	{
 		"title": "Tan Varsity",
 		"collection": "dourfits",
 		"trait": "Tops",

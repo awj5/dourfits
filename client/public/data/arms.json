@@ -27,7 +27,8 @@
         "collection": "dourfits",
         "trait": "Tops",
         "layer": "arms",
-        "topType": "sleeveless"
+        "topType": "sleeveless",
+        "default": "big-bag"
     },
     {
         "title": "Bones",

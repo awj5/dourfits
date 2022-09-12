@@ -1,0 +1,74 @@
+/* Home */
+
+#sectionHome {
+  align-items: center;
+  min-height: 480px;
+}
+
+@media only screen and (max-width: 1023px) {
+  #sectionHome {
+    min-height: 248px;
+  }
+}
+
+/* HomeConnect */
+
+#homeConnect {
+  height: calc(100% - 96px);
+  max-height: 720px;
+  white-space: nowrap;
+}
+
+img.connectDarcel {
+  height: 100%;
+  display: none;
+}
+
+#connectLogo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  vertical-align: top;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+#connectLogo img {
+  height: 40%;
+}
+
+#connectLogo h2 {
+  font-family: "avgb", sans-serif;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-aspect-ratio: 4/3) and (min-width: 1024px) {
+  img.connectDarcel {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #homeConnect {
+    height: 100%;
+    width: 100%;
+    max-height: none;
+  }
+
+  #connectLogo {
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #connectLogo img {
+    height: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+}

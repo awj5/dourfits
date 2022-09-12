@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useAccount, useDisconnect } from 'wagmi';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 
-function ConnectButton() {
+function ConnectButton(props: { label?: string }) {
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
@@ -17,7 +17,7 @@ function ConnectButton() {
     }
   }
 
-  return <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton">{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : 'Connect' }</button>;
+  return <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton">{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : props.label ? props.label : 'Connect' }</button>;
 }
 
 export default ConnectButton;
