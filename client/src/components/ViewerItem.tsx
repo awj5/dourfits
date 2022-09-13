@@ -10,7 +10,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  const localCategory: string = category; // Static var to avoid re-rendering on category state change
+  const [localCategory, setLocalCategory] = useState<string | undefined>(undefined);
   const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
   const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
   const format: string = props.item.format ? props.item.format : '.svg';
@@ -118,6 +118,10 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   const loaded = () => {
     setImageLoaded(true);
   }
+
+  useEffect(() => {
+    setLocalCategory(category) // Stop re-rendering invalid image on category state change
+  }, [category]);
 
   useEffect(() => {
     props.viewerScroll(); // Call to set scroll buttons in viewer

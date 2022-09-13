@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: "avgb";
-  src: url("assets/fonts/avgb.woff2") format("woff2");
+  font-family: "AvantGarde-Book";
+  src: url("assets/fonts/AvantGarde-Book.woff2") format("woff2");
 }
 
 /* Vars */
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "avgb", sans-serif;
+  font-family: "AvantGarde-Book", sans-serif;
   font-size: 14px;
   color: #FFF;
   line-height: 0;
