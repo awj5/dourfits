@@ -77,6 +77,11 @@
         "layer": "glasses"
     },
     {
+        "title": "Cyber",
+        "xp": 300,
+        "layer": "glasses"
+    },
+    {
         "title": "Fat Brown",
         "collection": "dourfits",
         "trait": "Glasses",

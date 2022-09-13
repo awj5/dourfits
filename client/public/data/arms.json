@@ -76,6 +76,12 @@
         "default": "coffee"
     },
     {
+        "title": "Concentric Bag",
+        "xp": 300,
+        "layer": "arms",
+        "topType": "sleeveless"
+    },
+    {
         "title": "Crossed",
         "collection": "dourdarcels",
         "trait": "Arms",

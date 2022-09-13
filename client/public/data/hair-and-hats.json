@@ -511,6 +511,11 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Panel Cap",
+        "xp": 300,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Patch Bucket",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
