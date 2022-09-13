@@ -13,6 +13,11 @@
         "layer": "bodyAccessories"
     },
     {
+        "title": "Card Pouch",
+        "xp": 200,
+        "layer": "bodyAccessories"
+    },
+    {
         "title": "Choker",
         "collection": "dourdarcels",
         "trait": "Legs & Clothes",
@@ -46,6 +51,11 @@
         "title": "Gold Necklace",
         "collection": "dourdarcels",
         "trait": "Legs & Clothes",
+        "layer": "bodyAccessories"
+    },
+    {
+        "title": "Green Beads",
+        "xp": 200,
         "layer": "bodyAccessories"
     },
     {
@@ -87,6 +97,11 @@
     {
         "title": "Red Beads",
         "xp": 100,
+        "layer": "bodyAccessories"
+    },
+    {
+        "title": "Red Pouch",
+        "xp": 200,
         "layer": "bodyAccessories"
     }
 ]

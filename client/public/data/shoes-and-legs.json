@@ -54,6 +54,11 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Blue Sandals",
+		"xp": 200,
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Boat Shoes",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
@@ -288,6 +293,11 @@
 		"title": "Striped Hi Tops",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Tan Hiking Boots",
+		"xp": 200,
 		"layer": "shoesAndLegs"
 	},
 	{

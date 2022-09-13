@@ -232,6 +232,11 @@
         "layer": "glasses"
     },
     {
+        "title": "Speed",
+        "xp": 200,
+        "layer": "glasses"
+    },
+    {
         "title": "Star",
         "collection": "dourfits",
         "trait": "Glasses",

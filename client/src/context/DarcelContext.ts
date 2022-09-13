@@ -8,8 +8,8 @@ export interface Darcel {
   shoesAndLegs: string;
   bottoms: string;
   tops: string;
-  arms: string;
   bodyAccessories: string;
+  arms: string;
   facialHair: string;
   mouth: string;
   headAccessories: string;
@@ -24,8 +24,8 @@ export const DefaultDarcel: Darcel = {
   shoesAndLegs: "shoes-and-legs/regular.svg",
   bottoms: "bottoms/underwear.svg",
   tops: "",
-  arms: "arms/regular.svg",
   bodyAccessories: "",
+  arms: "arms/regular.svg",
   facialHair: "",
   mouth: "mouth/sad.svg",
   headAccessories: "",

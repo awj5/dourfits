@@ -23,7 +23,7 @@
 .viewerItem {
   width: calc(33.3% - 24px);
   aspect-ratio: 4/4;
-  background-color: #EEE;
+  background-color: rgba(255, 255, 255, 0.9);
   float: left;
   border-radius: 32px;
   position: relative;

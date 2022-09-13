@@ -224,6 +224,11 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Shape Earrings",
+        "xp": 200,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Single Hoop",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
