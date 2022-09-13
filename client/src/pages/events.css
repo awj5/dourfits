@@ -1,0 +1,110 @@
+/* Events */
+
+#sectionEvents {
+  display: inline;
+  padding: 0;
+  padding-top: 32px;
+}
+
+@media screen and (orientation: portrait) {
+
+}
+
+/* Group */
+
+.eventGroup {
+  padding: 32px;
+  padding-right: 0;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.eventGroup h2 {
+  color: #000;
+  font-size: 72px;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+@media screen and (orientation: portrait) {
+  .eventGroup {
+    padding: 16px;
+    padding-right: 0;
+  }
+
+  .eventGroup h2 {
+    font-size: 48px;
+  }
+}
+
+/* Event */
+
+.event {
+  float: left;
+  height: 400px;
+  width: 600px;
+  margin-top: 24px;
+}
+
+.eventInfo {
+  background-color: #000;
+  height: 100%;
+  width: 45%;
+  float: left;
+  box-sizing: border-box;
+  padding: 16px;
+  padding-top: 0;
+  position: relative;
+}
+
+.eventInfo span {
+  line-height: 1;
+  font-size: 18px;
+  margin-top: 16px;
+  display: block;
+}
+
+.eventInfo h3,
+.eventInfo h4 {
+  font-size: 36px;
+  color: var(--df-yellow);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--df-pink);
+}
+
+.eventInfo h4 {
+  font-size: 24px;
+  color: #FFF;
+}
+
+.eventInfo button {
+  position: absolute;
+  bottom: 16px;
+  width: calc(100% - 32px);
+  color: #FFF;
+}
+
+.eventInfo button:active {
+  color: #000;
+}
+
+.eventImage {
+  background-color: var(--df-red);
+  height: 100%;
+  width: 55%;
+  float: left;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+}
+
+.eventImage img {
+  height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .event {
+    width: 480px;
+  }
+}

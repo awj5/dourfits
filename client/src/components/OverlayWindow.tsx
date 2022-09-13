@@ -1,3 +1,4 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useEffect, useCallback } from 'react';
 import { useConnect, useAccount } from 'wagmi';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
@@ -7,12 +8,18 @@ function OverlayConnect() {
   const { connect, connectors, error } = useConnect();
   const { isConnected } = useAccount();
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isConnected) {
       setOverlay({ visible: false }); // Hide overlay once connected
+
+      if (location.pathname === '/') {
+        navigate('/wardrobe');
+      }
     }
-  }, [isConnected, setOverlay]);
+  }, [isConnected, setOverlay, location.pathname, navigate]);
 
   return (
     <div id={ styles.overlayConnect }>

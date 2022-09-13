@@ -9,6 +9,7 @@ import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet';
 import Layout from './Layout';
 import Home from './pages/Home';
 import Wardrobe from './pages/Wardrobe';
+import Events from './pages/Events';
 import './index.css';
 
 window.Buffer = require('buffer').Buffer; // Polyfill to fix buffer not defined in WAGMI
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="/" element={ <Layout /> }>
             <Route index element={ <Home /> } />
             <Route path="wardrobe" element={ <Wardrobe /> } />
+            <Route path="events" element={ <Events /> } />
           </Route>
         </Routes>
       </BrowserRouter>
