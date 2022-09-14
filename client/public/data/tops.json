@@ -104,7 +104,10 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Check Button Down",
@@ -272,7 +275,10 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Gray Hoodie",
@@ -397,7 +403,10 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Navy Pleats",
@@ -411,7 +420,10 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "NGMI Hoodie",
@@ -555,7 +567,10 @@
 		"collection": "dourfits",
 		"trait": "Tops",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Rainbow Tier Dress",
@@ -622,7 +637,10 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Sad T-shirt",
@@ -636,7 +654,10 @@
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
 		"layer": "tops",
-		"topType": "outwear"
+		"topType": "outwear",
+		"exclusions": {
+			"bodyAccessories": ""
+		}
 	},
 	{
 		"title": "Skull Hoodie",

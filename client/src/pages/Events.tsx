@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './events.css';
 
@@ -55,6 +56,10 @@ function EventGroup(props: { title: string; bgColor: string }) {
 /* Events */
 
 function Events() {
+  useEffect(() => {
+      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+  }, []);
+
   return (
     <div className="section" id="sectionEvents">
       <EventGroup title="Upcoming" bgColor="var(--df-pink)" />

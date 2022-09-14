@@ -2,6 +2,7 @@
 
 #sectionEvents {
   display: inline;
+  height: auto;
   padding: 0;
   padding-top: 32px;
 }
@@ -33,6 +34,7 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   display: inline-flex;
+  scrollbar-width: none;
 }
 
 .groupEvents::-webkit-scrollbar {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import ConnectButton from '../components/ConnectButton';
 import './home.css';
 
@@ -22,6 +23,10 @@ function HomeConnect() {
 /* Home */
 
 function Home() {
+  useEffect(() => {
+      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+  }, []);
+
   return (
     <div className="section" id="sectionHome">
       <HomeConnect />
