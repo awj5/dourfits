@@ -191,6 +191,20 @@ nav button.bigButton {
   margin-left: 16px;
 }
 
+nav button.iconButton {
+  width: 40px;
+  height: 40px;
+  vertical-align: -2px;
+  margin-left: 16px;
+  display: none;
+}
+
+nav button.iconButton img {
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+}
+
 @media (hover: hover) {
   nav a:hover {
     opacity: 1;
@@ -271,6 +285,11 @@ button#navBurger {
   a#nav-home,
   nav button.bigButton {
     display: block;
+  }
+
+  nav button.iconButton {
+    background-color: var(--df-orange);
+    margin-top: 16px;
   }
 
   button#navBurger {

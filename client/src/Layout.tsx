@@ -24,10 +24,15 @@ function HeaderDashboard() {
   );
 }
 
+const themeSong = new Audio('https://dourfits.s3.amazonaws.com/audio/theme.mp3');
+themeSong.loop = true;
+
 function Header() {
   const location = useLocation();
   const { isConnected } = useAccount();
   const [showingNav, setshowingNav] = useState<boolean>(false);
+  const [themePlaying, setThemePlaying] = useState<boolean>(false);
+  const userInteractedRef: React.MutableRefObject<boolean> = useRef(false);
 
   const burgerClick = () => {
     setshowingNav(!showingNav);
@@ -36,6 +41,27 @@ function Header() {
   const hideNav = () => {
     setshowingNav(false);
   }
+
+  const toggleThemeSong = () => {
+    setThemePlaying(!themePlaying);
+  }
+
+  useEffect(() => {
+    if (themePlaying) {
+      themeSong.play();
+    } else {
+      themeSong.pause();
+    }
+  }, [themePlaying]);
+
+  useEffect(() => {
+    window.addEventListener('click', function() {
+      if (!userInteractedRef.current) {
+        userInteractedRef.current = true;
+        setThemePlaying(true);
+      }
+    });
+  }, []);
 
   return (
     <header>
@@ -47,6 +73,7 @@ function Header() {
         <Link to="/wardrobe" onClick={ hideNav } id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
         <Link to="/events" onClick={ hideNav } id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
         <Link to="/faq" onClick={ hideNav } id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
+        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="" /></button>
         <ConnectButton />
       </nav>
 
@@ -61,17 +88,6 @@ function Layout() {
   const [domReady, setDOMReady] = useState<boolean>(false);
   const [overlay, setOverlay] = useState<Overlay>({ visible: false });
   const [xp, setXP] = useState<number>(0);
-  const theme = new Audio('https://dourfits.s3.amazonaws.com/audio/theme.mp3');
-  const themeRef: React.MutableRefObject<boolean> = useRef(false);
-
-  useEffect(() => {
-    window.addEventListener('click', function() {
-      if (!themeRef.current) {
-        theme.play();
-        themeRef.current!;
-      }
-    });
-  }, []);
 
   useEffect(() => {
     // Hack to avoid FOUC
