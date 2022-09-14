@@ -186,6 +186,7 @@ function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React
 
 const sfxClick = new Audio('assets/audio/click.wav');
 const sfxOver = new Audio('assets/audio/over.wav');
+const sfxChange = new Audio('assets/audio/change.wav');
 
 function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
@@ -323,6 +324,9 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
         const data: Category[] = await response.json();
         setDate(Date.now()); // Use date for item key
         setViewerItems(data);
+        if (userInteractedRef.current) {
+          sfxChange.play();
+        }
       } catch (error) {
         console.log(error);
       }
