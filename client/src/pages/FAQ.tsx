@@ -18,7 +18,7 @@ function FAQ() {
       <h3>How do I get more items for my wardrobe?</h3>
       <p>Item NFTs can be won in events or purchased on OpenSea.</p>
       <h3>Can I download a fit to share on social media?</h3>
-      <p>Yes! Simply click the download button inside your wardrobe. Unfortunatley downloading is not possible in the MetaMask mobile app.</p>
+      <p>Yes! Simply click the download button inside your wardrobe. Unfortunately downloading is not possible in the MetaMask mobile app.</p>
       <h3>Do all Arms and Tops traits work together?</h3>
       <p>Arms and Tops items only work together in certain combinations e.g. all singlets and dresses work with arms like 'Coffee' and 'Regular'. T-Shirts work with different arms altogether like 'Hands on Hips' and 'Peace'. Experiment and discover all of the combinations.</p>
     </div>
