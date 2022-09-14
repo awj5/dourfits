@@ -54,6 +54,7 @@ function OverlayWindow() {
         <div id={ styles.overlayWindow }>
           <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
+          <p style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
           { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }
         </div>
       </div>

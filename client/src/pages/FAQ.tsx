@@ -12,13 +12,13 @@ function FAQ() {
     <div className="section" id="sectionFAQ">
       <h2>FAQ</h2>
       <h3>Do I need to own a Dour Darcels NFT to play?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed libero tempor, posuere sem vel, efficitur libero. Fusce id justo non risus porta tristique et quis risus. Suspendisse sed massa metus. Donec vestibulum ex quis eros vulputate, a mattis turpis aliquet. Proin congue iaculis eros, id hendrerit arcu. Maecenas erat diam, volutpat ac viverra eu, pellentesque id nisi. In hac habitasse platea dictumst. Duis volutpat imperdiet lectus, vitae dignissim odio fringilla id.</p>
+      <p>Yes you must own at least one NFT from the <a href="https://opensea.io/collection/dourdarcels" target="_blank">Dour Darcels</a>, <a href="https://opensea.io/collection/dourfits" target="_blank">Dour Fits</a> or <a href="https://opensea.io/collection/colettexdourdarcels" target="_blank">colette x Dour Darcels</a>.</p>
       <h3>How do I gain more XP?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed libero tempor, posuere sem vel, efficitur libero. Fusce id justo non risus porta tristique et quis risus. Suspendisse sed massa metus. Donec vestibulum ex quis eros vulputate, a mattis turpis aliquet. Proin congue iaculis eros, id hendrerit arcu. Maecenas erat diam, volutpat ac viverra eu, pellentesque id nisi. In hac habitasse platea dictumst. Duis volutpat imperdiet lectus, vitae dignissim odio fringilla id.</p>
+      <p>200XP is automatically issued for each Dour Darcels or colette x Dour Darcels NFT you hold and 100XP for Dour Fits NFTs. Extra XP can be gained via participating in and winning events.</p>
       <h3>How do I get more items for my wardrobe?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed libero tempor, posuere sem vel, efficitur libero. Fusce id justo non risus porta tristique et quis risus. Suspendisse sed massa metus. Donec vestibulum ex quis eros vulputate, a mattis turpis aliquet. Proin congue iaculis eros, id hendrerit arcu. Maecenas erat diam, volutpat ac viverra eu, pellentesque id nisi. In hac habitasse platea dictumst. Duis volutpat imperdiet lectus, vitae dignissim odio fringilla id.</p>
+      <p>Item NFTs can be won in events or purchased on OpenSea.</p>
       <h3>Can I download a fit to share on social media?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed libero tempor, posuere sem vel, efficitur libero. Fusce id justo non risus porta tristique et quis risus. Suspendisse sed massa metus. Donec vestibulum ex quis eros vulputate, a mattis turpis aliquet. Proin congue iaculis eros, id hendrerit arcu. Maecenas erat diam, volutpat ac viverra eu, pellentesque id nisi. In hac habitasse platea dictumst. Duis volutpat imperdiet lectus, vitae dignissim odio fringilla id.</p>
+      <p>Yes! Simply click the download button inside the wardrobe. Unfortunatley downloading is not possible in the MetaMask mobile app.</p>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import { useAccount } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
 import ConnectButton from './components/ConnectButton';
@@ -61,6 +61,17 @@ function Layout() {
   const [domReady, setDOMReady] = useState<boolean>(false);
   const [overlay, setOverlay] = useState<Overlay>({ visible: false });
   const [xp, setXP] = useState<number>(0);
+  const theme = new Audio('https://dourfits.s3.amazonaws.com/audio/theme.mp3');
+  const themeRef: React.MutableRefObject<boolean> = useRef(false);
+
+  useEffect(() => {
+    window.addEventListener('click', function() {
+      if (!themeRef.current) {
+        theme.play();
+        themeRef.current!;
+      }
+    });
+  }, []);
 
   useEffect(() => {
     // Hack to avoid FOUC

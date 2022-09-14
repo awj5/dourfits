@@ -16,8 +16,16 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   const format: string = props.item.format ? props.item.format : '.svg';
   const xpItem: string | undefined = props.item.xp !== undefined ? (props.item.xp <= xp || props.traitOwned ? 'UNLOCKED' : props.item.xp + ' XP') : undefined;
   const available: boolean = props.traitOwned || xpItem === 'UNLOCKED' ? true : false;
+  const sfxClick = new Audio('https://dourfits.s3.amazonaws.com/audio/item-click.wav');
+  const sfxHover = new Audio('https://dourfits.s3.amazonaws.com/audio/item-over.wav');
+
+  const itemOver = () => {
+    //sfxHover.play();
+  }
 
   const itemClick = () => {
+    //sfxClick.play();
+
     // Update Darcel avatar
     const currentVal: string = darcel[props.item.layer as keyof Darcel];
     const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
@@ -128,7 +136,7 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   }, [props]);
 
   return (
-    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
+    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } onMouseOver={ itemOver } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
       <img src={ props.item.hex ? 'assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
