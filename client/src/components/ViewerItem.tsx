@@ -5,7 +5,7 @@ import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelConte
 import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned: boolean; ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
+function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; itemSFXClick: Function; item: Category; traitOwned: boolean; ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
@@ -16,15 +16,13 @@ function ViewerItem(props: { viewerScroll: Function; item: Category; traitOwned:
   const format: string = props.item.format ? props.item.format : '.svg';
   const xpItem: string | undefined = props.item.xp !== undefined ? (props.item.xp <= xp || props.traitOwned ? 'UNLOCKED' : props.item.xp + ' XP') : undefined;
   const available: boolean = props.traitOwned || xpItem === 'UNLOCKED' ? true : false;
-  const sfxClick = new Audio('https://dourfits.s3.amazonaws.com/audio/item-click.wav');
-  const sfxHover = new Audio('https://dourfits.s3.amazonaws.com/audio/item-over.wav');
 
   const itemOver = () => {
-    //sfxHover.play();
+    props.itemSFXOver();
   }
 
   const itemClick = () => {
-    //sfxClick.play();
+    props.itemSFXClick();
 
     // Update Darcel avatar
     const currentVal: string = darcel[props.item.layer as keyof Darcel];

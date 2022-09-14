@@ -184,6 +184,9 @@ function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React
   );
 }
 
+const sfxClick = new Audio('assets/audio/click.wav');
+const sfxOver = new Audio('assets/audio/over.wav');
+
 function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
@@ -195,6 +198,7 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
   const [scrollInterval, setScrollInterval] = useState<number>(0);
   const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
   const viewerRef = useRef<HTMLDivElement>(null);
+  const userInteractedRef: React.MutableRefObject<boolean> = useRef(false);
 
   const cancelScroll = () => {
     clearInterval(scrollInterval);
@@ -242,6 +246,26 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
     return checkTrait.length || !isConnected ? true : false;
   }
+
+  const itemSFXOver = () => {
+    if (userInteractedRef.current) {
+      sfxOver.play();
+    }
+  }
+
+  const itemSFXClick = () => {
+    if (userInteractedRef.current) {
+      sfxClick.play();
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', function() {
+      if (!userInteractedRef.current) {
+        userInteractedRef.current = true;
+      }
+    });
+  }, []);
 
   useEffect(() => {
     let ownedTraits: Record<"value" | "trait_type", string>[] = [];
@@ -314,7 +338,7 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
   return (
     <>
       <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } itemSFXOver={ itemSFXOver } itemSFXClick={ itemSFXClick } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
       </div>
 
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
