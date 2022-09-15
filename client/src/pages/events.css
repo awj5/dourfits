@@ -60,7 +60,7 @@
   width: 580px;
   margin-top: 24px;
   flex-shrink: 0;
-  margin-right: 32px;
+  padding-right: 32px;
 }
 
 .eventInfo {
@@ -136,7 +136,7 @@
   .event {
     width: 430px;
     height: 340px;
-    margin-right: 16px;
+    padding-right: 16px;
     margin-top: 16px;
   }
 

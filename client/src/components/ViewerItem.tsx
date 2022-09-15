@@ -97,7 +97,7 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
             arms = 'arms/hands-on-hips.svg';
           } else if (props.item.topType === 'sleeveless') {
             arms = 'arms/regular.svg';
-          } else {
+          } else if (props.item.topType !== 'no-arms') {
             arms = `arms/${ props.item.topType }.svg`;
           }
 

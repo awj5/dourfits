@@ -278,10 +278,7 @@
         "title": "Unicorn",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
+        "layer": "headAccessories"
     },
     {
         "title": "White Stud",
