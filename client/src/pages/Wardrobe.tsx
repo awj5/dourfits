@@ -242,7 +242,7 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
   const checkItemOwned = (title: string, trait: string): boolean => {
     const checkTrait = userTraits.filter(obj => {
-      return obj.value.toLowerCase() === title.toLowerCase() && obj.trait_type.toLowerCase() === trait.toLowerCase();
+      return obj.value.toLowerCase() === title.toLowerCase() && (obj.trait_type.toLowerCase() === trait.toLowerCase() || (trait === 'Background' && obj.trait_type.toLowerCase() === 'backgrounds')); // Hacky code added to make genesis backgrounds available to DF backgrounds with same name
     })
 
     return checkTrait.length || !isConnected ? true : false;

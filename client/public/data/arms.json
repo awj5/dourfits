@@ -12,7 +12,10 @@
         "trait": "Arms",
         "layer": "arms",
         "topType": "sleeveless",
-        "default": "basketball"
+        "default": "basketball",
+        "exclusions": {
+            "facialHair": ""
+        }
     },
     {
         "title": "Beer",
@@ -20,7 +23,10 @@
         "trait": "Arms",
         "layer": "arms",
         "topType": "sleeveless",
-        "default": "beer"
+        "default": "beer",
+        "exclusions": {
+            "facialHair": ""
+        }
     },
     {
         "title": "Big Bag",
@@ -42,7 +48,10 @@
         "collection": "dourdarcels",
         "trait": "Arms",
         "layer": "arms",
-        "topType": "short"
+        "topType": "short",
+        "exclusions": {
+            "facialHair": ""
+        }
     },
     {
         "title": "Champagne",
@@ -121,7 +130,10 @@
         "trait": "Arms",
         "layer": "arms",
         "topType": "short",
-        "default": "gm-skateboard"
+        "default": "gm-skateboard",
+        "exclusions": {
+            "facialHair": ""
+        }
     },
     {
         "title": "Sky Singlet",
