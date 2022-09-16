@@ -256,6 +256,10 @@ button#navBurger {
     left: 32px;
     margin-left: 0;
   }
+
+  a#nav-home {
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -293,7 +297,6 @@ button#navBurger {
     color: var(--df-orange);
   }
 
-  a#nav-home,
   nav button.bigButton {
     display: block;
   }
