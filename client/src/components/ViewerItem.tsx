@@ -18,7 +18,9 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
   const available: boolean = props.traitOwned || xpItem === 'UNLOCKED' ? true : false;
 
   const itemOver = () => {
-    props.itemSFXOver();
+    if (available) {
+      props.itemSFXOver();
+    }
   }
 
   const itemClick = () => {
