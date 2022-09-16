@@ -17,7 +17,7 @@ function ConnectButton(props: { label?: string }) {
     }
   }
 
-  return <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton">{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : props.label ? props.label : 'Connect' }</button>;
+  return <button onClick={ isConnected ? disconnectClick : connectClick } className="bigButton" style={{ paddingLeft: isConnected ? "16px" : "", paddingRight: isConnected ? "16px" : "" }}>{ isConnected ? `${ address!.substring(0, 4) }...${ address!.substring(address!.length - 4) }` : props.label ? props.label : 'Connect' }</button>;
 }
 
 export default ConnectButton;
