@@ -86,7 +86,7 @@ function Header() {
   }
 
   useEffect(() => {
-    if (themePlaying) {
+    if (themePlaying && window.location.hostname !== 'localhost') {
       themeSong.play();
     } else {
       themeSong.pause();

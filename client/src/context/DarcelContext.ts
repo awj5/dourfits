@@ -2,10 +2,10 @@ import { createContext } from 'react';
 
 export interface Darcel {
   background: string;
-  shoesAndLegs: string;
   head: string;
   eye: string;
   hairAndHats: string;
+  shoesAndLegs: string;
   bottoms: string;
   tops: string;
   bodyAccessories: string;
@@ -18,10 +18,10 @@ export interface Darcel {
 
 export const DefaultDarcel: Darcel = {
   background: "background/wardrobe.png",
-  shoesAndLegs: "shoes-and-legs/regular.svg",
   head: "head/regular.svg",
   eye: "eye/regular.svg",
   hairAndHats: "",
+  shoesAndLegs: "shoes-and-legs/regular.svg",
   bottoms: "bottoms/underwear.svg",
   tops: "",
   bodyAccessories: "",

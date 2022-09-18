@@ -1,8 +1,66 @@
+import { useContext, useEffect, useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useCallback } from 'react';
 import { useConnect, useAccount } from 'wagmi';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
+import { DarcelContext, DarcelContextType } from '../context/DarcelContext';
 import styles from './overlay-window.module.css';
+
+/* Submit */
+
+function OverlaySubmit() {
+  const { address } = useAccount();
+  const { darcel } = useContext<DarcelContextType>(DarcelContext);
+  const [events, setEvents] = useState<Event[]>([]);
+
+  interface Event {
+    id: number;
+    title: string;
+    start: Date;
+    end: Date;
+    voting_end: Date;
+  }
+
+  const eventClick = async (id: number) => {
+    const config = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(darcel)
+    }
+
+    try {
+      const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/entries/${ id }/${ address }`, config);
+      const data: any = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    const getEvents = async () => {
+      try {
+        const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/events`);
+        const data: Event[] = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getEvents();
+  }, []);
+
+  return (
+    <div id={ styles.overlaySubmit }>
+      { events.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className="bigButton">{ item.title }</button>) }
+    </div>
+  )
+}
+
+/* Connect */
 
 function OverlayConnect() {
   const { connect, connectors, error } = useConnect();
@@ -29,6 +87,8 @@ function OverlayConnect() {
   );
 }
 
+/* OverlayWindow */
+
 function OverlayWindow() {
   const { overlay, setOverlay } = useContext<OverlayContextType>(OverlayContext);
 
@@ -54,8 +114,9 @@ function OverlayWindow() {
         <div id={ styles.overlayWindow }>
           <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
-          <p style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
+          <p id={ styles.overlayMessage } style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
           { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }
+          { overlay.title === 'Yay!' && <OverlaySubmit /> }
         </div>
       </div>
     </div>
