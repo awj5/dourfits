@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useContext, useRef } from 'react';
+import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
 import ConnectButton from './components/ConnectButton';
@@ -7,10 +8,48 @@ import { OverlayContext, Overlay } from './context/OverlayContext';
 import { XPContext, XPContextType } from './context/XP';
 import './layout.css';
 
+const settings = {
+  apiKey: process.env.REACT_APP_ALCHEMY_ID,
+  network: Network.ETH_MAINNET
+}
+
+const alchemy = new Alchemy(settings);
+
 /* Header */
 
 function HeaderDashboard() {
-  const { xp } = useContext<XPContextType>(XPContext);
+  const { setXP, xp } = useContext<XPContextType>(XPContext);
+  const { address, isConnected } = useAccount();
+
+  useEffect(() => {
+    let addressXP: number = 0;
+
+    const getXP = async (page?: string | undefined) => {
+      try {
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page }); // DD, colette and DF
+
+        // Loop NFTs
+        for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
+          addressXP += userNFTs.ownedNfts[x].contract.address === ('0x8d609bd201beaea7dccbfbd9c22851e23da68691' || '0x6d93d3fd7bb8baebf853be56d0198989db655e40') ? 200 : 100;
+        }
+
+        // Check if more than 100 NFTs held
+        if (userNFTs.pageKey) {
+          getXP(userNFTs.pageKey); // Next page
+        } else {
+          setXP(addressXP);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    if (isConnected) {
+      getXP();
+    } else {
+      setXP(0);
+    }
+  }, [isConnected, address, setXP]);
 
   return (
     <div id="headerDashboard">
@@ -98,13 +137,13 @@ function Layout() {
 
   return (
     <XPContext.Provider value={{ xp, setXP }}>
-    <OverlayContext.Provider value={{ overlay, setOverlay }}>
-      <div style={{ visibility: domReady ? "visible" : "hidden" }}>
-        <Outlet />
-        <Header />
-        <OverlayWindow />
-      </div>
-    </OverlayContext.Provider>
+      <OverlayContext.Provider value={{ overlay, setOverlay }}>
+        <div style={{ visibility: domReady ? "visible" : "hidden" }}>
+          <Outlet />
+          <Header />
+          <OverlayWindow />
+        </div>
+      </OverlayContext.Provider>
     </XPContext.Provider>
   );
 }

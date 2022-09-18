@@ -191,7 +191,6 @@ const sfxChange = new Audio('assets/audio/change.wav');
 function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
-  const { setXP } = useContext<XPContextType>(XPContext);
   const [date, setDate] = useState<number>(Date.now());
   const [viewerItems, setViewerItems] = useState<Category[]>([]);
   const [scrollUp, setScrollUp] = useState<boolean>(false);
@@ -270,7 +269,6 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
   useEffect(() => {
     let ownedTraits: Record<"value" | "trait_type", string>[] = [];
-    let addressXP: number = 0;
 
     const getNFTs = async (page?: string | undefined) => {
       try {
@@ -278,7 +276,6 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
         // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
-          addressXP += userNFTs.ownedNfts[x].contract.address === ('0x8d609bd201beaea7dccbfbd9c22851e23da68691' || '0x6d93d3fd7bb8baebf853be56d0198989db655e40') ? 200 : 100;
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
           if (attributes) {
@@ -301,7 +298,6 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
           getNFTs(userNFTs.pageKey); // Next page
         } else {
           setUserTraits(ownedTraits);
-          setXP(addressXP);
         }
       } catch (error) {
         console.log(error);
@@ -310,10 +306,8 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
     if (isConnected) {
       getNFTs(); // Set user owned traits
-    } else {
-      setXP(0);
     }
-  }, [isConnected, address, setXP]);
+  }, [isConnected, address]);
 
   useEffect(() => {
     const getViewerItems = async () => {

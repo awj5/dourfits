@@ -15,7 +15,7 @@ function OverlayConnect() {
     if (isConnected) {
       setOverlay({ visible: false }); // Hide overlay once connected
 
-      if (location.pathname === '/') {
+      if (location.pathname !== '/wardrobe') {
         navigate('/wardrobe');
       }
     }
