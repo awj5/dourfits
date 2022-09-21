@@ -70,8 +70,15 @@ function OverlaySubmit() {
 
   useEffect(() => {
     const getEvents = async (type: string) => {
+      const config = {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json'
+        }
+      }
+
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/events/${ type }`);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/events/${ type }`, config);
 
         if (response.status === 200) {
           // Success
