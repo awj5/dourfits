@@ -43,7 +43,7 @@ function OverlaySubmit() {
 
     try {
       setSubmitting(true);
-      const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/entries/${ id }/${ address }`, config);
+      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/entries/${ id }/${ address }`, config);
 
       if (response.status !== 201) {
         // Error
@@ -71,7 +71,7 @@ function OverlaySubmit() {
   useEffect(() => {
     const getEvents = async (type: string) => {
       try {
-        const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/events/${ type }`);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/events/${ type }`);
 
         if (response.status === 200) {
           // Success
