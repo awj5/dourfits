@@ -2,7 +2,6 @@ import { useContext, useEffect, useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useConnect, useAccount } from 'wagmi';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
-import { DarcelContext, DarcelContextType } from '../context/DarcelContext';
 import styles from './overlay-window.module.css';
 
 /* Submitted */
@@ -19,7 +18,6 @@ function OverlaySubmitted() {
 
 function OverlaySubmit() {
   const { address } = useAccount();
-  const { darcel } = useContext<DarcelContextType>(DarcelContext);
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const [openEvents, setOpenEvents] = useState<Event[]>([]);
   const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
@@ -40,7 +38,7 @@ function OverlaySubmit() {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(darcel)
+      body: JSON.stringify(JSON.parse(localStorage.avatarV2))
     }
 
     try {

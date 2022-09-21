@@ -30,7 +30,7 @@ const addEntry = async (request, response) => {
 
     // Insert only if user not already submitted and event still open
     if (!userEntries.rows.length && event.rows.length) {
-      const entry = await pool.query('INSERT INTO df_entries (event_id, wallet, background, shoesandlegs, head, eye, hairandhats, bottoms, tops, bodyaccessories, arms, facialhair, mouth, headaccessories, glasses) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING id', [request.params.id, request.params.wallet, request.body.background, request.body.shoesandlegs, request.body.head, request.body.eye, request.body.hairandhats, request.body.bottoms, request.body.tops, request.body.bodyaccessories, request.body.arms, request.body.facialhair, request.body.mouth, request.body.headaccessories, request.body.glasses]);
+      const entry = await pool.query('INSERT INTO df_entries (event_id, wallet, background, shoesandlegs, head, eye, hairandhats, bottoms, tops, bodyaccessories, arms, facialhair, mouth, headaccessories, glasses) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING id', [request.params.id, request.params.wallet, request.body.background, request.body.shoesAndLegs, request.body.head, request.body.eye, request.body.hairAndHats, request.body.bottoms, request.body.tops, request.body.bodyAccessories, request.body.arms, request.body.facialHair, request.body.mouth, request.body.headAccessories, request.body.glasses]);
       response.status(201).send(entry.rows[0].id.toString());
     } else {
       response.status(!event.rows.length ? 403 : 409).send(); // Event not open or already submitted
