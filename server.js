@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 
 app.use(Express.static(Path.join(__dirname, 'client/build'))); // React
 app.use(Cors());
-//app.use(Express.json());
+app.use(Express.json());
 
 app.listen(port, () => {
   console.log(`App running on port ${ port }.`);

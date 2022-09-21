@@ -43,7 +43,7 @@ function OverlaySubmit() {
 
     try {
       setSubmitting(true);
-      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/entries/${ id }/${ address }`, config);
+      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/entries/${ id }/${ address }`, config);
 
       if (response.status !== 201) {
         // Error
@@ -78,7 +78,7 @@ function OverlaySubmit() {
       }
 
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002' : 'https://dourfits.io' }/api/events/${ type }`, config);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`, config);
 
         if (response.status === 200) {
           // Success
