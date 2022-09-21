@@ -112,3 +112,23 @@ p#overlayMessage {
 #overlaySubmit button:active {
   color: #000;
 }
+
+#overlaySubmit button.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+/* Submitted */
+
+#overlayWindow.submitted {
+	background-color: #CD9BCD;
+}
+
+#overlaySubmitted {
+	text-align: center;
+}
+
+#overlaySubmitted img {
+	width: 200px;
+	margin-top: 16px;
+}

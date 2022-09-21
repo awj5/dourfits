@@ -5,19 +5,32 @@ import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import { DarcelContext, DarcelContextType } from '../context/DarcelContext';
 import styles from './overlay-window.module.css';
 
+/* Submitted */
+
+function OverlaySubmitted() {
+  return (
+    <div id={ styles.overlaySubmitted }>
+      <img src="assets/img/celebrate.gif" alt="" />
+    </div>
+  )
+}
+
 /* Submit */
 
 function OverlaySubmit() {
   const { address } = useAccount();
   const { darcel } = useContext<DarcelContextType>(DarcelContext);
-  const [events, setEvents] = useState<Event[]>([]);
+  const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const [openEvents, setOpenEvents] = useState<Event[]>([]);
+  const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
+  const [submitting, setSubmitting] = useState<boolean>(false);
 
   interface Event {
     id: number;
     title: string;
-    start: Date;
-    end: Date;
-    voting_end: Date;
+    start: number;
+    end: number;
+    voting_end: number;
   }
 
   const eventClick = async (id: number) => {
@@ -31,31 +44,62 @@ function OverlaySubmit() {
     }
 
     try {
+      setSubmitting(true);
       const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/entries/${ id }/${ address }`, config);
-      const data: any = await response.json();
-      console.log(data);
+
+      if (response.status !== 201) {
+        // Error
+        switch (response.status) {
+          case 403:
+            alert('Sorry event has closed.');
+            break;
+          case 409:
+            alert('Fit already submitted for this event.');
+            break;
+          default:
+            alert('Error ' + response.status);
+        }
+      } else {
+        // Success
+        setOverlay({ visible: true, title: 'Congrats!', message: 'Your fit has been submitted. Voting opens soon.' });
+      }
     } catch (error) {
       console.log(error);
     }
+
+    setSubmitting(false);
   }
 
   useEffect(() => {
-    const getEvents = async () => {
+    const getEvents = async (type: string) => {
       try {
-        const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/events`);
-        const data: Event[] = await response.json();
-        setEvents(data);
+        const response: Response = await fetch(`http://${ window.location.hostname === 'localhost' ? 'localhost:3002' : 'dourfits.io' }/api/events/${ type }`);
+
+        if (response.status === 200) {
+          // Success
+          const data: Event[] = await response.json();
+
+          if (type === 'open') {
+            setOpenEvents(data);
+          } else {
+            setUpcomingEvents(data);
+          }
+        } else {
+          alert('Error ' + response.status);
+        }
       } catch (error) {
         console.log(error);
       }
     }
 
-    getEvents();
+    getEvents('open');
+    getEvents('upcoming');
   }, []);
 
   return (
     <div id={ styles.overlaySubmit }>
-      { events.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className="bigButton">{ item.title }</button>) }
+      { openEvents.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ item.title }</button>) }
+      { upcomingEvents.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className={ `bigButton ${ styles.disabled }` }>{ item.title }</button>) }
     </div>
   )
 }
@@ -111,12 +155,13 @@ function OverlayWindow() {
       <div id={ styles.overlayBg } onClick={ closeClick }></div>
 
       <div id={ styles.overlayWrapper }>
-        <div id={ styles.overlayWindow }>
+        <div id={ styles.overlayWindow } className={ overlay.title === 'Congrats!' ? styles.submitted : undefined }>
           <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
           <p id={ styles.overlayMessage } style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
           { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }
           { overlay.title === 'Yay!' && <OverlaySubmit /> }
+          { overlay.title === 'Congrats!' && <OverlaySubmitted /> }
         </div>
       </div>
     </div>

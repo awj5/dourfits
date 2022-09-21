@@ -23,7 +23,7 @@ app.listen(port, () => {
 
 /* API endpoints */
 
-app.get('/api/events', Queries.getEvents);
+app.get('/api/events/:type', Queries.getEvents);
 app.post('/api/entries/:id/:wallet', Queries.addEntry);
 
 // Router
