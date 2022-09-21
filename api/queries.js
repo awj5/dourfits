@@ -4,7 +4,7 @@ import PG from 'pg';
 
 const pool = new PG.Pool({
   user: process.env.DATABASE_USER ? process.env.DATABASE_USER : 'adamjohnson',
-  host: process.env.DATABASE_NAME ? 'ec2-52-73-155-171.compute-1.amazonaws.com' : 'localhost',
+  host: process.env.DATABASE_NAME ? 'ec2-44-207-133-100.compute-1.amazonaws.com' : 'localhost',
   database: process.env.DATABASE_NAME ? process.env.DATABASE_NAME : 'adamjohnson',
   password: process.env.DATABASE_PASSWORD ? process.env.DATABASE_PASSWORD : '',
   port: 5432,
