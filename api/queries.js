@@ -15,7 +15,7 @@ const pool = new PG.Pool({
 
 const getEvents = async (request, response) => {
   try {
-    const events = await pool.query('SELECT * FROM df_events WHERE $1 = \'open\' AND submit_start <= now() AND submit_end > now() OR $1 = \'upcoming\' AND submit_start > now() ORDER BY submit_start', [request.params.type]);
+    const events = await pool.query('SELECT * FROM df_events WHERE $1 = \'open\' AND submit_start <= now() AND submit_end > now() OR $1 = \'upcoming\' AND submit_start > now() OR $1 = \'vote\' AND submit_end <= now() AND voting_end > now() OR $1 = \'archive\' AND voting_end <= now() ORDER BY submit_start', [request.params.type]);
     response.status(200).json(events.rows);
   } catch (error) {
     console.log(error);

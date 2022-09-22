@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useConnect, useAccount } from 'wagmi';
 import Confetti from 'react-dom-confetti';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
+import { EventObj } from '../pages/Events';
 import styles from './overlay-window.module.css';
 
 /* Submitted */
@@ -52,17 +53,9 @@ function OverlaySubmitted() {
 function OverlaySubmit() {
   const { address } = useAccount();
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
-  const [openEvents, setOpenEvents] = useState<Event[]>([]);
-  const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
+  const [openEvents, setOpenEvents] = useState<EventObj[]>([]);
+  const [upcomingEvents, setUpcomingEvents] = useState<EventObj[]>([]);
   const [submitting, setSubmitting] = useState<boolean>(false);
-
-  interface Event {
-    id: number;
-    title: string;
-    start: number;
-    end: number;
-    voting_end: number;
-  }
 
   const eventClick = async (id: number) => {
     const config = {
@@ -115,7 +108,7 @@ function OverlaySubmit() {
 
         if (response.status === 200) {
           // Success
-          const data: Event[] = await response.json();
+          const data: EventObj[] = await response.json();
 
           if (type === 'open') {
             setOpenEvents(data);
@@ -136,8 +129,8 @@ function OverlaySubmit() {
 
   return (
     <div id={ styles.overlaySubmit }>
-      { openEvents.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ item.title }</button>) }
-      { upcomingEvents.map((item) => <button key={ item.id } onClick={ () => eventClick(item.id) } className={ `bigButton ${ styles.disabled }` }>{ item.title }</button>) }
+      { openEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ event.title }</button>) }
+      { upcomingEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
     </div>
   )
 }
