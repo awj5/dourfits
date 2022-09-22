@@ -1,15 +1,48 @@
 import { useContext, useEffect, useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useConnect, useAccount } from 'wagmi';
+import Confetti from 'react-dom-confetti';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import styles from './overlay-window.module.css';
 
 /* Submitted */
 
+const sfxConfetti = new Audio('assets/audio/confetti.wav');
+
 function OverlaySubmitted() {
+  const [confetti, setConfetti] = useState<boolean>(false);
+
+  const confettiConfig = {
+    angle: 90,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 70,
+    dragFriction: 0.12,
+    duration: 3000,
+    stagger: 3,
+    width: '10px',
+    height: '10px',
+    perspective: '500px',
+    colors: ['#3f6296', '#bd352f', '#df723a', '#f7cf48', '#5e3461']
+  }
+
+  useEffect(() => {
+    setConfetti(true);
+  }, []);
+
+  useEffect(() => {
+    if (confetti) {
+      sfxConfetti.play();
+    }
+  }, [confetti]);
+
   return (
     <div id={ styles.overlaySubmitted }>
-      <img src="assets/img/celebrate.gif" alt="" />
+      <img src="assets/img/celebrate.gif" alt="" onClick={ () => setConfetti(!confetti) } />
+
+      <div id={ styles.confetti }>
+        <Confetti active={ confetti } config={ confettiConfig } />
+      </div>
     </div>
   )
 }

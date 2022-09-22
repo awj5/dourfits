@@ -121,14 +121,20 @@ p#overlayMessage {
 /* Submitted */
 
 #overlayWindow.submitted {
-	background-color: #CD9BCD;
+	background-color: var(--df-purple);
 }
 
 #overlaySubmitted {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 16px;
 }
 
 #overlaySubmitted img {
 	width: 200px;
-	margin-top: 16px;
+}
+
+#confetti {
+	position: fixed;
 }
