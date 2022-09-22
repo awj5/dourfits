@@ -41,11 +41,7 @@ function WardrobeStage() {
   }
 
   const submitClick = () => {
-    if (urlParams.get('demo')) {
-      setOverlay({ visible: true, title: 'Yay!', message: 'Which challenge would you like to submit your fit to?' });
-    } else {
-      setOverlay({ visible: true, title: 'Almost!', message: 'Our first event begins 9.22.22, please submit your fit then.' }); // Remove this on 9/22
-    }
+    setOverlay({ visible: true, title: 'Yay!', message: 'Which challenge would you like to submit your fit to?' });
   }
 
   const downloadClick = async () => {
