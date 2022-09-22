@@ -262,6 +262,24 @@
         "hex": "#4680B2"
     },
     {
+        "title": "Slam Jam Charcoal",
+        "xp": 600,
+        "layer": "background",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Slam Jam Red",
+        "xp": 1200,
+        "layer": "background",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Slam Jam Smoke",
+        "xp": 300,
+        "layer": "background",
+        "format": ".svg.png"
+    },
+    {
         "title": "Slate",
         "collection": "dourdarcels",
         "trait": "Background",
