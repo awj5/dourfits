@@ -16,9 +16,9 @@ export interface EventObj {
 
 function Event(props: { event: EventObj; group: string; }) {
   const navigate = useNavigate();
-  const dateSubmitStart = new Date(props.event.submit_start).toLocaleString('default', { month: 'long', day: 'numeric' });
-  const dateSubmitEnd = new Date(props.event.submit_end).toLocaleString('default', { month: 'long', day: 'numeric' });
-  const dateVotingEnd = new Date(props.event.voting_end).toLocaleString('default', { month: 'long', day: 'numeric' });
+  const dateSubmitStart = new Date(props.event.submit_start).toLocaleString('en-US', { month: 'long', day: 'numeric' });
+  const dateSubmitEnd = new Date(props.event.submit_end).toLocaleString('en-US', { month: 'long', day: 'numeric' });
+  const dateVotingEnd = new Date(props.event.voting_end).toLocaleString('en-US', { month: 'long', day: 'numeric' });
 
   const ctaClick = (location: String) => {
     navigate('/' + location);
