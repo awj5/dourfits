@@ -34,7 +34,7 @@ function Event(props: { event: EventObj; group: string; }) {
         <span>Prize</span>
 
         <div className="infoPrizes">
-          { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">?</div>) }
+          { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">{ props.group === 'Upcoming' ? '?' : <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }-prize-${ i + 1 }.png` } alt="" /> }</div>) }
           <div className="clear"></div>
         </div>
 

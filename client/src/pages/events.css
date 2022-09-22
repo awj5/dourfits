@@ -131,6 +131,11 @@
   font-size: 36px;
   background-color: #FFF;
   color: #000;
+  overflow: hidden;
+}
+
+.infoPrize img {
+  width: 100%;
 }
 
 .eventInfo button {
