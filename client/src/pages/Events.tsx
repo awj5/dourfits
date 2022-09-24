@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAccount } from 'wagmi';
+import Moment from 'moment';
 import ConnectButton from '../components/ConnectButton';
 import './events.css';
 
@@ -20,9 +21,9 @@ function Event(props: { event: EventObj; group: string; }) {
   const { isConnected } = useAccount();
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const navigate = useNavigate();
-  const dateSubmitStart = new Date(props.event.submit_start).toLocaleString('en-US', { month: 'long', day: 'numeric' });
-  const dateSubmitEnd = new Date(props.event.submit_end).toLocaleString('en-US', { month: 'long', day: 'numeric' });
-  const dateVotingEnd = new Date(props.event.voting_end).toLocaleString('en-US', { month: 'long', day: 'numeric' });
+  const dateSubmitStart = Moment(props.event.submit_start).format('MMMM D');
+  const dateSubmitEnd = Moment(props.event.submit_end).format('MMMM D');
+  const dateVotingEnd = Moment(props.event.voting_end).format('MMMM D');
 
   const ctaClick = (location: String) => {
     navigate('/' + location);
@@ -30,7 +31,6 @@ function Event(props: { event: EventObj; group: string; }) {
 
   const loaded = () => {
     setImageLoaded(true);
-    console.log(props.event.submit_end);
   }
 
   return (
