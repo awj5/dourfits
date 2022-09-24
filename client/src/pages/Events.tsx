@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAccount } from 'wagmi';
+import ConnectButton from '../components/ConnectButton';
 import './events.css';
 
 export interface EventObj {
@@ -15,6 +17,8 @@ export interface EventObj {
 /* Event */
 
 function Event(props: { event: EventObj; group: string; }) {
+  const { isConnected } = useAccount();
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const navigate = useNavigate();
   const dateSubmitStart = new Date(props.event.submit_start).toLocaleString('en-US', { month: 'long', day: 'numeric' });
   const dateSubmitEnd = new Date(props.event.submit_end).toLocaleString('en-US', { month: 'long', day: 'numeric' });
@@ -22,6 +26,10 @@ function Event(props: { event: EventObj; group: string; }) {
 
   const ctaClick = (location: String) => {
     navigate('/' + location);
+  }
+
+  const loaded = () => {
+    setImageLoaded(true);
   }
 
   return (
@@ -38,10 +46,13 @@ function Event(props: { event: EventObj; group: string; }) {
           <div className="clear"></div>
         </div>
 
-        <button onClick={ () => ctaClick('wardrobe') } className="bigButton" style={{ backgroundColor: props.group === 'Compete' || props.group === 'Upcoming' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' || props.group === 'Upcoming' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button>
+        <div className="eventCTA">
+          { (!isConnected && props.group !== 'Archive' && props.group !== 'Upcoming') && <ConnectButton label="Connect" /> }
+          { isConnected && <button onClick={ () => ctaClick('wardrobe') } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' || props.group === 'Upcoming' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' || props.group === 'Upcoming' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
+        </div>
       </div>
 
-      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="" />
+      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
     </div>
   )
 }

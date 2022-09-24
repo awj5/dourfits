@@ -84,6 +84,16 @@ button.iconButton.selected:active * {
   box-sizing: border-box;
 }
 
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .section {
     padding: 16px;

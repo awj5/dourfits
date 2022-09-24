@@ -138,20 +138,28 @@
   width: 100%;
 }
 
-.eventInfo button {
+.eventCTA * {
   position: absolute;
   bottom: 16px;
   width: calc(100% - 32px);
+}
+
+button.eventButton {
   color: #FFF;
 }
 
-.eventInfo button:active {
+button.eventButton:active {
   color: #000;
 }
 
-.event img {
+img.eventImage {
   height: 100%;
   float: left;
+  opacity: 0;
+}
+
+img.eventImage.loaded {
+  animation: fadeIn1 ease-in .25s forwards;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -194,7 +202,7 @@
     font-size: 30px;
   }
 
-  .eventInfo button {
+  .eventCTA * {
     bottom: 12px;
     width: calc(100% - 24px);
   }
