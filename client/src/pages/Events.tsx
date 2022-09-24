@@ -30,6 +30,7 @@ function Event(props: { event: EventObj; group: string; }) {
 
   const loaded = () => {
     setImageLoaded(true);
+    console.log(props.event.submit_end);
   }
 
   return (
