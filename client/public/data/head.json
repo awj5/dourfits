@@ -18,7 +18,8 @@
         "layer": "head",
         "exclusions": {
             "eye": "",
-            "mouth": ""
+            "mouth": "",
+            "facialHair": ""
         }
     },
     {

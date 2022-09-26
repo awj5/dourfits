@@ -53,7 +53,7 @@ function Event(props: { event: EventObj; group: string; }) {
         </div>
       </div>
 
-      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png?d=${ new Date }` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
+      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
     </div>
   )
 }
