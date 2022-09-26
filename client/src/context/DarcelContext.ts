@@ -32,6 +32,22 @@ export const DefaultDarcel: Darcel = {
   glasses: ""
 }
 
+export const EmptyDarcel: Darcel = {
+  background: "",
+  head: "",
+  eye: "",
+  hairAndHats: "",
+  shoesAndLegs: "",
+  bottoms: "",
+  tops: "",
+  bodyAccessories: "",
+  arms: "",
+  facialHair: "",
+  mouth: "",
+  headAccessories: "",
+  glasses: ""
+}
+
 export type DarcelContextType = {
   darcel: Darcel;
   setDarcel: (darcel: Darcel) => void;

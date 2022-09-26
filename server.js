@@ -25,6 +25,7 @@ app.listen(port, () => {
 
 app.get('/api/events/:type', Queries.getEvents);
 app.post('/api/entries/:id/:wallet', Queries.addEntry);
+app.get('/api/vote/entries/:id/:wallet', Queries.getVoteEntries);
 
 // Router
 

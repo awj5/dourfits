@@ -54,7 +54,7 @@ function HeaderDashboard() {
   return (
     <div id="headerDashboard">
       <div id="dashboardXP">
-        <div id="xpIcon"><img src="assets/img/icon-heart.svg" alt="XP" /></div>
+        <div id="xpIcon"><img src="/assets/img/icon-heart.svg" alt="XP" /></div>
         <p>{ xp }<span>XP</span></p>
       </div>
 
@@ -104,7 +104,7 @@ function Header() {
 
   return (
     <header>
-      <h1><Link to="/"><img src="assets/img/logo.svg" alt="Dour Fits" /></Link></h1>
+      <h1><Link to="/"><img src="/assets/img/logo.svg" alt="Dour Fits" /></Link></h1>
       <HeaderDashboard />
 
       <nav style={{ right: showingNav ? 0 : "" }}>
@@ -112,7 +112,7 @@ function Header() {
         <Link to="/wardrobe" onClick={ hideNav } id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
         <Link to="/events" onClick={ hideNav } id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
         <Link to="/faq" onClick={ hideNav } id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
-        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="" /></button>
+        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `/assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="" /></button>
         <ConnectButton />
       </nav>
 

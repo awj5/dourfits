@@ -41,6 +41,16 @@ const addEntry = async (request, response) => {
   }
 }
 
+const getVoteEntries = async (request, response) => {
+  try {
+    const entries = await pool.query('SELECT * FROM df_entries WHERE event_id = $1 AND id NOT IN (SELECT entry_id FROM df_votes WHERE wallet = $2) ORDER BY random() LIMIT 2', [request.params.id, request.params.wallet]); // Query excludes entries user has already voted on
+    response.status(200).json(entries.rows);
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 /* Export */
 
-export default { getEvents, addEntry }
+export default { getEvents, addEntry, getVoteEntries }

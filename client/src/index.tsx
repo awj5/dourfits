@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Wardrobe from './pages/Wardrobe';
 import Events from './pages/Events';
 import FAQ from './pages/FAQ';
+import Vote from './pages/Vote';
 import './index.css';
 
 window.Buffer = require('buffer').Buffer; // Polyfill to fix buffer not defined in WAGMI
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="wardrobe" element={ <Wardrobe /> } />
             <Route path="events" element={ <Events /> } />
             <Route path="faq" element={ <FAQ /> } />
+            <Route path="vote/:id" element={ <Vote /> } />
           </Route>
         </Routes>
       </BrowserRouter>

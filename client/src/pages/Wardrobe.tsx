@@ -117,8 +117,8 @@ function WardrobeStage() {
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
       <button onClick={ submitClick } className="bigButton" style={{ display: xp === 0 ? "none" : "" }}>Submit<svg viewBox="0 0 15.84 27.18"><path d="M2.25,27.18c-.58,0-1.15-.22-1.59-.66-.88-.88-.88-2.3,0-3.18L10.41,13.59,.66,3.84C-.22,2.96-.22,1.54,.66,.66,1.54-.22,2.96-.22,3.84,.66L15.18,12c.88,.88,.88,2.3,0,3.18L3.84,26.52c-.44,.44-1.02,.66-1.59,.66Z"/></svg></button>
-      <button onClick={ resetClick } className="iconButton" id="stageReset"><img src="assets/img/icon-reset.png" alt="Reset" /></button>
-      <button onClick={ downloadClick } className="iconButton"id="stageDownload" style={{ display: xp === 0 && !urlParams.get('demo') ? "none" : "", pointerEvents: downloadEnabled ? "auto" : "none" }}><img src="assets/img/icon-download.png" alt="Download" /></button>
+      <button onClick={ resetClick } className="iconButton" id="stageReset"><img src="/assets/img/icon-reset.png" alt="Reset" /></button>
+      <button onClick={ downloadClick } className="iconButton"id="stageDownload" style={{ display: xp === 0 && !urlParams.get('demo') ? "none" : "", pointerEvents: downloadEnabled ? "auto" : "none" }}><img src="/assets/img/icon-download.png" alt="Download" /></button>
     </div>
   );
 }
@@ -171,7 +171,7 @@ function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React
 
   return (
     <>
-      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="/assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
       <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="viewerOwnedToggle"><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
 
       <select id="viewerMenu" onChange={ menuChange } value={ category }>
@@ -184,9 +184,9 @@ function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React
   );
 }
 
-const sfxClick = new Audio('assets/audio/click.wav');
-const sfxOver = new Audio('assets/audio/over.wav');
-const sfxChange = new Audio('assets/audio/change.wav');
+const sfxClick = new Audio('/assets/audio/click.wav');
+const sfxOver = new Audio('/assets/audio/over.wav');
+const sfxChange = new Audio('/assets/audio/change.wav');
 
 function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
@@ -339,8 +339,8 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
         { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } itemSFXOver={ itemSFXOver } itemSFXClick={ itemSFXClick } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
       </div>
 
-      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
-      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="/assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
+      <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="/assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
   );
 }

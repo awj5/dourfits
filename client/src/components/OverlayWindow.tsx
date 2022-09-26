@@ -8,7 +8,7 @@ import styles from './overlay-window.module.css';
 
 /* Submitted */
 
-const sfxConfetti = new Audio('assets/audio/confetti.wav');
+const sfxConfetti = new Audio('/assets/audio/confetti.wav');
 
 function OverlaySubmitted() {
   const [confetti, setConfetti] = useState<boolean>(false);
@@ -39,7 +39,7 @@ function OverlaySubmitted() {
 
   return (
     <div id={ styles.overlaySubmitted }>
-      <img src="assets/img/celebrate.gif" alt="" onClick={ () => setConfetti(!confetti) } />
+      <img src="/assets/img/celebrate.gif" alt="" onClick={ () => setConfetti(!confetti) } />
 
       <div id={ styles.confetti }>
         <Confetti active={ confetti } config={ confettiConfig } />
@@ -148,7 +148,7 @@ function OverlayConnect() {
     if (isConnected) {
       setOverlay({ visible: false }); // Hide overlay once connected
 
-      if (location.pathname !== '/wardrobe') {
+      if (location.pathname !== '/wardrobe' && location.pathname !== '/events') {
         navigate('/wardrobe');
       }
     }
@@ -156,7 +156,7 @@ function OverlayConnect() {
 
   return (
     <div id={ styles.overlayConnect }>
-      { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }><img src= { `assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } />{ connector.name }</button>)) }
+      { connectors.map((connector) => (<button key={ connector.id } className="bigButton" onClick={ () => connect({ connector }) }><img src= { `/assets/img/${ connector.name.toLowerCase().replace(/ /g, '-') }.png` } alt={ connector.name } />{ connector.name }</button>)) }
       { error && <p>{ error.message }</p> }
     </div>
   );
@@ -187,7 +187,7 @@ function OverlayWindow() {
 
       <div id={ styles.overlayWrapper }>
         <div id={ styles.overlayWindow } className={ overlay.title === 'Congrats!' ? styles.submitted : undefined }>
-          <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="assets/img/icon-x.png" alt="Close" /></button>
+          <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="/assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
           <p id={ styles.overlayMessage } style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
           { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }

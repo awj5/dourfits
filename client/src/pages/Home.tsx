@@ -7,15 +7,15 @@ import './home.css';
 function HomeConnect() {
   return (
     <div id="homeConnect">
-      <img src="assets/img/home-darcel-1.svg" alt="" className="connectDarcel" />
+      <img src="/assets/img/home-darcel-1.svg" alt="" className="connectDarcel" />
 
       <div id="connectLogo">
-        <img src="assets/img/home-logo.svg" alt="" />
+        <img src="/assets/img/home-logo.svg" alt="" />
         <h2>A blockchain fashion game</h2>
         <ConnectButton label="Connect Wallet" />
       </div>
 
-      <img src="assets/img/home-darcel-2.svg" alt="" className="connectDarcel" />
+      <img src="/assets/img/home-darcel-2.svg" alt="" className="connectDarcel" />
     </div>
   )
 }

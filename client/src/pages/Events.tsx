@@ -36,7 +36,7 @@ function Event(props: { event: EventObj; group: string; }) {
   return (
     <div className={ `event ${ props.group === 'Upcoming' && 'upcoming'  }` }>
       <div className="eventInfo">
-        <span>{ props.event.sub_title ? props.event.sub_title : 'Theme' }</span>
+        <span>{ props.event.sub_title ? props.event.sub_title : (props.group === 'Upcoming' ? 'Upcoming' : 'Theme') }</span>
         <h3>{ props.event.title }</h3>
         <span>{ props.group === 'Upcoming' ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
         <h4>{ props.group === 'Upcoming' ? dateSubmitStart : (props.group === 'Compete' ? dateSubmitEnd : dateVotingEnd) }</h4>
@@ -49,11 +49,11 @@ function Event(props: { event: EventObj; group: string; }) {
 
         <div className="eventCTA">
           { (!isConnected && props.group !== 'Archive' && props.group !== 'Upcoming') && <ConnectButton label="Connect" /> }
-          { isConnected && <button onClick={ () => ctaClick('wardrobe') } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' || props.group === 'Upcoming' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' || props.group === 'Upcoming' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
+          { isConnected && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : 'wardrobe') } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' || props.group === 'Upcoming' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' || props.group === 'Upcoming' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
         </div>
       </div>
 
-      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
+      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png?d=${ new Date }` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
     </div>
   )
 }
