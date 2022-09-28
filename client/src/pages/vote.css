@@ -5,26 +5,61 @@
   align-items: center;
 }
 
+/* Entries */
+
 #voteEntries {
-  height: calc(100% - 96px - 16px);
+  height: calc(100% - 96px - 16px - 64px);
   margin-top: 16px;
   aspect-ratio: 2/1;
-}
-
-#sectionVote h2 {
-  font-family: "AvantGarde-Book", sans-serif;
+  margin-bottom: 64px;
 }
 
 #sectionVote h2,
 #sectionVote h3 {
   font-size: 48px;
   line-height: 1;
+  text-align: center;
+}
+
+#sectionVote h2 {
+  font-family: "AvantGarde-Book", sans-serif;
+}
+
+@media only screen and (max-width: 1023px) {
+  #voteEntries {
+    height: calc(100% - 60px - 16px);
+    aspect-ratio: 1/2;
+    margin-bottom: 0;
+  }
+
+  #sectionVote h2,
+  #sectionVote h3 {
+    font-size: 30px;
+  }
 }
 
 /* Entry */
 
 .voteEntry {
   height: 100%;
-  aspect-ratio: 4/4;
   float: left;
+  aspect-ratio: 4/4;
+}
+
+.voteEntry button {
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  width: 112px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .voteEntry {
+    height: 50%;
+    float: none;
+  }
+
+  .voteEntry button {
+    display: none;
+  }
 }

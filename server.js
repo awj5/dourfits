@@ -24,6 +24,7 @@ app.listen(port, () => {
 /* API endpoints */
 
 app.get('/api/events/:type', Queries.getEvents);
+app.get('/api/event/:id', Queries.getEvent);
 app.post('/api/entries/:id/:wallet', Queries.addEntry);
 app.get('/api/vote/entries/:id/:wallet', Queries.getVoteEntries);
 

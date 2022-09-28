@@ -23,6 +23,16 @@ const getEvents = async (request, response) => {
   }
 }
 
+const getEvent = async (request, response) => {
+  try {
+    const event = await pool.query('SELECT * FROM df_events WHERE id = $1', [request.params.id]);
+    response.status(200).json(event.rows[0]);
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 const addEntry = async (request, response) => {
   try {
     const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND submit_start <= now() AND submit_end > now()', [request.params.id]);
@@ -53,4 +63,4 @@ const getVoteEntries = async (request, response) => {
 
 /* Export */
 
-export default { getEvents, addEntry, getVoteEntries }
+export default { getEvents, getEvent, addEntry, getVoteEntries }

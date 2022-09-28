@@ -1,16 +1,22 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import Avatar from '../components/Avatar';
 import { Darcel, EmptyDarcel } from '../context/DarcelContext';
+import { EventObj } from '../pages/Events';
 import './vote.css';
 
 /* Entry */
 
-function Entry(props: {darcel: Darcel}) {
+function Entry(props: {darcel: Darcel, getEntries: Function}) {
+  const voteClick = () => {
+    props.getEntries();
+  }
+
   return (
-    <div className="voteEntry">
+    <div className="voteEntry" onClick={ voteClick }>
       <Avatar { ...props.darcel } />
+      <button className="bigButton">Vote</button>
     </div>
   )
 }
@@ -22,15 +28,18 @@ function Vote() {
   const { id } = useParams();
   const [entry1, setEntry1] = useState<Darcel>(EmptyDarcel);
   const [entry2, setEntry2] = useState<Darcel>(EmptyDarcel);
+  const [eventTitle, setEventTitle] = useState<string>('');
 
-  const getEntries = useCallback(async () => {
-    const config = {
+  const config = useMemo(() => {
+    return {
       method: 'GET',
       headers: {
         Accept: 'application/json'
       }
     }
+  }, []);
 
+  const getEntries = useCallback(async () => {
     try {
       const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/entries/${ id }/${ address }`, config);
 
@@ -39,8 +48,20 @@ function Vote() {
         const data = await response.json();
 
         if (data.length === 2) {
-          setEntry1({background: data[0].background, head: data[0].head, eye: data[0].eye, hairAndHats: data[0].hairandhats, shoesAndLegs: data[0].shoesandlegs, bottoms: data[0].bottoms, tops: data[0].tops, bodyAccessories: data[0].bodyaccessories, arms: data[0].arms, facialHair: data[0].facialhair, mouth: data[0].mouth, headAccessories: data[0].headaccessories, glasses: data[0].glasses});
-          setEntry2({background: data[1].background, head: data[1].head, eye: data[1].eye, hairAndHats: data[1].hairandhats, shoesAndLegs: data[1].shoesandlegs, bottoms: data[1].bottoms, tops: data[1].tops, bodyAccessories: data[1].bodyaccessories, arms: data[1].arms, facialHair: data[1].facialhair, mouth: data[1].mouth, headAccessories: data[1].headaccessories, glasses: data[1].glasses});
+          const darcel1: Darcel = { ...EmptyDarcel };
+          const darcel2: Darcel = { ...EmptyDarcel };
+
+          for (let key in darcel1) {
+            darcel1[key as keyof typeof darcel1] = data[0][key.toLowerCase()];
+          }
+
+          setEntry1(darcel1);
+
+          for (let key in darcel2) {
+            darcel2[key as keyof typeof darcel2] = data[1][key.toLowerCase()];
+          }
+
+          setEntry2(darcel2);
         } else {
           console.log('No entries');
         }
@@ -50,21 +71,39 @@ function Vote() {
     } catch (error) {
       console.log(error);
     }
-  }, [id, address]);
+  }, [address, config, id]);
 
   useEffect(() => {
     document.querySelector('html')!.style.backgroundColor = ""; // Reset
+
+    const getEvent = async () => {
+      try {
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ id }`, config);
+
+        if (response.status === 200) {
+          // Success
+          const data: EventObj = await response.json();
+          setEventTitle(data.title);
+        } else {
+          alert('Error ' + response.status);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getEvent();
     getEntries();
-  }, [getEntries]);
+  }, [id, config, getEntries]);
 
   return (
     <div className="section" id="sectionVote">
-      <h2>Milan Streetwear</h2>
+      <h2>{ eventTitle }</h2>
       <h3>Vote for your favorite:</h3>
 
       <div id="voteEntries">
-        <Entry darcel={ entry1 } />
-        <Entry darcel={ entry2 } />
+        <Entry darcel={ entry1 } getEntries={ getEntries } />
+        <Entry darcel={ entry2 } getEntries={ getEntries } />
       </div>
     </div>
   )
