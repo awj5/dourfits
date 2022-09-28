@@ -61,6 +61,17 @@ const getVoteEntries = async (request, response) => {
   }
 }
 
+const addVote = async (request, response) => {
+  try {
+    console.log(request.body.winner); // WIP - Update winner row
+    const vote = await pool.query('INSERT INTO df_votes (entry_id, wallet) VALUES ($1, $2) RETURNING id', [request.params.id, request.params.wallet]);
+    response.status(201).send(vote.rows[0].id.toString());
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 /* Export */
 
-export default { getEvents, getEvent, addEntry, getVoteEntries }
+export default { getEvents, getEvent, addEntry, getVoteEntries, addVote }

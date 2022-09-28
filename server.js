@@ -27,6 +27,7 @@ app.get('/api/events/:type', Queries.getEvents);
 app.get('/api/event/:id', Queries.getEvent);
 app.post('/api/entries/:id/:wallet', Queries.addEntry);
 app.get('/api/vote/entries/:id/:wallet', Queries.getVoteEntries);
+app.post('/api/vote/:id/:wallet', Queries.addVote);
 
 // Router
 
