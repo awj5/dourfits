@@ -9,7 +9,7 @@ import './vote.css';
 
 /* Entry */
 
-const sfxVote = new Audio('/assets/audio/change.wav');
+const sfxVote = new Audio('/assets/audio/vote.wav');
 
 function Entry(props: { id: number; darcel: Darcel; vote: Function; voting: boolean; }) {
   const voteClick = () => {
