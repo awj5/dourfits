@@ -63,7 +63,12 @@ const getVoteEntries = async (request, response) => {
 
 const addVote = async (request, response) => {
   try {
-    console.log(request.body.winner); // WIP - Update winner row
+    // Record winner
+    if (request.body.winner === parseInt(request.params.id)) {
+      await pool.query('UPDATE df_entries SET votes = votes + 1 WHERE id = $1', [request.body.winner]);
+    }
+
+    // Record vote
     const vote = await pool.query('INSERT INTO df_votes (entry_id, wallet) VALUES ($1, $2) RETURNING id', [request.params.id, request.params.wallet]);
     response.status(201).send(vote.rows[0].id.toString());
   } catch (error) {
