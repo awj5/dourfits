@@ -5,13 +5,30 @@
   align-items: center;
 }
 
-/* Entries */
-
 #voteEntries {
   height: calc(100% - 96px - 16px - 64px);
   margin-top: 16px;
   aspect-ratio: 2/1;
   margin-bottom: 64px;
+  position: relative;
+}
+
+span#entriesVersus {
+  border-radius: 999px;
+  background-color: #000;
+  font-size: 48px;
+  position: absolute;
+  width: 96px;
+  padding-top: 4px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  font-family: "itc-avant-garde-gothic-lt-bold", sans-serif;
+  margin-left: -48px;
+  margin-top: -48px;
 }
 
 #sectionVote h2,
@@ -40,6 +57,10 @@
     height: calc(100% - 48px - 16px);
     aspect-ratio: 1/2;
     margin-bottom: 0;
+  }
+
+  span#entriesVersus {
+    display: none;
   }
 
   #voteFinished {

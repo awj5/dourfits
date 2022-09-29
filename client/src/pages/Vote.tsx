@@ -148,6 +148,7 @@ function Vote() {
       <div id="voteEntries" style={{ display: !entry1ID ? "none" : "" }}>
         <Entry id={ entry1ID } darcel={ entry1 } vote={ vote } voting={ voting } />
         <Entry id={ entry2ID } darcel={ entry2 } vote={ vote } voting={ voting } />
+        <span id="entriesVersus">V</span>
       </div>
 
       <div id="voteFinished" style={{ display: !votingFinished ? "none" : "" }}>Thank you for voting!</div>
