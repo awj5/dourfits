@@ -11,7 +11,7 @@ const __dirname = Path.resolve();
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   next();
-})
+});
 
 app.use(Express.static(Path.join(__dirname, 'client/build'))); // React
 app.use(Cors());
@@ -26,7 +26,7 @@ app.listen(port, () => {
 app.get('/api/events/:type', Queries.getEvents);
 app.get('/api/event/:id', Queries.getEvent);
 app.post('/api/entries/:id/:wallet', Queries.addEntry);
-app.get('/api/vote/entries/:id/:wallet', Queries.getVoteEntries);
+app.get('/api/vote/entries/:id/:wallet', Queries.getEventEntries);
 app.post('/api/vote/:id/:wallet', Queries.addVote);
 
 // Router

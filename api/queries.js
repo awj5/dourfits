@@ -1,7 +1,6 @@
-'use strict';
-
 import PG from 'pg';
 
+// Heroku or localhost
 const pool = new PG.Pool({
   user: process.env.DATABASE_USER ? process.env.DATABASE_USER : 'adamjohnson',
   host: process.env.DATABASE_NAME ? 'ec2-44-207-133-100.compute-1.amazonaws.com' : 'localhost',
@@ -51,7 +50,7 @@ const addEntry = async (request, response) => {
   }
 }
 
-const getVoteEntries = async (request, response) => {
+const getEventEntries = async (request, response) => {
   try {
     const entries = await pool.query('SELECT * FROM df_entries WHERE event_id = $1 AND id NOT IN (SELECT entry_id FROM df_votes WHERE wallet = $2) ORDER BY random() LIMIT 2', [request.params.id, request.params.wallet]); // Query excludes entries user has already voted on
     response.status(200).json(entries.rows);
@@ -79,4 +78,4 @@ const addVote = async (request, response) => {
 
 /* Export */
 
-export default { getEvents, getEvent, addEntry, getVoteEntries, addVote }
+export default { getEvents, getEvent, addEntry, getEventEntries, addVote }

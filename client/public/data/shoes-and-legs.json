@@ -15,7 +15,10 @@
 		"title": "Black Heels",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Black Hi Tops",
@@ -150,7 +153,10 @@
 	{
 		"title": "Gray Heels",
 		"xp": 100,
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Gray Low Cuts",
@@ -228,7 +234,10 @@
 		"title": "Red Heels",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Red Lace Up Boots",
@@ -287,7 +296,10 @@
 		"title": "Strappy Heels",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
-		"layer": "shoesAndLegs"
+		"layer": "shoesAndLegs",
+		"exclusions": {
+			"bottoms": ""
+		}
 	},
 	{
 		"title": "Striped Hi Tops",
