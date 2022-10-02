@@ -75,6 +75,7 @@ button {
   cursor: var(--df-cursor), auto;
   padding: 0;
   outline: none;
+  line-height: 1;
 }
 
 /* Form */

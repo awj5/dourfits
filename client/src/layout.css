@@ -5,7 +5,6 @@
 }
 
 button.bigButton {
-  line-height: 1;
   color: #000;
   background-color: #FFF;
   font-size: 18px;
@@ -214,7 +213,7 @@ nav button.iconButton {
 nav button.iconButton img {
   width: 24px;
   height: 24px;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 @media (hover: hover) {

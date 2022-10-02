@@ -1,5 +1,5 @@
-import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useContext, useRef } from 'react';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Network, Alchemy, OwnedNftsResponse } from 'alchemy-sdk';
 import { useAccount } from 'wagmi';
 import OverlayWindow from './components/OverlayWindow';
@@ -8,12 +8,12 @@ import { OverlayContext, Overlay } from './context/OverlayContext';
 import { XPContext, XPContextType } from './context/XP';
 import './layout.css';
 
-const settings = {
+const alchemySettings = {
   apiKey: process.env.REACT_APP_ALCHEMY_ID,
   network: Network.ETH_MAINNET
 }
 
-const alchemy = new Alchemy(settings);
+const alchemy = new Alchemy(alchemySettings);
 
 /* Header */
 
@@ -26,14 +26,14 @@ function HeaderDashboard() {
 
     const getXP = async (page?: string | undefined) => {
       try {
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page }); // DD, colette and DF
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page }); // DD, colette and DF contracts
 
-        // Loop NFTs
+        // Loop NFTs and add XP
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
-          addressXP += userNFTs.ownedNfts[x].contract.address === ('0x8d609bd201beaea7dccbfbd9c22851e23da68691' || '0x6d93d3fd7bb8baebf853be56d0198989db655e40') ? 200 : 100;
+          addressXP += userNFTs.ownedNfts[x].contract.address === ('0x8d609bd201beaea7dccbfbd9c22851e23da68691' || '0x6d93d3fd7bb8baebf853be56d0198989db655e40') ? 200 : 100; // 200 XP for DD and colette. 100 XP for DF
         }
 
-        // Check if more than 100 NFTs held
+        // Check if more than 100 NFTs returned
         if (userNFTs.pageKey) {
           getXP(userNFTs.pageKey); // Next page
         } else {
@@ -54,7 +54,7 @@ function HeaderDashboard() {
   return (
     <div id="headerDashboard">
       <div id="dashboardXP">
-        <div id="xpIcon"><img src="/assets/img/icon-heart.svg" alt="XP" /></div>
+        <div id="xpIcon"><img src="/assets/img/icon-heart.svg" alt="Heart" /></div>
         <p>{ xp }<span>XP</span></p>
       </div>
 
@@ -74,18 +74,15 @@ function Header() {
   const userInteractedRef: React.MutableRefObject<boolean> = useRef(false);
 
   const burgerClick = () => {
-    setshowingNav(!showingNav);
-  }
-
-  const hideNav = () => {
-    setshowingNav(false);
+    setshowingNav(!showingNav); // Toggle nav
   }
 
   const toggleThemeSong = () => {
-    setThemePlaying(!themePlaying);
+    setThemePlaying(!themePlaying); // Toggle music theme on/off
   }
 
   useEffect(() => {
+    // No music theme on localhost
     if (themePlaying && window.location.hostname !== 'localhost') {
       themeSong.play();
     } else {
@@ -94,6 +91,11 @@ function Header() {
   }, [themePlaying]);
 
   useEffect(() => {
+    setshowingNav(false); // Hide nav when page changes
+  }, [location]);
+
+  useEffect(() => {
+    // Browsers need user interaction before audio can play
     window.addEventListener('click', function() {
       if (!userInteractedRef.current) {
         userInteractedRef.current = true;
@@ -108,11 +110,11 @@ function Header() {
       <HeaderDashboard />
 
       <nav style={{ right: showingNav ? 0 : "" }}>
-        <Link to="/" id="nav-home" onClick={ hideNav } style={{ opacity: location.pathname === '/' ? 1 : "" }}>Home</Link>
-        <Link to="/wardrobe" onClick={ hideNav } id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
-        <Link to="/events" onClick={ hideNav } id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
-        <Link to="/faq" onClick={ hideNav } id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
-        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `/assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="" /></button>
+        <Link to="/" id="nav-home" style={{ opacity: location.pathname === '/' ? 1 : "" }}>Home</Link>
+        <Link to="/wardrobe" id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
+        <Link to="/events" id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
+        <Link to="/faq" id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
+        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `/assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="Music icon" /></button>
         <ConnectButton />
       </nav>
 
