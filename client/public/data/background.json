@@ -106,6 +106,12 @@
         "layer": "background"
     },
     {
+        "title": "DF Orange",
+        "xp": 0,
+        "layer": "background",
+        "hex": "#F60"
+    },
+    {
         "title": "Diagonal Stripes",
         "collection": "dourfits",
         "trait": "Backgrounds",
@@ -350,6 +356,12 @@
         "collection": "dourfits",
         "trait": "Backgrounds",
         "layer": "background"
+    },
+    {
+        "title": "Wardrobe",
+        "xp": 0,
+        "layer": "background",
+        "format": ".svg.png"
     },
     {
         "title": "White Dots",

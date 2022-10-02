@@ -17,7 +17,7 @@ export interface Darcel {
 }
 
 export const DefaultDarcel: Darcel = {
-  background: "background/wardrobe.png",
+  background: "#F60",
   head: "head/regular.svg",
   eye: "eye/regular.svg",
   hairAndHats: "",
