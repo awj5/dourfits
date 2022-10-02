@@ -30,7 +30,7 @@
   margin: 8px;
   margin-top: 16px;
   margin-right: 16px;
-  cursor: var(--cursor), auto;
+  cursor: var(--df-cursor), auto;
 }
 
 .viewerItem.unavailable {
@@ -133,7 +133,7 @@
 
 .viewerItem h4.buy {
   display: inline-block;
-  cursor: var(--cursor), auto;
+  cursor: var(--df-cursor), auto;
   background-color: var(--df-green);
   padding: 4px;
   padding-left: 10px;

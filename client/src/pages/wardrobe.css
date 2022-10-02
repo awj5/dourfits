@@ -147,7 +147,7 @@ button.viewerUpDown {
   position: absolute;
   left: 50%;
   margin-left: -24px;
-  cursor: var(--cursor), auto;
+  cursor: var(--df-cursor), auto;
   visibility: hidden;
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.5);
