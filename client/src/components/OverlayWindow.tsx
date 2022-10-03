@@ -148,11 +148,12 @@ function OverlayConnect() {
     if (isConnected) {
       setOverlay({ visible: false }); // Hide overlay once connected
 
-      if (location.pathname !== '/wardrobe' && location.pathname !== '/events') {
+      // Redirect to wardrobe if connecting from home
+      if (location.pathname === '/') {
         navigate('/wardrobe');
       }
     }
-  }, [isConnected, setOverlay, location.pathname, navigate]);
+  }, [isConnected, setOverlay, location, navigate]);
 
   return (
     <div id={ styles.overlayConnect }>

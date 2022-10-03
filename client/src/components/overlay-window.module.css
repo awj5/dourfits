@@ -58,8 +58,7 @@ button#overlayClose img {
 #overlayWindow h2 {
 	color: #000;
 	font-size: 48px;
-	padding: 40px;
-	padding-top: 32px;
+	padding: 32px;
 	padding-bottom: 16px;
 	text-align: center;
 	line-height: 1;
@@ -70,9 +69,6 @@ p#overlayMessage {
 	color: #000;
 	font-size: 18px;
 	text-align: center;
-	padding: 16px;
-	padding-top: 0;
-	padding-bottom: 0;
 	display: none;
 }
 
