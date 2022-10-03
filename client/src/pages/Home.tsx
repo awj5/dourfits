@@ -17,7 +17,7 @@ function HomeConnect() {
 
       <img src="/assets/img/home-darcel-2.svg" alt="" className="connectDarcel" />
     </div>
-  )
+  );
 }
 
 /* Home */
@@ -31,7 +31,7 @@ function Home() {
     <div className="section" id="sectionHome">
       <HomeConnect />
     </div>
-  )
+  );
 }
 
 export default Home;

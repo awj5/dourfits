@@ -45,7 +45,7 @@ function OverlaySubmitted() {
         <Confetti active={ confetti } config={ confettiConfig } />
       </div>
     </div>
-  )
+  );
 }
 
 /* Submit */
@@ -132,7 +132,7 @@ function OverlaySubmit() {
       { openEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ event.title }</button>) }
       { upcomingEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
     </div>
-  )
+  );
 }
 
 /* Connect */
