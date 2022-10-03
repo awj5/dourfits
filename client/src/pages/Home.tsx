@@ -1,13 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ConnectButton from '../components/ConnectButton';
 import './home.css';
 
 /* HomeConnect */
 
+function ConnectDarcel(props: { file: string; }) {
+  const [darcelLoaded, setDarcelLoaded] = useState<boolean>(false);
+
+  const imageLoaded = () => {
+    setDarcelLoaded(true);
+  }
+
+  return <img src={ props.file } alt="Darcel" className={ `connectDarcel ${ darcelLoaded && 'loaded' }` } onLoad={ imageLoaded } />;
+}
+
 function HomeConnect() {
   return (
     <div id="homeConnect">
-      <img src="/assets/img/home-darcel-1.svg" alt="" className="connectDarcel" />
+      <ConnectDarcel file="/assets/img/home-darcel-1.svg" />
 
       <div id="connectLogo">
         <img src="/assets/img/home-logo.svg" alt="" />
@@ -15,7 +25,7 @@ function HomeConnect() {
         <ConnectButton label="Connect Wallet" />
       </div>
 
-      <img src="/assets/img/home-darcel-2.svg" alt="" className="connectDarcel" />
+      <ConnectDarcel file="/assets/img/home-darcel-2.svg" />
     </div>
   );
 }

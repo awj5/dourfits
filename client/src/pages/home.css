@@ -22,6 +22,11 @@
 img.connectDarcel {
   height: 100%;
   display: none;
+  opacity: 0;
+}
+
+img.connectDarcel.loaded {
+  animation: fadeIn1 ease-in .25s forwards;
 }
 
 #connectLogo {
