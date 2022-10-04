@@ -17,43 +17,43 @@ export interface EventObj {
 
 /* Event */
 
-function Event(props: { event: EventObj; group: string; }) {
+function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   const { isConnected } = useAccount();
-  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+  const [darcelLoaded, setDarcelLoaded] = useState<boolean>(false);
   const navigate = useNavigate();
   const dateSubmitStart = Moment(props.event.submit_start).format('MMMM D');
   const dateSubmitEnd = Moment(props.event.submit_end).format('MMMM D');
   const dateVotingEnd = Moment(props.event.voting_end).format('MMMM D');
 
-  const ctaClick = (location: String) => {
+  const ctaClick = (location: string) => {
     navigate('/' + location);
   }
 
-  const loaded = () => {
-    setImageLoaded(true);
+  const imageLoaded = () => {
+    setDarcelLoaded(true);
   }
 
   return (
-    <div className={ `event ${ props.group === 'Upcoming' && 'upcoming'  }` }>
+    <div className={ `event ${ props.upcoming && 'upcoming' }` }>
       <div className="eventInfo">
-        <span>{ props.event.sub_title ? props.event.sub_title : (props.group === 'Upcoming' ? 'Upcoming' : 'Theme') }</span>
+        <span>{ props.event.sub_title ? props.event.sub_title : (props.upcoming ? 'Upcoming' : 'Theme') }</span>
         <h3>{ props.event.title }</h3>
-        <span>{ props.group === 'Upcoming' ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
-        <h4>{ props.group === 'Upcoming' ? dateSubmitStart : (props.group === 'Compete' ? dateSubmitEnd : dateVotingEnd) }</h4>
+        <span>{ props.upcoming ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
+        <h4>{ props.upcoming && props.group === 'Compete' ? dateSubmitStart : (props.group === 'Compete' || props.upcoming ? dateSubmitEnd : dateVotingEnd) }</h4>
         <span>Prize</span>
 
         <div className="infoPrizes">
-          { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">{ props.group === 'Upcoming' ? '?' : <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }-prize-${ i + 1 }.png` } alt="" /> }</div>) }
+          { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">{ props.upcoming && props.group === 'Compete' ? '?' : <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }-prize-${ i + 1 }.png` } alt="Prize" /> }</div>) }
           <div className="clear"></div>
         </div>
 
         <div className="eventCTA">
-          { (!isConnected && props.group !== 'Archive' && props.group !== 'Upcoming') && <ConnectButton label="Connect" /> }
-          { isConnected && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : 'wardrobe') } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' || props.group === 'Upcoming' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' || props.group === 'Upcoming' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
+          { (!isConnected && props.group !== 'Archive' && !props.upcoming) && <ConnectButton label="Connect" /> }
+          { isConnected && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : (props.group === 'Archive' ? 'results/' + props.event.id : 'wardrobe')) } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
         </div>
       </div>
 
-      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="" onLoad={ loaded } className={ `eventImage ${ imageLoaded && 'loaded' }` } />
+      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="Darcel" onLoad={ imageLoaded } className={ `eventImage ${ darcelLoaded && 'loaded' }` } />
     </div>
   )
 }
@@ -63,15 +63,8 @@ function Event(props: { event: EventObj; group: string; }) {
 const getEvents = async (type: string) => {
   let data: EventObj[] = [];
 
-  const config = {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json'
-    }
-  }
-
   try {
-    const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`, config);
+    const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`);
 
     if (response.status === 200) {
       // Success
@@ -99,7 +92,7 @@ function EventGroup(props: { title: string; bgColor: string }) {
           eventType = upcoming ? 'upcoming' : 'open';
           break;
         case 'Vote':
-          eventType = 'vote';
+          eventType = upcoming ? 'open' : 'vote';
           break;
         default:
           eventType = 'archive';
@@ -116,8 +109,9 @@ function EventGroup(props: { title: string; bgColor: string }) {
 
     loadEvents();
 
-    if (props.title === 'Compete') {
-      loadEvents(true); // Upcoming events
+    // Upcoming events
+    if (props.title !== 'Archive') {
+      loadEvents(true);
     }
   }, [props.title]);
 
@@ -127,7 +121,7 @@ function EventGroup(props: { title: string; bgColor: string }) {
 
       <div className="groupEvents">
         { groupEvents.map((event) => <Event key={ event.id } event={ event } group={ props.title } />) }
-        { upcomingEvents.map((event) => <Event key={ event.id } event={ event } group="Upcoming" />) }
+        { upcomingEvents.map((event) => <Event key={ event.id } event={ event } group={ props.title } upcoming={ true } />) }
         <div className="clear"></div>
       </div>
     </div>

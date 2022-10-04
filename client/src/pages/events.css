@@ -35,7 +35,7 @@
   -webkit-overflow-scrolling: touch;
   display: inline-flex;
   scrollbar-width: none;
-  height: 446px;
+  height: 448px;
 }
 
 .groupEvents::-webkit-scrollbar {
@@ -53,7 +53,7 @@
   }
 
   .groupEvents {
-    height: 346px;
+    height: 350px;
   }
 }
 
@@ -61,7 +61,7 @@
 
 .event {
   float: left;
-  height: 422px;
+  height: calc(100% - 24px);
   margin-top: 24px;
   flex-shrink: 0;
   padding-right: 32px;
@@ -106,7 +106,7 @@
 }
 
 .infoPrizes {
-  height: 106px;
+  height: 108px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -165,7 +165,7 @@ img.eventImage.loaded {
 
 @media only screen and (max-width: 1023px) {
   .event {
-    height: 330px;
+    height: calc(100% - 16px);
     padding-right: 16px;
     margin-top: 16px;
   }
@@ -192,13 +192,14 @@ img.eventImage.loaded {
   }
 
   .infoPrizes {
-    height: 76px;
+    height: 80px;
   }
 
   .infoPrize {
     width: 48px;
     height: 48px;
-    margin-top: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     margin-right: 8px;
     font-size: 30px;
   }
