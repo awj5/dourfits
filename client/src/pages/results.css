@@ -1,5 +1,10 @@
 /* Results */
 
+#sectionResults {
+  display: inline;
+  height: auto;
+}
+
 .resultsAvatar {
   width: 320px;
   height: 320px;
