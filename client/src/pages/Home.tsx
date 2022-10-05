@@ -34,7 +34,7 @@ function HomeConnect() {
 
 function Home() {
   useEffect(() => {
-      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+    document.querySelector('html')!.style.backgroundColor = ""; // Reset
   }, []);
 
   return (

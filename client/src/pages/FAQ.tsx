@@ -5,7 +5,7 @@ import './faq.css';
 
 function FAQ() {
   useEffect(() => {
-      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+    document.querySelector('html')!.style.backgroundColor = ""; // Reset
   }, []);
 
   return (

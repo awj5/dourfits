@@ -76,6 +76,16 @@ const addVote = async (request, response) => {
   }
 }
 
+const getEventResults = async (request, response) => {
+  try {
+    const results = await pool.query('SELECT background, shoesandlegs, head, eye, hairandhats, bottoms, tops, bodyaccessories, arms, facialhair, mouth, headaccessories, glasses FROM df_entries WHERE event_id = $1 ORDER BY votes DESC LIMIT 20', [request.params.id]);
+    response.status(200).json(results.rows);
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 /* Export */
 
-export default { getEvents, getEvent, addEntry, getEventEntries, addVote }
+export default { getEvents, getEvent, addEntry, getEventEntries, addVote, getEventResults }

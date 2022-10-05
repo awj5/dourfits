@@ -132,7 +132,7 @@ function EventGroup(props: { title: string; bgColor: string }) {
 
 function Events() {
   useEffect(() => {
-      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+    document.querySelector('html')!.style.backgroundColor = ""; // Reset
   }, []);
 
   return (
