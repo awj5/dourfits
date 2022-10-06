@@ -9,9 +9,11 @@ import './results.css';
 function Results() {
   const { id } = useParams();
   const [darcels, setDarcels] = useState<Darcel[]>([]);
+  const [wallets, setWallets] = useState<string[]>([]);
 
   useEffect(() => {
     document.querySelector('html')!.style.backgroundColor = ""; // Reset
+    const entryWallets: string[] = [];
 
     const getEventResults = async () => {
       try {
@@ -19,7 +21,14 @@ function Results() {
 
         if (response.status === 200) {
           // Success
-          const data: Darcel[] = await response.json();
+          const data: any = await response.json();
+
+          // Get entry wallets
+          for (let x = 0; x < data.length; x++) {
+            entryWallets.push(data[x].wallet);
+          }
+
+          setWallets(entryWallets);
           setDarcels(data);
         } else {
           alert('Error ' + response.status);
@@ -34,8 +43,11 @@ function Results() {
 
   return (
     <div className="section" id="sectionResults">
-      <h2> </h2>
-      { darcels.map((darcel, i) => <div key={ i } className="resultsAvatar"><Avatar { ...darcel } /></div>) }
+      <h2>Milan Streetwear</h2>
+
+      <div id="results">
+        { darcels.map((darcel, i) => <div key={ i } id={ 'resultsAvatar' + i } className="resultsAvatar"><Avatar { ...darcel } /><p>{ `${ i + 1 }. ${ wallets[i].substring(0, 4) }...${ wallets[i].substring(wallets[i].length - 4) }` }</p></div>) }
+      </div>
     </div>
   )
 }

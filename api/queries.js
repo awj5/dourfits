@@ -78,7 +78,7 @@ const addVote = async (request, response) => {
 
 const getEventResults = async (request, response) => {
   try {
-    const results = await pool.query('SELECT background, shoesandlegs, head, eye, hairandhats, bottoms, tops, bodyaccessories, arms, facialhair, mouth, headaccessories, glasses FROM df_entries WHERE event_id = $1 ORDER BY votes DESC LIMIT 20', [request.params.id]);
+    const results = await pool.query('SELECT wallet, background, shoesandlegs, head, eye, hairandhats, bottoms, tops, bodyaccessories, arms, facialhair, mouth, headaccessories, glasses FROM df_entries WHERE event_id = $1 ORDER BY votes DESC LIMIT 25', [request.params.id]);
     response.status(200).json(results.rows);
   } catch (error) {
     console.log(error);
