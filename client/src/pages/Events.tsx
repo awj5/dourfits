@@ -94,7 +94,7 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
 
         <div className="eventCTA">
           { (!isConnected && props.group !== 'Archive' && !props.upcoming) && <ConnectButton label="Connect" /> }
-          { isConnected && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : (props.group === 'Archive' ? 'results/' + props.event.id : 'wardrobe')) } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
+          { (isConnected || props.group === 'Archive') && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : (props.group === 'Archive' ? 'results/' + props.event.id : 'wardrobe')) } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
         </div>
       </div>
 
