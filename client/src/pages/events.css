@@ -191,7 +191,7 @@ img.eventImage {
   height: 100%;
   float: left;
   opacity: 0;
-  aspect-ratio: 3/4;
+  aspect-ratio: 5/6;
 }
 
 img.eventImage.loaded {
