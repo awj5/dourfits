@@ -35,7 +35,7 @@
   -webkit-overflow-scrolling: touch;
   display: inline-flex;
   scrollbar-width: none;
-  height: 448px;
+  height: 435px;
 }
 
 .groupEvents::-webkit-scrollbar {
@@ -53,7 +53,7 @@
   }
 
   .groupEvents {
-    height: 350px;
+    height: 351px;
   }
 }
 
@@ -75,41 +75,52 @@
 .eventInfo {
   background-color: #000;
   height: 100%;
-  width: 260px;
+  width: 280px;
   float: left;
   box-sizing: border-box;
   padding: 16px;
-  padding-top: 0;
   position: relative;
 }
 
 .eventInfo span {
   line-height: 1;
   font-size: 18px;
-  margin-top: 16px;
   display: block;
   padding-bottom: 4px;
 }
 
-.eventInfo h3,
-.eventInfo h4 {
+.eventInfo h3 {
   font-size: 36px;
   color: var(--df-yellow);
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--df-pink);
   line-height: 1;
+  padding-bottom: 4px;
+}
+
+.eventInfo p,
+.eventInfo h4 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--df-pink);
+  margin-bottom: 8px;
+}
+
+.eventInfo p {
+  font-size: 12px;
+  line-height: 1.25;
 }
 
 .eventInfo h4 {
   font-size: 24px;
   color: #FFF;
+  line-height: 1;
 }
 
 .infoPrizes {
-  height: 108px;
-  overflow-y: auto;
+  height: 76px;
+  width: 100%;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  display: inline-flex;
 }
 
 .infoPrizes::-webkit-scrollbar {
@@ -117,12 +128,13 @@
 }
 
 .infoPrize {
+  flex-shrink: 0;
   width: 64px;
   height: 64px;
   border-radius: 999px;
   margin-bottom: 6px;
   margin-top: 6px;
-  margin-right: 12px;
+  margin-right: 8px;
   float: left;
   display: flex;
   justify-content: center;
@@ -171,20 +183,24 @@ img.eventImage.loaded {
   }
 
   .eventInfo {
-    width: 192px;
+    width: 220px;
     padding: 12px;
-    padding-top: 0;
   }
 
   .eventInfo span {
     font-size: 14px;
-    margin-top: 12px;
+    padding-bottom: 2px;
   }
 
-  .eventInfo h3,
-  .eventInfo h4 {
+  .eventInfo h3 {
     font-size: 30px;
+    padding-bottom: 2px;
+  }
+
+  .eventInfo p,
+  .eventInfo h4 {
     padding-bottom: 6px;
+    margin-bottom: 6px;
   }
 
   .eventInfo h4 {
@@ -192,7 +208,7 @@ img.eventImage.loaded {
   }
 
   .infoPrizes {
-    height: 80px;
+    height: 56px;
   }
 
   .infoPrize {
@@ -200,7 +216,7 @@ img.eventImage.loaded {
     height: 48px;
     margin-top: 4px;
     margin-bottom: 4px;
-    margin-right: 8px;
+    margin-right: 6px;
     font-size: 30px;
   }
 

@@ -13,6 +13,7 @@ export interface EventObj {
   voting_end: number;
   sub_title?: string;
   prize_count: number;
+  description: string;
 }
 
 /* Event */
@@ -38,6 +39,7 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
       <div className="eventInfo">
         <span>{ props.event.sub_title ? props.event.sub_title : (props.upcoming ? 'Upcoming' : 'Theme') }</span>
         <h3>{ props.event.title }</h3>
+        <p>{ props.event.description }</p>
         <span>{ props.upcoming ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
         <h4>{ props.upcoming && props.group === 'Compete' ? dateSubmitStart : (props.group === 'Compete' || props.upcoming ? dateSubmitEnd : dateVotingEnd) }</h4>
         <span>Prize</span>
