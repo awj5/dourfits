@@ -32,6 +32,16 @@ const getEvent = async (request, response) => {
   }
 }
 
+const getEventPrizes = async (request, response) => {
+  try {
+    const prizes = await pool.query('SELECT * FROM df_prizes WHERE event_id = $1 ORDER BY order_num', [request.params.id]);
+    response.status(200).json(prizes.rows);
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 const addEntry = async (request, response) => {
   try {
     const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND submit_start <= now() AND submit_end > now()', [request.params.id]);
@@ -88,4 +98,4 @@ const getEventResults = async (request, response) => {
 
 /* Export */
 
-export default { getEvents, getEvent, addEntry, getEventEntries, addVote, getEventResults }
+export default { getEvents, getEvent, getEventPrizes, addEntry, getEventEntries, addVote, getEventResults }

@@ -12,7 +12,6 @@ export interface EventObj {
   submit_end: number;
   voting_end: number;
   sub_title?: string;
-  prize_count: number;
   description: string;
   xp_entry: number;
   xp_first: number;
@@ -25,18 +24,50 @@ export interface EventObj {
 function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   const { isConnected } = useAccount();
   const [darcelLoaded, setDarcelLoaded] = useState<boolean>(false);
+  const [prizes, setPrizes] = useState<PrizeObj[]>([]);
   const navigate = useNavigate();
   const dateSubmitStart = Moment(props.event.submit_start).format('MMMM D');
   const dateSubmitEnd = Moment(props.event.submit_end).format('MMMM D');
   const dateVotingEnd = Moment(props.event.voting_end).format('MMMM D');
 
+  interface PrizeObj {
+    file: string;
+    url: string;
+  }
+
   const ctaClick = (location: string) => {
     navigate('/' + location);
+  }
+
+  const prizeClick = (url: string) => {
+    if (url) {
+      window.open(url);
+    }
   }
 
   const imageLoaded = () => {
     setDarcelLoaded(true);
   }
+
+  useEffect(() => {
+    const getPrizes = async () => {
+      try {
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ props.event.id }/prizes`);
+
+        if (response.status === 200) {
+          // Success
+          const data: PrizeObj[] = await response.json();
+          setPrizes(data);
+        } else {
+          alert('Error ' + response.status);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getPrizes();
+  }, [props.event]);
 
   return (
     <div className={ `event ${ props.upcoming && 'upcoming' }` }>
@@ -49,13 +80,13 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
         <span>Prizes</span>
 
         <div className="infoPrizes">
-          { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">{ props.upcoming && props.group === 'Compete' ? '?' : <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }-prize-${ i + 1 }.png` } alt="Prize" /> }</div>) }
+          { prizes.map((prize, i) => <div key={ i } className="infoPrize" onClick={ () => prizeClick(prize.url) }>{ !prize.file ? '?' : <img src={ 'https://dourfits.s3.amazonaws.com/events/' + prize.file } alt="Prize" /> }</div>) }
           { !props.upcoming &&
           <>
-            <div className="infoPrize infoPrizeXP infoPrizeXPFirst" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
-            <div className="infoPrize infoPrizeXP infoPrizeXPSecond" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
-            <div className="infoPrize infoPrizeXP infoPrizeXPThird" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
-            <div className="infoPrize infoPrizeXP infoPrizeXPEntry"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
+            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
+            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
+            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
+            <div className="infoPrize infoPrizeXP"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
           </>
           }
           <div className="clear"></div>
