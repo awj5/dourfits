@@ -14,6 +14,10 @@ export interface EventObj {
   sub_title?: string;
   prize_count: number;
   description: string;
+  xp_entry: number;
+  xp_first: number;
+  xp_second: number;
+  xp_third: number;
 }
 
 /* Event */
@@ -39,13 +43,21 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
       <div className="eventInfo">
         <span>{ props.event.sub_title ? props.event.sub_title : (props.upcoming ? 'Upcoming' : 'Theme') }</span>
         <h3>{ props.event.title }</h3>
-        <p>{ props.event.description }</p>
+        <p className="infoDescription">{ props.event.description }</p>
         <span>{ props.upcoming ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
         <h4>{ props.upcoming && props.group === 'Compete' ? dateSubmitStart : (props.group === 'Compete' || props.upcoming ? dateSubmitEnd : dateVotingEnd) }</h4>
-        <span>Prize</span>
+        <span>Prizes</span>
 
         <div className="infoPrizes">
           { Array.from({ length: props.event.prize_count }, (_, i) => <div key={ i } className="infoPrize">{ props.upcoming && props.group === 'Compete' ? '?' : <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }-prize-${ i + 1 }.png` } alt="Prize" /> }</div>) }
+          { !props.upcoming &&
+          <>
+            <div className="infoPrize infoPrizeXP infoPrizeXPFirst" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
+            <div className="infoPrize infoPrizeXP infoPrizeXPSecond" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
+            <div className="infoPrize infoPrizeXP infoPrizeXPThird" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
+            <div className="infoPrize infoPrizeXP infoPrizeXPEntry"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
+          </>
+          }
           <div className="clear"></div>
         </div>
 

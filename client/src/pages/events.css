@@ -96,14 +96,14 @@
   padding-bottom: 4px;
 }
 
-.eventInfo p,
+p.infoDescription,
 .eventInfo h4 {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--df-pink);
   margin-bottom: 8px;
 }
 
-.eventInfo p {
+p.infoDescription {
   font-size: 12px;
   line-height: 1.25;
 }
@@ -144,10 +144,28 @@
   background-color: #FFF;
   color: #000;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .infoPrize img {
   width: 100%;
+}
+
+.infoPrizeXP span {
+  font-size: 12px;
+  line-height: 0.75;
+}
+
+.infoPrizeXP p {
+  font-size: 18px;
+  line-height: 1;
+  font-family: "AvantGarde-Book", sans-serif;
+}
+
+.infoPrizeXP p:after {
+  content: "XP";
+  margin-left: 2px;
+  font-size: 12px;
 }
 
 .eventCTA * {
@@ -197,7 +215,7 @@ img.eventImage.loaded {
     padding-bottom: 2px;
   }
 
-  .eventInfo p,
+  p.infoDescription,
   .eventInfo h4 {
     padding-bottom: 6px;
     margin-bottom: 6px;
@@ -218,6 +236,19 @@ img.eventImage.loaded {
     margin-bottom: 4px;
     margin-right: 6px;
     font-size: 30px;
+  }
+
+  .infoPrizeXP span {
+    font-size: 10px;
+    line-height: 0.75;
+  }
+
+  .infoPrizeXP p {
+    font-size: 14px;
+  }
+
+  .infoPrizeXP p:after {
+    font-size: 10px;
   }
 
   .eventCTA * {
