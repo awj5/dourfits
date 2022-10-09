@@ -118,7 +118,7 @@ function EventGroup(props: { title: string; bgColor: string }) {
   }, [props.title]);
 
   return (
-    <div className="eventGroup" style={{ backgroundColor: props.bgColor }}>
+    <div className="eventGroup" style={{ backgroundColor: props.bgColor, display: !groupEvents.length && !upcomingEvents.length ? "none" : "" }}>
       <h2>{ props.title }</h2>
 
       <div className="groupEvents">
