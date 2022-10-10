@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useAccount } from 'wagmi';
 import ConnectButton from '../components/ConnectButton';
 import './home.css';
 
@@ -15,6 +16,8 @@ function ConnectDarcel(props: { file: string; }) {
 }
 
 function HomeConnect() {
+  const { isConnected } = useAccount();
+
   return (
     <div id="homeConnect">
       <ConnectDarcel file="/assets/img/home-darcel-1.svg" />
@@ -22,7 +25,7 @@ function HomeConnect() {
       <div id="connectLogo">
         <img src="/assets/img/home-logo.svg" alt="" />
         <h2>A blockchain fashion game</h2>
-        <ConnectButton label="Connect Wallet" />
+        { !isConnected && <ConnectButton label="Connect Wallet" /> }
       </div>
 
       <ConnectDarcel file="/assets/img/home-darcel-2.svg" />

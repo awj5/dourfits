@@ -47,7 +47,10 @@ img.connectDarcel.loaded {
 #connectLogo h2 {
   font-family: "AvantGarde-Book", sans-serif;
   margin-top: 24px;
-  margin-bottom: 32px;
+}
+
+#connectLogo button {
+  margin-top: 32px;
 }
 
 @media (min-aspect-ratio: 4/3) and (min-width: 1024px) {
