@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useAccount, useDisconnect } from 'wagmi';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 
@@ -6,6 +7,9 @@ function ConnectButton(props: { label?: string }) {
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
   const connectClick = () => {
     setOverlay({ visible: true, title: 'Connect a Wallet' });
@@ -14,6 +18,11 @@ function ConnectButton(props: { label?: string }) {
   const disconnectClick = () => {
     if (window.confirm('Disconnect wallet?')) {
       disconnect();
+
+      // Redirect to home if disconnecting from wardrobe
+      if (location.pathname === '/wardrobe' && !urlParams.get('demo')) {
+        navigate('/');
+      }
     }
   }
 
