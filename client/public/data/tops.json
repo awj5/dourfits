@@ -683,7 +683,6 @@
 	},
 	{
 		"title": "Slam Jam Archive Shirt",
-		"collection": "dour-fits-market",
 		"trait": "Market",
 		"marketID": 8,
 		"layer": "tops",
@@ -691,7 +690,6 @@
 	},
 	{
 		"title": "Slam Jam Hoodie",
-		"collection": "dour-fits-market",
 		"trait": "Market",
 		"marketID": 7,
 		"layer": "tops",
@@ -699,7 +697,6 @@
 	},
 	{
 		"title": "Slam Jam x AC Milan Jersey",
-		"collection": "dour-fits-market",
 		"trait": "Market",
 		"marketID": 2,
 		"layer": "tops",
@@ -707,7 +704,6 @@
 	},
 	{
 		"title": "Slice Up Your Life T-Shirt",
-		"collection": "dour-fits-market",
 		"trait": "Market",
 		"marketID": 1,
 		"layer": "tops",
