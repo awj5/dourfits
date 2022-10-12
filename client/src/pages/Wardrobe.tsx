@@ -136,8 +136,9 @@ export interface Category {
   xp?: number;
   format?: string;
   exclusions?: object;
-  topType?: string
-  default?: string
+  topType?: string;
+  default?: string;
+  marketID?: number;
 }
 
 function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean | undefined>>; }) {
@@ -273,19 +274,22 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
     const getNFTs = async (page?: string | undefined) => {
       try {
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073'], pageKey: page }); // DD, colette and DF
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c'], pageKey: page }); // DD, colette and DF
 
         // Loop NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
-          if (attributes) {
+          if (userNFTs.ownedNfts[x].contract.address === '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c') {
+            // DF Market
+            ownedTraits.push({value: userNFTs.ownedNfts[x].rawMetadata?.name ?? '', trait_type: "Market"});
+          } else if (attributes) {
             // Loop traits
             for (let x: number = 0; x < attributes.length; x++) {
               // Check if trait already included
               let checkTrait = ownedTraits.filter(obj => {
                 return obj.value === attributes![x].value && obj.trait_type === attributes![x].trait_type;
-              })
+              });
 
               if (!checkTrait.length) {
                 ownedTraits.push(attributes[x]);

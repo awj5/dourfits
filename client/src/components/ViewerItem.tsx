@@ -120,7 +120,12 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
   }
 
   const buyClick = () => {
-    window.open(`https://opensea.io/collection/${ props.item.collection }?search[stringTraits][0][name]=${ props.item.trait?.replace('&', '%26') }&search[stringTraits][0][values][0]=${ props.item.title }`);
+    if (props.item.marketID) {
+      // DF Market
+      window.open('https://opensea.io/assets/ethereum/0xac5dc1676595fc2f4d4a746c7a4857e692480e0c/' + props.item.marketID);
+    } else {
+      window.open(`https://opensea.io/collection/${ props.item.collection }?search[stringTraits][0][name]=${ props.item.trait?.replace('&', '%26') }&search[stringTraits][0][values][0]=${ props.item.title }`);
+    }
   }
 
   const loaded = () => {

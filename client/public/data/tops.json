@@ -682,6 +682,22 @@
 		"default": "sky-singlet"
 	},
 	{
+		"title": "Slam Jam Archive Shirt",
+		"collection": "dour-fits-market",
+		"trait": "Market",
+		"marketID": 8,
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Slice Up Your Life T-Shirt",
+		"collection": "dour-fits-market",
+		"trait": "Market",
+		"marketID": 1,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Space Suit",
 		"collection": "dourfits",
 		"trait": "Tops",
