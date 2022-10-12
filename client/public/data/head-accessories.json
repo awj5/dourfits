@@ -235,6 +235,12 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Slam Jam Mask",
+        "trait": "Market",
+        "marketID": 3,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Space",
         "collection": "dourfits",
         "trait": "Accessories",
