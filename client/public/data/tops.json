@@ -690,6 +690,22 @@
 		"topType": "sweater"
 	},
 	{
+		"title": "Slam Jam Hoodie",
+		"collection": "dour-fits-market",
+		"trait": "Market",
+		"marketID": 7,
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
+		"title": "Slam Jam x AC Milan Jersey",
+		"collection": "dour-fits-market",
+		"trait": "Market",
+		"marketID": 2,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Slice Up Your Life T-Shirt",
 		"collection": "dour-fits-market",
 		"trait": "Market",

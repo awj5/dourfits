@@ -256,6 +256,14 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Slam Jam Bag",
+        "collection": "dour-fits-market",
+        "trait": "Market",
+        "marketID": 4,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Striped Bag",
         "collection": "dourdarcels",
         "trait": "Arms",
