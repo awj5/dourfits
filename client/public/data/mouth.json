@@ -7,7 +7,7 @@
     },
     {
         "title": "Ambivalent",
-        "xp": 100,
+        "xp": 0,
         "layer": "mouth"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
         "title": "Happy",
-        "xp": 100,
+        "xp": 0,
         "layer": "mouth"
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "title": "Sad",
-        "xp": 100,
+        "xp": 0,
         "layer": "mouth"
     },
     {

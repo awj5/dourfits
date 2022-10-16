@@ -14,7 +14,7 @@
     },
     {
         "title": "Card Pouch",
-        "xp": 200,
+        "xp": 100,
         "layer": "bodyAccessories"
     },
     {
@@ -55,7 +55,7 @@
     },
     {
         "title": "Green Beads",
-        "xp": 200,
+        "xp": 0,
         "layer": "bodyAccessories"
     },
     {
@@ -73,7 +73,7 @@
     },
     {
         "title": "Orange Necklace",
-        "xp": 100,
+        "xp": 0,
         "layer": "bodyAccessories"
     },
     {
@@ -96,12 +96,12 @@
     },
     {
         "title": "Red Beads",
-        "xp": 100,
+        "xp": 0,
         "layer": "bodyAccessories"
     },
     {
         "title": "Red Pouch",
-        "xp": 200,
+        "xp": 100,
         "layer": "bodyAccessories"
     }
 ]

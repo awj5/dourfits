@@ -65,7 +65,7 @@
     },
     {
         "title": "Black Curly",
-        "xp": 100,
+        "xp": 0,
         "layer": "hairAndHats"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
         "title": "Black Part",
-        "xp": 100,
+        "xp": 0,
         "layer": "hairAndHats"
     },
     {
@@ -512,7 +512,7 @@
     },
     {
         "title": "Panel Cap",
-        "xp": 300,
+        "xp": 200,
         "layer": "hairAndHats"
     },
     {
@@ -732,7 +732,7 @@
     },
     {
         "title": "Short Brown",
-        "xp": 100,
+        "xp": 0,
         "layer": "hairAndHats"
     },
     {
@@ -749,7 +749,7 @@
     },
     {
         "title": "Shoulder Length",
-        "xp": 100,
+        "xp": 0,
         "layer": "hairAndHats"
     },
     {

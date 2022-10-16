@@ -43,7 +43,7 @@
     },
     {
         "title": "Black Glasses",
-        "xp": 100,
+        "xp": 0,
         "layer": "glasses"
     },
     {
@@ -78,7 +78,7 @@
     },
     {
         "title": "Cyber",
-        "xp": 300,
+        "xp": 200,
         "layer": "glasses"
     },
     {
@@ -119,7 +119,7 @@
     },
     {
         "title": "Gold Wireframe",
-        "xp": 100,
+        "xp": 0,
         "layer": "glasses"
     },
     {

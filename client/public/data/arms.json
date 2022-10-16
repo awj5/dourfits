@@ -86,7 +86,7 @@
     },
     {
         "title": "Concentric Bag",
-        "xp": 300,
+        "xp": 200,
         "layer": "arms",
         "topType": "sleeveless"
     },
@@ -106,7 +106,7 @@
     },
     {
         "title": "Dangly",
-        "xp": 100,
+        "xp": 0,
         "layer": "arms",
         "topType": "sleeveless"
     },
@@ -153,7 +153,7 @@
     },
     {
         "title": "Hands on Hips",
-        "xp": 100,
+        "xp": 0,
         "layer": "arms",
         "topType": "short"
     },
@@ -219,7 +219,7 @@
     },
     {
         "title": "Regular",
-        "xp": 100,
+        "xp": 0,
         "layer": "arms",
         "topType": "sleeveless"
     },

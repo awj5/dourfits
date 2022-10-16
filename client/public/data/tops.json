@@ -9,7 +9,7 @@
 	{
 		"title": "Basketball",
 		"shortTitle": "Basketball Jersey",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -37,14 +37,14 @@
 	{
 		"title": "Champagne",
 		"shortTitle": "Champagne T-Shirt",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "short"
 	},
 	{
 		"title": "Beer",
 		"shortTitle": "Cheers Singlet",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -58,7 +58,7 @@
 	{
 		"title": "Coffee",
 		"shortTitle": "Coffee Singlet",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -182,7 +182,7 @@
 	{
 		"title": "Muscle",
 		"shortTitle": "Donut Singlet",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -217,7 +217,7 @@
 	{
 		"title": "Cigarette",
 		"shortTitle": "Flame Singlet",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -259,7 +259,7 @@
 	{
 		"title": "GM Skateboard",
 		"shortTitle": "GM T-Shirt",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -296,7 +296,7 @@
 	},
 	{
 		"title": "Gray Singlet",
-		"xp": 100,
+		"xp": 0,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -373,7 +373,7 @@
 	},
 	{
 		"title": "Mauve T-Shirt",
-		"xp": 100,
+		"xp": 0,
 		"layer": "tops",
 		"topType": "short"
 	},
@@ -511,13 +511,13 @@
 	},
 	{
 		"title": "Pink Dress",
-		"xp": 100,
+		"xp": 0,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
 	{
 		"title": "Pink Singlet",
-		"xp": 100,
+		"xp": 0,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -530,7 +530,7 @@
 	},
 	{
 		"title": "Polka Dot Dress",
-		"xp": 100,
+		"xp": 0,
 		"layer": "tops",
 		"topType": "sleeveless"
 	},
@@ -871,7 +871,7 @@
 	{
 		"title": "Thumbs Up",
 		"shortTitle": "Yep Singlet",
-		"xp": 100,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "sleeveless"
 	}

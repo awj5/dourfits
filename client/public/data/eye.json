@@ -37,7 +37,7 @@
     },
     {
         "title": "Eyelid",
-        "xp": 100,
+        "xp": 0,
         "layer": "eye"
     },
     {
@@ -92,7 +92,7 @@
     },
     {
         "title": "Moody",
-        "xp": 100,
+        "xp": 0,
         "layer": "eye"
     },
     {
@@ -133,7 +133,7 @@
     },
     {
         "title": "Regular",
-        "xp": 100,
+        "xp": 0,
         "layer": "eye"
     },
     {

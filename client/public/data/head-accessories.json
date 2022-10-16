@@ -13,7 +13,7 @@
     },
     {
         "title": "Blue Earrings",
-        "xp": 100,
+        "xp": 0,
         "layer": "headAccessories"
     },
     {
@@ -225,7 +225,7 @@
     },
     {
         "title": "Shape Earrings",
-        "xp": 200,
+        "xp": 100,
         "layer": "headAccessories"
     },
     {
@@ -288,7 +288,7 @@
     },
     {
         "title": "White Stud",
-        "xp": 100,
+        "xp": 0,
         "layer": "headAccessories"
     },
     {
