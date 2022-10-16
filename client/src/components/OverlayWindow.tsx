@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useConnect, useAccount } from 'wagmi';
 import Confetti from 'react-dom-confetti';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
+import { XPContext, XPContextType } from '../context/XP';
 import { EventObj } from '../pages/Events';
 import styles from './overlay-window.module.css';
 
@@ -53,42 +54,48 @@ function OverlaySubmitted() {
 function OverlaySubmit() {
   const { address } = useAccount();
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
+  const { xp } = useContext<XPContextType>(XPContext);
   const [openEvents, setOpenEvents] = useState<EventObj[]>([]);
   const [upcomingEvents, setUpcomingEvents] = useState<EventObj[]>([]);
   const [submitting, setSubmitting] = useState<boolean>(false);
 
   const eventClick = async (id: number) => {
-    const config = {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(JSON.parse(localStorage.avatarV2))
-    }
+    setSubmitting(true);
 
-    try {
-      setSubmitting(true);
-      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/entries/${ id }/${ address }`, config);
-
-      if (response.status !== 201) {
-        // Error
-        switch (response.status) {
-          case 403:
-            alert('Sorry event has closed.');
-            break;
-          case 409:
-            alert('You\'ve already submitted a fit for this event.');
-            break;
-          default:
-            alert('Error ' + response.status);
-        }
-      } else {
-        // Success
-        setOverlay({ visible: true, title: 'Congrats!', message: 'Your fit has been submitted. Voting opens soon.' });
+    if (xp > 0) {
+      const config = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(JSON.parse(localStorage.avatarV2))
       }
-    } catch (error) {
-      console.log(error);
+
+      try {
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/entries/${ id }/${ address }`, config);
+
+        if (response.status !== 201) {
+          // Error
+          switch (response.status) {
+            case 403:
+              alert('Sorry event has closed.');
+              break;
+            case 409:
+              alert('You\'ve already submitted a fit for this event.');
+              break;
+            default:
+              alert('Error ' + response.status);
+          }
+        } else {
+          // Success
+          setOverlay({ visible: true, title: 'Congrats!', message: 'Your fit has been submitted. Voting opens soon.' });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      alert('Sorry, you must hold a Dour Darcels, colette x Dour Darcels, Dour Fits or Dour Fits Market NFT to submit a fit.');
     }
 
     setSubmitting(false);

@@ -606,6 +606,11 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Pumpkin Hat",
+        "xp": 300,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Pup Rave",
         "collection": "dourfits",
         "trait": "Hair & Hats",

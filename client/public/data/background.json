@@ -131,6 +131,11 @@
         "hex": "#66A466"
     },
     {
+        "title": "Graveyard",
+        "xp": 100,
+        "layer": "background"
+    },
+    {
         "title": "Grid",
         "collection": "dourfits",
         "trait": "Backgrounds",

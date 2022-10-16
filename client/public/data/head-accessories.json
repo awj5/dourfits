@@ -235,6 +235,11 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Skull Earrings",
+        "xp": 200,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Slam Jam Mask",
         "trait": "Market",
         "marketID": 3,

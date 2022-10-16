@@ -117,7 +117,7 @@ function WardrobeStage() {
   return (
     <div id="wardrobeStage">
       <Avatar { ...darcel } />
-      <button onClick={ submitClick } className="bigButton" style={{ display: xp === 0 ? "none" : "" }}>Submit<svg viewBox="0 0 15.84 27.18"><path d="M2.25,27.18c-.58,0-1.15-.22-1.59-.66-.88-.88-.88-2.3,0-3.18L10.41,13.59,.66,3.84C-.22,2.96-.22,1.54,.66,.66,1.54-.22,2.96-.22,3.84,.66L15.18,12c.88,.88,.88,2.3,0,3.18L3.84,26.52c-.44,.44-1.02,.66-1.59,.66Z"/></svg></button>
+      <button onClick={ submitClick } className="bigButton">Submit<svg viewBox="0 0 15.84 27.18"><path d="M2.25,27.18c-.58,0-1.15-.22-1.59-.66-.88-.88-.88-2.3,0-3.18L10.41,13.59,.66,3.84C-.22,2.96-.22,1.54,.66,.66,1.54-.22,2.96-.22,3.84,.66L15.18,12c.88,.88,.88,2.3,0,3.18L3.84,26.52c-.44,.44-1.02,.66-1.59,.66Z"/></svg></button>
       <button onClick={ resetClick } className="iconButton" id="stageReset"><img src="/assets/img/icon-reset.png" alt="Reset" /></button>
       <button onClick={ downloadClick } className="iconButton"id="stageDownload" style={{ pointerEvents: downloadEnabled ? "auto" : "none" }}><img src="/assets/img/icon-download.png" alt="Download" /></button>
     </div>
