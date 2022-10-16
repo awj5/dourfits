@@ -264,9 +264,10 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
 
   useEffect(() => {
     const getViewerItems = async () => {
+      setViewerItems([]);
+      setScrollDown(false); // Hide
+
       try {
-        setViewerItems([]);
-        setScrollDown(false); // Hide
         const response: Response = await fetch(`data/${ category }.json`);
         const data: Item[] = await response.json();
         setDate(Date.now()); // Use date for item key

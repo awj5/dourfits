@@ -70,7 +70,7 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
           }
 
           if (props.item.layer === key && !props.viewerMessage) {
-            props.setViewerMessage('Not compatible with ' + layer.replace('And', ' & ').replace('dA', 'd a').toLowerCase()); // Show message
+            props.setViewerMessage('Not compatible with ' + layer.replace('And', ' & ').replace('dA', 'd a').toLowerCase()); // Show incompatible message
           }
         }
       }
@@ -123,21 +123,18 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
       // DF Market
       window.open('https://opensea.io/assets/ethereum/0xac5dc1676595fc2f4d4a746c7a4857e692480e0c/' + props.item.marketID);
     } else {
+      // Filter OS
       window.open(`https://opensea.io/collection/${ props.item.collection }?search[stringTraits][0][name]=${ props.item.trait?.replace('&', '%26') }&search[stringTraits][0][values][0]=${ props.item.title }`);
     }
   }
 
-  const loaded = () => {
-    setImageLoaded(true);
-  }
-
   useEffect(() => {
-    props.viewerScroll(); // Call to set scroll buttons in viewer
+    props.viewerScroll(); // Call at init to set scroll buttons in viewer
   }, [props]);
 
   return (
     <div onClick={ props.category === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } onMouseOver={ itemOver } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ props.category === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ props.category }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
-      <img src={ props.item.hex ? '/assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ props.category }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
+      <img src={ props.item.hex ? '/assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ props.category }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ () => setImageLoaded(true) } />
 
       <hgroup>
         <h3>{ title }</h3>
