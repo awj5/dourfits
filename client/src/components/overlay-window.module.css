@@ -40,6 +40,7 @@
 	padding-bottom: 32px;
 	animation: fadeIn1 ease-in .25s forwards;
 	position: relative;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 button#overlayClose {
@@ -70,25 +71,31 @@ p#overlayMessage {
 	font-size: 18px;
 	text-align: center;
 	display: none;
+	line-height: 1.35;
 }
 
-/* Connect */
-
-#overlayConnect button {
+#overlayContent button {
 	width: 100%;
 	background-color: #000;
 	color: #FFF;
 	margin-top: 16px;
 }
 
-#overlayConnect button:active {
-  color: #000;
+#overlayContent button.disabled {
+	opacity: 0.5;
+	pointer-events: none;
 }
 
-#overlayConnect button img {
+#overlayContent button:active {
+	color: #000;
+}
+
+#overlayContent button img {
 	height: 28px;
 	margin-right: 8px;
 }
+
+/* Connect */
 
 #overlayConnect p {
 	color: var(--df-red);
@@ -99,25 +106,18 @@ p#overlayMessage {
 /* Submit */
 
 #overlaySubmit button {
-	width: 100%;
 	background-color: var(--df-orange);
-	color: #FFF;
-	margin-top: 16px;
-}
-
-#overlaySubmit button:active {
-  color: #000;
-}
-
-#overlaySubmit button.disabled {
-	opacity: 0.5;
-	pointer-events: none;
 }
 
 /* Submitted */
 
 #overlayWindow.submitted {
 	background-color: var(--df-purple);
+}
+
+#overlayWindow.submitted h2,
+#overlayWindow.submitted p {
+	color: #FFF;
 }
 
 #overlaySubmitted {

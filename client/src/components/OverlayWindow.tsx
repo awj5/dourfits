@@ -78,7 +78,7 @@ function OverlaySubmit() {
             alert('Sorry event has closed.');
             break;
           case 409:
-            alert('Fit already submitted for this event.');
+            alert('You\'ve already submitted a fit for this event.');
             break;
           default:
             alert('Error ' + response.status);
@@ -96,15 +96,8 @@ function OverlaySubmit() {
 
   useEffect(() => {
     const getEvents = async (type: string) => {
-      const config = {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json'
-        }
-      }
-
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`, config);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`);
 
         if (response.status === 200) {
           // Success
@@ -130,7 +123,7 @@ function OverlaySubmit() {
   return (
     <div id={ styles.overlaySubmit }>
       { openEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ event.title }</button>) }
-      { upcomingEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
+      { upcomingEvents.map((event) => <button key={ event.id } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
     </div>
   );
 }
@@ -173,6 +166,7 @@ function OverlayWindow() {
   }, [setOverlay]);
 
   useEffect(() => {
+    // Close on esc key
     const keyHandler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeClick();
@@ -191,9 +185,12 @@ function OverlayWindow() {
           <button className="iconButton" id={ styles.overlayClose } onClick={ closeClick }><img src="/assets/img/icon-x.png" alt="Close" /></button>
           <h2>{ overlay.title }</h2>
           <p id={ styles.overlayMessage } style={{ display: overlay.message ? "block" : "" }}>{ overlay.message }</p>
-          { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }
-          { overlay.title === 'Yay!' && <OverlaySubmit /> }
-          { overlay.title === 'Congrats!' && <OverlaySubmitted /> }
+
+          <div id={ styles.overlayContent }>
+            { overlay.title === 'Connect a Wallet' && <OverlayConnect /> }
+            { overlay.title === 'Yay!' && <OverlaySubmit /> }
+            { overlay.title === 'Congrats!' && <OverlaySubmitted /> }
+          </div>
         </div>
       </div>
     </div>
