@@ -1,16 +1,15 @@
 import { useState, useContext, useEffect } from 'react';
-import { Category } from '../pages/Wardrobe';
+import { Item } from '../pages/Wardrobe';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
 import { DarcelContext, Darcel, DarcelContextType } from '../context/DarcelContext';
 import { XPContext, XPContextType } from '../context/XP';
 import styles from './viewer-item.module.css';
 
-function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; itemSFXClick: Function; item: Category; traitOwned: boolean; ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
-  const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
+function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; itemSFXClick: Function; category: string; item: Item; traitOwned: boolean; ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
+  const { setCategory } = useContext<CategoryContextType>(CategoryContext);
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
   const { xp } = useContext<XPContextType>(XPContext);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  const [localCategory, setLocalCategory] = useState<string | undefined>(undefined);
   const title: string = props.item.shortTitle ? props.item.shortTitle : props.item.title;
   const slug: string = props.item.title.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-');
   const format: string = props.item.format ? props.item.format : '.svg';
@@ -28,7 +27,7 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
 
     // Update Darcel avatar
     const currentVal: string = darcel[props.item.layer as keyof Darcel];
-    const newVal: string = props.item.hex ? props.item.hex : `${ localCategory }/${ slug }${ format }`;
+    const newVal: string = props.item.hex ? props.item.hex : `${ props.category }/${ slug }${ format }`;
     const clearedVal: string = props.item.layer === 'background' ? '#999' : ""; // Background resets to default color
     const layers: { [x: string]: string; } = { [props.item.layer!]: currentVal === newVal ? clearedVal : newVal };
     const exclusions: string[] = [];
@@ -133,20 +132,16 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
   }
 
   useEffect(() => {
-    setLocalCategory(category) // Stop re-rendering invalid image on category state change
-  }, [category]);
-
-  useEffect(() => {
     props.viewerScroll(); // Call to set scroll buttons in viewer
   }, [props]);
 
   return (
-    <div onClick={ localCategory === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } onMouseOver={ itemOver } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ localCategory === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ localCategory }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
-      <img src={ props.item.hex ? '/assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ localCategory }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
+    <div onClick={ props.category === 'categories' ? () => setCategory(slug) : (available ? itemClick : (!xpItem ? buyClick : () => null)) } onMouseOver={ itemOver } className={ `${ styles.viewerItem } ${ !available && styles.unavailable } ${ imageLoaded && styles.loaded } ${ props.category === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ props.category }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
+      <img src={ props.item.hex ? '/assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ props.category }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } onLoad={ loaded } />
 
       <hgroup>
         <h3>{ title }</h3>
-        <h4 className={ xpItem ? (xpItem === 'UNLOCKED' ? styles.unlocked : styles.locked) : (!available ? styles.buy : undefined) }>{ xpItem ? xpItem : (localCategory === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
+        <h4 className={ xpItem ? (xpItem === 'UNLOCKED' ? styles.unlocked : styles.locked) : (!available ? styles.buy : undefined) }>{ xpItem ? xpItem : (props.category === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
       </hgroup>
     </div>
   );

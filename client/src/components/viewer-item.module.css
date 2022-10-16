@@ -152,7 +152,7 @@
 }
 
 .viewerItem.background h4.buy {
-  box-shadow: 1px 1px #000;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 @media only screen and (max-width: 1279px) {

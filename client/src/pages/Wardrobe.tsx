@@ -126,7 +126,7 @@ function WardrobeStage() {
 
 /* Viewer */
 
-export interface Category {
+export interface Item {
   title: string;
   shortTitle?: string;
   collection?: string;
@@ -141,51 +141,6 @@ export interface Category {
   marketID?: number;
 }
 
-function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean | undefined>>; }) {
-  const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  const homeClick = () => {
-    setCategory('categories');
-  }
-
-  const ownedToggleClick = () => {
-    props.setOwnedOnly(!props.ownedOnly);
-  }
-
-  const menuChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setCategory(e.currentTarget.value);
-  }
-
-  useEffect(() => {
-    const getCategories = async () => {
-      try {
-        const response: Response = await fetch('data/categories.json');
-        const data: Category[] = await response.json();
-        setCategories(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    getCategories();
-  }, []);
-
-  return (
-    <>
-      <button onClick={ homeClick } className="iconButton" id="viewerHome"><img src="/assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
-      <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="viewerOwnedToggle"><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
-
-      <select id="viewerMenu" onChange={ menuChange } value={ category }>
-        <option value="categories">Categories</option>
-        { categories.map((category, i) => <option value={ category.title.toLowerCase().replace('&', 'and').replace(/ /g, '-') } key={ i }>{ category.title }</option>) }
-      </select>
-
-      <div className="clear"></div>
-    </>
-  );
-}
-
 const sfxClick = new Audio('/assets/audio/click.wav');
 const sfxOver = new Audio('/assets/audio/over.wav');
 const sfxChange = new Audio('/assets/audio/change.wav');
@@ -193,14 +148,27 @@ const sfxChange = new Audio('/assets/audio/change.wav');
 function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; setViewerMessage: React.Dispatch<React.SetStateAction<string>>; }) {
   const { address, isConnected } = useAccount();
   const { category } = useContext<CategoryContextType>(CategoryContext);
+  const [viewerItems, setViewerItems] = useState<Item[]>([]);
   const [date, setDate] = useState<number>(Date.now());
-  const [viewerItems, setViewerItems] = useState<Category[]>([]);
+  const [itemCategory, setItemCategory] = useState<string>('categories');
   const [scrollUp, setScrollUp] = useState<boolean>(false);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const [scrollInterval, setScrollInterval] = useState<number>(0);
   const [userTraits, setUserTraits] = useState<Record<"value" | "trait_type", string>[]>([]);
   const viewerRef = useRef<HTMLDivElement>(null);
   const userInteractedRef: React.MutableRefObject<boolean> = useRef(false);
+
+  const itemSFXOver = () => {
+    if (userInteractedRef.current && !isMobile) {
+      sfxOver.play();
+    }
+  }
+
+  const itemSFXClick = () => {
+    if (userInteractedRef.current) {
+      sfxClick.play();
+    }
+  }
 
   const cancelScroll = () => {
     clearInterval(scrollInterval);
@@ -249,26 +217,6 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
     return checkTrait.length || !isConnected ? true : false;
   }
 
-  const itemSFXOver = () => {
-    if (userInteractedRef.current) {
-      sfxOver.play();
-    }
-  }
-
-  const itemSFXClick = () => {
-    if (userInteractedRef.current) {
-      sfxClick.play();
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('click', function() {
-      if (!userInteractedRef.current) {
-        userInteractedRef.current = true;
-      }
-    });
-  }, []);
-
   useEffect(() => {
     let ownedTraits: Record<"value" | "trait_type", string>[] = [];
 
@@ -276,7 +224,7 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
       try {
         const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c'], pageKey: page }); // DD, colette and DF
 
-        // Loop NFTs
+        // Loop owned NFTs
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
           let attributes: Record<"value" | "trait_type", string>[] | undefined = userNFTs.ownedNfts[x].rawMetadata?.attributes;
 
@@ -317,12 +265,14 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
   useEffect(() => {
     const getViewerItems = async () => {
       try {
-        setViewerItems([]); // Clear
+        setViewerItems([]);
         setScrollDown(false); // Hide
         const response: Response = await fetch(`data/${ category }.json`);
-        const data: Category[] = await response.json();
+        const data: Item[] = await response.json();
         setDate(Date.now()); // Use date for item key
+        setItemCategory(category);
         setViewerItems(data);
+
         if (userInteractedRef.current) {
           sfxChange.play();
         }
@@ -335,18 +285,72 @@ function Viewer(props: { ownedOnly: boolean | undefined; viewerMessage: string; 
   }, [category]);
 
   useEffect(() => {
+    // Scroll to top when owned only is toggled
     viewerRef.current!.scrollTop = 0;
   }, [props.ownedOnly]);
+
+  useEffect(() => {
+    window.addEventListener('click', function() {
+      if (!userInteractedRef.current) {
+        userInteractedRef.current = true;
+      }
+    });
+  }, []);
 
   return (
     <>
       <div id="viewer" ref={ viewerRef } onScroll={ viewerScroll } onMouseUp={ cancelScroll }>
-        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } itemSFXOver={ itemSFXOver } itemSFXClick={ itemSFXClick } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
+        { viewerItems.map((item, i) => <ViewerItem key={ i + date } viewerScroll={ viewerScroll } itemSFXOver={ itemSFXOver } itemSFXClick={ itemSFXClick } category={ itemCategory } item={ item } traitOwned={ !item.layer ? true : checkItemOwned(item.title, item.trait ?? '') } ownedOnly={ props.ownedOnly } viewerMessage={ props.viewerMessage } setViewerMessage={ props.setViewerMessage } />) }
       </div>
 
       <button onMouseDown={ () => scrollMouseDown('up') } onMouseUp={ cancelScroll } style={{ visibility: scrollUp ? "visible" : "hidden", pointerEvents: scrollUp ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerUp"><img src="/assets/img/icon-arrow.svg" alt="Up" draggable="false" /></button>
       <button onMouseDown={ () => scrollMouseDown('down') } onMouseUp={ cancelScroll } style={{ visibility: scrollDown ? "visible" : "hidden", pointerEvents: scrollDown ? "auto" : "none" }} className="iconButton viewerUpDown" id="viewerDown"><img src="/assets/img/icon-arrow.svg" alt="Down" draggable="false" /></button>
     </>
+  );
+}
+
+function ViewerMenu(props: { ownedOnly: boolean | undefined; setOwnedOnly: React.Dispatch<React.SetStateAction<boolean | undefined>>; }) {
+  const { category, setCategory } = useContext<CategoryContextType>(CategoryContext);
+  const [categories, setCategories] = useState<Item[]>([]);
+
+  const homeClick = () => {
+    setCategory('categories');
+  }
+
+  const ownedToggleClick = () => {
+    props.setOwnedOnly(!props.ownedOnly);
+  }
+
+  const categoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setCategory(e.currentTarget.value);
+  }
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response: Response = await fetch('data/categories.json');
+        const data: Item[] = await response.json();
+        setCategories(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getCategories();
+  }, []);
+
+  return (
+    <div id="viewerMenu">
+      <button onClick={ homeClick } className="iconButton" id="menuHome"><img src="/assets/img/icon-home.svg" alt="Home" style={{ paddingBottom: "4px" }} /></button>
+      <button onClick={ ownedToggleClick } className={ `iconButton ${ props.ownedOnly && 'selected' }` } id="menuOwnedToggle"><svg viewBox="0 0 127.49 121.25" style={{ paddingBottom: "2px" }}><polygon points="63.74 0 83.44 39.91 127.49 46.31 95.61 77.38 103.14 121.25 63.74 100.53 24.35 121.25 31.87 77.38 0 46.31 44.05 39.91 63.74 0" /></svg></button>
+
+      <select id="menuCategories" onChange={ categoryChange } value={ category }>
+        <option value="categories">Categories</option>
+        { categories.map((category, i) => <option value={ category.title.toLowerCase().replace('&', 'and').replace(/ /g, '-') } key={ i }>{ category.title }</option>) }
+      </select>
+
+      <div className="clear"></div>
+    </div>
   );
 }
 
@@ -383,7 +387,7 @@ function WardrobeViewer() {
       <div id="wardrobeViewer">
         <ViewerMenu ownedOnly={ ownedOnly } setOwnedOnly={ setOwnedOnly } />
         <Viewer ownedOnly={ ownedOnly } viewerMessage={ viewerMessage } setViewerMessage={ setViewerMessage } />
-        <p id="viewerMessage" style={{ display: !viewerMessage ? "none" : "" }} className={ viewerMessage && 'visible' }>{ viewerMessage }</p>
+        <p id="viewerMessage" style={{ display: viewerMessage ? "inline" : "" }}>{ viewerMessage }</p>
       </div>
     </CategoryContext.Provider>
   );
