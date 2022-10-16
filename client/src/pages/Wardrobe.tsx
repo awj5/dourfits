@@ -413,7 +413,7 @@ function Wardrobe() {
     if (darcel.background.indexOf('#') !== -1) {
       document.querySelector('html')!.style.backgroundColor = darcel.background;
     } else {
-      document.querySelector('html')!.style.backgroundColor = ""; // Reset
+      document.querySelector('html')!.style.backgroundColor = "#999"; // Reset
     }
   }, [darcel]);
 

@@ -7,19 +7,19 @@
     },
     {
         "title": "Apricot",
-        "xp": 100,
+        "xp": 0,
         "layer": "background",
         "hex": "#FFA466"
     },
     {
         "title": "Auburn",
-        "xp": 100,
+        "xp": 0,
         "layer": "background",
         "hex": "#E16666"
     },
     {
         "title": "Baby Blue",
-        "xp": 100,
+        "xp": 0,
         "layer": "background",
         "hex": "#A4C3E1"
     },
@@ -106,12 +106,6 @@
         "layer": "background"
     },
     {
-        "title": "DF Orange",
-        "xp": 0,
-        "layer": "background",
-        "hex": "#F60"
-    },
-    {
         "title": "Diagonal Stripes",
         "collection": "dourfits",
         "trait": "Backgrounds",
@@ -132,7 +126,7 @@
     },
     {
         "title": "Grass Green",
-        "xp": 100,
+        "xp": 0,
         "layer": "background",
         "hex": "#66A466"
     },
@@ -268,24 +262,6 @@
         "hex": "#4680B2"
     },
     {
-        "title": "Slam Jam Charcoal",
-        "xp": 600,
-        "layer": "background",
-        "format": ".svg.png"
-    },
-    {
-        "title": "Slam Jam Red",
-        "xp": 1200,
-        "layer": "background",
-        "format": ".svg.png"
-    },
-    {
-        "title": "Slam Jam Smoke",
-        "xp": 300,
-        "layer": "background",
-        "format": ".svg.png"
-    },
-    {
         "title": "Slate",
         "collection": "dourdarcels",
         "trait": "Background",
@@ -301,7 +277,7 @@
     },
     {
         "title": "Soft Yellow",
-        "xp": 100,
+        "xp": 0,
         "layer": "background",
         "hex": "#FFE165"
     },
@@ -359,7 +335,7 @@
     },
     {
         "title": "Wardrobe",
-        "xp": 0,
+        "xp": 100,
         "layer": "background",
         "format": ".svg.png"
     },
