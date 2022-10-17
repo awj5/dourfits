@@ -706,7 +706,8 @@
 		"title": "Slash Singlet",
 		"trait": "Market",
 		"marketID": 11,
-		"layer": "tops"
+		"layer": "tops",
+		"topType": "sleeveless"
 	},
 	{
 		"title": "Slice Up Your Life T-Shirt",
