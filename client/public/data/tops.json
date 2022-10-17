@@ -703,6 +703,12 @@
 		"topType": "short"
 	},
 	{
+		"title": "Slash Singlet",
+		"trait": "Market",
+		"marketID": 11,
+		"layer": "tops"
+	},
+	{
 		"title": "Slice Up Your Life T-Shirt",
 		"trait": "Market",
 		"marketID": 1,

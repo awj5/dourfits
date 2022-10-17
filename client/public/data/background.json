@@ -30,6 +30,13 @@
         "layer": "background"
     },
     {
+        "title": "Blood Drip Background",
+        "shortTitle": "Blood Drip",
+        "trait": "Market",
+        "marketID": 10,
+        "layer": "background"
+    },
+    {
         "title": "Blue Dots",
         "collection": "dourfits",
         "trait": "Backgrounds",

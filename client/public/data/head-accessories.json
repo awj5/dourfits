@@ -268,6 +268,12 @@
         }
     },
     {
+        "title": "Spiders",
+        "trait": "Market",
+        "marketID": 12,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Star Earrings",
         "collection": "dourfits",
         "trait": "Accessories",

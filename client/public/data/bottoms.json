@@ -49,6 +49,11 @@
 		"layer": "bottoms"
 	},
 	{
+		"title": "Bones Pants",
+		"xp": 900,
+		"layer": "bottoms"
+	},
+	{
 		"title": "Brown Genie",
 		"collection": "dourfits",
 		"trait": "Bottoms",

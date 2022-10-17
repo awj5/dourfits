@@ -898,6 +898,12 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Witches Hat",
+        "trait": "Market",
+        "marketID": 9,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Yellow Beanie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",
