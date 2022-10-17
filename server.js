@@ -30,6 +30,7 @@ app.post('/api/entries/:id/:wallet', Queries.addEntry);
 app.get('/api/vote/entries/:id/:wallet', Queries.getEventEntries);
 app.post('/api/vote/:id/:wallet', Queries.addVote);
 app.get('/api/results/:id', Queries.getEventResults);
+app.get('/api/xp/:wallet', Queries.getWalletXP);
 
 // Router
 

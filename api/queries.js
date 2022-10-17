@@ -96,6 +96,16 @@ const getEventResults = async (request, response) => {
   }
 }
 
+const getWalletXP = async (request, response) => {
+  try {
+    const xp = await pool.query('SELECT * FROM df_xp WHERE wallet = $1', [request.params.wallet]);
+    response.status(200).json(xp.rows.length ? xp.rows[0].xp : 0);
+  } catch (error) {
+    console.log(error);
+    response.status(500).send();
+  }
+}
+
 /* Export */
 
-export default { getEvents, getEvent, getEventPrizes, addEntry, getEventEntries, addVote, getEventResults }
+export default { getEvents, getEvent, getEventPrizes, addEntry, getEventEntries, addVote, getEventResults, getWalletXP }

@@ -6,7 +6,6 @@ import ViewerItem from '../components/ViewerItem';
 import Avatar from '../components/Avatar';
 import { DarcelContext, DarcelContextType, DefaultDarcel, Darcel } from '../context/DarcelContext';
 import { CategoryContext, CategoryContextType } from '../context/CategoryContext';
-import { XPContext, XPContextType } from '../context/XP';
 import { OverlayContext, OverlayContextType } from '../context/OverlayContext';
 import './wardrobe.css';
 
@@ -21,7 +20,6 @@ const alchemy = new Alchemy(settings);
 
 function WardrobeStage() {
   const { darcel, setDarcel } = useContext<DarcelContextType>(DarcelContext);
-  const { xp } = useContext<XPContextType>(XPContext);
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const [downloadEnabled, setDownloadEnabled] = useState<boolean>(true);
 

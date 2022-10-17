@@ -48,6 +48,21 @@ function HeaderDashboard() {
         if (userNFTs.pageKey) {
           getXP(userNFTs.pageKey); // Next page
         } else {
+          // Add prize XP
+          try {
+            const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/xp/${ address }`);
+
+            if (response.status === 200) {
+              // Success
+              const data: number = await response.json();
+              addressXP += data;
+            } else {
+              alert('Error ' + response.status);
+            }
+          } catch (error) {
+            console.log(error);
+          }
+
           setXP(addressXP);
         }
       } catch (error) {
