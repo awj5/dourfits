@@ -81,14 +81,10 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
 
         <div className="infoPrizes">
           { prizes.map((prize, i) => <div key={ i } className="infoPrize" onClick={ () => prizeClick(prize.url) }>{ !prize.file ? '?' : <img src={ 'https://dourfits.s3.amazonaws.com/events/' + prize.file } alt="Prize" /> }</div>) }
-          { !props.upcoming &&
-          <>
-            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
-            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
-            <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
-            <div className="infoPrize infoPrizeXP"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
-          </>
-          }
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
+          <div className="infoPrize infoPrizeXP"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
           <div className="clear"></div>
         </div>
 
