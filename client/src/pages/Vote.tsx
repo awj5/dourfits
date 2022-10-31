@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useMemo, useContext } from 'react';
+import { useEffect, useState, useCallback, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import Avatar from '../components/Avatar';
@@ -39,15 +39,6 @@ function Vote() {
   const [voting, setVoting] = useState<boolean>(false);
   const [votingFinished, setVotingFinished] = useState<boolean>(false);
 
-  const configGet = useMemo(() => {
-    return {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json'
-      }
-    }
-  }, []);
-
   const vote = async (winner: number) => {
     const configPost = {
       method: 'POST',
@@ -60,12 +51,12 @@ function Vote() {
 
     setEntry1(EmptyDarcel);
     setEntry2(EmptyDarcel);
-    setVoting(true); // Disable voting
+    setVoting(true); // Disable voting while posting data
 
     try {
       // Record votes
-      await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/${ entry1ID }/${ address }`, configPost);
-      await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/${ entry2ID }/${ address }`, configPost);
+      await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/${ id }/${ entry1ID }/${ address }`, configPost);
+      await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/${ id }/${ entry2ID }/${ address }`, configPost);
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +66,7 @@ function Vote() {
 
   const getEntries = useCallback(async () => {
     try {
-      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/entries/${ id }/${ address }`, configGet);
+      const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/vote/entries/${ id }/${ address }`);
 
       if (response.status === 200) {
         // Success
@@ -101,11 +92,8 @@ function Vote() {
 
           setEntry2(darcel2);
         } else {
+          // Not entries left to vote on
           setVotingFinished(true);
-
-          // Hide entries
-          setEntry1ID(0);
-          setEntry2ID(0);
         }
       } else {
         alert('Error ' + response.status);
@@ -115,14 +103,14 @@ function Vote() {
     }
 
     setVoting(false); // Enable voting
-  }, [address, configGet, id]);
+  }, [address, id]);
 
   useEffect(() => {
-    document.querySelector('html')!.style.backgroundColor = ""; // Reset
+    document.querySelector('html')!.style.backgroundColor = "var(--df-magenta)"; // Set bg color
 
     const getEvent = async () => {
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ id }`, configGet);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ id }`);
 
         if (response.status === 200) {
           // Success
@@ -138,20 +126,20 @@ function Vote() {
 
     getEvent();
     getEntries();
-  }, [id, configGet, getEntries]);
+  }, [id, getEntries]);
 
   return (
-    <div className="section" id="sectionVote" style={{ display: xp < 100 ? "none" : "" }}>
+    <div className="section" id="sectionVote" style={{ display: xp < 50 ? "none" : "" }}>
       <h2>{ eventTitle }</h2>
       <h3>Vote for your favorite:</h3>
 
-      <div id="voteEntries" style={{ display: !entry1ID ? "none" : "" }}>
+      <div id="voteEntries" style={{ display: votingFinished ? "none" : "", visibility: !entry1ID ? "hidden" : "visible" }}>
         <Entry id={ entry1ID } darcel={ entry1 } vote={ vote } voting={ voting } />
         <Entry id={ entry2ID } darcel={ entry2 } vote={ vote } voting={ voting } />
         <span id="entriesVersus">V</span>
       </div>
 
-      <div id="voteFinished" style={{ display: !votingFinished ? "none" : "" }}>Thank you for voting!</div>
+      <div id="voteFinished" style={{ display: votingFinished ? "flex" : "" }}>Thank you for voting!</div>
     </div>
   )
 }

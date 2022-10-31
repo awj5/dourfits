@@ -72,14 +72,21 @@ const getEventEntries = async (request, response) => {
 
 const addVote = async (request, response) => {
   try {
-    // Record winner
-    if (request.body.winner === parseInt(request.params.id)) {
-      await pool.query('UPDATE df_entries SET votes = votes + 1 WHERE id = $1', [request.body.winner]);
-    }
+    const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND submit_end <= now() AND voting_end > now()', [request.params.event]);
 
-    // Record vote
-    const vote = await pool.query('INSERT INTO df_votes (entry_id, wallet) VALUES ($1, $2) RETURNING id', [request.params.id, request.params.wallet]);
-    response.status(201).send(vote.rows[0].id.toString());
+    // Insert only if event still open for voting
+    if (event.rows.length) {
+      // Record winner
+      if (request.body.winner === parseInt(request.params.id)) {
+        await pool.query('UPDATE df_entries SET votes = votes + 1 WHERE id = $1', [request.body.winner]);
+      }
+
+      // Record vote
+      const vote = await pool.query('INSERT INTO df_votes (entry_id, wallet) VALUES ($1, $2) RETURNING id', [request.params.id, request.params.wallet]);
+      response.status(201).send(vote.rows[0].id.toString());
+    } else {
+      response.status(403).send(); // Event voting closed
+    }
   } catch (error) {
     console.log(error);
     response.status(500).send();
