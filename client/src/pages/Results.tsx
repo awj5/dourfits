@@ -43,7 +43,7 @@ function Results() {
 
   return (
     <div className="section" id="sectionResults">
-      <h2>Milan Streetwear</h2>
+      <h2>Haunted Halloween</h2>
 
       <div id="results">
         { darcels.map((darcel, i) => <div key={ i } id={ 'resultsAvatar' + i } className="resultsAvatar"><Avatar { ...darcel } /><p>{ `${ i + 1 }. ${ wallets[i].substring(0, 4) }...${ wallets[i].substring(wallets[i].length - 4) }` }</p></div>) }
