@@ -11,14 +11,14 @@ import './vote.css';
 
 const sfxVote = new Audio('/assets/audio/vote.wav');
 
-function Entry(props: { id: number; darcel: Darcel; vote: Function; voting: boolean; }) {
+function Entry(props: { id: number; darcel: Darcel; vote: Function; voting: boolean | undefined; }) {
   const voteClick = () => {
     props.vote(props.id);
     sfxVote.play();
   }
 
   return (
-    <div className="voteEntry" onClick={ voteClick } style={{ pointerEvents: props.voting ? "none" : "auto"}}>
+    <div className="voteEntry" onClick={ voteClick } style={{ pointerEvents: props.voting ? "none" : "auto" }}>
       <Avatar { ...props.darcel } />
       <button className="bigButton">Vote</button>
     </div>
@@ -36,7 +36,7 @@ function Vote() {
   const [entry1ID, setEntry1ID] = useState<number>(0);
   const [entry2ID, setEntry2ID] = useState<number>(0);
   const [eventTitle, setEventTitle] = useState<string>('');
-  const [voting, setVoting] = useState<boolean>(false);
+  const [voting, setVoting] = useState<boolean | undefined>(undefined);
   const [votingFinished, setVotingFinished] = useState<boolean>(false);
 
   const vote = async (winner: number) => {
@@ -136,7 +136,7 @@ function Vote() {
       <div id="voteEntries" style={{ display: votingFinished ? "none" : "", visibility: !entry1ID ? "hidden" : "visible" }}>
         <Entry id={ entry1ID } darcel={ entry1 } vote={ vote } voting={ voting } />
         <Entry id={ entry2ID } darcel={ entry2 } vote={ vote } voting={ voting } />
-        <span id="entriesVersus">V</span>
+        <span id="entriesVersus" className={ !voting && voting !== undefined ? 'in' : undefined }>V</span>
       </div>
 
       <div id="voteFinished" style={{ display: votingFinished ? "flex" : "" }}>Thank you for voting!</div>
