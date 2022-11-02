@@ -54,6 +54,16 @@
   margin-left: 4px;
 }
 
+@media (hover: hover) {
+  #wardrobeStage button.bigButton:hover {
+    background-color: #FFF !important;
+  }
+}
+
+#wardrobeStage button.bigButton:active {
+  background-color: var(--df-yellow) !important;
+}
+
 #wardrobeStage button.bigButton:active svg {
   fill: #FFF;
 }
