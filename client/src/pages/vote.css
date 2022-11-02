@@ -28,6 +28,16 @@
   }
 }
 
+@keyframes fadeOut1 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 #sectionVote {
   flex-direction: column;
   align-items: center;
@@ -82,16 +92,35 @@ span#entriesVersus.in {
   justify-content: center;
   align-items: center;
   height: calc(100% - 96px - 16px);
-  font-size: 36px;
-  text-align: center;
   margin-top: 16px;
+  flex-direction: column;
 }
 
-@media only screen and (max-height: 600px) {
+#voteFinished h4,
+#voteFinished h5 {
+  line-height: 1;
+  font-size: 36px;
+  text-align: center;
+}
+
+#voteFinished h5 {
+  font-family: "AvantGarde-Book", sans-serif;
+  margin-top: 4px;
+}
+
+#voteFinished img {
+  width: 240px;
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
   span#entriesVersus {
     font-size: 30px;
     width: 56px;
     height: 52px;
+  }
+
+  #voteFinished img {
+    width: 160px;
   }
 }
 
@@ -103,6 +132,15 @@ span#entriesVersus.in {
 
   #voteEntries {
     height: calc(100% - 48px - 16px - 64px);
+  }
+
+  #voteFinished h4,
+  #voteFinished h5 {
+    font-size: 30px;
+  }
+
+  #voteFinished h5 {
+    font-size: 24px;
   }
 }
 
@@ -119,7 +157,6 @@ span#entriesVersus.in {
 
   #voteFinished {
     height: calc(100% - 48px - 16px);
-    font-size: 24px;
   }
 }
 
@@ -129,6 +166,15 @@ span#entriesVersus.in {
   height: 100%;
   float: left;
   aspect-ratio: 4/4;
+}
+
+.voteEntry.out {
+  animation: fadeOut1 ease-out .25s forwards;
+  pointer-events: none;
+}
+
+.voteEntry.winner {
+  animation-delay: .5s;
 }
 
 .voteEntry button {

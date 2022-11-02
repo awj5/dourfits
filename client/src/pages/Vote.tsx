@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import Avatar from '../components/Avatar';
+import ConfettiExplosion from '../components/ConfettiExplosion';
 import { Darcel, EmptyDarcel } from '../context/DarcelContext';
 import { EventObj } from '../pages/Events';
 import { XPContext, XPContextType } from '../context/XP';
@@ -12,13 +13,20 @@ import './vote.css';
 const sfxVote = new Audio('/assets/audio/vote.wav');
 
 function Entry(props: { id: number; darcel: Darcel; vote: Function; voting: boolean | undefined; }) {
+  const [winningEntry, setWinningEntry] = useState<boolean>(false);
+
   const voteClick = () => {
+    setWinningEntry(true);
     props.vote(props.id);
     sfxVote.play();
   }
 
+  useEffect(() => {
+    setWinningEntry(false); // Reset on ID change
+  }, [props.id]);
+
   return (
-    <div className="voteEntry" onClick={ voteClick } style={{ pointerEvents: props.voting ? "none" : "auto" }}>
+    <div onClick={ voteClick } className={ `voteEntry ${ props.voting && "out" } ${ winningEntry && "winner" }` } style={{ display: !props.id ? "none" : "" }}>
       <Avatar { ...props.darcel } />
       <button className="bigButton">Vote</button>
     </div>
@@ -37,7 +45,7 @@ function Vote() {
   const [entry2ID, setEntry2ID] = useState<number>(0);
   const [eventTitle, setEventTitle] = useState<string>('');
   const [voting, setVoting] = useState<boolean | undefined>(undefined);
-  const [votingFinished, setVotingFinished] = useState<boolean>(false);
+  const [votingClosed, setVotingClosed] = useState<boolean>(false);
 
   const vote = async (winner: number) => {
     const configPost = {
@@ -49,8 +57,6 @@ function Vote() {
       body: JSON.stringify({winner: winner})
     }
 
-    setEntry1(EmptyDarcel);
-    setEntry2(EmptyDarcel);
     setVoting(true); // Disable voting while posting data
 
     try {
@@ -61,7 +67,13 @@ function Vote() {
       console.log(error);
     }
 
-    getEntries();
+    // Wait for entry fade out
+    setTimeout(() => {
+      // Reset and get next entries
+      setEntry1(EmptyDarcel);
+      setEntry2(EmptyDarcel);
+      getEntries();
+    }, 1000);
   }
 
   const getEntries = useCallback(async () => {
@@ -73,6 +85,7 @@ function Vote() {
         const data = await response.json();
 
         if (data.length === 2) {
+          // Set entry IDs
           setEntry1ID(data[0].id);
           setEntry2ID(data[1].id);
 
@@ -93,7 +106,7 @@ function Vote() {
           setEntry2(darcel2);
         } else {
           // Not entries left to vote on
-          setVotingFinished(true);
+          setVotingClosed(true);
         }
       } else {
         alert('Error ' + response.status);
@@ -106,7 +119,7 @@ function Vote() {
   }, [address, id]);
 
   useEffect(() => {
-    document.querySelector('html')!.style.backgroundColor = "var(--df-magenta)"; // Set bg color
+    document.querySelector('html')!.style.backgroundColor = ""; // Set bg color
 
     const getEvent = async () => {
       try {
@@ -116,6 +129,7 @@ function Vote() {
           // Success
           const data: EventObj = await response.json();
           setEventTitle(data.title);
+          getEntries(); // Get first couple of entries
         } else {
           alert('Error ' + response.status);
         }
@@ -125,7 +139,6 @@ function Vote() {
     }
 
     getEvent();
-    getEntries();
   }, [id, getEntries]);
 
   return (
@@ -133,13 +146,18 @@ function Vote() {
       <h2>{ eventTitle }</h2>
       <h3>Vote for your favorite:</h3>
 
-      <div id="voteEntries" style={{ display: votingFinished ? "none" : "", visibility: !entry1ID ? "hidden" : "visible" }}>
+      <div id="voteEntries" style={{ display: votingClosed ? "none" : "" }}>
         <Entry id={ entry1ID } darcel={ entry1 } vote={ vote } voting={ voting } />
         <Entry id={ entry2ID } darcel={ entry2 } vote={ vote } voting={ voting } />
         <span id="entriesVersus" className={ !voting && voting !== undefined ? 'in' : undefined }>V</span>
       </div>
 
-      <div id="voteFinished" style={{ display: votingFinished ? "flex" : "" }}>Thank you for voting!</div>
+      <div id="voteFinished" style={{ display: votingClosed ? "flex" : "" }}>
+        <img src="/assets/img/sticker-heart.png" alt="" />
+        <h4>Thank you for voting!</h4>
+        <h5>Results will be shared soon.</h5>
+        <ConfettiExplosion explode={ votingClosed } />
+      </div>
     </div>
   )
 }

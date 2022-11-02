@@ -111,15 +111,6 @@ p#overlayMessage {
 
 /* Submitted */
 
-#overlayWindow.submitted {
-	background-color: var(--df-purple);
-}
-
-#overlayWindow.submitted h2,
-#overlayWindow.submitted p {
-	color: #FFF;
-}
-
 #overlaySubmitted {
 	display: flex;
 	justify-content: center;
@@ -129,8 +120,4 @@ p#overlayMessage {
 
 #overlaySubmitted img {
 	width: 200px;
-}
-
-#confetti {
-	position: fixed;
 }
