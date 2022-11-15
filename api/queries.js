@@ -14,7 +14,7 @@ const pool = new PG.Pool({
 
 const getEvents = async (request, response) => {
   try {
-    const events = await pool.query('SELECT * FROM df_events WHERE $1 = \'open\' AND submit_start <= now() AND submit_end > now() OR $1 = \'upcoming\' AND submit_start > now() OR $1 = \'vote\' AND submit_end <= now() AND voting_end > now() OR $1 = \'archive\' AND voting_end <= now() ORDER BY submit_start', [request.params.type]);
+    const events = await pool.query('SELECT * FROM df_events WHERE $1 = \'open\' AND submit_start <= now() AND submit_end > now() OR $1 = \'upcoming\' AND submit_start > now() OR $1 = \'vote\' AND submit_end <= now() AND voting_end > now() OR $1 = \'archive\' AND voting_end <= now() ORDER BY submit_start DESC', [request.params.type]);
     response.status(200).json(events.rows);
   } catch (error) {
     console.log(error);
@@ -24,8 +24,13 @@ const getEvents = async (request, response) => {
 
 const getEvent = async (request, response) => {
   try {
-    const event = await pool.query('SELECT * FROM df_events WHERE id = $1', [request.params.id]);
-    response.status(200).json(event.rows[0]);
+    const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND submit_end <= now() AND voting_end > now()', [request.params.id]);
+
+    if (event.rows.length) {
+      response.status(200).json(event.rows[0]);
+    } else {
+      response.status(403).send(); // Voting not open
+    }
   } catch (error) {
     console.log(error);
     response.status(500).send();

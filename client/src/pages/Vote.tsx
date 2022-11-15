@@ -44,6 +44,7 @@ function Vote() {
   const [entry1ID, setEntry1ID] = useState<number>(0);
   const [entry2ID, setEntry2ID] = useState<number>(0);
   const [eventTitle, setEventTitle] = useState<string>('');
+  const [eventOpen, setEventOpen] = useState<boolean>(false);
   const [voting, setVoting] = useState<boolean | undefined>(undefined);
   const [votingClosed, setVotingClosed] = useState<boolean>(false);
 
@@ -130,6 +131,9 @@ function Vote() {
           const data: EventObj = await response.json();
           setEventTitle(data.title);
           getEntries(); // Get first couple of entries
+          setEventOpen(true);
+        } else if (response.status === 403) {
+          alert('Sorry voting is closed.');
         } else {
           alert('Error ' + response.status);
         }
@@ -142,7 +146,7 @@ function Vote() {
   }, [id, getEntries]);
 
   return (
-    <div className="section" id="sectionVote" style={{ display: xp < 50 ? "none" : "" }}>
+    <div className="section" id="sectionVote" style={{ display: xp < 50 || !eventOpen ? "none" : "" }}>
       <h2>{ eventTitle }</h2>
       <h3>Vote for your favorite:</h3>
 
