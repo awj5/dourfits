@@ -189,6 +189,23 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Metakicks Boots",
+		"trait": "Market",
+		"marketID": 14,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Metakicks Hi-Tops",
+		"xp": 300,
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Metakicks Trainers",
+		"trait": "Market",
+		"marketID": 13,
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Multi Sneakers",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",

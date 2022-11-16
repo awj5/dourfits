@@ -392,6 +392,13 @@
 		"topType": "short"
 	},
 	{
+		"title": "Metakicks Hoodie",
+		"trait": "Market",
+		"marketID": 15,
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
 		"title": "Multi Stripe Button Down",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -584,6 +591,12 @@
 		"title": "Red Button Down",
 		"collection": "dourfits",
 		"trait": "Tops",
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
+		"title": "Red & Blue T-Shirt",
+		"xp": 100,
 		"layer": "tops",
 		"topType": "short"
 	},

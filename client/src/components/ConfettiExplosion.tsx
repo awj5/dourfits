@@ -27,8 +27,10 @@ function ConfettiExplosion(props: { explode: boolean; }) {
   }, [props.explode]);
 
   return (
-    <div style={{ position: "fixed" }}>
-      <Confetti active={ props.explode } config={ confettiConfig } />
+    <div style={{ position: "absolute", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div style={{ position: "sticky" }}>
+        <Confetti active={ props.explode } config={ confettiConfig } />
+      </div>
     </div>
   );
 }

@@ -94,6 +94,7 @@ span#entriesVersus.in {
   height: calc(100% - 96px - 16px);
   margin-top: 16px;
   flex-direction: column;
+  position: relative;
 }
 
 #voteFinished h4,
