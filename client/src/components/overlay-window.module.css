@@ -109,6 +109,12 @@ p#overlayMessage {
 	background-color: var(--df-orange);
 }
 
+#overlaySubmit p {
+	color: var(--df-red);
+	text-align: center;
+	margin-top: 16px;
+}
+
 /* Submitted */
 
 #overlaySubmitted {

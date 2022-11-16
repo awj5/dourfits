@@ -106,6 +106,7 @@ function OverlaySubmit() {
     <div id={ styles.overlaySubmit }>
       { openEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ event.title }</button>) }
       { upcomingEvents.map((event) => <button key={ event.id } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
+      { !openEvents.length && !upcomingEvents.length && <p>More events will be announced soon.</p> }
     </div>
   );
 }
