@@ -54,19 +54,21 @@ function HeaderDashboard() {
         if (userNFTs.pageKey) {
           getXP(userNFTs.pageKey); // Next page
         } else {
-          // Add prize XP
-          try {
-            const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/xp/${ address }`);
+          // Add prize XP only if DD token owned
+          if (addressXP) {
+            try {
+              const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/xp/${ address }`);
 
-            if (response.status === 200) {
-              // Success
-              const data: number = await response.json();
-              addressXP += data;
-            } else {
-              alert('Error ' + response.status);
+              if (response.status === 200) {
+                // Success
+                const data: number = await response.json();
+                addressXP += data;
+              } else {
+                alert('Error ' + response.status);
+              }
+            } catch (error) {
+              console.log(error);
             }
-          } catch (error) {
-            console.log(error);
           }
 
           setXP(addressXP);

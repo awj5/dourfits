@@ -90,7 +90,7 @@
 
 .viewerItem.background img.itemImage {
   height: 100%;
-  border-radius: 30px;
+  border-radius: 32px;
 }
 
 .viewerItem hgroup {
@@ -193,7 +193,7 @@
   }
 
   .viewerItem.background img.itemImage {
-    border-radius: 26px;
+    border-radius: 28px;
   }
 
   .viewerItem hgroup {

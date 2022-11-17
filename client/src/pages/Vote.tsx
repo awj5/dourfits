@@ -1,11 +1,10 @@
-import { useEffect, useState, useCallback, useContext } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAccount } from 'wagmi';
 import Avatar from '../components/Avatar';
 import ConfettiExplosion from '../components/ConfettiExplosion';
 import { Darcel, EmptyDarcel } from '../context/DarcelContext';
 import { EventObj } from '../pages/Events';
-import { XPContext, XPContextType } from '../context/XP';
 import './vote.css';
 
 /* Entry */
@@ -36,9 +35,8 @@ function Entry(props: { id: number; darcel: Darcel; vote: Function; voting: bool
 /* Vote */
 
 function Vote() {
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const { id } = useParams();
-  const { xp } = useContext<XPContextType>(XPContext);
   const [entry1, setEntry1] = useState<Darcel>(EmptyDarcel);
   const [entry2, setEntry2] = useState<Darcel>(EmptyDarcel);
   const [entry1ID, setEntry1ID] = useState<number>(0);
@@ -146,7 +144,7 @@ function Vote() {
   }, [id, getEntries]);
 
   return (
-    <div className="section" id="sectionVote" style={{ display: xp < 50 || !eventOpen ? "none" : "" }}>
+    <div className="section" id="sectionVote" style={{ display: !isConnected || !eventOpen ? "none" : "" }}>
       <h2>{ eventTitle }</h2>
       <h3>Vote for your favorite:</h3>
 
