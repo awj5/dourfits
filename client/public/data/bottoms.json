@@ -220,6 +220,11 @@
 		"layer": "bottoms"
 	},
 	{
+		"title": "Red Pants",
+		"xp": 50,
+		"layer": "bottoms"
+	},
+	{
 		"title": "Red Pants Please",
 		"collection": "dourfits",
 		"trait": "Bottoms",

@@ -110,6 +110,11 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Blue Bucket",
+        "xp": 50,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Blue Pulled Back",
         "collection": "dourfits",
         "trait": "Hair & Hats",
