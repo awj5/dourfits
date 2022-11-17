@@ -113,6 +113,7 @@ p#overlayMessage {
 	color: var(--df-red);
 	text-align: center;
 	margin-top: 16px;
+	font-size: 16px;
 }
 
 /* Submitted */

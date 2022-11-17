@@ -13,10 +13,10 @@ function FAQ() {
       <h2>FAQ</h2>
       <h3>Do I need to own a Dour Darcels NFT to play?</h3>
       <p>Yes you must own at least one NFT from the <a href="https://opensea.io/collection/dourdarcels" target="_blank" rel="noreferrer">Dour Darcels</a>, <a href="https://opensea.io/collection/colettexdourdarcels" target="_blank" rel="noreferrer">colette x Dour Darcels</a>, <a href="https://opensea.io/collection/dourfits" target="_blank" rel="noreferrer">Dour Fits</a> or <a href="https://opensea.io/collection/dourfits-market" target="_blank" rel="noreferrer">Dour Fits Market</a> collection.</p>
-      <h3>How do I gain more XP?</h3>
-      <p>200 XP is automatically issued for each Dour Darcels or colette x Dour Darcels NFT you hold, 100 XP for Dour Fits NFTs and 50 XP for Dour Fits Market NFTs. Extra XP can be gained by participating in events. If you acquire additional Darcel NFTs in your wallet your XP will automatically update.</p>
       <h3>How do I get more items for my wardrobe?</h3>
       <p>Items in your wardrobe represent the traits of your Darcel NFTs. Additional item NFTs can be won in events or purchased on <a href="https://opensea.io/collection/dourfits-market" target="_blank" rel="noreferrer">OpenSea</a> while some items are available only when you have enough XP to unlock them.</p>
+      <h3>How do I gain more XP?</h3>
+      <p>200 XP is automatically issued for each Dour Darcels or colette x Dour Darcels NFT you hold, 100 XP for Dour Fits NFTs and 50 XP for Dour Fits Market NFTs. Extra XP can be gained by participating in events. If you acquire additional Darcel NFTs in your wallet your XP will automatically update.</p>
       <h3>Can I download a fit to share on social media?</h3>
       <p>Yes! Simply click the download button inside your wardrobe. Unfortunately downloading is not possible in the MetaMask mobile app.</p>
       <h3>Do all Arms and Tops traits work together?</h3>

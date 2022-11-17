@@ -31,7 +31,9 @@ function OverlaySubmit() {
   const { setOverlay } = useContext<OverlayContextType>(OverlayContext);
   const { xp } = useContext<XPContextType>(XPContext);
   const [openEvents, setOpenEvents] = useState<EventObj[]>([]);
+  const [openEventsComplete, setOpenEventsComplete] = useState<boolean>(false);
   const [upcomingEvents, setUpcomingEvents] = useState<EventObj[]>([]);
+  const [upcomingEventsComplete, setUpcomingEventsComplete] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState<boolean>(false);
 
   const eventClick = async (id: number) => {
@@ -87,8 +89,10 @@ function OverlaySubmit() {
 
           if (type === 'open') {
             setOpenEvents(data);
+            setOpenEventsComplete(true);
           } else {
             setUpcomingEvents(data);
+            setUpcomingEventsComplete(true);
           }
         } else {
           alert('Error ' + response.status);
@@ -106,7 +110,7 @@ function OverlaySubmit() {
     <div id={ styles.overlaySubmit }>
       { openEvents.map((event) => <button key={ event.id } onClick={ () => eventClick(event.id) } className={ `bigButton ${ submitting && styles.disabled }` }>{ event.title }</button>) }
       { upcomingEvents.map((event) => <button key={ event.id } className={ `bigButton ${ styles.disabled }` }>{ event.title }</button>) }
-      { !openEvents.length && !upcomingEvents.length && <p>More events will be announced soon.</p> }
+      { openEventsComplete && upcomingEventsComplete && !openEvents.length && !upcomingEvents.length && <p>Sorry no events are currently scheduled. Please check back soon.</p> }
     </div>
   );
 }

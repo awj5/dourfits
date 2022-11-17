@@ -20,7 +20,7 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
   const available: boolean = props.traitOwned || xpItem === 'UNLOCKED' ? true : false;
 
   const itemOver = () => {
-    if (available && (!xpItem || (xpItem && xpUnlocked))) {
+    if (available && (!xpItem || xpUnlocked)) {
       props.itemSFXOver();
     }
   }
