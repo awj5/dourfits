@@ -153,12 +153,12 @@ function ViewerItem(props: { viewerScroll: Function; itemSFXOver: Function; item
   return (
     <div onClick={ props.category === 'categories' ? () => setCategory(slug) : (available ? (xpItem && !xpUnlocked ? unlockClick : itemClick) : (!xpItem ? buyClick : () => null)) } onMouseOver={ itemOver } className={ `${ styles.viewerItem } ${ (!available || (available && xpItem && !xpUnlocked)) && styles.unavailable } ${ imageLoaded && styles.loaded } ${ props.category === 'categories' ? styles.category : (props.item.layer === 'background' && styles.background) } ${ (darcel[props.item.layer as keyof Darcel] === `${ props.category }/${ slug }${ format }` || (props.item.layer === 'background' && darcel['background'] === props.item.hex)) && styles.selected }` } style={{ display: props.ownedOnly && !available ? "none" : "" }}>
       <img src={ props.item.hex ? '/assets/img/placeholder.png' : `https://dourfits.s3.amazonaws.com/${ props.category }/${ slug }.png` } style={{ backgroundColor: props.item.hex ? props.item.hex : "transparent" }} alt={ title } className={ styles.itemImage } onLoad={ () => setImageLoaded(true) } />
-      { xpItem && !xpUnlocked && <img src="/assets/img/key.gif" alt="" className={ styles.itemKey } /> }
+      { xpItem && !xpUnlocked && <img src="/assets/img/key.png" alt="" className={ styles.itemKey } /> }
       <ConfettiExplosion explode={ confettiExplode } />
 
       <hgroup>
         <h3>{ title }</h3>
-        <h4 className={ xpItem ? (xpItem === 'UNLOCKED' ? (!xpUnlocked ? styles.unlock : styles.unlocked) : styles.locked) : (!available ? styles.buy : undefined) }>{ xpItem ? (!xpUnlocked && available ? 'UNLOCK' : xpItem) : (props.category === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
+        <h4 className={ xpItem ? (xpItem === 'UNLOCKED' ? (!xpUnlocked ? styles.unlock : styles.unlocked) : styles.locked) : (!available ? styles.buy : undefined) }>{ xpItem ? (!xpUnlocked && available ? 'UNLOCK' : (available ? xpItem : xpItem + ' NEEDED')) : (props.category === 'categories' ? '' : (available ? 'YOU OWN' : 'BUY')) }</h4>
       </hgroup>
     </div>
   );
