@@ -81,7 +81,7 @@ function Vote() {
 
       if (response.status === 200) {
         // Success
-        const data = await response.json();
+        const data: any = await response.json();
 
         if (data.length === 2) {
           // Set entry IDs
@@ -122,7 +122,7 @@ function Vote() {
 
     const getEvent = async () => {
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ id }`);
+        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ id }/voting`);
 
         if (response.status === 200) {
           // Success

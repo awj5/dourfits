@@ -5,11 +5,13 @@
   height: auto;
 }
 
-#sectionResults h2 {
-  font-size: 72px;
-  letter-spacing: -2px;
+#sectionResults h2,
+#sectionResults h3 {
+  font-size: 48px;
   line-height: 1;
-  margin-bottom: 24px;
+}
+
+#sectionResults h2 {
   font-family: "AvantGarde-Book", sans-serif;
 }
 
@@ -17,6 +19,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
+  margin-top: 24px;
 }
 
 .resultsAvatar {
@@ -31,8 +34,8 @@
 
 .resultsAvatar p {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 12px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 999px;
   font-family: "itc-avant-garde-gothic-lt-bold", sans-serif;
@@ -43,15 +46,23 @@
 }
 
 @media screen and (orientation: portrait) {
-  #sectionResults h2 {
-    font-size: 36px;
+  #sectionResults h2,
+  #sectionResults h3 {
+    font-size: 24px;
+    text-align: center;
   }
 
   #results {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 12px;
   }
 
   #resultsAvatar0 {
     grid-area: auto;
+  }
+
+  .resultsAvatar p {
+    top: 8px;
+    left: 8px;
   }
 }

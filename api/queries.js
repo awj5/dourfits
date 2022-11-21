@@ -24,12 +24,12 @@ const getEvents = async (request, response) => {
 
 const getEvent = async (request, response) => {
   try {
-    const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND submit_end <= now() AND voting_end > now()', [request.params.id]);
+    const event = await pool.query('SELECT * FROM df_events WHERE id = $1 AND $2 = \'voting\' AND submit_end <= now() AND voting_end > now() OR id = $1 AND $2 = \'results\' AND voting_end <= now()', [request.params.id, request.params.type]);
 
     if (event.rows.length) {
       response.status(200).json(event.rows[0]);
     } else {
-      response.status(403).send(); // Voting not open
+      response.status(403).send();
     }
   } catch (error) {
     console.log(error);
