@@ -110,8 +110,28 @@ const getEventResults = async (request, response) => {
 
 const getWalletXP = async (request, response) => {
   try {
+    const entries = await pool.query('SELECT * FROM df_entries WHERE wallet = $1 AND prize_claimed = FALSE', [request.params.wallet]);
     const xp = await pool.query('SELECT * FROM df_xp WHERE wallet = $1', [request.params.wallet]);
-    response.status(200).json(xp.rows.length ? xp.rows[0].xp : 0);
+    var total = xp.rows.length ? xp.rows[0].xp : 0;
+
+    if (entries.rows.length) {
+      // Claim XP
+      for (let x = 0; x < entries.rows.length; x++) {
+        const event = await pool.query('SELECT * FROM df_events WHERE id = $1', [entries.rows[x].event_id]);
+        const results = await pool.query('SELECT * FROM df_entries WHERE event_id = $1 ORDER BY votes DESC', [event.rows[0].id]);
+        await pool.query('UPDATE df_entries SET prize_claimed = TRUE WHERE id = $1', [entries.rows[x].id]);
+        total = total + (results.rows[0].wallet === request.params.wallet ? event.rows[0].xp_first : (results.rows[1].wallet === request.params.wallet ? event.rows[0].xp_second : (results.rows[2].wallet === request.params.wallet ? event.rows[0].xp_third : event.rows[0].xp_entry))); // 1st, 2nd, 3rd or entry prize
+      }
+
+      // Save
+      if (xp.rows.length) {
+        await pool.query('UPDATE df_xp SET xp = $1 WHERE id = $2', [total, xp.rows[0].id]);
+      } else {
+        await pool.query('INSERT INTO df_xp (wallet, xp) VALUES ($1, $2)', [request.params.wallet, total]);
+      }
+    }
+
+    response.status(200).json(total);
   } catch (error) {
     console.log(error);
     response.status(500).send();
