@@ -147,6 +147,7 @@ function Header() {
         <Link to="/" id="nav-home" style={{ opacity: location.pathname === '/' ? 1 : "" }}>Home</Link>
         <Link to="/wardrobe" id="nav-wardrobe" style={{ opacity: location.pathname === '/wardrobe' ? 1 : "", display: !isConnected ? "none" : "" }}>Wardrobe</Link>
         <Link to="/events" id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
+        <a href="https://opensea.io/collection/dourfits-market" target="_blank">Market</a>
         <Link to="/faq" id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
         <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `/assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="Music icon" /></button>
         <ConnectButton />

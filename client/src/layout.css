@@ -256,7 +256,7 @@ button#navBurger {
   background-color: var(--df-orange);
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1279px) {
   h1 {
     display: none;
   }
