@@ -133,6 +133,11 @@
 		"layer": "shoesAndLegs"
 	},
 	{
+		"title": "Elf Boots",
+		"xp": 300,
+		"layer": "shoesAndLegs"
+	},
+	{
 		"title": "Forest Hi Tops",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",

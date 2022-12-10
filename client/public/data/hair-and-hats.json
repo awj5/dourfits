@@ -728,6 +728,12 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Santa Hat",
+        "trait": "Market",
+        "marketID": 17,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Sensible",
         "collection": "dourfits",
         "trait": "Hair & Hats",

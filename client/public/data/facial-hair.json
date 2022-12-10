@@ -82,6 +82,11 @@
         "layer": "facialHair"
     },
     {
+        "title": "White Beard",
+        "xp": 1000,
+        "layer": "facialHair"
+    },
+    {
         "title": "Yellow Mustache",
         "collection": "dourdarcels",
         "trait": "Facial Hair",

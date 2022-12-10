@@ -219,6 +219,16 @@
         "layer": "headAccessories"
     },
     {
+        "title": "Red Nose",
+        "xp": 100,
+        "layer": "headAccessories"
+    },
+    {
+        "title": "Reindeer Horns",
+        "xp": 500,
+        "layer": "headAccessories"
+    },
+    {
         "title": "Safety Pin",
         "collection": "dourdarcels",
         "trait": "Accessories & Ears",

@@ -54,6 +54,13 @@
         }
     },
     {
+        "title": "Candy Cane",
+        "trait": "Market",
+        "marketID": 16,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Champagne",
         "collection": "dourdarcels",
         "trait": "Arms",

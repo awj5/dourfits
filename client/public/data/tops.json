@@ -322,6 +322,12 @@
 		"topType": "sleeveless"
 	},
 	{
+		"title": "Ho Ho Ho T-Shirt",
+		"xp": 200,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Jacket and Tie",
 		"collection": "dourfits",
 		"trait": "Tops",
