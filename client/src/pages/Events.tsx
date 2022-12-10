@@ -26,9 +26,9 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   const [darcelLoaded, setDarcelLoaded] = useState<boolean>(false);
   const [prizes, setPrizes] = useState<PrizeObj[]>([]);
   const navigate = useNavigate();
-  const dateSubmitStart = Moment(props.event.submit_start).format('MMM D [at] HHa');
-  const dateSubmitEnd = Moment(props.event.submit_end).format('MMM D [at] HHa');
-  const dateVotingEnd = Moment(props.event.voting_end).format('MMM D [at] HHa');
+  const dateSubmitStart = Moment(props.event.submit_start).format('MMM D [at] Ha');
+  const dateSubmitEnd = Moment(props.event.submit_end).format('MMM D [at] Ha');
+  const dateVotingEnd = Moment(props.event.voting_end).format('MMM D [at] Ha');
 
   interface PrizeObj {
     file: string;
