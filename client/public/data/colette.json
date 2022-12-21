@@ -201,6 +201,44 @@
         "topType": "short"
     },
     {
+        "title": "Mon Amour",
+        "shortTitle": "Mon Amour Background",
+        "collection": "dourfits-collaborations",
+        "trait": "Backgrounds",
+        "layer": "background",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Mon Amour Hi Tops",
+        "collection": "dourfits-collaborations",
+        "trait": "Shoes & Legs",
+        "layer": "shoesAndLegs",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Mon Amour Pants",
+        "collection": "dourfits-collaborations",
+        "trait": "Bottoms",
+        "layer": "bottoms",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Mon Amour Popcorn",
+        "collection": "dourfits-collaborations",
+        "trait": "Tops",
+        "layer": "arms",
+        "topType": "sleeveless",
+        "default": "mon-amour-singlet",
+        "format": ".svg.png"
+    },
+    {
+        "title": "Mon Amour Rave",
+        "collection": "dourfits-collaborations",
+        "trait": "Hair & Hats",
+        "layer": "hairAndHats",
+        "format": ".svg.png"
+    },
+    {
         "title": "White Crossbody Bag Sweater",
         "shortTitle": "White Bag Sweater",
         "collection": "colettexdourdarcels",
