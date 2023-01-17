@@ -28,10 +28,16 @@ function HeaderDashboard() {
       try {
         const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c'], pageKey: page }); // DD, colette, DF and DF Market contracts
 
-        const metaKicks: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x6f69fd63e7e0a5050a91bd6249c4672f892681c6'] }); // TEMP - Metakicks contract
+        const robotos: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x099689220846644f87d1137665cded7bf3422747'] }); // TEMP - Robotos contract
 
-        if (metaKicks.ownedNfts.length) {
-          addressXP += 1000; // TEMP
+        if (robotos.ownedNfts.length) {
+          addressXP += 300; // TEMP
+        }
+
+        const robopets: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x4e962d488412a14aa37eacadcb83f18c7e2271a7'] }); // TEMP - Robopets contract
+
+        if (robopets.ownedNfts.length) {
+          addressXP += 100; // TEMP
         }
 
         // Loop NFTs and add XP
