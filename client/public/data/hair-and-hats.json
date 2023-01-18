@@ -716,6 +716,17 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Robotos Bucket",
+        "trait": "Market",
+        "marketID": 18,
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Robotos Newsie",
+        "xp": 300,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Rock Dog",
         "collection": "dourfits",
         "trait": "Hair & Hats",

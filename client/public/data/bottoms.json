@@ -260,6 +260,16 @@
 		"layer": "bottoms"
 	},
 	{
+		"title": "Robotos Genie",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
+		"title": "Robotos Shorts",
+		"xp": 300,
+		"layer": "bottoms"
+	},
+	{
 		"title": "Skull Shorts",
 		"collection": "dourfits",
 		"trait": "Bottoms",

@@ -662,6 +662,24 @@
 		}
 	},
 	{
+		"title": "Robotos Hoodie",
+		"xp": 600,
+		"layer": "tops",
+		"topType": "hoodie"
+	},
+	{
+		"title": "Robotos Sweater",
+		"xp": 200,
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Robotos T-shirt",
+		"xp": 100,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Sad T-shirt",
 		"collection": "dourfits",
 		"trait": "Tops",

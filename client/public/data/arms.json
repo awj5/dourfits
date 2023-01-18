@@ -231,6 +231,13 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Robotos Bag",
+        "trait": "Market",
+        "marketID": 19,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Rose",
         "collection": "dourdarcels",
         "trait": "Arms",
