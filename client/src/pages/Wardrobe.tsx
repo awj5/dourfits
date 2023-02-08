@@ -38,7 +38,14 @@ function WardrobeStage() {
   }
 
   const submitClick = () => {
-    setOverlay({ visible: true, title: 'Yay!', message: 'Which challenge would you like to submit your fit to?' });
+    const d = JSON.parse(localStorage.avatarV2);
+
+    // Check if Darcel has bottom and no top
+    if (d.bottoms && d.bottoms !== 'bottoms/underwear.svg' && !d.tops) {
+      alert('Oops! Looks like your Darcel needs a top.');
+    } else {
+      setOverlay({ visible: true, title: 'Yay!', message: 'Which challenge would you like to submit your fit to?' });
+    }
   }
 
   const downloadClick = async () => {
