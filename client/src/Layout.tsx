@@ -26,14 +26,14 @@ function HeaderDashboard() {
 
     const getXP = async (page?: string | undefined) => {
       try {
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c'], pageKey: page }); // DD, colette, DF and DF Market contracts
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c', '0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b'], pageKey: page }); // DD, colette, DF, DF Market and DF collabs contracts
 
-        const robotos: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x099689220846644f87d1137665cded7bf3422747', '0x4e962d488412a14aa37eacadcb83f18c7e2271a7'] }); // TEMP - Robotos contracts
+        //const robotos: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x099689220846644f87d1137665cded7bf3422747', '0x4e962d488412a14aa37eacadcb83f18c7e2271a7'] }); // TEMP - Robotos contracts
 
         // Loop Robotos NFTs and add XP
-        for (let x: number = 0; x < robotos.ownedNfts.length; x++) {
+        /* for (let x: number = 0; x < robotos.ownedNfts.length; x++) {
           addressXP += robotos.ownedNfts[x].contract.address === '0x099689220846644f87d1137665cded7bf3422747' ? 300 : 100; // TEMP - 300 for genesis and 100 for pets
-        }
+        } */
 
         // Loop NFTs and add XP
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
