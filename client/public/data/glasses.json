@@ -314,6 +314,11 @@
         "layer": "glasses"
     },
     {
+        "title": "Wonderpals Glasses",
+        "xp": 1000000,
+        "layer": "glasses"
+    },
+    {
         "title": "Woodgrain",
         "collection": "dourdarcels",
         "trait": "Glasses",

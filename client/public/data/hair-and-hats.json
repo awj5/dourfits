@@ -931,6 +931,16 @@
         "layer": "hairAndHats"
     },
     {
+        "title": "Wonderpals Cap",
+        "xp": 1000000,
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wonderpals Rave",
+        "xp": 1000000,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Yellow Beanie",
         "collection": "dourdarcels",
         "trait": "Hair & Hats",

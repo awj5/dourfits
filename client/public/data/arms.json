@@ -313,6 +313,12 @@
         "topType": "sleeveless"
     },
     {
+        "title": "Wonderpals Tote",
+        "xp": 1000000,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Woodgrain Bag",
         "collection": "dourdarcels",
         "trait": "Arms",

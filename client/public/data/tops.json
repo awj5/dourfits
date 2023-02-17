@@ -891,6 +891,24 @@
 		"topType": "short"
 	},
 	{
+		"title": "Wonderpals Dress",
+		"xp": 1000000,
+		"layer": "tops",
+		"topType": "dress-1"
+	},
+	{
+		"title": "Wonderpals Sweater",
+		"xp": 1000000,
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Wonderpals T-Shirt",
+		"xp": 1000000,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "Woodgrain Sweater",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
