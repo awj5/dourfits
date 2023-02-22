@@ -932,12 +932,13 @@
     },
     {
         "title": "Wonderpals Cap",
-        "xp": 1000000,
+        "trait": "Market",
+        "marketID": 21,
         "layer": "hairAndHats"
     },
     {
         "title": "Wonderpals Rave",
-        "xp": 1000000,
+        "xp": 800,
         "layer": "hairAndHats"
     },
     {

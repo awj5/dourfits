@@ -892,19 +892,19 @@
 	},
 	{
 		"title": "Wonderpals Dress",
-		"xp": 1000000,
+		"xp": 200,
 		"layer": "tops",
 		"topType": "dress-1"
 	},
 	{
 		"title": "Wonderpals Sweater",
-		"xp": 1000000,
+		"xp": 300,
 		"layer": "tops",
 		"topType": "sweater"
 	},
 	{
 		"title": "Wonderpals T-Shirt",
-		"xp": 1000000,
+		"xp": 600,
 		"layer": "tops",
 		"topType": "short"
 	},
