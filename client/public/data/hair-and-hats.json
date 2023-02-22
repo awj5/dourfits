@@ -1,5 +1,16 @@
 [
     {
+        "title": "Wonderpals Cap",
+        "trait": "Market",
+        "marketID": 21,
+        "layer": "hairAndHats"
+    },
+    {
+        "title": "Wonderpals Rave",
+        "xp": 800,
+        "layer": "hairAndHats"
+    },
+    {
         "title": "Afro",
         "collection": "dourfits",
         "trait": "Hair & Hats",
@@ -928,17 +939,6 @@
         "title": "Witches Hat",
         "trait": "Market",
         "marketID": 9,
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Wonderpals Cap",
-        "trait": "Market",
-        "marketID": 21,
-        "layer": "hairAndHats"
-    },
-    {
-        "title": "Wonderpals Rave",
-        "xp": 800,
         "layer": "hairAndHats"
     },
     {

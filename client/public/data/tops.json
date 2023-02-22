@@ -1,5 +1,23 @@
 [
 	{
+		"title": "Wonderpals Dress",
+		"xp": 200,
+		"layer": "tops",
+		"topType": "dress-1"
+	},
+	{
+		"title": "Wonderpals Sweater",
+		"xp": 300,
+		"layer": "tops",
+		"topType": "sweater"
+	},
+	{
+		"title": "Wonderpals T-Shirt",
+		"xp": 600,
+		"layer": "tops",
+		"topType": "short"
+	},
+	{
 		"title": "80s Oversized",
 		"collection": "dourfits",
 		"trait": "Tops",
@@ -887,24 +905,6 @@
 		"title": "White T-Shirt",
 		"collection": "dourdarcels",
 		"trait": "Legs & Clothes",
-		"layer": "tops",
-		"topType": "short"
-	},
-	{
-		"title": "Wonderpals Dress",
-		"xp": 200,
-		"layer": "tops",
-		"topType": "dress-1"
-	},
-	{
-		"title": "Wonderpals Sweater",
-		"xp": 300,
-		"layer": "tops",
-		"topType": "sweater"
-	},
-	{
-		"title": "Wonderpals T-Shirt",
-		"xp": 600,
 		"layer": "tops",
 		"topType": "short"
 	},

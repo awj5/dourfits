@@ -1,5 +1,10 @@
 [
 	{
+		"title": "Wonderpals Shorts",
+		"xp": 100,
+		"layer": "bottoms"
+	},
+	{
 		"title": "Black Mini",
 		"collection": "dourfits",
 		"trait": "Bottoms",
@@ -338,11 +343,6 @@
 		"title": "White Skinny",
 		"collection": "dourfits",
 		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Wonderpals Shorts",
-		"xp": 100,
 		"layer": "bottoms"
 	},
 	{

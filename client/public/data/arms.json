@@ -1,5 +1,12 @@
 [
     {
+        "title": "Wonderpals Tote",
+        "trait": "Market",
+        "marketID": 20,
+        "layer": "arms",
+        "topType": "short"
+    },
+    {
         "title": "Balloon",
         "collection": "dourdarcels",
         "trait": "Arms",
@@ -311,13 +318,6 @@
         "trait": "Arms",
         "layer": "arms",
         "topType": "sleeveless"
-    },
-    {
-        "title": "Wonderpals Tote",
-        "trait": "Market",
-        "marketID": 20,
-        "layer": "arms",
-        "topType": "short"
     },
     {
         "title": "Woodgrain Bag",
