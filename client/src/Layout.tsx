@@ -28,12 +28,12 @@ function HeaderDashboard() {
       try {
         const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c', '0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b'], pageKey: page }); // DD, colette, DF, DF Market and DF collabs contracts
 
-        //const robotos: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x099689220846644f87d1137665cded7bf3422747', '0x4e962d488412a14aa37eacadcb83f18c7e2271a7'] }); // TEMP - Robotos contracts
+        const wonderpals: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x3acce66cd37518a6d77d9ea3039e00b3a2955460'] }); // TEMP - Wonderpals contract
 
-        // Loop Robotos NFTs and add XP
-        /* for (let x: number = 0; x < robotos.ownedNfts.length; x++) {
-          addressXP += robotos.ownedNfts[x].contract.address === '0x099689220846644f87d1137665cded7bf3422747' ? 300 : 100; // TEMP - 300 for genesis and 100 for pets
-        } */
+        // Loop Wonderpals NFTs and add XP
+        for (let x: number = 0; x < wonderpals.ownedNfts.length; x++) {
+          addressXP += 300; // TEMP - 300 for genesis
+        }
 
         // Loop NFTs and add XP
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
