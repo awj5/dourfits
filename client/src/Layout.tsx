@@ -26,9 +26,7 @@ function HeaderDashboard() {
 
     const getXP = async (page?: string | undefined) => {
       try {
-        //const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c', '0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b'], pageKey: page }); // DD, colette, DF, DF Market and DF collabs contracts
-
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b'], pageKey: page }); // DD, colette, DF, DF Market and DF collabs contracts
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x8d609bd201beaea7dccbfbd9c22851e23da68691', '0x6d93d3fd7bb8baebf853be56d0198989db655e40', '0x5e014f8c5778138ccc2c2d88e0530bc343831073', '0xac5dc1676595fc2f4d4a746c7a4857e692480e0c', '0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b'], pageKey: page }); // DD, colette, DF, DF Market and DF collabs contracts
 
         //const wonderpals: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, { contractAddresses: ['0x3acce66cd37518a6d77d9ea3039e00b3a2955460'] }); // TEMP - Wonderpals contract
 
@@ -60,7 +58,7 @@ function HeaderDashboard() {
           // Add prize XP only if DD token owned
           if (addressXP) {
             try {
-              const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/xp/${ address }`);
+              const response: Response = await fetch(`${window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/'}api/xp/${address}`);
 
               if (response.status === 200) {
                 // Success
@@ -92,7 +90,7 @@ function HeaderDashboard() {
     <div id="headerDashboard">
       <div id="dashboardXP">
         <div id="xpIcon"><img src="/assets/img/icon-heart.svg" alt="Heart" /></div>
-        <p>{ xp }<span>XP</span></p>
+        <p>{xp}<span>XP</span></p>
       </div>
 
       <ConnectButton />
@@ -152,11 +150,11 @@ function Header() {
         <Link to="/events" id="nav-events" style={{ opacity: location.pathname === '/events' ? 1 : "" }}>Events</Link>
         <a href="https://opensea.io/collection/dourfits-market" target="_blank" rel="noreferrer">Market</a>
         <Link to="/faq" id="nav-faq" style={{ opacity: location.pathname === '/faq' ? 1 : "" }}>FAQ</Link>
-        <button onClick={ toggleThemeSong } className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={ `/assets/img/audio-${ themePlaying ? 'on' : 'off' }.png` } alt="Music icon" /></button>
+        <button onClick={toggleThemeSong} className="iconButton" style={{ display: userInteractedRef.current ? "inline" : "" }}><img src={`/assets/img/audio-${themePlaying ? 'on' : 'off'}.png`} alt="Music icon" /></button>
         <ConnectButton />
       </nav>
 
-      <button onClick={ burgerClick } id="navBurger"><div id="burger" className={ showingNav ? 'selected' : undefined }></div></button>
+      <button onClick={burgerClick} id="navBurger"><div id="burger" className={showingNav ? 'selected' : undefined}></div></button>
     </header>
   );
 }
