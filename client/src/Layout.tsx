@@ -39,7 +39,7 @@ function HeaderDashboard() {
 
         // Loop collab NFTs and add XP
         for (let x: number = 0; x < collabNFTs.ownedNfts.length; x++) {
-          addressXP += 300;
+          addressXP += 100;
         }
 
         // Loop NFTs and add XP
