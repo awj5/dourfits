@@ -1,94 +1,100 @@
 [
-    {
-        "title": "Alien",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Cyborg",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Dead",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head",
-        "exclusions": {
-            "eye": "",
-            "mouth": "",
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Diamond",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Egg",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Furry",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head",
-        "exclusions": {
-            "hairAndHats": "",
-            "headAccessories": ""
-        }
-    },
-    {
-        "title": "Gold",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Melting",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Rainbow",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Regular",
-        "xp": 0,
-        "layer": "head"
-    },
-    {
-        "title": "Stickers",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Tattoos",
-        "collection": "dourdarcels",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Transparent",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head"
-    },
-    {
-        "title": "Versailles",
-        "collection": "dourfits",
-        "trait": "Head",
-        "layer": "head"
+  {
+    "title": "Alien",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Cyborg",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Dead",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head",
+    "exclusions": {
+      "eye": "",
+      "mouth": "",
+      "facialHair": ""
     }
+  },
+  {
+    "title": "Diamond",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Egg",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Furry",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head",
+    "exclusions": {
+      "hairAndHats": "",
+      "headAccessories": ""
+    }
+  },
+  {
+    "title": "Gold",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Melting",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Rainbow",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Regular",
+    "xp": 0,
+    "layer": "head"
+  },
+  {
+    "title": "Smurfs Head",
+    "shortTitle": "Smurfs",
+    "xp": 1000000,
+    "layer": "head"
+  },
+  {
+    "title": "Stickers",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Tattoos",
+    "collection": "dourdarcels",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Transparent",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head"
+  },
+  {
+    "title": "Versailles",
+    "collection": "dourfits",
+    "trait": "Head",
+    "layer": "head"
+  }
 ]

@@ -1,354 +1,364 @@
 [
-	{
-		"title": "Wonderpals Shorts",
-		"xp": 100,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Mini",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Pants Please",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Puffy Pants",
-		"shortTitle": "Black Puffy",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Skinny",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Black Stripe Skirt",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Blue Jeans",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Bones Pants",
-		"xp": 900,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Brown Genie",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Camo Tube",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Dour Darcels Skinny",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Charcoal Tube",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Coffee Flares",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Coffee Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Diagonal Stripe Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Eyes Skinny",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Flames Pants",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Floral Pants",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Flower Skirt",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Forest Flares",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Forest Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Gray Pants",
-		"xp": 0,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Gray Sweats",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Kilt",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Knight",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Lilac Tube",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Moss Puffy",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Navy Cargos",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Navy Shorts",
-		"xp": 0,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Peach Genie",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Pink Check Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Pink Genie",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Purple Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Rainbow Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Raw Denim",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Mini",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Pants",
-		"xp": 50,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Pants Please",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Sport Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Stripe Skinny",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Sweats",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Red Tube",
-		"xp": 0,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Robotos Genie",
-		"xp": 100,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Robotos Shorts",
-		"xp": 300,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Skull Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Sky Pants Please",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Sky Short Shorts",
-		"xp": 0,
-		"layer": "bottoms"
-	},
-	{
-		"title": "Space Suit",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Sport Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Striped Pants",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Tan Cargos",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Tan Seam",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Taxi Tube",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "White Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "White Stripe Short Shorts",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "White Skinny",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	},
-	{
-		"title": "Yellow Pants",
-		"collection": "dourfits",
-		"trait": "Bottoms",
-		"layer": "bottoms"
-	}
+  {
+    "title": "Wonderpals Shorts",
+    "xp": 100,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Mini",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Pants Please",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Puffy Pants",
+    "shortTitle": "Black Puffy",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Skinny",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Black Stripe Skirt",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Blue Jeans",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Bones Pants",
+    "xp": 900,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Brown Genie",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Camo Tube",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Dour Darcels Skinny",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Charcoal Tube",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Coffee Flares",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Coffee Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Diagonal Stripe Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Eyes Skinny",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Flames Pants",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Floral Pants",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Flower Skirt",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Forest Flares",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Forest Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Gray Pants",
+    "xp": 0,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Gray Sweats",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Kilt",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Knight",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Lilac Tube",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Moss Puffy",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Navy Cargos",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Navy Shorts",
+    "xp": 0,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Peach Genie",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Pink Check Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Pink Genie",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Purple Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Rainbow Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Raw Denim",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Mini",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Pants",
+    "xp": 50,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Pants Please",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Sport Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Stripe Skinny",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Sweats",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Red Tube",
+    "xp": 0,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Robotos Genie",
+    "xp": 100,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Robotos Shorts",
+    "xp": 300,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Skull Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Sky Pants Please",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Sky Short Shorts",
+    "xp": 0,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Smurfs Pants",
+    "xp": 1000000,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Smurfs Red Pants",
+    "xp": 1000000,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Space Suit",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Sport Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Striped Pants",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Tan Cargos",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Tan Seam",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Taxi Tube",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "White Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "White Stripe Short Shorts",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "White Skinny",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Yellow Pants",
+    "collection": "dourfits",
+    "trait": "Bottoms",
+    "layer": "bottoms"
+  }
 ]

@@ -1,322 +1,327 @@
 [
-    {
-        "title": "Ape",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Bandana",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Blue Earrings",
-        "xp": 0,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Bunny",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
-    },
-    {
-        "title": "Cat",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
-    },
-    {
-        "title": "Chain",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Cheeks",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Chrome Earrings",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Chrome Robot",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": "",
-            "glasses": ""
-        }
-    },
-    {
-        "title": "Coin",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Cross",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Crucifix Earring",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Cry",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Dangly",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Dangly Earrings",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Dark Hoops",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Diamond Stud",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Egg Fren",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
-    },
-    {
-        "title": "Flower Earrings",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Ghost",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
-    },
-    {
-        "title": "Gold Robot",
-        "collection": "dourdarcels",
-        "trait": "Hair & Hats",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": "",
-            "glasses": ""
-        }
-    },
-    {
-        "title": "Gold Stud",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Gold Studs",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Heart Earrings",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Hoops",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Moss Stud",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Motocross",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": "",
-            "glasses": ""
-        }
-    },
-    {
-        "title": "Mummy",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": ""
-        }
-    },
-    {
-        "title": "Nut",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Orange Earrings",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Purple Earrings",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Red Cheeks and Beauty Spot",
-        "shortTitle": "Red Cheeks & Beauty Spot",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Red Nose",
-        "xp": 100,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Reindeer Horns",
-        "xp": 500,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Safety Pin",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Shape Earrings",
-        "xp": 100,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Single Hoop",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Skull Earrings",
-        "xp": 200,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Slam Jam Mask",
-        "trait": "Market",
-        "marketID": 3,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Space",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": "",
-            "glasses": ""
-        }
-    },
-    {
-        "title": "Space Bubble",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories",
-        "layer": "headAccessories",
-        "exclusions": {
-            "hairAndHats": "",
-            "glasses": ""
-        }
-    },
-    {
-        "title": "Spiders",
-        "trait": "Market",
-        "marketID": 12,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Star Earrings",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Triangle",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "U Earrings",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Unicorn",
-        "collection": "dourdarcels",
-        "trait": "Accessories & Ears",
-        "layer": "headAccessories"
-    },
-    {
-        "title": "White Stud",
-        "xp": 0,
-        "layer": "headAccessories"
-    },
-    {
-        "title": "Yellow Single Hoop",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "headAccessories"
+  {
+    "title": "Ape",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Bandana",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Blue Earrings",
+    "xp": 0,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Bunny",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": ""
     }
+  },
+  {
+    "title": "Cat",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": ""
+    }
+  },
+  {
+    "title": "Chain",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Cheeks",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Chrome Earrings",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Chrome Robot",
+    "collection": "dourdarcels",
+    "trait": "Hair & Hats",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": "",
+      "glasses": ""
+    }
+  },
+  {
+    "title": "Coin",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Cross",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Crucifix Earring",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Cry",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Dangly",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Dangly Earrings",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Dark Hoops",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Diamond Stud",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Egg Fren",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": ""
+    }
+  },
+  {
+    "title": "Flower Earrings",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Ghost",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": ""
+    }
+  },
+  {
+    "title": "Gold Robot",
+    "collection": "dourdarcels",
+    "trait": "Hair & Hats",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": "",
+      "glasses": ""
+    }
+  },
+  {
+    "title": "Gold Stud",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Gold Studs",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Heart Earrings",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Hoops",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Moss Stud",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Motocross",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": "",
+      "glasses": ""
+    }
+  },
+  {
+    "title": "Mummy",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": ""
+    }
+  },
+  {
+    "title": "Nut",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Orange Earrings",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Purple Earrings",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Red Cheeks and Beauty Spot",
+    "shortTitle": "Red Cheeks & Beauty Spot",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Red Nose",
+    "xp": 100,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Reindeer Horns",
+    "xp": 500,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Safety Pin",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Shape Earrings",
+    "xp": 100,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Single Hoop",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Skull Earrings",
+    "xp": 200,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Slam Jam Mask",
+    "trait": "Market",
+    "marketID": 3,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Smurfs Ears",
+    "xp": 1000000,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Space",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": "",
+      "glasses": ""
+    }
+  },
+  {
+    "title": "Space Bubble",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories",
+    "layer": "headAccessories",
+    "exclusions": {
+      "hairAndHats": "",
+      "glasses": ""
+    }
+  },
+  {
+    "title": "Spiders",
+    "trait": "Market",
+    "marketID": 12,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Star Earrings",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Triangle",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "U Earrings",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Unicorn",
+    "collection": "dourdarcels",
+    "trait": "Accessories & Ears",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "White Stud",
+    "xp": 0,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Yellow Single Hoop",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "headAccessories"
+  }
 ]
