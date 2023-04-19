@@ -1,10 +1,5 @@
 [
     {
-        "title": "Wonderpals Glasses",
-        "xp": 400,
-        "layer": "glasses"
-    },
-    {
         "title": "3D",
         "collection": "dourdarcels",
         "trait": "Glasses",
@@ -316,6 +311,11 @@
         "title": "Wobbly",
         "collection": "dourdarcels",
         "trait": "Glasses",
+        "layer": "glasses"
+    },
+    {
+        "title": "Wonderpals Glasses",
+        "xp": 400,
         "layer": "glasses"
     },
     {

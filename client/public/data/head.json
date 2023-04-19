@@ -1,5 +1,11 @@
 [
   {
+    "title": "Smurfs Head",
+    "shortTitle": "Smurfs",
+    "xp": 100,
+    "layer": "head"
+  },
+  {
     "title": "Alien",
     "collection": "dourfits",
     "trait": "Head",
@@ -65,12 +71,6 @@
   {
     "title": "Regular",
     "xp": 0,
-    "layer": "head"
-  },
-  {
-    "title": "Smurfs Head",
-    "shortTitle": "Smurfs",
-    "xp": 1000000,
     "layer": "head"
   },
   {

@@ -1,5 +1,11 @@
 [
   {
+    "title": "Smurfs Background",
+    "shortTitle": "Smurfs",
+    "xp": 1200,
+    "layer": "background"
+  },
+  {
     "title": "80s",
     "collection": "dourfits",
     "trait": "Backgrounds",
@@ -286,12 +292,6 @@
     "trait": "Background",
     "layer": "background",
     "hex": "#CBCFD0"
-  },
-  {
-    "title": "Smurfs Background",
-    "shortTitle": "Smurfs",
-    "xp": 1000000,
-    "layer": "background"
   },
   {
     "title": "Soft Yellow",

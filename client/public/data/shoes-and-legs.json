@@ -1,10 +1,5 @@
 [
 	{
-		"title": "Wonderpals Hi-Tops",
-		"xp": 400,
-		"layer": "shoesAndLegs"
-	},
-	{
 		"title": "Alien",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
@@ -402,6 +397,11 @@
 		"title": "White Sneakers",
 		"collection": "dourfits",
 		"trait": "Shoes & Legs",
+		"layer": "shoesAndLegs"
+	},
+	{
+		"title": "Wonderpals Hi-Tops",
+		"xp": 400,
 		"layer": "shoesAndLegs"
 	},
 	{

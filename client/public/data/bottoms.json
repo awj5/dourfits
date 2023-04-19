@@ -1,7 +1,12 @@
 [
   {
-    "title": "Wonderpals Shorts",
-    "xp": 100,
+    "title": "Smurfs Pants",
+    "xp": 200,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Smurfs Red Pants",
+    "xp": 600,
     "layer": "bottoms"
   },
   {
@@ -292,16 +297,6 @@
     "layer": "bottoms"
   },
   {
-    "title": "Smurfs Pants",
-    "xp": 1000000,
-    "layer": "bottoms"
-  },
-  {
-    "title": "Smurfs Red Pants",
-    "xp": 1000000,
-    "layer": "bottoms"
-  },
-  {
     "title": "Space Suit",
     "collection": "dourfits",
     "trait": "Bottoms",
@@ -353,6 +348,11 @@
     "title": "White Skinny",
     "collection": "dourfits",
     "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Wonderpals Shorts",
+    "xp": 100,
     "layer": "bottoms"
   },
   {

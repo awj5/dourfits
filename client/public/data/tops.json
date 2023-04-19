@@ -1,19 +1,13 @@
 [
   {
-    "title": "Wonderpals Dress",
-    "xp": 200,
-    "layer": "tops",
-    "topType": "dress-1"
-  },
-  {
-    "title": "Wonderpals Sweater",
+    "title": "Smurfette Dress",
     "xp": 300,
     "layer": "tops",
-    "topType": "sweater"
+    "topType": "sleeveless"
   },
   {
-    "title": "Wonderpals T-Shirt",
-    "xp": 600,
+    "title": "Smurfs T-Shirt",
+    "xp": 300,
     "layer": "tops",
     "topType": "short"
   },
@@ -773,18 +767,6 @@
     "topType": "short"
   },
   {
-    "title": "Smurfette Dress",
-    "xp": 1000000,
-    "layer": "tops",
-    "topType": "sleeveless"
-  },
-  {
-    "title": "Smurfs T-Shirt",
-    "xp": 1000000,
-    "layer": "tops",
-    "topType": "short"
-  },
-  {
     "title": "Space Suit",
     "collection": "dourfits",
     "trait": "Tops",
@@ -918,6 +900,24 @@
     "title": "White T-Shirt",
     "collection": "dourdarcels",
     "trait": "Legs & Clothes",
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "Wonderpals Dress",
+    "xp": 200,
+    "layer": "tops",
+    "topType": "dress-1"
+  },
+  {
+    "title": "Wonderpals Sweater",
+    "xp": 300,
+    "layer": "tops",
+    "topType": "sweater"
+  },
+  {
+    "title": "Wonderpals T-Shirt",
+    "xp": 600,
     "layer": "tops",
     "topType": "short"
   },

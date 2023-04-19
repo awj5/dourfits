@@ -1,12 +1,16 @@
 [
   {
-    "title": "Wonderpals Cap",
-    "trait": "Market",
-    "marketID": 21,
+    "title": "Smurfette Hair",
+    "xp": 500,
     "layer": "hairAndHats"
   },
   {
-    "title": "Wonderpals Rave",
+    "title": "Smurfs Hat",
+    "xp": 200,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Smurfs Red Hat",
     "xp": 800,
     "layer": "hairAndHats"
   },
@@ -827,21 +831,6 @@
     "layer": "hairAndHats"
   },
   {
-    "title": "Smurfette Hair",
-    "xp": 1000000,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Smurfs Hat",
-    "xp": 1000000,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Smurfs Red Hat",
-    "xp": 1000000,
-    "layer": "hairAndHats"
-  },
-  {
     "title": "Space Buns",
     "collection": "dourfits",
     "trait": "Hair & Hats",
@@ -954,6 +943,17 @@
     "title": "Witches Hat",
     "trait": "Market",
     "marketID": 9,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Wonderpals Cap",
+    "trait": "Market",
+    "marketID": 21,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Wonderpals Rave",
+    "xp": 800,
     "layer": "hairAndHats"
   },
   {
