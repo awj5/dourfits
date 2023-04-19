@@ -26,9 +26,9 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   const [darcelLoaded, setDarcelLoaded] = useState<boolean>(false);
   const [prizes, setPrizes] = useState<PrizeObj[]>([]);
   const navigate = useNavigate();
-  const dateSubmitStart = Moment(props.event.submit_start).format('MMM D [at] Ha');
-  const dateSubmitEnd = Moment(props.event.submit_end).format('MMM D [at] Ha');
-  const dateVotingEnd = Moment(props.event.voting_end).format('MMM D [at] Ha');
+  const dateSubmitStart = Moment(props.event.submit_start).format('MMM D [at] ha');
+  const dateSubmitEnd = Moment(props.event.submit_end).format('MMM D [at] ha');
+  const dateVotingEnd = Moment(props.event.voting_end).format('MMM D [at] ha');
 
   interface PrizeObj {
     file: string;
@@ -52,7 +52,7 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   useEffect(() => {
     const getPrizes = async () => {
       try {
-        const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/event/${ props.event.id }/prizes`);
+        const response: Response = await fetch(`${window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/'}api/event/${props.event.id}/prizes`);
 
         if (response.status === 200) {
           // Success
@@ -70,31 +70,31 @@ function Event(props: { event: EventObj; group: string; upcoming?: boolean; }) {
   }, [props.event]);
 
   return (
-    <div className={ `event ${ props.upcoming && 'upcoming' }` }>
+    <div className={`event ${props.upcoming && 'upcoming'}`}>
       <div className="eventInfo">
-        <span>{ props.event.sub_title ? props.event.sub_title : (props.upcoming ? 'Upcoming' : 'Theme') }</span>
-        <h3>{ props.event.title }</h3>
-        <p className="infoDescription">{ props.event.description }</p>
-        <span>{ props.upcoming ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends') }</span>
-        <h4>{ props.upcoming && props.group === 'Compete' ? dateSubmitStart : (props.group === 'Compete' || props.upcoming ? dateSubmitEnd : dateVotingEnd) }</h4>
+        <span>{props.event.sub_title ? props.event.sub_title : (props.upcoming ? 'Upcoming' : 'Theme')}</span>
+        <h3>{props.event.title}</h3>
+        <p className="infoDescription">{props.event.description}</p>
+        <span>{props.upcoming ? 'Starts' : (props.group === 'Archive' ? 'Closed' : 'Ends')}</span>
+        <h4>{props.upcoming && props.group === 'Compete' ? dateSubmitStart : (props.group === 'Compete' || props.upcoming ? dateSubmitEnd : dateVotingEnd)}</h4>
         <span>Prizes</span>
 
         <div className="infoPrizes">
-          { prizes.map((prize, i) => <div key={ i } className="infoPrize" onClick={ () => prizeClick(prize.url) } style={{ cursor: !prize.url ? "auto" : "" }}>{ !prize.file ? '?' : <img src={ 'https://dourfits.s3.amazonaws.com/events/' + prize.file } alt="Prize" /> }</div>) }
-          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{ props.event.xp_first }</p></div>
-          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{ props.event.xp_second }</p></div>
-          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{ props.event.xp_third }</p></div>
-          <div className="infoPrize infoPrizeXP"><span>Entry</span><p>{ props.event.xp_entry }</p></div>
+          {prizes.map((prize, i) => <div key={i} className="infoPrize" onClick={() => prizeClick(prize.url)} style={{ cursor: !prize.url ? "auto" : "" }}>{!prize.file ? '?' : <img src={'https://dourfits.s3.amazonaws.com/events/' + prize.file} alt="Prize" />}</div>)}
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-yellow)" }}><span>1st</span><p>{props.event.xp_first}</p></div>
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-silver)" }}><span>2nd</span><p>{props.event.xp_second}</p></div>
+          <div className="infoPrize infoPrizeXP" style={{ backgroundColor: "var(--df-bronze)" }}><span>3rd</span><p>{props.event.xp_third}</p></div>
+          <div className="infoPrize infoPrizeXP"><span>Entry</span><p>{props.event.xp_entry}</p></div>
           <div className="clear"></div>
         </div>
 
         <div className="eventCTA">
-          { (!isConnected && props.group !== 'Archive' && !props.upcoming) && <ConnectButton label="Connect" /> }
-          { (isConnected || props.group === 'Archive') && <button onClick={ () => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : (props.group === 'Archive' ? 'results/' + props.event.id : 'wardrobe')) } className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{ props.group === 'Compete' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results') }</button> }
+          {(!isConnected && props.group !== 'Archive' && !props.upcoming) && <ConnectButton label="Connect" />}
+          {(isConnected || props.group === 'Archive') && <button onClick={() => ctaClick(props.group === 'Vote' ? 'vote/' + props.event.id : (props.group === 'Archive' ? 'results/' + props.event.id : 'wardrobe'))} className="bigButton eventButton" style={{ backgroundColor: props.group === 'Compete' ? 'var(--df-green)' : (props.group === 'Vote' ? 'var(--df-orange)' : 'var(--df-red)') }}>{props.group === 'Compete' ? 'Enter Wardrobe' : (props.group === 'Vote' ? 'Vote' : 'See Results')}</button>}
         </div>
       </div>
 
-      <img src={ `https://dourfits.s3.amazonaws.com/events/${ props.event.title.toLowerCase().replace(/ /g, '-') }.png` } alt="Darcel" onLoad={ imageLoaded } className={ `eventImage ${ darcelLoaded && 'loaded' }` } />
+      <img src={`https://dourfits.s3.amazonaws.com/events/${props.event.title.toLowerCase().replace(/ /g, '-')}.png`} alt="Darcel" onLoad={imageLoaded} className={`eventImage ${darcelLoaded && 'loaded'}`} />
     </div>
   )
 }
@@ -105,7 +105,7 @@ const getEvents = async (type: string) => {
   let data: EventObj[] = [];
 
   try {
-    const response: Response = await fetch(`${ window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/' }api/events/${ type }`);
+    const response: Response = await fetch(`${window.location.hostname === 'localhost' ? 'http://localhost:3002/' : '/'}api/events/${type}`);
 
     if (response.status === 200) {
       // Success
@@ -158,11 +158,11 @@ function EventGroup(props: { title: string; bgColor: string }) {
 
   return (
     <div className="eventGroup" style={{ backgroundColor: props.bgColor, display: !groupEvents.length && !upcomingEvents.length ? "none" : "" }}>
-      <h2>{ props.title }</h2>
+      <h2>{props.title}</h2>
 
       <div className="groupEvents">
-        { groupEvents.map((event) => <Event key={ event.id } event={ event } group={ props.title } />) }
-        { upcomingEvents.map((event) => <Event key={ event.id } event={ event } group={ props.title } upcoming={ true } />) }
+        {groupEvents.map((event) => <Event key={event.id} event={event} group={props.title} />)}
+        {upcomingEvents.map((event) => <Event key={event.id} event={event} group={props.title} upcoming={true} />)}
         <div className="clear"></div>
       </div>
     </div>
