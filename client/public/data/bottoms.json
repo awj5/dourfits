@@ -2,12 +2,18 @@
   {
     "title": "Smurfs Pants",
     "xp": 200,
-    "layer": "bottoms"
+    "layer": "bottoms",
+    "exclusions": {
+      "shoesAndLegs": ""
+    }
   },
   {
     "title": "Smurfs Red Pants",
     "xp": 600,
-    "layer": "bottoms"
+    "layer": "bottoms",
+    "exclusions": {
+      "shoesAndLegs": ""
+    }
   },
   {
     "title": "Black Mini",
