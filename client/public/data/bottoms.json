@@ -1,19 +1,14 @@
 [
   {
-    "title": "Smurfs Pants",
-    "xp": 200,
-    "layer": "bottoms",
-    "exclusions": {
-      "shoesAndLegs": ""
-    }
+    "title": "Mira Mikati Flares",
+    "shortTitle": "Mira Mikati Pants",
+    "xp": 300,
+    "layer": "bottoms"
   },
   {
-    "title": "Smurfs Red Pants",
-    "xp": 600,
-    "layer": "bottoms",
-    "exclusions": {
-      "shoesAndLegs": ""
-    }
+    "title": "Mira Mikati Shorts",
+    "xp": 100,
+    "layer": "bottoms"
   },
   {
     "title": "Black Mini",
@@ -301,6 +296,22 @@
     "title": "Sky Short Shorts",
     "xp": 0,
     "layer": "bottoms"
+  },
+  {
+    "title": "Smurfs Pants",
+    "xp": 200,
+    "layer": "bottoms",
+    "exclusions": {
+      "shoesAndLegs": ""
+    }
+  },
+  {
+    "title": "Smurfs Red Pants",
+    "xp": 600,
+    "layer": "bottoms",
+    "exclusions": {
+      "shoesAndLegs": ""
+    }
   },
   {
     "title": "Space Suit",

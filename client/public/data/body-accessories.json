@@ -1,107 +1,112 @@
 [
-    {
-        "title": "Polka Dot Sweater",
-        "shortTitle": "Black Chain",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Bow Tie",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Card Pouch",
-        "xp": 100,
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Choker",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Chrome Necklace",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Colorful Necklace",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Crucifix Necklace",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Gold Chain",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Gold Necklace",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Green Beads",
-        "xp": 0,
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Heart Sweater",
-        "shortTitle": "Heart Necklace",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Opening Night",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Orange Necklace",
-        "xp": 0,
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Pearls",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Quilt",
-        "collection": "dourfits",
-        "trait": "Accessories",
-        "layer": "bodyAccessories",
-        "exclusions": {
-            "mouth": "",
-            "headAccessories": "",
-            "arms": "",
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Red Beads",
-        "xp": 0,
-        "layer": "bodyAccessories"
-    },
-    {
-        "title": "Red Pouch",
-        "xp": 100,
-        "layer": "bodyAccessories"
+  {
+    "title": "Mira Mikati Beads",
+    "xp": 300,
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Polka Dot Sweater",
+    "shortTitle": "Black Chain",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Bow Tie",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Card Pouch",
+    "xp": 100,
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Choker",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Chrome Necklace",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Colorful Necklace",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Crucifix Necklace",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Gold Chain",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Gold Necklace",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Green Beads",
+    "xp": 0,
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Heart Sweater",
+    "shortTitle": "Heart Necklace",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Opening Night",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Orange Necklace",
+    "xp": 0,
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Pearls",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Quilt",
+    "collection": "dourfits",
+    "trait": "Accessories",
+    "layer": "bodyAccessories",
+    "exclusions": {
+      "mouth": "",
+      "headAccessories": "",
+      "arms": "",
+      "facialHair": ""
     }
+  },
+  {
+    "title": "Red Beads",
+    "xp": 0,
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Red Pouch",
+    "xp": 100,
+    "layer": "bodyAccessories"
+  }
 ]

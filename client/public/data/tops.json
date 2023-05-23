@@ -1,13 +1,20 @@
 [
   {
-    "title": "Smurfette Dress",
-    "xp": 300,
+    "title": "Mira Mikati Hoodie",
+    "xp": 500,
     "layer": "tops",
-    "topType": "sleeveless"
+    "topType": "hoodie"
   },
   {
-    "title": "Smurfs T-Shirt",
-    "xp": 300,
+    "title": "Mira Mikati Shirt",
+    "xp": 400,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "Mira Mikati Palm Shirt",
+    "shortTitle": "Mira Mikati Palm",
+    "xp": 200,
     "layer": "tops",
     "topType": "short"
   },
@@ -763,6 +770,18 @@
     "title": "Slice Up Your Life T-Shirt",
     "trait": "Market",
     "marketID": 1,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "Smurfette Dress",
+    "xp": 300,
+    "layer": "tops",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Smurfs T-Shirt",
+    "xp": 300,
     "layer": "tops",
     "topType": "short"
   },

@@ -1,329 +1,336 @@
 [
-    {
-        "title": "Balloon",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Basketball",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "basketball",
-        "exclusions": {
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Beer",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "beer",
-        "exclusions": {
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Big Bag",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "big-bag"
-    },
-    {
-        "title": "Bones",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Camo Skateboard",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short",
-        "exclusions": {
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Candy Cane",
-        "trait": "Market",
-        "marketID": 16,
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Champagne",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short",
-        "default": "champagne"
-    },
-    {
-        "title": "Chrome Robot",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Cigarette",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "cigarette"
-    },
-    {
-        "title": "Coffee",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "coffee"
-    },
-    {
-        "title": "Concentric Bag",
-        "xp": 200,
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Crossed",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Crossed Jewelry",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Dangly",
-        "xp": 0,
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Dour Darcels Tote",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Gold Robot",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "GM Skateboard",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short",
-        "default": "gm-skateboard",
-        "exclusions": {
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Sky Singlet",
-        "shortTitle": "Gold Crossed",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "sky-singlet"
-    },
-    {
-        "title": "Gym Bag",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Hands on Hips",
-        "xp": 0,
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Have A Crap Day Tote",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "pink-singlet"
-    },
-    {
-        "title": "Heart Hands T-shirt",
-        "shortTitle": "Heart Hands",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "short",
-        "default": "heart-hands-t-shirt"
-    },
-    {
-        "title": "Knight",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Lots",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Mummy",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Muscle",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "muscle"
-    },
-    {
-        "title": "Peace",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Space Suit",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Regular",
-        "xp": 0,
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Robotos Bag",
-        "trait": "Market",
-        "marketID": 19,
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Rose",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Sad Tote",
-        "collection": "dourfits",
-        "trait": "Tops",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Selfie",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "exclusions": {
-            "mouth": "",
-            "facialHair": ""
-        }
-    },
-    {
-        "title": "Shrug",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Slam Jam Bag",
-        "trait": "Market",
-        "marketID": 4,
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Striped Bag",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Thumbs Up",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless",
-        "default": "thumbs-up"
-    },
-    {
-        "title": "Transparent",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Versailles",
-        "collection": "dourdarcels",
-        "trait": "Legs & Clothes",
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Wave",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "sleeveless"
-    },
-    {
-        "title": "Wonderpals Tote",
-        "trait": "Market",
-        "marketID": 20,
-        "layer": "arms",
-        "topType": "short"
-    },
-    {
-        "title": "Woodgrain Bag",
-        "collection": "dourdarcels",
-        "trait": "Arms",
-        "layer": "arms",
-        "topType": "short"
+  {
+    "title": "Mira Mikati Tote",
+    "xp": 800,
+    "layer": "arms",
+    "topType": "sleeveless",
+    "topType": "short"
+  },
+  {
+    "title": "Balloon",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Basketball",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "basketball",
+    "exclusions": {
+      "facialHair": ""
     }
+  },
+  {
+    "title": "Beer",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "beer",
+    "exclusions": {
+      "facialHair": ""
+    }
+  },
+  {
+    "title": "Big Bag",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "big-bag"
+  },
+  {
+    "title": "Bones",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Camo Skateboard",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short",
+    "exclusions": {
+      "facialHair": ""
+    }
+  },
+  {
+    "title": "Candy Cane",
+    "trait": "Market",
+    "marketID": 16,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Champagne",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short",
+    "default": "champagne"
+  },
+  {
+    "title": "Chrome Robot",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Cigarette",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "cigarette"
+  },
+  {
+    "title": "Coffee",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "coffee"
+  },
+  {
+    "title": "Concentric Bag",
+    "xp": 200,
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Crossed",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Crossed Jewelry",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Dangly",
+    "xp": 0,
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Dour Darcels Tote",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Gold Robot",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "GM Skateboard",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short",
+    "default": "gm-skateboard",
+    "exclusions": {
+      "facialHair": ""
+    }
+  },
+  {
+    "title": "Sky Singlet",
+    "shortTitle": "Gold Crossed",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "sky-singlet"
+  },
+  {
+    "title": "Gym Bag",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Hands on Hips",
+    "xp": 0,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Have A Crap Day Tote",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "pink-singlet"
+  },
+  {
+    "title": "Heart Hands T-shirt",
+    "shortTitle": "Heart Hands",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "short",
+    "default": "heart-hands-t-shirt"
+  },
+  {
+    "title": "Knight",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Lots",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Mummy",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Muscle",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "muscle"
+  },
+  {
+    "title": "Peace",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Space Suit",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Regular",
+    "xp": 0,
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Robotos Bag",
+    "trait": "Market",
+    "marketID": 19,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Rose",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Sad Tote",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Selfie",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "exclusions": {
+      "mouth": "",
+      "facialHair": ""
+    }
+  },
+  {
+    "title": "Shrug",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Slam Jam Bag",
+    "trait": "Market",
+    "marketID": 4,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Striped Bag",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Thumbs Up",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless",
+    "default": "thumbs-up"
+  },
+  {
+    "title": "Transparent",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Versailles",
+    "collection": "dourdarcels",
+    "trait": "Legs & Clothes",
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Wave",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Wonderpals Tote",
+    "trait": "Market",
+    "marketID": 20,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Woodgrain Bag",
+    "collection": "dourdarcels",
+    "trait": "Arms",
+    "layer": "arms",
+    "topType": "short"
+  }
 ]

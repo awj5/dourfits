@@ -1,20 +1,5 @@
 [
   {
-    "title": "Smurfette Hair",
-    "xp": 500,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Smurfs Hat",
-    "xp": 200,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Smurfs Red Hat",
-    "xp": 800,
-    "layer": "hairAndHats"
-  },
-  {
     "title": "Afro",
     "collection": "dourfits",
     "trait": "Hair & Hats",
@@ -828,6 +813,21 @@
     "title": "Slicked Back",
     "collection": "dourfits",
     "trait": "Hair & Hats",
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Smurfette Hair",
+    "xp": 500,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Smurfs Hat",
+    "xp": 200,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Smurfs Red Hat",
+    "xp": 800,
     "layer": "hairAndHats"
   },
   {

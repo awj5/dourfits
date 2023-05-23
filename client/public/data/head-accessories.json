@@ -1,10 +1,5 @@
 [
   {
-    "title": "Smurfs Ears",
-    "xp": 400,
-    "layer": "headAccessories"
-  },
-  {
     "title": "Ape",
     "collection": "dourdarcels",
     "trait": "Accessories & Ears",
@@ -259,6 +254,11 @@
     "title": "Slam Jam Mask",
     "trait": "Market",
     "marketID": 3,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Smurfs Ears",
+    "xp": 400,
     "layer": "headAccessories"
   },
   {
