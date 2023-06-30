@@ -53,7 +53,8 @@ function HeaderDashboard() {
 
         // Loop collab NFTs and add XP
         for (let x: number = 0; x < collabNFTs.ownedNfts.length; x++) {
-          addressXP += 100;
+          addressXP +=
+            collabNFTs.ownedNfts[x].contract.address === "0x9231f13343f871b051fa5002e8c04beed91b4f62" ? 100 : 200;
         }
 
         // Loop NFTs and add XP
