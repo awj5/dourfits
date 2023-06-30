@@ -33,26 +33,28 @@ function HeaderDashboard() {
 
     const getXP = async (page?: string | undefined) => {
       try {
-        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(
-          address!,
-          {
-            contractAddresses: [
-              "0x8d609bd201beaea7dccbfbd9c22851e23da68691",
-              "0x6d93d3fd7bb8baebf853be56d0198989db655e40",
-              "0x5e014f8c5778138ccc2c2d88e0530bc343831073",
-              "0xac5dc1676595fc2f4d4a746c7a4857e692480e0c",
-              "0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b",
-            ],
-            pageKey: page,
-          }
-        ); // DD, colette, DF, DF Market and DF collabs contracts
+        const userNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, {
+          contractAddresses: [
+            "0x8d609bd201beaea7dccbfbd9c22851e23da68691",
+            "0x6d93d3fd7bb8baebf853be56d0198989db655e40",
+            "0x5e014f8c5778138ccc2c2d88e0530bc343831073",
+            "0xac5dc1676595fc2f4d4a746c7a4857e692480e0c",
+            "0x7e10adb7c91b0e6ee6f5c9cebdfad9046122015b",
+          ],
+          pageKey: page,
+        }); // DD, colette, DF, DF Market and DF collabs contracts
 
-        //const collabNFTs: OwnedNftsResponse = await alchemyPolygon.nft.getNftsForOwner(address!, { contractAddresses: ['0xbac7e3182bb6691f180ef91f7ae4530abb3dc08d'] }); // Collab contracts
+        const collabNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, {
+          contractAddresses: [
+            "0x9231f13343f871b051fa5002e8c04beed91b4f62",
+            "0xee71025bf3f08e43a5698b44bf456670a4ed5c0c",
+          ],
+        }); // Collab contracts
 
         // Loop collab NFTs and add XP
-        /* for (let x: number = 0; x < collabNFTs.ownedNfts.length; x++) {
+        for (let x: number = 0; x < collabNFTs.ownedNfts.length; x++) {
           addressXP += 100;
-        } */
+        }
 
         // Loop NFTs and add XP
         for (let x: number = 0; x < userNFTs.ownedNfts.length; x++) {
@@ -78,10 +80,7 @@ function HeaderDashboard() {
           if (addressXP) {
             try {
               const response: Response = await fetch(
-                `${window.location.hostname === "localhost"
-                  ? "http://localhost:3002/"
-                  : "/"
-                }api/xp/${address}`
+                `${window.location.hostname === "localhost" ? "http://localhost:3002/" : "/"}api/xp/${address}`
               );
 
               if (response.status === 200) {
@@ -127,9 +126,7 @@ function HeaderDashboard() {
   );
 }
 
-const themeSong = new Audio(
-  "https://dourfits.s3.amazonaws.com/audio/theme.mp3"
-);
+const themeSong = new Audio("https://dourfits.s3.amazonaws.com/audio/theme.mp3");
 themeSong.loop = true;
 
 function Header() {
@@ -162,7 +159,7 @@ function Header() {
 
   useEffect(() => {
     // Browsers need user interaction before audio can play
-    window.addEventListener("click", function() {
+    window.addEventListener("click", function () {
       if (!userInteractedRef.current) {
         userInteractedRef.current = true;
         setThemePlaying(true);
@@ -180,11 +177,7 @@ function Header() {
       <HeaderDashboard />
 
       <nav style={{ right: showingNav ? 0 : "" }}>
-        <Link
-          to="/"
-          id="nav-home"
-          style={{ opacity: location.pathname === "/" ? 1 : "" }}
-        >
+        <Link to="/" id="nav-home" style={{ opacity: location.pathname === "/" ? 1 : "" }}>
           Home
         </Link>
         <Link
@@ -197,25 +190,13 @@ function Header() {
         >
           Wardrobe
         </Link>
-        <Link
-          to="/events"
-          id="nav-events"
-          style={{ opacity: location.pathname === "/events" ? 1 : "" }}
-        >
+        <Link to="/events" id="nav-events" style={{ opacity: location.pathname === "/events" ? 1 : "" }}>
           Events
         </Link>
-        <a
-          href="https://opensea.io/collection/dourfits-market"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://opensea.io/collection/dourfits-market" target="_blank" rel="noreferrer">
           Market
         </a>
-        <Link
-          to="/faq"
-          id="nav-faq"
-          style={{ opacity: location.pathname === "/faq" ? 1 : "" }}
-        >
+        <Link to="/faq" id="nav-faq" style={{ opacity: location.pathname === "/faq" ? 1 : "" }}>
           FAQ
         </Link>
         <button
@@ -223,10 +204,7 @@ function Header() {
           className="iconButton"
           style={{ display: userInteractedRef.current ? "inline" : "" }}
         >
-          <img
-            src={`/assets/img/audio-${themePlaying ? "on" : "off"}.png`}
-            alt="Music icon"
-          />
+          <img src={`/assets/img/audio-${themePlaying ? "on" : "off"}.png`} alt="Music icon" />
         </button>
         <ConnectButton />
       </nav>
