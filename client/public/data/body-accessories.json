@@ -1,10 +1,5 @@
 [
   {
-    "title": "Mira Mikati Beads",
-    "xp": 300,
-    "layer": "bodyAccessories"
-  },
-  {
     "title": "Polka Dot Sweater",
     "shortTitle": "Black Chain",
     "collection": "dourdarcels",
@@ -68,6 +63,11 @@
     "shortTitle": "Heart Necklace",
     "collection": "dourdarcels",
     "trait": "Legs & Clothes",
+    "layer": "bodyAccessories"
+  },
+  {
+    "title": "Mira Mikati Beads",
+    "xp": 300,
     "layer": "bodyAccessories"
   },
   {

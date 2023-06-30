@@ -1,9 +1,10 @@
 [
   {
-    "title": "Mira Mikati Tote",
-    "xp": 800,
+    "title": "Atari X Gym Bag",
+    "trait": "Market",
+    "marketID": 23,
+    "trait": "Tops",
     "layer": "arms",
-    "topType": "sleeveless",
     "topType": "short"
   },
   {
@@ -201,6 +202,13 @@
     "trait": "Arms",
     "layer": "arms",
     "topType": "sleeveless"
+  },
+  {
+    "title": "Mira Mikati Tote",
+    "xp": 800,
+    "layer": "arms",
+    "topType": "sleeveless",
+    "topType": "short"
   },
   {
     "title": "Mummy",

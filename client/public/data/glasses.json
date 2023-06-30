@@ -1,10 +1,5 @@
 [
   {
-    "title": "Mira Mikati Sunglasses",
-    "xp": 1000,
-    "layer": "glasses"
-  },
-  {
     "title": "3D",
     "collection": "dourdarcels",
     "trait": "Glasses",
@@ -149,6 +144,11 @@
     "title": "Mid Blue",
     "collection": "dourdarcels",
     "trait": "Glasses",
+    "layer": "glasses"
+  },
+  {
+    "title": "Mira Mikati Sunglasses",
+    "xp": 1000,
     "layer": "glasses"
   },
   {

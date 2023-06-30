@@ -1,19 +1,18 @@
 [
   {
-    "title": "Mira Mikati Hoodie",
+    "title": "Atari X Singlet",
+    "xp": 600,
+    "layer": "tops",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Atari X Sweater",
     "xp": 500,
     "layer": "tops",
-    "topType": "hoodie"
+    "topType": "sweater"
   },
   {
-    "title": "Mira Mikati Shirt",
-    "xp": 400,
-    "layer": "tops",
-    "topType": "short"
-  },
-  {
-    "title": "Mira Mikati Palm Shirt",
-    "shortTitle": "Mira Mikati Palm",
+    "title": "Atari X T-shirt",
     "xp": 200,
     "layer": "tops",
     "topType": "short"
@@ -423,6 +422,25 @@
     "marketID": 15,
     "layer": "tops",
     "topType": "hoodie"
+  },
+  {
+    "title": "Mira Mikati Hoodie",
+    "xp": 500,
+    "layer": "tops",
+    "topType": "hoodie"
+  },
+  {
+    "title": "Mira Mikati Shirt",
+    "xp": 400,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "Mira Mikati Palm Shirt",
+    "shortTitle": "Mira Mikati Palm",
+    "xp": 200,
+    "layer": "tops",
+    "topType": "short"
   },
   {
     "title": "Multi Stripe Button Down",

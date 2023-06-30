@@ -1,12 +1,11 @@
 [
   {
-    "title": "Mira Mikati Flares",
-    "shortTitle": "Mira Mikati Pants",
+    "title": "Atari X Pants",
     "xp": 300,
     "layer": "bottoms"
   },
   {
-    "title": "Mira Mikati Shorts",
+    "title": "Atari X Shorts",
     "xp": 100,
     "layer": "bottoms"
   },
@@ -169,6 +168,17 @@
     "title": "Lilac Tube",
     "collection": "dourfits",
     "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Mira Mikati Flares",
+    "shortTitle": "Mira Mikati Pants",
+    "xp": 300,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Mira Mikati Shorts",
+    "xp": 100,
     "layer": "bottoms"
   },
   {
