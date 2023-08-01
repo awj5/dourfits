@@ -1,4 +1,4 @@
-# dourfits
+# Dour Fits
 
 A blockchain fashion game
 
