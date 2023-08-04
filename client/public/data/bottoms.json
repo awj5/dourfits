@@ -2,11 +2,13 @@
   {
     "title": "Toy Boogers Pants",
     "xp": 300,
+    "format": ".svg.png",
     "layer": "bottoms"
   },
   {
     "title": "Toy Boogers Shorts",
     "xp": 100,
+    "format": ".svg.png",
     "layer": "bottoms"
   },
   {

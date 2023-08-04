@@ -2,11 +2,13 @@
   {
     "title": "Toy Boogers Bucket",
     "xp": 400,
+    "format": ".svg.png",
     "layer": "hairAndHats"
   },
   {
     "title": "Toy Boogers Cap",
     "xp": 500,
+    "format": ".svg.png",
     "layer": "hairAndHats"
   },
   {

@@ -3,12 +3,14 @@
     "title": "Toy Boogers Guitar",
     "xp": 1000,
     "layer": "arms",
+    "format": ".svg.png",
     "topType": "sleeveless"
   },
   {
     "title": "Toy Boogers Pizza",
     "xp": 600,
     "layer": "arms",
+    "format": ".svg.png",
     "topType": "short"
   },
   {
