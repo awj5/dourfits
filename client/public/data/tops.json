@@ -1,5 +1,30 @@
 [
   {
+    "title": "Toy Boogers Singlet",
+    "xp": 200,
+    "layer": "tops",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Toy Boogers T-shirt",
+    "xp": 300,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "Toy Boogers Wings",
+    "xp": 800,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
+    "title": "80s Oversized",
+    "collection": "dourfits",
+    "trait": "Tops",
+    "layer": "tops",
+    "topType": "oversized"
+  },
+  {
     "title": "Atari X Singlet",
     "xp": 600,
     "layer": "tops",
@@ -16,13 +41,6 @@
     "xp": 200,
     "layer": "tops",
     "topType": "short"
-  },
-  {
-    "title": "80s Oversized",
-    "collection": "dourfits",
-    "trait": "Tops",
-    "layer": "tops",
-    "topType": "oversized"
   },
   {
     "title": "Basketball",

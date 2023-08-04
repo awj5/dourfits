@@ -1,19 +1,12 @@
 [
   {
-    "title": "Atari X Speaker Cap",
-    "shortTitle": "Atari X Cap",
+    "title": "Toy Boogers Bucket",
     "xp": 400,
     "layer": "hairAndHats"
   },
   {
-    "title": "Atari X Cap",
-    "xp": 1000,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Atari X Rave",
-    "trait": "Market",
-    "marketID": 22,
+    "title": "Toy Boogers Cap",
+    "xp": 500,
     "layer": "hairAndHats"
   },
   {
@@ -32,6 +25,23 @@
     "title": "Angel",
     "collection": "dourdarcels",
     "trait": "Hair & Hats",
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Atari X Speaker Cap",
+    "shortTitle": "Atari X Cap",
+    "xp": 400,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Atari X Cap",
+    "xp": 1000,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Atari X Rave",
+    "trait": "Market",
+    "marketID": 22,
     "layer": "hairAndHats"
   },
   {

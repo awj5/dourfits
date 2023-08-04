@@ -1,5 +1,17 @@
 [
   {
+    "title": "Toy Boogers Guitar",
+    "xp": 1000,
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Toy Boogers Pizza",
+    "xp": 600,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
     "title": "Atari X Gym Bag",
     "trait": "Market",
     "marketID": 23,

@@ -1,14 +1,14 @@
 [
   {
-    "title": "Atari X Trainers",
-    "trait": "Market",
-    "marketID": 24,
-    "layer": "shoesAndLegs"
-  },
-  {
     "title": "Alien",
     "collection": "dourfits",
     "trait": "Shoes & Legs",
+    "layer": "shoesAndLegs"
+  },
+  {
+    "title": "Atari X Trainers",
+    "trait": "Market",
+    "marketID": 24,
     "layer": "shoesAndLegs"
   },
   {

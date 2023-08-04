@@ -46,15 +46,15 @@ function HeaderDashboard() {
 
         const collabNFTs: OwnedNftsResponse = await alchemy.nft.getNftsForOwner(address!, {
           contractAddresses: [
-            "0x9231f13343f871b051fa5002e8c04beed91b4f62",
-            "0xee71025bf3f08e43a5698b44bf456670a4ed5c0c",
+            "0xBF662A0e4069b58dFB9bceBEBaE99A6f13e06f5a",
+            "0x5ff1863753C1920C38c7BaE94576f2831eF99695",
           ],
         }); // Collab contracts
 
         // Loop collab NFTs and add XP
         for (let x: number = 0; x < collabNFTs.ownedNfts.length; x++) {
           addressXP +=
-            collabNFTs.ownedNfts[x].contract.address === "0x9231f13343f871b051fa5002e8c04beed91b4f62" ? 100 : 200;
+            collabNFTs.ownedNfts[x].contract.address === "0x5ff1863753C1920C38c7BaE94576f2831eF99695" ? 100 : 200;
         }
 
         // Loop NFTs and add XP

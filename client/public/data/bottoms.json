@@ -1,5 +1,15 @@
 [
   {
+    "title": "Toy Boogers Pants",
+    "xp": 300,
+    "layer": "bottoms"
+  },
+  {
+    "title": "Toy Boogers Shorts",
+    "xp": 100,
+    "layer": "bottoms"
+  },
+  {
     "title": "Atari X Pants",
     "xp": 300,
     "layer": "bottoms"
