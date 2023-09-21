@@ -1,5 +1,19 @@
 [
   {
+    "title": "Time Pieces Sweater",
+    "shortTitle": "TIMEPieces Sweater",
+    "xp": 200,
+    "layer": "tops",
+    "topType": "sweater"
+  },
+  {
+    "title": "Time Pieces T-shirt",
+    "shortTitle": "TIMEPieces T-shirt",
+    "xp": 800,
+    "layer": "tops",
+    "topType": "short"
+  },
+  {
     "title": "80s Oversized",
     "collection": "dourfits",
     "trait": "Tops",

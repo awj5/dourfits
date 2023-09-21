@@ -1,5 +1,19 @@
 [
   {
+    "title": "Time Pieces Big Bag",
+    "shortTitle": "TIMEPieces Big Bag",
+    "xp": 600,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
+    "title": "Time Pieces Magazine",
+    "shortTitle": "TIMEPieces Magazine",
+    "xp": 900,
+    "layer": "arms",
+    "topType": "short"
+  },
+  {
     "title": "Atari X Gym Bag",
     "trait": "Market",
     "marketID": 23,

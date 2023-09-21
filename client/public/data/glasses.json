@@ -1,5 +1,11 @@
 [
   {
+    "title": "Time Pieces Frame",
+    "shortTitle": "TIMEPieces Frame",
+    "xp": 1000,
+    "layer": "glasses"
+  },
+  {
     "title": "3D",
     "collection": "dourdarcels",
     "trait": "Glasses",
