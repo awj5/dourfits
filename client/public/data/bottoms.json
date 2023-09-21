@@ -1,17 +1,5 @@
 [
   {
-    "title": "Toy Boogers Pants",
-    "xp": 300,
-    "format": ".svg.png",
-    "layer": "bottoms"
-  },
-  {
-    "title": "Toy Boogers Shorts",
-    "xp": 100,
-    "format": ".svg.png",
-    "layer": "bottoms"
-  },
-  {
     "title": "Atari X Pants",
     "xp": 300,
     "layer": "bottoms"
@@ -369,6 +357,18 @@
     "title": "Taxi Tube",
     "collection": "dourfits",
     "trait": "Bottoms",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Toy Boogers Pants",
+    "xp": 300,
+    "format": ".svg.png",
+    "layer": "bottoms"
+  },
+  {
+    "title": "Toy Boogers Shorts",
+    "xp": 100,
+    "format": ".svg.png",
     "layer": "bottoms"
   },
   {

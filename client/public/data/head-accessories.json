@@ -1,11 +1,5 @@
 [
   {
-    "title": "Toy Boogers Poop",
-    "xp": 700,
-    "format": ".svg.png",
-    "layer": "headAccessories"
-  },
-  {
     "title": "Ape",
     "collection": "dourdarcels",
     "trait": "Accessories & Ears",
@@ -299,6 +293,12 @@
     "title": "Star Earrings",
     "collection": "dourfits",
     "trait": "Accessories",
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Toy Boogers Poop",
+    "xp": 700,
+    "format": ".svg.png",
     "layer": "headAccessories"
   },
   {

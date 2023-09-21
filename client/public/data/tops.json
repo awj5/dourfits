@@ -1,26 +1,5 @@
 [
   {
-    "title": "Toy Boogers Singlet",
-    "xp": 200,
-    "layer": "tops",
-    "format": ".svg.png",
-    "topType": "sleeveless"
-  },
-  {
-    "title": "Toy Boogers T-shirt",
-    "xp": 300,
-    "layer": "tops",
-    "format": ".svg.png",
-    "topType": "short"
-  },
-  {
-    "title": "Toy Boogers Wings",
-    "xp": 800,
-    "layer": "tops",
-    "format": ".svg.png",
-    "topType": "short"
-  },
-  {
     "title": "80s Oversized",
     "collection": "dourfits",
     "trait": "Tops",
@@ -908,6 +887,27 @@
     "title": "Tie Dye T-Shirt",
     "collection": "dourdarcels",
     "trait": "Legs & Clothes",
+    "layer": "tops",
+    "format": ".svg.png",
+    "topType": "short"
+  },
+  {
+    "title": "Toy Boogers Singlet",
+    "xp": 200,
+    "layer": "tops",
+    "format": ".svg.png",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Toy Boogers T-shirt",
+    "xp": 300,
+    "layer": "tops",
+    "format": ".svg.png",
+    "topType": "short"
+  },
+  {
+    "title": "Toy Boogers Wings",
+    "xp": 800,
     "layer": "tops",
     "format": ".svg.png",
     "topType": "short"
