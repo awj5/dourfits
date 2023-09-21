@@ -1,5 +1,11 @@
 [
   {
+    "title": "Time Pieces Frame",
+    "shortTitle": "TIMEPieces Frame",
+    "xp": 1000,
+    "layer": "background"
+  },
+  {
     "title": "80s",
     "collection": "dourfits",
     "trait": "Backgrounds",
