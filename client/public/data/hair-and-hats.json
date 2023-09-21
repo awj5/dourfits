@@ -1,5 +1,17 @@
 [
   {
+    "title": "TIME Pieces Bucket",
+    "shortTitle": "TIMEPieces Bucket",
+    "xp": 700,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "TIME Pieces Cap",
+    "shortTitle": "TIMEPieces Cap",
+    "xp": 400,
+    "layer": "hairAndHats"
+  },
+  {
     "title": "Afro",
     "collection": "dourfits",
     "trait": "Hair & Hats",
