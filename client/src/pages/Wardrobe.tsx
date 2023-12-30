@@ -346,8 +346,7 @@ function Viewer(props: {
             itemSFXClick={itemSFXClick}
             category={itemCategory}
             item={item}
-            //traitOwned={!item.layer ? true : checkItemOwned(item.title, item.trait ?? "")} // TEMP
-            traitOwned={true}
+            traitOwned={!item.layer ? true : checkItemOwned(item.title, item.trait ?? "")}
             ownedOnly={props.ownedOnly}
             viewerMessage={props.viewerMessage}
             setViewerMessage={props.setViewerMessage}
