@@ -1,15 +1,13 @@
 [
   {
-    "title": "Time Pieces Big Bag",
-    "shortTitle": "TIMEPieces Big Bag",
-    "xp": 600,
+    "title": "Holiday Gift",
+    "xp": 500,
     "layer": "arms",
     "topType": "sleeveless"
   },
   {
-    "title": "Time Pieces Magazine",
-    "shortTitle": "TIMEPieces Magazine",
-    "xp": 900,
+    "title": "Holiday Gingerbread",
+    "xp": 800,
     "layer": "arms",
     "topType": "short"
   },
@@ -318,6 +316,20 @@
     "layer": "arms",
     "topType": "sleeveless",
     "default": "thumbs-up"
+  },
+  {
+    "title": "Time Pieces Big Bag",
+    "shortTitle": "TIMEPieces Big Bag",
+    "xp": 600,
+    "layer": "arms",
+    "topType": "sleeveless"
+  },
+  {
+    "title": "Time Pieces Magazine",
+    "shortTitle": "TIMEPieces Magazine",
+    "xp": 900,
+    "layer": "arms",
+    "topType": "short"
   },
   {
     "title": "Toy Boogers Guitar",
