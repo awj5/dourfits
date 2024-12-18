@@ -1,14 +1,7 @@
 [
   {
-    "title": "Time Pieces Bucket",
-    "shortTitle": "TIMEPieces Bucket",
-    "xp": 700,
-    "layer": "hairAndHats"
-  },
-  {
-    "title": "Time Pieces Cap",
-    "shortTitle": "TIMEPieces Cap",
-    "xp": 400,
+    "title": "Snowman",
+    "xp": 1000,
     "layer": "hairAndHats"
   },
   {
@@ -899,6 +892,18 @@
     "title": "Tan Curly",
     "collection": "dourfits",
     "trait": "Hair & Hats",
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Time Pieces Bucket",
+    "shortTitle": "TIMEPieces Bucket",
+    "xp": 700,
+    "layer": "hairAndHats"
+  },
+  {
+    "title": "Time Pieces Cap",
+    "shortTitle": "TIMEPieces Cap",
+    "xp": 400,
     "layer": "hairAndHats"
   },
   {

@@ -1,8 +1,7 @@
 [
   {
-    "title": "Time Pieces Hi-tops",
-    "shortTitle": "TIMEPieces Trainers",
-    "xp": 500,
+    "title": "Holiday Stockings",
+    "xp": 300,
     "layer": "shoesAndLegs"
   },
   {
@@ -362,6 +361,12 @@
     "title": "Tan Slides",
     "collection": "dourfits",
     "trait": "Shoes & Legs",
+    "layer": "shoesAndLegs"
+  },
+  {
+    "title": "Time Pieces Hi-tops",
+    "shortTitle": "TIMEPieces Trainers",
+    "xp": 500,
     "layer": "shoesAndLegs"
   },
   {
