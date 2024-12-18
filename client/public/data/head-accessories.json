@@ -1,5 +1,15 @@
 [
   {
+    "title": "Holiday Earrings",
+    "xp": 200,
+    "layer": "headAccessories"
+  },
+  {
+    "title": "Holiday Holly",
+    "xp": 600,
+    "layer": "headAccessories"
+  },
+  {
     "title": "Ape",
     "collection": "dourdarcels",
     "trait": "Accessories & Ears",
@@ -266,7 +276,6 @@
     "collection": "dourfits",
     "trait": "Accessories",
     "layer": "headAccessories",
-    "layer": "headAccessories",
     "exclusions": {
       "hairAndHats": "",
       "glasses": ""
@@ -276,7 +285,6 @@
     "title": "Space Bubble",
     "collection": "dourfits",
     "trait": "Accessories",
-    "layer": "headAccessories",
     "layer": "headAccessories",
     "exclusions": {
       "hairAndHats": "",
